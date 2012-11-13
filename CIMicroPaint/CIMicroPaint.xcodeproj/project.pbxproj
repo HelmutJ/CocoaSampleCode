@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		287DD8BA156838D1005216D8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DD8B9156838D1005216D8 /* Cocoa.framework */; };
+		287DD8C4156838D2005216D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 287DD8C2156838D2005216D8 /* InfoPlist.strings */; };
+		287DD8C6156838D2005216D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD8C5156838D2005216D8 /* main.m */; };
+		287DD8D0156838D2005216D8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287DD8CE156838D2005216D8 /* MainMenu.xib */; };
+		287DD8E315683AC9005216D8 /* CIMicroPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD8E015683AC9005216D8 /* CIMicroPaintView.m */; };
+		287DD8E415683AC9005216D8 /* SampleCIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD8E215683AC9005216D8 /* SampleCIView.m */; };
+		287DD8E615683CBB005216D8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DD8E515683CBB005216D8 /* OpenGL.framework */; };
+		287DD8E815683CC0005216D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DD8E715683CC0005216D8 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		287DD8B5156838D1005216D8 /* CIMicroPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIMicroPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		287DD8B9156838D1005216D8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		287DD8BC156838D1005216D8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		287DD8BD156838D1005216D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		287DD8BE156838D1005216D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		287DD8C1156838D2005216D8 /* CIMicroPaint-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CIMicroPaint-Info.plist"; sourceTree = "<group>"; };
+		287DD8C3156838D2005216D8 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		287DD8C5156838D2005216D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		287DD8C7156838D2005216D8 /* CIMicroPaint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIMicroPaint-Prefix.pch"; sourceTree = "<group>"; };
+		287DD8CF156838D2005216D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		287DD8DF15683AC9005216D8 /* CIMicroPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIMicroPaintView.h; sourceTree = "<group>"; };
+		287DD8E015683AC9005216D8 /* CIMicroPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIMicroPaintView.m; sourceTree = "<group>"; };
+		287DD8E115683AC9005216D8 /* SampleCIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCIView.h; sourceTree = "<group>"; };
+		287DD8E215683AC9005216D8 /* SampleCIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCIView.m; sourceTree = "<group>"; };
+		287DD8E515683CBB005216D8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		287DD8E715683CC0005216D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		287DD8E915684335005216D8 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		287DD8B2156838D1005216D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD8E815683CC0005216D8 /* QuartzCore.framework in Frameworks */,
+				287DD8E615683CBB005216D8 /* OpenGL.framework in Frameworks */,
+				287DD8BA156838D1005216D8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		287DD8AA156838D1005216D8 = {
+			isa = PBXGroup;
+			children = (
+				287DD8E915684335005216D8 /* ReadMe.txt */,
+				287DD8BF156838D1005216D8 /* CIMicroPaint */,
+				287DD8B8156838D1005216D8 /* Frameworks */,
+				287DD8B6156838D1005216D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		287DD8B6156838D1005216D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8B5156838D1005216D8 /* CIMicroPaint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		287DD8B8156838D1005216D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8E715683CC0005216D8 /* QuartzCore.framework */,
+				287DD8E515683CBB005216D8 /* OpenGL.framework */,
+				287DD8B9156838D1005216D8 /* Cocoa.framework */,
+				287DD8BB156838D1005216D8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		287DD8BB156838D1005216D8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8BC156838D1005216D8 /* AppKit.framework */,
+				287DD8BD156838D1005216D8 /* CoreData.framework */,
+				287DD8BE156838D1005216D8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		287DD8BF156838D1005216D8 /* CIMicroPaint */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8DF15683AC9005216D8 /* CIMicroPaintView.h */,
+				287DD8E015683AC9005216D8 /* CIMicroPaintView.m */,
+				287DD8E115683AC9005216D8 /* SampleCIView.h */,
+				287DD8E215683AC9005216D8 /* SampleCIView.m */,
+				287DD8CE156838D2005216D8 /* MainMenu.xib */,
+				287DD8C0156838D2005216D8 /* Supporting Files */,
+			);
+			path = CIMicroPaint;
+			sourceTree = "<group>";
+		};
+		287DD8C0156838D2005216D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8C1156838D2005216D8 /* CIMicroPaint-Info.plist */,
+				287DD8C2156838D2005216D8 /* InfoPlist.strings */,
+				287DD8C5156838D2005216D8 /* main.m */,
+				287DD8C7156838D2005216D8 /* CIMicroPaint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		287DD8B4156838D1005216D8 /* CIMicroPaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 287DD8D3156838D2005216D8 /* Build configuration list for PBXNativeTarget "CIMicroPaint" */;
+			buildPhases = (
+				287DD8B1156838D1005216D8 /* Sources */,
+				287DD8B2156838D1005216D8 /* Frameworks */,
+				287DD8B3156838D1005216D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CIMicroPaint;
+			productName = CIMicroPaint;
+			productReference = 287DD8B5156838D1005216D8 /* CIMicroPaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		287DD8AC156838D1005216D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 287DD8AF156838D1005216D8 /* Build configuration list for PBXProject "CIMicroPaint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 287DD8AA156838D1005216D8;
+			productRefGroup = 287DD8B6156838D1005216D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				287DD8B4156838D1005216D8 /* CIMicroPaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		287DD8B3156838D1005216D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD8C4156838D2005216D8 /* InfoPlist.strings in Resources */,
+				287DD8D0156838D2005216D8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		287DD8B1156838D1005216D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD8C6156838D2005216D8 /* main.m in Sources */,
+				287DD8E315683AC9005216D8 /* CIMicroPaintView.m in Sources */,
+				287DD8E415683AC9005216D8 /* SampleCIView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		287DD8C2156838D2005216D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287DD8C3156838D2005216D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		287DD8CE156838D2005216D8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287DD8CF156838D2005216D8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		287DD8D1156838D2005216D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		287DD8D2156838D2005216D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		287DD8D4156838D2005216D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CIMicroPaint/CIMicroPaint-Prefix.pch";
+				INFOPLIST_FILE = "CIMicroPaint/CIMicroPaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		287DD8D5156838D2005216D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CIMicroPaint/CIMicroPaint-Prefix.pch";
+				INFOPLIST_FILE = "CIMicroPaint/CIMicroPaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		287DD8AF156838D1005216D8 /* Build configuration list for PBXProject "CIMicroPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287DD8D1156838D2005216D8 /* Debug */,
+				287DD8D2156838D2005216D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		287DD8D3156838D2005216D8 /* Build configuration list for PBXNativeTarget "CIMicroPaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287DD8D4156838D2005216D8 /* Debug */,
+				287DD8D5156838D2005216D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 287DD8AC156838D1005216D8 /* Project object */;
+}
