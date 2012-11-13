@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		287DD8FA156848C6005216D8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DD8F9156848C6005216D8 /* Cocoa.framework */; };
+		287DD904156848C6005216D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 287DD902156848C6005216D8 /* InfoPlist.strings */; };
+		287DD906156848C6005216D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD905156848C6005216D8 /* main.m */; };
+		287DD910156848C6005216D8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287DD90E156848C6005216D8 /* MainMenu.xib */; };
+		287DD92215684A62005216D8 /* TransitionSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD92015684A62005216D8 /* TransitionSelectorView.m */; };
+		287DD92315684A62005216D8 /* TransitionSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 287DD92115684A62005216D8 /* TransitionSetup.m */; };
+		287DD92A15684EAB005216D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DD92915684EAB005216D8 /* QuartzCore.framework */; };
+		287DD9311568508A005216D8 /* Blank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 287DD92C1568508A005216D8 /* Blank.jpg */; };
+		287DD9321568508A005216D8 /* Frog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 287DD92D1568508A005216D8 /* Frog.jpg */; };
+		287DD9331568508A005216D8 /* Mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 287DD92E1568508A005216D8 /* Mask.jpg */; };
+		287DD9341568508A005216D8 /* Rose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 287DD92F1568508A005216D8 /* Rose.jpg */; };
+		287DD9351568508A005216D8 /* Shading.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 287DD9301568508A005216D8 /* Shading.tiff */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		287DD8F5156848C6005216D8 /* CITransitionSelectorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CITransitionSelectorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		287DD8F9156848C6005216D8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		287DD8FC156848C6005216D8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		287DD8FD156848C6005216D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		287DD8FE156848C6005216D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		287DD901156848C6005216D8 /* CITransitionSelectorSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CITransitionSelectorSample-Info.plist"; sourceTree = "<group>"; };
+		287DD903156848C6005216D8 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		287DD905156848C6005216D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		287DD907156848C6005216D8 /* CITransitionSelectorSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CITransitionSelectorSample-Prefix.pch"; sourceTree = "<group>"; };
+		287DD90F156848C6005216D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		287DD91F15684A62005216D8 /* TransitionSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionSelectorView.h; sourceTree = "<group>"; };
+		287DD92015684A62005216D8 /* TransitionSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionSelectorView.m; sourceTree = "<group>"; };
+		287DD92115684A62005216D8 /* TransitionSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionSetup.m; sourceTree = "<group>"; };
+		287DD92915684EAB005216D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		287DD92C1568508A005216D8 /* Blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blank.jpg; sourceTree = "<group>"; };
+		287DD92D1568508A005216D8 /* Frog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frog.jpg; sourceTree = "<group>"; };
+		287DD92E1568508A005216D8 /* Mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mask.jpg; sourceTree = "<group>"; };
+		287DD92F1568508A005216D8 /* Rose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rose.jpg; sourceTree = "<group>"; };
+		287DD9301568508A005216D8 /* Shading.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shading.tiff; sourceTree = "<group>"; };
+		287DD936156854C4005216D8 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		287DD8F2156848C6005216D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD92A15684EAB005216D8 /* QuartzCore.framework in Frameworks */,
+				287DD8FA156848C6005216D8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		287DD8EA156848C6005216D8 = {
+			isa = PBXGroup;
+			children = (
+				287DD936156854C4005216D8 /* ReadMe.txt */,
+				287DD8FF156848C6005216D8 /* CITransitionSelectorSample */,
+				287DD8F8156848C6005216D8 /* Frameworks */,
+				287DD8F6156848C6005216D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		287DD8F6156848C6005216D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8F5156848C6005216D8 /* CITransitionSelectorSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		287DD8F8156848C6005216D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				287DD92915684EAB005216D8 /* QuartzCore.framework */,
+				287DD8F9156848C6005216D8 /* Cocoa.framework */,
+				287DD8FB156848C6005216D8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		287DD8FB156848C6005216D8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				287DD8FC156848C6005216D8 /* AppKit.framework */,
+				287DD8FD156848C6005216D8 /* CoreData.framework */,
+				287DD8FE156848C6005216D8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		287DD8FF156848C6005216D8 /* CITransitionSelectorSample */ = {
+			isa = PBXGroup;
+			children = (
+				287DD91F15684A62005216D8 /* TransitionSelectorView.h */,
+				287DD92015684A62005216D8 /* TransitionSelectorView.m */,
+				287DD92115684A62005216D8 /* TransitionSetup.m */,
+				287DD90E156848C6005216D8 /* MainMenu.xib */,
+				287DD92B1568506D005216D8 /* Images */,
+				287DD900156848C6005216D8 /* Supporting Files */,
+			);
+			path = CITransitionSelectorSample;
+			sourceTree = "<group>";
+		};
+		287DD900156848C6005216D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				287DD901156848C6005216D8 /* CITransitionSelectorSample-Info.plist */,
+				287DD902156848C6005216D8 /* InfoPlist.strings */,
+				287DD905156848C6005216D8 /* main.m */,
+				287DD907156848C6005216D8 /* CITransitionSelectorSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		287DD92B1568506D005216D8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				287DD92C1568508A005216D8 /* Blank.jpg */,
+				287DD92D1568508A005216D8 /* Frog.jpg */,
+				287DD92E1568508A005216D8 /* Mask.jpg */,
+				287DD92F1568508A005216D8 /* Rose.jpg */,
+				287DD9301568508A005216D8 /* Shading.tiff */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		287DD8F4156848C6005216D8 /* CITransitionSelectorSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 287DD913156848C6005216D8 /* Build configuration list for PBXNativeTarget "CITransitionSelectorSample" */;
+			buildPhases = (
+				287DD8F1156848C6005216D8 /* Sources */,
+				287DD8F2156848C6005216D8 /* Frameworks */,
+				287DD8F3156848C6005216D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CITransitionSelectorSample;
+			productName = CITransitionSelectorSample;
+			productReference = 287DD8F5156848C6005216D8 /* CITransitionSelectorSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		287DD8EC156848C6005216D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 287DD8EF156848C6005216D8 /* Build configuration list for PBXProject "CITransitionSelectorSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 287DD8EA156848C6005216D8;
+			productRefGroup = 287DD8F6156848C6005216D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				287DD8F4156848C6005216D8 /* CITransitionSelectorSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		287DD8F3156848C6005216D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD904156848C6005216D8 /* InfoPlist.strings in Resources */,
+				287DD910156848C6005216D8 /* MainMenu.xib in Resources */,
+				287DD9311568508A005216D8 /* Blank.jpg in Resources */,
+				287DD9321568508A005216D8 /* Frog.jpg in Resources */,
+				287DD9331568508A005216D8 /* Mask.jpg in Resources */,
+				287DD9341568508A005216D8 /* Rose.jpg in Resources */,
+				287DD9351568508A005216D8 /* Shading.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		287DD8F1156848C6005216D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287DD906156848C6005216D8 /* main.m in Sources */,
+				287DD92215684A62005216D8 /* TransitionSelectorView.m in Sources */,
+				287DD92315684A62005216D8 /* TransitionSetup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		287DD902156848C6005216D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287DD903156848C6005216D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		287DD90E156848C6005216D8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287DD90F156848C6005216D8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		287DD911156848C6005216D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		287DD912156848C6005216D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		287DD914156848C6005216D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CITransitionSelectorSample/CITransitionSelectorSample-Prefix.pch";
+				INFOPLIST_FILE = "CITransitionSelectorSample/CITransitionSelectorSample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		287DD915156848C6005216D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CITransitionSelectorSample/CITransitionSelectorSample-Prefix.pch";
+				INFOPLIST_FILE = "CITransitionSelectorSample/CITransitionSelectorSample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		287DD8EF156848C6005216D8 /* Build configuration list for PBXProject "CITransitionSelectorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287DD911156848C6005216D8 /* Debug */,
+				287DD912156848C6005216D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		287DD913156848C6005216D8 /* Build configuration list for PBXNativeTarget "CITransitionSelectorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287DD914156848C6005216D8 /* Debug */,
+				287DD915156848C6005216D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 287DD8EC156848C6005216D8 /* Project object */;
+}
