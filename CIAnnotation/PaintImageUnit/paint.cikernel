@@ -1,0 +1,21 @@
+kernel vec4 paint(vec2 p0, vec2 p1, float radius, vec2 v01, __color color)
+{
+    float dist, dist2, d0;
+    vec2 v0;
+    vec3 c0;
+    
+    // evaluate space closest to line
+    v0 = destCoord() - p0;
+    c0 = cross(vec3(v0, 0.0), vec3(v01, 0.0));
+    dist = abs(c0.z);
+    // evaluate space closest to p0
+    dist2 = length(v0);
+    d0 = dot(v01, v0);
+    dist = (d0 < 0.0) ? dist : dist2;
+    // evaluate space closest to p1
+    v0 = destCoord() - p1;
+    dist2 = length(v0);
+    d0 = dot(v01, v0);
+    dist = (d0 < 0.0) ? dist2 : dist;
+    return clamp(radius - dist, 0.0, 1.0) * color;
+}

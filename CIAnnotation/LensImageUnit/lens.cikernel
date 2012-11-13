@@ -1,0 +1,47 @@
+kernel vec4 lens(sampler src, sampler magsrc, sampler highlights, vec2 center, float radius, float magnification, float roundness, float opacity, vec2 highlightsSize)
+{
+    float dist, mapdist;
+    vec2 v0;
+    vec4 pix, pix2, mappix;
+    
+    // create distance function from center point
+    v0 = destCoord() - center;
+    dist = length(v0);
+    v0 = normalize(v0);
+    mapdist = (dist / radius) * roundness;
+    mappix = sample(highlights, samplerTransform(highlights, highlightsSize * (v0 * mapdist + 1.0) * 0.5));
+    // get the undistorted pixel from the source texture
+    pix = sample(src, samplerCoord(src));
+    // and the distorted pixel
+    pix2 = sample(magsrc, samplerCoord(magsrc));
+    // apply highlight
+    mappix *= opacity;
+    pix2 = mappix + (1.0 - mappix.a) * pix2;
+    // interpolate between the two using a simple alpha concoction with a 1-pixel soft edge
+    return mix(pix, pix2, clamp(radius - dist, 0.0, 1.0));
+}
+
+kernel vec4 ring(sampler material, vec2 center, float innerRadius, float outerRadius, float filletRadius, vec2 materialSize)
+{
+    float dist, f, d0, d1, alpha;
+    vec2 t0, v0;
+    vec4 pix;
+    
+    // create distance function from center point
+    t0 = destCoord() - center;
+    dist = length(t0);
+    v0 = normalize(t0);
+    // create function for surface shape lookup
+    // [-1...0] in the inner fillet and [0...1] in the outer fillet, and 0 in between
+    d0 = dist - (innerRadius + filletRadius);
+    d1 = dist - (outerRadius - filletRadius);
+    f = (d1 > 0.0) ? (d1 / filletRadius) : min(d0 / filletRadius, 0.0);
+    v0 = v0 * f; // modify vector for ring fillet shaping
+    // create ring alpha
+    alpha = clamp(dist - innerRadius, 0.0, 1.0) * clamp(outerRadius - dist, 0.0, 1.0);
+    // lookup into material map
+    v0 = materialSize * (v0 + 1.0) * 0.5;
+    pix = sample(material, samplerTransform(material, v0));
+    // apply the alpha
+    return pix * alpha;
+}
