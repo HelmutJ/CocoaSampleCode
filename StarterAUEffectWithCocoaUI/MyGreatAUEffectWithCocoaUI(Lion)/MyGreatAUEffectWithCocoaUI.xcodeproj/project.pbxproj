@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B1C2F39162CC209002FCF53 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F2A162CC209002FCF53 /* AUBase.cpp */; };
+		2B1C2F3A162CC209002FCF53 /* AUBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F2B162CC209002FCF53 /* AUBase.h */; };
+		2B1C2F3B162CC209002FCF53 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F2C162CC209002FCF53 /* AUDispatch.cpp */; };
+		2B1C2F3C162CC209002FCF53 /* AUDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F2D162CC209002FCF53 /* AUDispatch.h */; };
+		2B1C2F3D162CC209002FCF53 /* AUInputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F2E162CC209002FCF53 /* AUInputElement.cpp */; };
+		2B1C2F3E162CC209002FCF53 /* AUInputElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F2F162CC209002FCF53 /* AUInputElement.h */; };
+		2B1C2F3F162CC209002FCF53 /* AUOutputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F30162CC209002FCF53 /* AUOutputElement.cpp */; };
+		2B1C2F40162CC209002FCF53 /* AUOutputElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F31162CC209002FCF53 /* AUOutputElement.h */; };
+		2B1C2F41162CC209002FCF53 /* AUPlugInDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F32162CC209002FCF53 /* AUPlugInDispatch.cpp */; };
+		2B1C2F42162CC209002FCF53 /* AUPlugInDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F33162CC209002FCF53 /* AUPlugInDispatch.h */; };
+		2B1C2F44162CC209002FCF53 /* AUScopeElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F35162CC209002FCF53 /* AUScopeElement.cpp */; };
+		2B1C2F45162CC209002FCF53 /* AUScopeElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F36162CC209002FCF53 /* AUScopeElement.h */; };
+		2B1C2F46162CC209002FCF53 /* ComponentBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F37162CC209002FCF53 /* ComponentBase.cpp */; };
+		2B1C2F47162CC209002FCF53 /* ComponentBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F38162CC209002FCF53 /* ComponentBase.h */; };
+		2B1C2F4B162CC244002FCF53 /* AUEffectBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F49162CC244002FCF53 /* AUEffectBase.cpp */; };
+		2B1C2F4C162CC244002FCF53 /* AUEffectBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F4A162CC244002FCF53 /* AUEffectBase.h */; };
+		2B1C2F55162CC2D5002FCF53 /* AUBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F4E162CC2D5002FCF53 /* AUBaseHelper.cpp */; };
+		2B1C2F56162CC2D5002FCF53 /* AUBaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F4F162CC2D5002FCF53 /* AUBaseHelper.h */; };
+		2B1C2F57162CC2D5002FCF53 /* AUBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F50162CC2D5002FCF53 /* AUBuffer.cpp */; };
+		2B1C2F58162CC2D5002FCF53 /* AUBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F51162CC2D5002FCF53 /* AUBuffer.h */; };
+		2B1C2F59162CC2D5002FCF53 /* AUInputFormatConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F52162CC2D5002FCF53 /* AUInputFormatConverter.h */; };
+		2B1C2F5A162CC2D5002FCF53 /* AUSilentTimeout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F53162CC2D5002FCF53 /* AUSilentTimeout.h */; };
+		2B1C2F5B162CC2D5002FCF53 /* AUTimestampGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F54162CC2D5002FCF53 /* AUTimestampGenerator.h */; };
+		2B1C2F68162CC364002FCF53 /* CAAudioChannelLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F5D162CC364002FCF53 /* CAAudioChannelLayout.cpp */; };
+		2B1C2F69162CC364002FCF53 /* CAAudioChannelLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F5E162CC364002FCF53 /* CAAudioChannelLayout.h */; };
+		2B1C2F6A162CC364002FCF53 /* CAAUParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F5F162CC364002FCF53 /* CAAUParameter.cpp */; };
+		2B1C2F6B162CC364002FCF53 /* CAAUParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F60162CC364002FCF53 /* CAAUParameter.h */; };
+		2B1C2F6C162CC364002FCF53 /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F61162CC364002FCF53 /* CAMutex.cpp */; };
+		2B1C2F6D162CC364002FCF53 /* CAMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F62162CC364002FCF53 /* CAMutex.h */; };
+		2B1C2F6E162CC364002FCF53 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F63162CC364002FCF53 /* CAStreamBasicDescription.cpp */; };
+		2B1C2F6F162CC364002FCF53 /* CAStreamBasicDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F64162CC364002FCF53 /* CAStreamBasicDescription.h */; };
+		2B1C2F70162CC364002FCF53 /* CAVectorUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C2F65162CC364002FCF53 /* CAVectorUnit.cpp */; };
+		2B1C2F71162CC364002FCF53 /* CAVectorUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F66162CC364002FCF53 /* CAVectorUnit.h */; };
+		2B1C2F72162CC364002FCF53 /* CAVectorUnitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1C2F67162CC364002FCF53 /* CAVectorUnitTypes.h */; };
+		2B22E5DC148EF689009A374D /* MyGreatAUEffectWithCocoaUIVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B22E5DB148EF689009A374D /* MyGreatAUEffectWithCocoaUIVersion.h */; };
+		8BA05A6B0720730100365D66 /* MyGreatAUEffectWithCocoaUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA05A660720730100365D66 /* MyGreatAUEffectWithCocoaUI.cpp */; };
+		8BA05AFC072074E100365D66 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AF9072074E100365D66 /* AudioToolbox.framework */; };
+		8BA05AFD072074E100365D66 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AFA072074E100365D66 /* AudioUnit.framework */; };
+		8BA05B02072074F900365D66 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05B01072074F900365D66 /* CoreServices.framework */; };
+		8BA4AE54073EB72300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA4ADCE073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h */; };
+		8BA4AE55073EB72300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA4ADD0073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.h */; };
+		8BA4AE56073EB73300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4ADCF073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m */; };
+		8BA4AE57073EB73300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4ADD1073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.m */; };
+		8BA4AE58073EB74C00A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA4ADF4073EB43200A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.xib */; };
+		8BA4AE5C073EB79000A2709A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA4AE5B073EB79000A2709A /* Cocoa.framework */; };
+		8BA4AE5D073EB7C300A2709A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA4AE5B073EB79000A2709A /* Cocoa.framework */; };
+		8BA4AE5E073EB7C500A2709A /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AFA072074E100365D66 /* AudioUnit.framework */; };
+		8BA4AE5F073EB7C600A2709A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA05AF9072074E100365D66 /* AudioToolbox.framework */; };
+		8BA4AE66073EBB2E00A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BA4AE4E073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle */; };
+		8BC6025C073B072D006C4272 /* MyGreatAUEffectWithCocoaUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC6025B073B072D006C4272 /* MyGreatAUEffectWithCocoaUI.h */; };
+		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7609A450C556A700040AAA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BA4AE4D073EB69000A2709A;
+			remoteInfo = CocoaUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BA4AE65073EBB1B00A2709A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				8BA4AE66073EBB2E00A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B1C2F2A162CC209002FCF53 /* AUBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUBase.cpp; sourceTree = "<group>"; };
+		2B1C2F2B162CC209002FCF53 /* AUBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUBase.h; sourceTree = "<group>"; };
+		2B1C2F2C162CC209002FCF53 /* AUDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUDispatch.cpp; sourceTree = "<group>"; };
+		2B1C2F2D162CC209002FCF53 /* AUDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUDispatch.h; sourceTree = "<group>"; };
+		2B1C2F2E162CC209002FCF53 /* AUInputElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUInputElement.cpp; sourceTree = "<group>"; };
+		2B1C2F2F162CC209002FCF53 /* AUInputElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUInputElement.h; sourceTree = "<group>"; };
+		2B1C2F30162CC209002FCF53 /* AUOutputElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUOutputElement.cpp; sourceTree = "<group>"; };
+		2B1C2F31162CC209002FCF53 /* AUOutputElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUOutputElement.h; sourceTree = "<group>"; };
+		2B1C2F32162CC209002FCF53 /* AUPlugInDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUPlugInDispatch.cpp; sourceTree = "<group>"; };
+		2B1C2F33162CC209002FCF53 /* AUPlugInDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUPlugInDispatch.h; sourceTree = "<group>"; };
+		2B1C2F34162CC209002FCF53 /* AUResources.r */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = AUResources.r; sourceTree = "<group>"; };
+		2B1C2F35162CC209002FCF53 /* AUScopeElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUScopeElement.cpp; sourceTree = "<group>"; };
+		2B1C2F36162CC209002FCF53 /* AUScopeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUScopeElement.h; sourceTree = "<group>"; };
+		2B1C2F37162CC209002FCF53 /* ComponentBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentBase.cpp; sourceTree = "<group>"; };
+		2B1C2F38162CC209002FCF53 /* ComponentBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentBase.h; sourceTree = "<group>"; };
+		2B1C2F49162CC244002FCF53 /* AUEffectBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUEffectBase.cpp; sourceTree = "<group>"; };
+		2B1C2F4A162CC244002FCF53 /* AUEffectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUEffectBase.h; sourceTree = "<group>"; };
+		2B1C2F4E162CC2D5002FCF53 /* AUBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUBaseHelper.cpp; sourceTree = "<group>"; };
+		2B1C2F4F162CC2D5002FCF53 /* AUBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUBaseHelper.h; sourceTree = "<group>"; };
+		2B1C2F50162CC2D5002FCF53 /* AUBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUBuffer.cpp; sourceTree = "<group>"; };
+		2B1C2F51162CC2D5002FCF53 /* AUBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUBuffer.h; sourceTree = "<group>"; };
+		2B1C2F52162CC2D5002FCF53 /* AUInputFormatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUInputFormatConverter.h; sourceTree = "<group>"; };
+		2B1C2F53162CC2D5002FCF53 /* AUSilentTimeout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUSilentTimeout.h; sourceTree = "<group>"; };
+		2B1C2F54162CC2D5002FCF53 /* AUTimestampGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUTimestampGenerator.h; sourceTree = "<group>"; };
+		2B1C2F5D162CC364002FCF53 /* CAAudioChannelLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioChannelLayout.cpp; sourceTree = "<group>"; };
+		2B1C2F5E162CC364002FCF53 /* CAAudioChannelLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAudioChannelLayout.h; sourceTree = "<group>"; };
+		2B1C2F5F162CC364002FCF53 /* CAAUParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUParameter.cpp; sourceTree = "<group>"; };
+		2B1C2F60162CC364002FCF53 /* CAAUParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
+		2B1C2F61162CC364002FCF53 /* CAMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
+		2B1C2F62162CC364002FCF53 /* CAMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMutex.h; sourceTree = "<group>"; };
+		2B1C2F63162CC364002FCF53 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		2B1C2F64162CC364002FCF53 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		2B1C2F65162CC364002FCF53 /* CAVectorUnit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAVectorUnit.cpp; sourceTree = "<group>"; };
+		2B1C2F66162CC364002FCF53 /* CAVectorUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAVectorUnit.h; sourceTree = "<group>"; };
+		2B1C2F67162CC364002FCF53 /* CAVectorUnitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAVectorUnitTypes.h; sourceTree = "<group>"; };
+		2B22E5DB148EF689009A374D /* MyGreatAUEffectWithCocoaUIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGreatAUEffectWithCocoaUIVersion.h; sourceTree = "<group>"; };
+		8BA05A660720730100365D66 /* MyGreatAUEffectWithCocoaUI.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MyGreatAUEffectWithCocoaUI.cpp; sourceTree = "<group>"; };
+		8BA05A670720730100365D66 /* MyGreatAUEffectWithCocoaUI.exp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.exports; path = MyGreatAUEffectWithCocoaUI.exp; sourceTree = "<group>"; };
+		8BA05AF9072074E100365D66 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		8BA05AFA072074E100365D66 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		8BA05AFB072074E100365D66 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		8BA05B01072074F900365D66 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		8BA4ADCE073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h; sourceTree = "<group>"; };
+		8BA4ADCF073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m; sourceTree = "<group>"; };
+		8BA4ADD0073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyGreatAUEffectWithCocoaUI_CocoaView.h; sourceTree = "<group>"; };
+		8BA4ADD1073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyGreatAUEffectWithCocoaUI_CocoaView.m; sourceTree = "<group>"; };
+		8BA4ADF4073EB43200A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGreatAUEffectWithCocoaUI_CocoaView.xib; sourceTree = "<group>"; };
+		8BA4AE4E073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA4AE4F073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.plist; sourceTree = "<group>"; };
+		8BA4AE5B073EB79000A2709A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8BC6025B073B072D006C4272 /* MyGreatAUEffectWithCocoaUI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyGreatAUEffectWithCocoaUI.h; sourceTree = "<group>"; };
+		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D01CCD20486CAD60068D4B7 /* MyGreatAUEffectWithCocoaUI.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGreatAUEffectWithCocoaUI.component; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BA4AE4C073EB69000A2709A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA4AE5D073EB7C300A2709A /* Cocoa.framework in Frameworks */,
+				8BA4AE5E073EB7C500A2709A /* AudioUnit.framework in Frameworks */,
+				8BA4AE5F073EB7C600A2709A /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D01CCCD0486CAD60068D4B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA05AFC072074E100365D66 /* AudioToolbox.framework in Frameworks */,
+				8BA05AFD072074E100365D66 /* AudioUnit.framework in Frameworks */,
+				8BA05B02072074F900365D66 /* CoreServices.framework in Frameworks */,
+				8BA4AE5C073EB79000A2709A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* MyGreatAUEffectWithCocoaUI */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = MyGreatAUEffectWithCocoaUI;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8BA4AE5B073EB79000A2709A /* Cocoa.framework */,
+				8BA05B01072074F900365D66 /* CoreServices.framework */,
+				8BA05AF9072074E100365D66 /* AudioToolbox.framework */,
+				8BA05AFA072074E100365D66 /* AudioUnit.framework */,
+				8BA05AFB072074E100365D66 /* CoreAudio.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BA4ADF4073EB43200A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.xib */,
+				8BA4AE4F073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.plist */,
+				8D01CCD10486CAD60068D4B7 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8BA05A56072072A900365D66 /* AU Source */,
+				8BA4ADCB073EB14C00A2709A /* CocoaUI */,
+				8BA05A7D072073D200365D66 /* AUPublic */,
+				2B1C2F5C162CC364002FCF53 /* PublicUtility */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D01CCD20486CAD60068D4B7 /* MyGreatAUEffectWithCocoaUI.component */,
+				8BA4AE4E073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B1C2F29162CC209002FCF53 /* AUBase */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C2F2B162CC209002FCF53 /* AUBase.h */,
+				2B1C2F2A162CC209002FCF53 /* AUBase.cpp */,
+				2B1C2F2D162CC209002FCF53 /* AUDispatch.h */,
+				2B1C2F2C162CC209002FCF53 /* AUDispatch.cpp */,
+				2B1C2F2F162CC209002FCF53 /* AUInputElement.h */,
+				2B1C2F2E162CC209002FCF53 /* AUInputElement.cpp */,
+				2B1C2F31162CC209002FCF53 /* AUOutputElement.h */,
+				2B1C2F30162CC209002FCF53 /* AUOutputElement.cpp */,
+				2B1C2F33162CC209002FCF53 /* AUPlugInDispatch.h */,
+				2B1C2F32162CC209002FCF53 /* AUPlugInDispatch.cpp */,
+				2B1C2F36162CC209002FCF53 /* AUScopeElement.h */,
+				2B1C2F35162CC209002FCF53 /* AUScopeElement.cpp */,
+				2B1C2F38162CC209002FCF53 /* ComponentBase.h */,
+				2B1C2F37162CC209002FCF53 /* ComponentBase.cpp */,
+				2B1C2F34162CC209002FCF53 /* AUResources.r */,
+			);
+			name = AUBase;
+			path = AUPublic/AUBase;
+			sourceTree = "<group>";
+		};
+		2B1C2F48162CC244002FCF53 /* OtherBases */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C2F4A162CC244002FCF53 /* AUEffectBase.h */,
+				2B1C2F49162CC244002FCF53 /* AUEffectBase.cpp */,
+			);
+			name = OtherBases;
+			path = AUPublic/OtherBases;
+			sourceTree = "<group>";
+		};
+		2B1C2F4D162CC2D5002FCF53 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C2F4F162CC2D5002FCF53 /* AUBaseHelper.h */,
+				2B1C2F4E162CC2D5002FCF53 /* AUBaseHelper.cpp */,
+				2B1C2F51162CC2D5002FCF53 /* AUBuffer.h */,
+				2B1C2F50162CC2D5002FCF53 /* AUBuffer.cpp */,
+				2B1C2F52162CC2D5002FCF53 /* AUInputFormatConverter.h */,
+				2B1C2F53162CC2D5002FCF53 /* AUSilentTimeout.h */,
+				2B1C2F54162CC2D5002FCF53 /* AUTimestampGenerator.h */,
+			);
+			name = Utility;
+			path = AUPublic/Utility;
+			sourceTree = "<group>";
+		};
+		2B1C2F5C162CC364002FCF53 /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C2F5F162CC364002FCF53 /* CAAUParameter.cpp */,
+				2B1C2F60162CC364002FCF53 /* CAAUParameter.h */,
+				2B1C2F67162CC364002FCF53 /* CAVectorUnitTypes.h */,
+				2B1C2F66162CC364002FCF53 /* CAVectorUnit.h */,
+				2B1C2F65162CC364002FCF53 /* CAVectorUnit.cpp */,
+				2B1C2F5E162CC364002FCF53 /* CAAudioChannelLayout.h */,
+				2B1C2F5D162CC364002FCF53 /* CAAudioChannelLayout.cpp */,
+				2B1C2F62162CC364002FCF53 /* CAMutex.h */,
+				2B1C2F61162CC364002FCF53 /* CAMutex.cpp */,
+				2B1C2F64162CC364002FCF53 /* CAStreamBasicDescription.h */,
+				2B1C2F63162CC364002FCF53 /* CAStreamBasicDescription.cpp */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
+		8BA05A56072072A900365D66 /* AU Source */ = {
+			isa = PBXGroup;
+			children = (
+				8BC6025B073B072D006C4272 /* MyGreatAUEffectWithCocoaUI.h */,
+				8BA05A660720730100365D66 /* MyGreatAUEffectWithCocoaUI.cpp */,
+				8BA05A670720730100365D66 /* MyGreatAUEffectWithCocoaUI.exp */,
+				2B22E5DB148EF689009A374D /* MyGreatAUEffectWithCocoaUIVersion.h */,
+			);
+			name = "AU Source";
+			sourceTree = "<group>";
+		};
+		8BA05A7D072073D200365D66 /* AUPublic */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C2F29162CC209002FCF53 /* AUBase */,
+				2B1C2F48162CC244002FCF53 /* OtherBases */,
+				2B1C2F4D162CC2D5002FCF53 /* Utility */,
+			);
+			name = AUPublic;
+			sourceTree = SOURCE_ROOT;
+		};
+		8BA4ADCB073EB14C00A2709A /* CocoaUI */ = {
+			isa = PBXGroup;
+			children = (
+				8BA4ADCE073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h */,
+				8BA4ADCF073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m */,
+				8BA4ADD0073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.h */,
+				8BA4ADD1073EB19800A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.m */,
+			);
+			name = CocoaUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8BA4AE52073EB70000A2709A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA4AE54073EB72300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.h in Headers */,
+				8BA4AE55073EB72300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D01CCC70486CAD60068D4B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BC6025C073B072D006C4272 /* MyGreatAUEffectWithCocoaUI.h in Headers */,
+				2B22E5DC148EF689009A374D /* MyGreatAUEffectWithCocoaUIVersion.h in Headers */,
+				2B1C2F3A162CC209002FCF53 /* AUBase.h in Headers */,
+				2B1C2F3C162CC209002FCF53 /* AUDispatch.h in Headers */,
+				2B1C2F3E162CC209002FCF53 /* AUInputElement.h in Headers */,
+				2B1C2F40162CC209002FCF53 /* AUOutputElement.h in Headers */,
+				2B1C2F42162CC209002FCF53 /* AUPlugInDispatch.h in Headers */,
+				2B1C2F45162CC209002FCF53 /* AUScopeElement.h in Headers */,
+				2B1C2F47162CC209002FCF53 /* ComponentBase.h in Headers */,
+				2B1C2F4C162CC244002FCF53 /* AUEffectBase.h in Headers */,
+				2B1C2F56162CC2D5002FCF53 /* AUBaseHelper.h in Headers */,
+				2B1C2F58162CC2D5002FCF53 /* AUBuffer.h in Headers */,
+				2B1C2F59162CC2D5002FCF53 /* AUInputFormatConverter.h in Headers */,
+				2B1C2F5A162CC2D5002FCF53 /* AUSilentTimeout.h in Headers */,
+				2B1C2F5B162CC2D5002FCF53 /* AUTimestampGenerator.h in Headers */,
+				2B1C2F69162CC364002FCF53 /* CAAudioChannelLayout.h in Headers */,
+				2B1C2F6B162CC364002FCF53 /* CAAUParameter.h in Headers */,
+				2B1C2F6D162CC364002FCF53 /* CAMutex.h in Headers */,
+				2B1C2F6F162CC364002FCF53 /* CAStreamBasicDescription.h in Headers */,
+				2B1C2F71162CC364002FCF53 /* CAVectorUnit.h in Headers */,
+				2B1C2F72162CC364002FCF53 /* CAVectorUnitTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8BA4AE4D073EB69000A2709A /* CocoaUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0BECFE0898391C00E1F0F7 /* Build configuration list for PBXNativeTarget "CocoaUI" */;
+			buildPhases = (
+				8BA4AE52073EB70000A2709A /* Headers */,
+				8BA4AE4A073EB69000A2709A /* Resources */,
+				8BA4AE4B073EB69000A2709A /* Sources */,
+				8BA4AE4C073EB69000A2709A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaUI;
+			productName = CocoaUI;
+			productReference = 8BA4AE4E073EB69000A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D01CCC60486CAD60068D4B7 /* MyGreatAUEffectWithCocoaUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0BED020898391C00E1F0F7 /* Build configuration list for PBXNativeTarget "MyGreatAUEffectWithCocoaUI" */;
+			buildPhases = (
+				8D01CCC70486CAD60068D4B7 /* Headers */,
+				8D01CCC90486CAD60068D4B7 /* Resources */,
+				8D01CCCB0486CAD60068D4B7 /* Sources */,
+				8D01CCCD0486CAD60068D4B7 /* Frameworks */,
+				8D01CCCF0486CAD60068D4B7 /* Rez */,
+				8BA4AE65073EBB1B00A2709A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7609A460C556A700040AAA6 /* PBXTargetDependency */,
+			);
+			name = MyGreatAUEffectWithCocoaUI;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = MyGreatAUEffectWithCocoaUI;
+			productReference = 8D01CCD20486CAD60068D4B7 /* MyGreatAUEffectWithCocoaUI.component */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 3E0BED060898391C00E1F0F7 /* Build configuration list for PBXProject "MyGreatAUEffectWithCocoaUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* MyGreatAUEffectWithCocoaUI */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D01CCC60486CAD60068D4B7 /* MyGreatAUEffectWithCocoaUI */,
+				8BA4AE4D073EB69000A2709A /* CocoaUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BA4AE4A073EB69000A2709A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA4AE58073EB74C00A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D01CCC90486CAD60068D4B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D01CCCF0486CAD60068D4B7 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BA4AE4B073EB69000A2709A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA4AE56073EB73300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaViewFactory.m in Sources */,
+				8BA4AE57073EB73300A2709A /* MyGreatAUEffectWithCocoaUI_CocoaView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA05A6B0720730100365D66 /* MyGreatAUEffectWithCocoaUI.cpp in Sources */,
+				2B1C2F39162CC209002FCF53 /* AUBase.cpp in Sources */,
+				2B1C2F3B162CC209002FCF53 /* AUDispatch.cpp in Sources */,
+				2B1C2F3D162CC209002FCF53 /* AUInputElement.cpp in Sources */,
+				2B1C2F3F162CC209002FCF53 /* AUOutputElement.cpp in Sources */,
+				2B1C2F41162CC209002FCF53 /* AUPlugInDispatch.cpp in Sources */,
+				2B1C2F44162CC209002FCF53 /* AUScopeElement.cpp in Sources */,
+				2B1C2F46162CC209002FCF53 /* ComponentBase.cpp in Sources */,
+				2B1C2F4B162CC244002FCF53 /* AUEffectBase.cpp in Sources */,
+				2B1C2F55162CC2D5002FCF53 /* AUBaseHelper.cpp in Sources */,
+				2B1C2F57162CC2D5002FCF53 /* AUBuffer.cpp in Sources */,
+				2B1C2F68162CC364002FCF53 /* CAAudioChannelLayout.cpp in Sources */,
+				2B1C2F6A162CC364002FCF53 /* CAAUParameter.cpp in Sources */,
+				2B1C2F6C162CC364002FCF53 /* CAMutex.cpp in Sources */,
+				2B1C2F6E162CC364002FCF53 /* CAStreamBasicDescription.cpp in Sources */,
+				2B1C2F70162CC364002FCF53 /* CAVectorUnit.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7609A460C556A700040AAA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BA4AE4D073EB69000A2709A /* CocoaUI */;
+			targetProxy = F7609A450C556A700040AAA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E0BECFF0898391C00E1F0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = MyGreatAUEffectWithCocoaUI_CocoaViewFactory;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		3E0BED000898391C00E1F0F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = MyGreatAUEffectWithCocoaUI_CocoaViewFactory.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = MyGreatAUEffectWithCocoaUI_CocoaViewFactory;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		3E0BED030898391C00E1F0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXPORTED_SYMBOLS_FILE = MyGreatAUEffectWithCocoaUI.exp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\"";
+				PRODUCT_NAME = MyGreatAUEffectWithCocoaUI;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		3E0BED040898391C00E1F0F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXPORTED_SYMBOLS_FILE = MyGreatAUEffectWithCocoaUI.exp;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				OTHER_LDFLAGS = "-bundle";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Examples/CoreAudio/AudioUnits/AUPublic/AUBase\"";
+				PRODUCT_NAME = MyGreatAUEffectWithCocoaUI;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
+		3E0BED070898391C00E1F0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		3E0BED080898391C00E1F0F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E0BECFE0898391C00E1F0F7 /* Build configuration list for PBXNativeTarget "CocoaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0BECFF0898391C00E1F0F7 /* Debug */,
+				3E0BED000898391C00E1F0F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3E0BED020898391C00E1F0F7 /* Build configuration list for PBXNativeTarget "MyGreatAUEffectWithCocoaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0BED030898391C00E1F0F7 /* Debug */,
+				3E0BED040898391C00E1F0F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3E0BED060898391C00E1F0F7 /* Build configuration list for PBXProject "MyGreatAUEffectWithCocoaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0BED070898391C00E1F0F7 /* Debug */,
+				3E0BED080898391C00E1F0F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
