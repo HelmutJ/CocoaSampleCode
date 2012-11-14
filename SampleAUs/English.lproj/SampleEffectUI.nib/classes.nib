@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {iaParam1Changed = id; iaParam2Changed = id; iaParam3Changed = id; }; 
+            CLASS = SampleEffectCocoaView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                uiParam1Slider = NSSlider; 
+                uiParam1TextField = NSTextField; 
+                uiParam2Slider = NSSlider; 
+                uiParam2TextField = NSTextField; 
+                uiParam3Matrix = NSMatrix; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = SampleEffectCocoaViewFactory; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {uiViewInstance = SampleEffectCocoaView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

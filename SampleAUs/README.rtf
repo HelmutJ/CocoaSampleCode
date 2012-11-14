@@ -1,0 +1,127 @@
+{\rtf1\mac\ansicpg10000\cocoartf791\cocoasubrtf300
+{\fonttbl\f0\fnil\fcharset77 HelveticaNeue-Bold;\f1\fnil\fcharset77 HelveticaNeue;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red118\green15\blue80;\red35\green110\blue37;\red137\green19\blue21;
+}
+{\info}\margl1440\margr1440\vieww18500\viewh14080\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs24 \cf0 Installing AudioUnits for testing/debugging:
+\f1\b0 \
+\
+The easiest way to do this is the following:\
+\
+% cd ~/Library/Audio/Plug-Ins/Components\
+% ln -s /My/Development/Build/Dir/MyAU.component\
+\
+(or you may install in the System's directory: /Library/Audio/Plug-Ins/Components as root user)\
+\
+This creates a symbolic link to your component.  Assuming you've already built your AudioUnit, and afterwards create the sym-link, you'll need to log-out and log back in again for it to work.  Once you log in again, the Component Manager (coreservicesd) will follow your sym-link and register the components that it finds there.\
+\
+Then - AS LONG AS YOU DON'T DO A CLEAN BUILD - you can keep rebuilding your component and testing without logging out-in just fine.\
+\
+If you need to do a clean build, delete "build/MyAU.build" in your project directory.  Make sure you don't delete the MyAU.component directory (which a clean from Project Builder will do.) This causes problems with the Component Manager, and once you've done that you have to log out/in again to fix it.\
+\
+\
+
+\f0\b SampleEffect AudioUnit's Cocoa UI:\
+
+\f1\b0 \
+The SampleEffect's CocoaUI can be built as a separate bundle in a separate target.  This needs to be installed in the Resources directory of the SampleEffect.  i.e.:\
+\
+SampleEffectUnit.component/Contents/Resources/SampleEffectCocoaUI.bundle\
+\
+Then the following code should be added to the SampleEffectUnit.cpp\
+\
+In GetPropertyInfo:\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 			\cf2 case\cf0  kAudioUnitProperty_CocoaUI:\
+				outWritable = \cf2 false\cf0 ;\
+				outDataSize = \cf2 sizeof\cf0  (AudioUnitCocoaViewInfo);\
+				\cf2 return\cf0  noErr;\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+\
+In GetProperty\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0 			\cf2 case\cf0  kAudioUnitProperty_CocoaUI:\
+			\{\
+				\cf3 // Look for a resource in the main bundle by name and type.\cf0 \
+				CFBundleRef bundle = CFBundleGetBundleWithIdentifier( CFSTR(\cf4 "com.acme.audiounit.passthrough"\cf0 ) );\
+				\
+				\cf2 if\cf0  (bundle == \cf2 NULL\cf0 ) \cf2 return\cf0  fnfErr;\
+                \
+				CFURLRef bundleURL = CFBundleCopyResourceURL( bundle, \
+                    CFSTR(\cf4 "SampleEffectCocoaUI"\cf0 ), \
+                    CFSTR(\cf4 "bundle"\cf0 ), \
+                    \cf2 NULL\cf0 );\
+                \
+                \cf2 if\cf0  (bundleURL == \cf2 NULL\cf0 ) \cf2 return\cf0  fnfErr;\
+                \
+				\cf3 //	SampleEffectUnit.component/Contents/Resources/SampleEffectBundle.bundle\cf0 \
+				CFStringRef className = CFSTR(\cf4 "SampleEffectCocoaViewFactory"\cf0 );\
+				AudioUnitCocoaViewInfo cocoaInfo = \{ bundleURL, className \};\
+				*((AudioUnitCocoaViewInfo *)outData) = cocoaInfo;\
+				\
+				\cf2 return\cf0  noErr;\
+			\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+Then, your AU will have a Cocoa UI! (Bundle Identifier of course has to be changed to match your ID)\
+\
+
+\f0\b SampleEffect AudioUnit's Icon Property:\
+\
+
+\f1\b0 An AudioUnit can publish the location of an Icon suite, that can be used by Host apps (even in their Generic Views, etc) to display some appropriate Icon for your AU.\
+\
+To support this you need an Icon (See Acme.icns)... Add the icon file to the Resources of your AudioUnit.\
+Then add the following code\
+\
+GetPropertyInfo:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0             \cf2 case\cf0  kAudioUnitProperty_IconLocation:\
+                outWritable = \cf2 false\cf0 ;\
+                outDataSize = \cf2 sizeof\cf0  (CFURLRef);\
+                \cf2 return\cf0  noErr;\
+            \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 GetProperty:\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f2\fs20 \cf0 \CocoaLigature0             \cf2 case\cf0  kAudioUnitProperty_IconLocation:\
+            \{\
+                CFBundleRef bundle = CFBundleGetBundleWithIdentifier(CFSTR(\cf4 "com.acme.audiounit.passthrough"\cf0 ));\
+				\cf2 if\cf0  (bundle == \cf2 NULL\cf0 ) \cf2 return\cf0  fnfErr;\
+                                \
+				CFURLRef bundleURL = CFBundleCopyResourceURL( bundle, \
+                    CFSTR(\cf4 "AcmeIcon"\cf0 ), \
+                    CFSTR(\cf4 "icns"\cf0 ), \
+                    \cf2 NULL\cf0 );\
+                \cf2 if\cf0  (bundleURL == \cf2 NULL\cf0 ) \cf2 return\cf0  fnfErr;\
+                \
+                (*(CFURLRef *)outData) = bundleURL;\
+                \
+                \cf2 return\cf0  noErr;\
+            \}\
+\
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural
+
+\f1\fs24 \cf0 \CocoaLigature1 Then your AU will have an Icon...(Bundle Identifier of course has to be changed to match your ID)\
+\
+
+\f0\b DebugDispatcher\
+
+\f1\b0 \
+This Build Style allows each call to the AU to be logged - it can be turned on for any AU with the modifications as defined in SampleEffectUnit...\
+\
+You will have to add the CoreAudio.framework to the directory, as well as CAHostTimeBase.cpp/.h and CAGuard.cpp/.h to the project to use this...\
+}

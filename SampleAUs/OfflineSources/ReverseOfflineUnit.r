@@ -1,0 +1,71 @@
+/*
+     File: ReverseOfflineUnit.r
+ Abstract: ReverseOfflineUnit.r
+  Version: 1.1
+ 
+ Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
+ Inc. ("Apple") in consideration of your agreement to the following
+ terms, and your use, installation, modification or redistribution of
+ this Apple software constitutes acceptance of these terms.  If you do
+ not agree with these terms, please do not use, install, modify or
+ redistribute this Apple software.
+ 
+ In consideration of your agreement to abide by the following terms, and
+ subject to these terms, Apple grants you a personal, non-exclusive
+ license, under Apple's copyrights in this original Apple software (the
+ "Apple Software"), to use, reproduce, modify and redistribute the Apple
+ Software, with or without modifications, in source and/or binary forms;
+ provided that if you redistribute the Apple Software in its entirety and
+ without modifications, you must retain this notice and the following
+ text and disclaimers in all such redistributions of the Apple Software.
+ Neither the name, trademarks, service marks or logos of Apple Inc. may
+ be used to endorse or promote products derived from the Apple Software
+ without specific prior written permission from Apple.  Except as
+ expressly stated in this notice, no other rights or licenses, express or
+ implied, are granted by Apple herein, including but not limited to any
+ patent rights that may be infringed by your derivative works or by other
+ works in which the Apple Software may be incorporated.
+ 
+ The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+ MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+ OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+ 
+ IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+ OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+ MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+ STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+ 
+ Copyright (C) 2012 Apple Inc. All Rights Reserved.
+ 
+*/
+#include <AudioUnit/AudioUnit.r>
+
+#include "ReverseOfflineUnitVersion.h"
+
+// Note that resource IDs must be spaced 2 apart for the 'STR ' name and description
+#define kAudioUnitResID_ReverseOfflineUnit				10002
+
+// So you need to define these appropriately for your audio unit.
+// For the name the convention is to provide your company name and end it with a ':',
+// then provide the name of the AudioUnit.
+// The Description can be whatever you want.
+// For an effect unit the Type and SubType should be left the way they are defined here...
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// SampleEffectUnit
+#define RES_ID			kAudioUnitResID_ReverseOfflineUnit
+#define COMP_TYPE		kAudioUnitType_OfflineEffect
+#define COMP_SUBTYPE	'Rvrs'
+#define COMP_MANUF		'Acme'	// note that Apple has reserved all all-lower-case 4-char codes for its own use.
+                                // Be sure to include at least one upper-case character in each of your codes.
+#define VERSION			kReverseOfflineUnitVersion
+#define NAME			"Acme Inc: ReverseOfflineUnit"
+#define DESCRIPTION		"Acme Inc's favourite offline audio effect"
+#define ENTRY_POINT		"ReverseOfflineUnitEntry"
+
+#include "AUResources.r"
