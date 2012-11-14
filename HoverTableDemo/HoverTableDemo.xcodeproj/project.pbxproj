@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53A59CAC1390226B00E92858 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53A59CAB1390226B00E92858 /* ReadMe.txt */; };
+		9D958DC2137C5B8300282003 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D958DC1137C5B8300282003 /* Cocoa.framework */; };
+		9D958DCC137C5B8300282003 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D958DCA137C5B8300282003 /* InfoPlist.strings */; };
+		9D958DCE137C5B8300282003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D958DCD137C5B8300282003 /* main.m */; };
+		9D958DD5137C5B8300282003 /* HoverTableDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D958DD4137C5B8300282003 /* HoverTableDemoAppDelegate.m */; };
+		9D958DD8137C5B8400282003 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D958DD6137C5B8400282003 /* MainMenu.xib */; };
+		9D958DE0137C77AC00282003 /* HoverTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D958DDF137C77AC00282003 /* HoverTableRowView.m */; };
+		9D958DE3137C830D00282003 /* HoverTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D958DE2137C830D00282003 /* HoverTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5370590A15E5636B00AA8253 /* HoverTableDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = HoverTableDemo.entitlements; path = HoverTableDemo/HoverTableDemo.entitlements; sourceTree = "<group>"; };
+		53A59CAB1390226B00E92858 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		9D958DBD137C5B8300282003 /* HoverTableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoverTableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D958DC1137C5B8300282003 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9D958DC4137C5B8300282003 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9D958DC5137C5B8300282003 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9D958DC6137C5B8300282003 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9D958DC9137C5B8300282003 /* HoverTableDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HoverTableDemo-Info.plist"; sourceTree = "<group>"; };
+		9D958DCB137C5B8300282003 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9D958DCD137C5B8300282003 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D958DCF137C5B8300282003 /* HoverTableDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HoverTableDemo-Prefix.pch"; sourceTree = "<group>"; };
+		9D958DD3137C5B8300282003 /* HoverTableDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoverTableDemoAppDelegate.h; sourceTree = "<group>"; };
+		9D958DD4137C5B8300282003 /* HoverTableDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoverTableDemoAppDelegate.m; sourceTree = "<group>"; };
+		9D958DD7137C5B8400282003 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9D958DDE137C77AC00282003 /* HoverTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoverTableRowView.h; sourceTree = "<group>"; };
+		9D958DDF137C77AC00282003 /* HoverTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoverTableRowView.m; sourceTree = "<group>"; };
+		9D958DE1137C830D00282003 /* HoverTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoverTableView.h; sourceTree = "<group>"; };
+		9D958DE2137C830D00282003 /* HoverTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoverTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D958DBA137C5B8300282003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D958DC2137C5B8300282003 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D958DB2137C5B8300282003 = {
+			isa = PBXGroup;
+			children = (
+				53A59CAB1390226B00E92858 /* ReadMe.txt */,
+				5370590A15E5636B00AA8253 /* HoverTableDemo.entitlements */,
+				9D958DC7137C5B8300282003 /* HoverTableDemo */,
+				9D958DC0137C5B8300282003 /* Frameworks */,
+				9D958DBE137C5B8300282003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D958DBE137C5B8300282003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D958DBD137C5B8300282003 /* HoverTableDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D958DC0137C5B8300282003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D958DC4137C5B8300282003 /* AppKit.framework */,
+				9D958DC5137C5B8300282003 /* CoreData.framework */,
+				9D958DC6137C5B8300282003 /* Foundation.framework */,
+				9D958DC1137C5B8300282003 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D958DC7137C5B8300282003 /* HoverTableDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9D958DD3137C5B8300282003 /* HoverTableDemoAppDelegate.h */,
+				9D958DD4137C5B8300282003 /* HoverTableDemoAppDelegate.m */,
+				9D958DDE137C77AC00282003 /* HoverTableRowView.h */,
+				9D958DDF137C77AC00282003 /* HoverTableRowView.m */,
+				9D958DE1137C830D00282003 /* HoverTableView.h */,
+				9D958DE2137C830D00282003 /* HoverTableView.m */,
+				9D958DD6137C5B8400282003 /* MainMenu.xib */,
+				9D958DC8137C5B8300282003 /* Supporting Files */,
+			);
+			path = HoverTableDemo;
+			sourceTree = "<group>";
+		};
+		9D958DC8137C5B8300282003 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D958DC9137C5B8300282003 /* HoverTableDemo-Info.plist */,
+				9D958DCA137C5B8300282003 /* InfoPlist.strings */,
+				9D958DCD137C5B8300282003 /* main.m */,
+				9D958DCF137C5B8300282003 /* HoverTableDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D958DBC137C5B8300282003 /* HoverTableDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D958DDB137C5B8400282003 /* Build configuration list for PBXNativeTarget "HoverTableDemo" */;
+			buildPhases = (
+				9D958DB9137C5B8300282003 /* Sources */,
+				9D958DBA137C5B8300282003 /* Frameworks */,
+				9D958DBB137C5B8300282003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoverTableDemo;
+			productName = HoverTableDemo;
+			productReference = 9D958DBD137C5B8300282003 /* HoverTableDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D958DB4137C5B8300282003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 9D958DB7137C5B8300282003 /* Build configuration list for PBXProject "HoverTableDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9D958DB2137C5B8300282003;
+			productRefGroup = 9D958DBE137C5B8300282003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D958DBC137C5B8300282003 /* HoverTableDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D958DBB137C5B8300282003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D958DCC137C5B8300282003 /* InfoPlist.strings in Resources */,
+				9D958DD8137C5B8400282003 /* MainMenu.xib in Resources */,
+				53A59CAC1390226B00E92858 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D958DB9137C5B8300282003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D958DCE137C5B8300282003 /* main.m in Sources */,
+				9D958DD5137C5B8300282003 /* HoverTableDemoAppDelegate.m in Sources */,
+				9D958DE0137C77AC00282003 /* HoverTableRowView.m in Sources */,
+				9D958DE3137C830D00282003 /* HoverTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D958DCA137C5B8300282003 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D958DCB137C5B8300282003 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9D958DD6137C5B8400282003 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D958DD7137C5B8400282003 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D958DD9137C5B8400282003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9D958DDA137C5B8400282003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9D958DDC137C5B8400282003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HoverTableDemo/HoverTableDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HoverTableDemo/HoverTableDemo-Prefix.pch";
+				INFOPLIST_FILE = "HoverTableDemo/HoverTableDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9D958DDD137C5B8400282003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HoverTableDemo/HoverTableDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HoverTableDemo/HoverTableDemo-Prefix.pch";
+				INFOPLIST_FILE = "HoverTableDemo/HoverTableDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D958DB7137C5B8300282003 /* Build configuration list for PBXProject "HoverTableDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D958DD9137C5B8400282003 /* Debug */,
+				9D958DDA137C5B8400282003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D958DDB137C5B8400282003 /* Build configuration list for PBXNativeTarget "HoverTableDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D958DDC137C5B8400282003 /* Debug */,
+				9D958DDD137C5B8400282003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D958DB4137C5B8300282003 /* Project object */;
+}
