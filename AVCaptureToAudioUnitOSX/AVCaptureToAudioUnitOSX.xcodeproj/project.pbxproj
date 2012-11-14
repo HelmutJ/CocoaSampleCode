@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B003A6B16057EAB00D3881B /* CAAudioBufferList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B003A6816057E6600D3881B /* CAAudioBufferList.cpp */; };
+		2B0964241607CC7900C63CEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2B0964231607CC7900C63CEB /* Icon.icns */; };
+		2B45848C1607CF1000B6025C /* CaptureSessionController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B45848B1607CF1000B6025C /* CaptureSessionController.mm */; };
+		2B4CCDF116040AAF00D49863 /* CAComponentDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BEDDA160402580074B814 /* CAComponentDescription.cpp */; };
+		2B89ACE6160560D700F519DB /* AUOutputBL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B89ACE5160560D700F519DB /* AUOutputBL.cpp */; };
+		2B9BEDE3160402660074B814 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BEDDF160402580074B814 /* CAStreamBasicDescription.cpp */; };
+		2BA069F41605D95900A85134 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA069F31605D95900A85134 /* QuartzCore.framework */; };
+		2BCB960D1605C0E1003596E6 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB960B1605C0E1003596E6 /* Image.png */; };
+		2BD64156160157AE00E61B9D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD64155160157AE00E61B9D /* AVFoundation.framework */; };
+		2BD64159160157C600E61B9D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD64158160157C500E61B9D /* AudioToolbox.framework */; };
+		2BD6415B160157CF00E61B9D /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD6415A160157CF00E61B9D /* AudioUnit.framework */; };
+		2BD6415D160157DA00E61B9D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD6415C160157DA00E61B9D /* Cocoa.framework */; };
+		2BD641651602917700E61B9D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD641641602917600E61B9D /* CoreMedia.framework */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2B003A6816057E6600D3881B /* CAAudioBufferList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAAudioBufferList.cpp; path = PublicUtility/CAAudioBufferList.cpp; sourceTree = "<group>"; };
+		2B003A6916057E6600D3881B /* CAAudioBufferList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAAudioBufferList.h; path = PublicUtility/CAAudioBufferList.h; sourceTree = "<group>"; };
+		2B0964231607CC7900C63CEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		2B45848B1607CF1000B6025C /* CaptureSessionController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureSessionController.mm; sourceTree = "<group>"; };
+		2B89ACE5160560D700F519DB /* AUOutputBL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AUOutputBL.cpp; path = PublicUtility/AUOutputBL.cpp; sourceTree = "<group>"; };
+		2B89ACE8160560E800F519DB /* AUOutputBL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUOutputBL.h; path = PublicUtility/AUOutputBL.h; sourceTree = "<group>"; };
+		2B9BEDDA160402580074B814 /* CAComponentDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAComponentDescription.cpp; path = PublicUtility/CAComponentDescription.cpp; sourceTree = "<group>"; };
+		2B9BEDDB160402580074B814 /* CAComponentDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAComponentDescription.h; path = PublicUtility/CAComponentDescription.h; sourceTree = "<group>"; };
+		2B9BEDDF160402580074B814 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAStreamBasicDescription.cpp; path = PublicUtility/CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		2B9BEDE0160402580074B814 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAStreamBasicDescription.h; path = PublicUtility/CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		2BA069F31605D95900A85134 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2BCB960C1605C0E1003596E6 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/Image.png; sourceTree = "<group>"; };
+		2BD64155160157AE00E61B9D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2BD64158160157C500E61B9D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2BD6415A160157CF00E61B9D /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		2BD6415C160157DA00E61B9D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2BD641601601582300E61B9D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2BD641621601583E00E61B9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BD641641602917600E61B9D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* AVCaptureToAudioUnitOSX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCaptureToAudioUnitOSX_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AVCaptureToAudioUnitOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCaptureToAudioUnitOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAC1DEE0DEF5CD6006A4496 /* CaptureSessionController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CaptureSessionController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA069F41605D95900A85134 /* QuartzCore.framework in Frameworks */,
+				2BD641651602917700E61B9D /* CoreMedia.framework in Frameworks */,
+				2BD6415D160157DA00E61B9D /* Cocoa.framework in Frameworks */,
+				2BD6415B160157CF00E61B9D /* AudioUnit.framework in Frameworks */,
+				2BD64159160157C600E61B9D /* AudioToolbox.framework in Frameworks */,
+				2BD64156160157AE00E61B9D /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC1DEE0DEF5CD6006A4496 /* CaptureSessionController.h */,
+				2B45848B1607CF1000B6025C /* CaptureSessionController.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BD6415C160157DA00E61B9D /* Cocoa.framework */,
+				2BD6415A160157CF00E61B9D /* AudioUnit.framework */,
+				2BD64158160157C500E61B9D /* AudioToolbox.framework */,
+				2BD64155160157AE00E61B9D /* AVFoundation.framework */,
+				2BD641641602917600E61B9D /* CoreMedia.framework */,
+				2BA069F31605D95900A85134 /* QuartzCore.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BD641601601582300E61B9D /* AppKit.framework */,
+				2BD641621601583E00E61B9D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AVCaptureToAudioUnitOSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AudioDataOutputToAudioUnit */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				2B9BEDD71604024C0074B814 /* PublicUtility */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AudioDataOutputToAudioUnit;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* AVCaptureToAudioUnitOSX_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2BCB960B1605C0E1003596E6 /* Image.png */,
+				2B0964231607CC7900C63CEB /* Icon.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B9BEDD71604024C0074B814 /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				2B003A6916057E6600D3881B /* CAAudioBufferList.h */,
+				2B003A6816057E6600D3881B /* CAAudioBufferList.cpp */,
+				2B9BEDDB160402580074B814 /* CAComponentDescription.h */,
+				2B9BEDDA160402580074B814 /* CAComponentDescription.cpp */,
+				2B89ACE8160560E800F519DB /* AUOutputBL.h */,
+				2B89ACE5160560D700F519DB /* AUOutputBL.cpp */,
+				2B9BEDE0160402580074B814 /* CAStreamBasicDescription.h */,
+				2B9BEDDF160402580074B814 /* CAStreamBasicDescription.cpp */,
+			);
+			name = PublicUtility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* AVCaptureToAudioUnitOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AVCaptureToAudioUnitOSX" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVCaptureToAudioUnitOSX;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AudioDataOutputToAudioUnit;
+			productReference = 8D1107320486CEB800E47090 /* AVCaptureToAudioUnitOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AVCaptureToAudioUnitOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AudioDataOutputToAudioUnit */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AVCaptureToAudioUnitOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2BCB960D1605C0E1003596E6 /* Image.png in Resources */,
+				2B0964241607CC7900C63CEB /* Icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2B9BEDE3160402660074B814 /* CAStreamBasicDescription.cpp in Sources */,
+				2B4CCDF116040AAF00D49863 /* CAComponentDescription.cpp in Sources */,
+				2B89ACE6160560D700F519DB /* AUOutputBL.cpp in Sources */,
+				2B003A6B16057EAB00D3881B /* CAAudioBufferList.cpp in Sources */,
+				2B45848C1607CF1000B6025C /* CaptureSessionController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2BCB960B1605C0E1003596E6 /* Image.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BCB960C1605C0E1003596E6 /* English */,
+			);
+			name = Image.png;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AVCaptureToAudioUnitOSX_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AVCaptureToAudioUnitOSX;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AVCaptureToAudioUnitOSX_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AVCaptureToAudioUnitOSX;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AVCaptureToAudioUnitOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AVCaptureToAudioUnitOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
