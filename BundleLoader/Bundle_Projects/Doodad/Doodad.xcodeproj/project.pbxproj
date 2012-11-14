@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5342E6660C0F58D300451225 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5342E6640C0F58D300451225 /* Localizable.strings */; };
+		536C1BB50C1DEFD0004694D0 /* DoodadWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536C1BB00C1DEFD0004694D0 /* DoodadWindowController.m */; };
+		536C1BB60C1DEFD0004694D0 /* Doodad.m in Sources */ = {isa = PBXBuildFile; fileRef = 536C1BB40C1DEFD0004694D0 /* Doodad.m */; };
+		536C1BB80C1DEFDA004694D0 /* Doodad.icns in Resources */ = {isa = PBXBuildFile; fileRef = 536C1BB70C1DEFDA004694D0 /* Doodad.icns */; };
+		53D01242161CE5DE008E0A88 /* Doodad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53D01240161CE5DE008E0A88 /* Doodad.xib */; };
+		53EB7ABF15E41F2400B3E8F0 /* MyBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B3053A0C0F2C1D00B031ED /* MyBundle.m */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5342E6650C0F58D300451225 /* English */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 30; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		536C1BB00C1DEFD0004694D0 /* DoodadWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DoodadWindowController.m; sourceTree = "<group>"; };
+		536C1BB10C1DEFD0004694D0 /* DoodadWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DoodadWindowController.h; sourceTree = "<group>"; };
+		536C1BB20C1DEFD0004694D0 /* Doodad.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Doodad.h; sourceTree = "<group>"; };
+		536C1BB30C1DEFD0004694D0 /* Doodad_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Doodad_Prefix.pch; sourceTree = "<group>"; };
+		536C1BB40C1DEFD0004694D0 /* Doodad.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Doodad.m; sourceTree = "<group>"; };
+		536C1BB70C1DEFDA004694D0 /* Doodad.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Doodad.icns; sourceTree = "<group>"; };
+		53B305390C0F2C1D00B031ED /* MyBundle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = MyBundle.h; path = ../MyBundle.h; sourceTree = SOURCE_ROOT; };
+		53B3053A0C0F2C1D00B031ED /* MyBundle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = MyBundle.m; path = ../MyBundle.m; sourceTree = SOURCE_ROOT; };
+		53D01241161CE5DE008E0A88 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Doodad.xib; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* Doodad.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Doodad.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Gizmo */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Gizmo;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				536C1BB70C1DEFDA004694D0 /* Doodad.icns */,
+				53D01240161CE5DE008E0A88 /* Doodad.xib */,
+				5342E6640C0F58D300451225 /* Localizable.strings */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				53B305390C0F2C1D00B031ED /* MyBundle.h */,
+				53B3053A0C0F2C1D00B031ED /* MyBundle.m */,
+				536C1BB10C1DEFD0004694D0 /* DoodadWindowController.h */,
+				536C1BB00C1DEFD0004694D0 /* DoodadWindowController.m */,
+				536C1BB20C1DEFD0004694D0 /* Doodad.h */,
+				536C1BB40C1DEFD0004694D0 /* Doodad.m */,
+				536C1BB30C1DEFD0004694D0 /* Doodad_Prefix.pch */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* Doodad.bundle */,
+			);
+			name = Products;
+			path = ../..;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Doodad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Doodad" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Doodad;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Gizmo;
+			productReference = 8D5B49B6048680CD000E48DA /* Doodad.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Doodad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Gizmo */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Doodad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				5342E6660C0F58D300451225 /* Localizable.strings in Resources */,
+				536C1BB80C1DEFDA004694D0 /* Doodad.icns in Resources */,
+				53D01242161CE5DE008E0A88 /* Doodad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536C1BB50C1DEFD0004694D0 /* DoodadWindowController.m in Sources */,
+				536C1BB60C1DEFD0004694D0 /* Doodad.m in Sources */,
+				53EB7ABF15E41F2400B3E8F0 /* MyBundle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5342E6640C0F58D300451225 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5342E6650C0F58D300451225 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		53D01240161CE5DE008E0A88 /* Doodad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D01241161CE5DE008E0A88 /* English */,
+			);
+			name = Doodad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Doodad_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = Doodad;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Doodad_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = Doodad;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Doodad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Doodad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
