@@ -1,0 +1,25 @@
+{
+	Checkboxes = (
+		{
+			Key = Doc;
+			Title = "Create document-based application";
+		},
+		{
+			Key = CoreData;
+			Title = "Use Core Data for storage";
+		},
+		{
+			Key = Spot;
+			Title = "Include Spotlight Importer";
+			EnableRule = CoreData;
+		},
+	);
+	TemplateSelection = {
+		"" = "Cocoa Application";
+		CoreData = "Core Data Application";
+		CoreDataSpot = "Core Data Application with Spotlight Importer";
+		Doc = "Cocoa Document-based Application";
+		DocCoreData = "Core Data Document-based Application";
+		DocCoreDataSpot = "Core Data Document-based Application with Spotlight Importer";
+	};
+}
