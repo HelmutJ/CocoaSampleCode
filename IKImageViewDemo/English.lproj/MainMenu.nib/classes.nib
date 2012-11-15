@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {doZoom = id; openImage = id; saveImage = id; switchToolMode = id; }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_imageView" = IKImageView; "_window" = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addCropLayer = id; 
+                addGuidesLayer = id; 
+                addNavigationLayer = id; 
+                addRotationLayer = id; 
+                crop = id; 
+                hidePageBreaks = id; 
+                setRotation = id; 
+                showPageBreaks = id; 
+                zoomIn = id; 
+                zoomOut = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IKImageView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}
