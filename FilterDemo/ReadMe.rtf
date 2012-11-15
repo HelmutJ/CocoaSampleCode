@@ -1,0 +1,51 @@
+{\rtf1\mac\ansicpg10000\cocoartf824
+\readonlydoc1{\fonttbl\f0\froman\fcharset77 Times-Bold;\f1\froman\fcharset77 Times-Roman;\f2\fswiss\fcharset77 Helvetica;
+\f3\fmodern\fcharset77 Courier;\f4\froman\fcharset77 Times-Italic;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10220\viewh14000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs38 \cf0 FilterDemo
+\f1\b0\fs28 \
+\
+This project will build a simple Audio Unit effect and a Cocoa UI to go along with it. The effect is a simple resonant low-pass filter which has two parameters: cutoff frequency and resonance. It demonstrates how to implement a custom property for communicating information between the Audio Unit and its view. Also, it shows how to publish factory presets.  The Cocoa view features a resizeable real-time display of the frequency-response curve which can be directly manipulated through a control point.\
+\
+There are two targets in the FilterDemo.xcode project:\
+
+\f0\b FilterDemo
+\f1\b0 - builds both the Audio Unit component and the CocoaUI bundle\
+\pard\tx720\tx1560\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b \cf0 CocoaUI
+\f1\b0 - 	builds just the CocoaUI bundle\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+
+\f0\b Installation
+\f1\b0 :\
+After building the FilterDemo target, the result (FilterDemo.component)
+\f2\fs24  
+\f1\fs28 is placed in the build directory.  \
+To install FilterDemo.component, copy it to:\
+
+\f3\fs24 ~/Library/Audio/Plug-Ins/Components/
+\f1\fs28 \
+or to:\
+
+\f3\fs24 /Library/Audio/Plug-Ins/Components/
+\f1\fs28 \
+\
+To play with the Audio Unit after installing it, use an Audio Unit hosting application such as "AU Lab".  AU Lab may be found in /Developer/Applications/Audio/.\
+\
+
+\f0\b Note
+\f1\b0 :\
+The implementation subclasses the AUEffectBase class (part of the Core Audio SDK) which assumes that the effect processes\
+the same number of input channels as output channels (
+\f4\i n
+\f1\i0 ->
+\f4\i n
+\f1\i0 ). Furthermore, AUEffectBase assumes that the processing will occur independently on each of these channels.  This may not be appropriate for some kinds of effects which require access to all channels at the same time (stereo-locked compressors, cross-coupling reverbs).  For these types of effects it is better to subclass AUBase, and override the Render() method.\
+\
+\
+}

@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = "AppleDemoFilter_GraphView"; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {cutoffFrequencyChanged = id; resonanceChanged = id; }; 
+            CLASS = "AppleDemoFilter_UIView"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cutoffFrequencyField = NSTextField; 
+                graphView = "AppleDemoFilter_GraphView"; 
+                resonanceField = NSTextField; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = "AppleDemoFilter_ViewFactory"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {uiFreshlyLoadedView = "AppleDemoFilter_UIView"; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
