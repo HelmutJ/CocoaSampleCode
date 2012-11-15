@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+ <asset>
+  <contributor>
+   <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
+  </contributor>
+  <created>2012-07-06T16:46:48Z</created>
+  <modified>2012-07-06T16:46:48Z</modified>
+  <up_axis>Z_UP</up_axis>
+ </asset>
+ <library_cameras>
+  <camera id="ID9" name="_am__r">
+   <optics>
+    <technique_common>
+     <perspective>
+      <xfov>60</xfov>
+      <znear>1</znear>
+      <zfar>4000</zfar>
+     </perspective>
+    </technique_common>
+   </optics>
+  </camera>
+ </library_cameras>
+ <library_lights>
+  <light id="ID11" name="Light">
+   <technique_common>
+    <point>
+     <color>1 1 1</color>
+     <constant_attenuation>0</constant_attenuation>
+     <linear_attenuation>0</linear_attenuation>
+     <quadratic_attenuation>1</quadratic_attenuation>
+    </point>
+   </technique_common>
+   <extra>
+    <technique profile="SceneKit">
+     <attenuationStart>0</attenuationStart>
+     <attenuationEnd>0</attenuationEnd>
+     <attenuationFalloffExponent>2</attenuationFalloffExponent>
+    </technique>
+   </extra>
+  </light>
+  <light id="ID13" name="EnvironmentAmbientLight">
+   <technique_common>
+    <ambient>
+     <color>0.5 0.5 0.5</color>
+    </ambient>
+   </technique_common>
+   <extra>
+    <technique profile="SceneKit">
+     <attenuationStart>0</attenuationStart>
+     <attenuationEnd>0</attenuationEnd>
+     <attenuationFalloffExponent>2</attenuationFalloffExponent>
+    </technique>
+   </extra>
+  </light>
+ </library_lights>
+ <library_materials>
+  <material id="ID5" name="Mat">
+   <instance_effect url="#ID6"/>
+  </material>
+ </library_materials>
+ <library_effects>
+  <effect id="ID6">
+   <profile_COMMON>
+    <technique sid="common">
+     <blinn>
+      <ambient>
+       <color>0.8 0.8 0.8 1</color>
+      </ambient>
+      <diffuse>
+       <color>0.8 0.8 0.8 1</color>
+      </diffuse>
+      <specular>
+       <color>0.2 0.2 0.2 1</color>
+      </specular>
+      <shininess>
+       <float>0.5</float>
+      </shininess>
+      <reflective>
+       <color>0 0 0 1</color>
+      </reflective>
+      <reflectivity>
+       <float>1</float>
+      </reflectivity>
+      <transparent opaque="A_ONE">
+       <color>1 1 1 1</color>
+      </transparent>
+      <transparency>
+       <float>1</float>
+      </transparency>
+      <index_of_refraction>
+       <float>1</float>
+      </index_of_refraction>
+     </blinn>
+    </technique>
+   </profile_COMMON>
+   <extra>
+    <technique profile="SceneKit">
+     <litPerPixel>1</litPerPixel>
+    </technique>
+   </extra>
+  </effect>
+ </library_effects>
+ <library_visual_scenes>
+  <visual_scene id="scene6">
+   <node id="ID8" name="Camera">
+    <matrix>0.999976 0.0069478 0.000681238 1.27602 0 0.0975829 -0.995227 -615.882 -0.00698112 0.995203 0.0975805 151.978 0 0 0 1 </matrix>
+    <instance_camera url="#ID9"/>
+   </node>
+   <node id="ID10" name="Light">
+    <matrix>1 0 0 0 0 1 0 0 0 0 1 200 0 0 0 1 </matrix>
+    <instance_light url="#ID11"/>
+   </node>
+   <node id="ID12" name="AmbientLight">
+    <matrix>1 0 0 0 0 2.22045e-16 1 0 0 -1 2.22045e-16 0 0 0 0 1 </matrix>
+    <instance_light url="#ID13"/>
+   </node>
+  </visual_scene>
+ </library_visual_scenes>
+ <scene>
+  <instance_visual_scene url="#scene6"/>
+ </scene>
+</COLLADA>

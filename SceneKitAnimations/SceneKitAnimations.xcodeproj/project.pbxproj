@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C400C4F15A73594009197BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C400C4E15A73594009197BD /* Cocoa.framework */; };
+		9C400C5915A73594009197BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C400C5715A73594009197BD /* InfoPlist.strings */; };
+		9C400C5B15A73594009197BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C400C5A15A73594009197BD /* main.m */; };
+		9C400C6215A73594009197BD /* ASCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C400C6115A73594009197BD /* ASCAppDelegate.m */; };
+		9C400C6515A73594009197BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C400C6315A73594009197BD /* MainMenu.xib */; };
+		9CFAB40215A740CC00FFE035 /* attack.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB3FB15A740CC00FFE035 /* attack.dae */; };
+		9CFAB40315A740CC00FFE035 /* die.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB3FC15A740CC00FFE035 /* die.dae */; };
+		9CFAB40415A740CC00FFE035 /* floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB3FD15A740CC00FFE035 /* floor.jpg */; };
+		9CFAB40515A740CC00FFE035 /* idle.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB3FE15A740CC00FFE035 /* idle.dae */; };
+		9CFAB40615A740CC00FFE035 /* male_large_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB3FF15A740CC00FFE035 /* male_large_01.png */; };
+		9CFAB40715A740CC00FFE035 /* run.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB40015A740CC00FFE035 /* run.dae */; };
+		9CFAB40815A740CC00FFE035 /* walk.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB40115A740CC00FFE035 /* walk.dae */; };
+		9CFAB40B15A7418C00FFE035 /* scene.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9CFAB40A15A7418C00FFE035 /* scene.dae */; };
+		9CFAB40D15A7430100FFE035 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFAB40C15A7430100FFE035 /* QuartzCore.framework */; };
+		9CFAB40F15A7430800FFE035 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFAB40E15A7430800FFE035 /* SceneKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C400C4A15A73594009197BD /* SceneKitAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneKitAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C400C4E15A73594009197BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9C400C5115A73594009197BD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9C400C5215A73594009197BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9C400C5315A73594009197BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C400C5615A73594009197BD /* SceneKitAnimations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SceneKitAnimations-Info.plist"; sourceTree = "<group>"; };
+		9C400C5815A73594009197BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C400C5A15A73594009197BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C400C5C15A73594009197BD /* SceneKitAnimations-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SceneKitAnimations-Prefix.pch"; sourceTree = "<group>"; };
+		9C400C6015A73594009197BD /* ASCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASCAppDelegate.h; sourceTree = "<group>"; };
+		9C400C6115A73594009197BD /* ASCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASCAppDelegate.m; sourceTree = "<group>"; };
+		9C400C6415A73594009197BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9CFAB3FB15A740CC00FFE035 /* attack.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = attack.dae; path = Resources/attack.dae; sourceTree = "<group>"; };
+		9CFAB3FC15A740CC00FFE035 /* die.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = die.dae; path = Resources/die.dae; sourceTree = "<group>"; };
+		9CFAB3FD15A740CC00FFE035 /* floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = floor.jpg; path = Resources/floor.jpg; sourceTree = "<group>"; };
+		9CFAB3FE15A740CC00FFE035 /* idle.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = idle.dae; path = Resources/idle.dae; sourceTree = "<group>"; };
+		9CFAB3FF15A740CC00FFE035 /* male_large_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male_large_01.png; path = Resources/male_large_01.png; sourceTree = "<group>"; };
+		9CFAB40015A740CC00FFE035 /* run.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = run.dae; path = Resources/run.dae; sourceTree = "<group>"; };
+		9CFAB40115A740CC00FFE035 /* walk.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = walk.dae; path = Resources/walk.dae; sourceTree = "<group>"; };
+		9CFAB40A15A7418C00FFE035 /* scene.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = scene.dae; path = Resources/scene.dae; sourceTree = "<group>"; };
+		9CFAB40C15A7430100FFE035 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		9CFAB40E15A7430800FFE035 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = /System/Library/Frameworks/SceneKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C400C4715A73594009197BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFAB40F15A7430800FFE035 /* SceneKit.framework in Frameworks */,
+				9CFAB40D15A7430100FFE035 /* QuartzCore.framework in Frameworks */,
+				9C400C4F15A73594009197BD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C400C3F15A73594009197BD = {
+			isa = PBXGroup;
+			children = (
+				9C400C5415A73594009197BD /* SceneKitAnimations */,
+				9C400C4D15A73594009197BD /* Frameworks */,
+				9C400C4B15A73594009197BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C400C4B15A73594009197BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C400C4A15A73594009197BD /* SceneKitAnimations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C400C4D15A73594009197BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CFAB40E15A7430800FFE035 /* SceneKit.framework */,
+				9CFAB40C15A7430100FFE035 /* QuartzCore.framework */,
+				9C400C4E15A73594009197BD /* Cocoa.framework */,
+				9C400C5015A73594009197BD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C400C5015A73594009197BD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C400C5115A73594009197BD /* AppKit.framework */,
+				9C400C5215A73594009197BD /* CoreData.framework */,
+				9C400C5315A73594009197BD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9C400C5415A73594009197BD /* SceneKitAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				9C400C6015A73594009197BD /* ASCAppDelegate.h */,
+				9C400C6115A73594009197BD /* ASCAppDelegate.m */,
+				9C400C6315A73594009197BD /* MainMenu.xib */,
+				9C400C7115A73F6F009197BD /* Resources */,
+				9C400C5515A73594009197BD /* Supporting Files */,
+			);
+			path = SceneKitAnimations;
+			sourceTree = "<group>";
+		};
+		9C400C5515A73594009197BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C400C5615A73594009197BD /* SceneKitAnimations-Info.plist */,
+				9C400C5715A73594009197BD /* InfoPlist.strings */,
+				9C400C5A15A73594009197BD /* main.m */,
+				9C400C5C15A73594009197BD /* SceneKitAnimations-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C400C7115A73F6F009197BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CFAB40A15A7418C00FFE035 /* scene.dae */,
+				9CFAB3FB15A740CC00FFE035 /* attack.dae */,
+				9CFAB3FC15A740CC00FFE035 /* die.dae */,
+				9CFAB3FE15A740CC00FFE035 /* idle.dae */,
+				9CFAB40015A740CC00FFE035 /* run.dae */,
+				9CFAB40115A740CC00FFE035 /* walk.dae */,
+				9CFAB40915A740E000FFE035 /* Textures */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9CFAB40915A740E000FFE035 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				9CFAB3FD15A740CC00FFE035 /* floor.jpg */,
+				9CFAB3FF15A740CC00FFE035 /* male_large_01.png */,
+			);
+			name = Textures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C400C4915A73594009197BD /* SceneKitAnimations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C400C6815A73594009197BD /* Build configuration list for PBXNativeTarget "SceneKitAnimations" */;
+			buildPhases = (
+				9C400C4615A73594009197BD /* Sources */,
+				9C400C4715A73594009197BD /* Frameworks */,
+				9C400C4815A73594009197BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SceneKitAnimations;
+			productName = SceneKitAnimations;
+			productReference = 9C400C4A15A73594009197BD /* SceneKitAnimations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C400C4115A73594009197BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Apple;
+			};
+			buildConfigurationList = 9C400C4415A73594009197BD /* Build configuration list for PBXProject "SceneKitAnimations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C400C3F15A73594009197BD;
+			productRefGroup = 9C400C4B15A73594009197BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C400C4915A73594009197BD /* SceneKitAnimations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C400C4815A73594009197BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C400C5915A73594009197BD /* InfoPlist.strings in Resources */,
+				9C400C6515A73594009197BD /* MainMenu.xib in Resources */,
+				9CFAB40215A740CC00FFE035 /* attack.dae in Resources */,
+				9CFAB40315A740CC00FFE035 /* die.dae in Resources */,
+				9CFAB40415A740CC00FFE035 /* floor.jpg in Resources */,
+				9CFAB40515A740CC00FFE035 /* idle.dae in Resources */,
+				9CFAB40615A740CC00FFE035 /* male_large_01.png in Resources */,
+				9CFAB40715A740CC00FFE035 /* run.dae in Resources */,
+				9CFAB40815A740CC00FFE035 /* walk.dae in Resources */,
+				9CFAB40B15A7418C00FFE035 /* scene.dae in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C400C4615A73594009197BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C400C5B15A73594009197BD /* main.m in Sources */,
+				9C400C6215A73594009197BD /* ASCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C400C5715A73594009197BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C400C5815A73594009197BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C400C6315A73594009197BD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C400C6415A73594009197BD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C400C6615A73594009197BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C400C6715A73594009197BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C400C6915A73594009197BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SceneKitAnimations/SceneKitAnimations-Prefix.pch";
+				INFOPLIST_FILE = "SceneKitAnimations/SceneKitAnimations-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C400C6A15A73594009197BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SceneKitAnimations/SceneKitAnimations-Prefix.pch";
+				INFOPLIST_FILE = "SceneKitAnimations/SceneKitAnimations-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C400C4415A73594009197BD /* Build configuration list for PBXProject "SceneKitAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C400C6615A73594009197BD /* Debug */,
+				9C400C6715A73594009197BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C400C6815A73594009197BD /* Build configuration list for PBXNativeTarget "SceneKitAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C400C6915A73594009197BD /* Debug */,
+				9C400C6A15A73594009197BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C400C4115A73594009197BD /* Project object */;
+}
