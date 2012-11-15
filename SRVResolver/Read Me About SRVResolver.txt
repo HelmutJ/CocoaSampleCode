@@ -1,0 +1,78 @@
+Read Me About SRVResolver
+=========================
+1.1
+
+SRVResolver shows how to do DNS SRV record queries using the <dns_sd.h> API.
+
+SRVResolver requires Mac OS X 10.7 or later, although the central techniques should work back to Mac OS X 10.2 and on all versions of iOS.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SRVResolver.txt -- This file.
+o SRVResolver.xcodeproj -- An Xcode project for the sample.
+o SRVResolver.[hm] -- A class that implements the core code.
+o main.m -- A command line tool to exercise the SRVResolver class.
+o build -- A pre-built binary.
+
+Using the Sample
+----------------
+You can test the code directly from Terminal:
+
+$ cd Downloads/SRVResolver/
+$ build/Debug/SRVResolver _xmpp-server._tcp.gmail.com
+[...] Priority   Weight Target:Port
+[...] --------   ------ -----------
+[...]        5        0 xmpp-server.l.google.com:5269
+[...]       20        0 xmpp-server1.l.google.com:5269
+[...]       20        0 xmpp-server3.l.google.com:5269
+[...]       20        0 xmpp-server2.l.google.com:5269
+[...]       20        0 xmpp-server4.l.google.com:5269
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.4.3 on Mac OS X 10.7.4 with Mac OS 10.7 SDK.  You should be able to just open the project and choose Build from the Build menu.  The resulting program should run on Mac OS X 10.7 and later.  The bulk of my testing was done with on Mac OS X 10.7.4.
+
+How It Works
+------------
+The SRVResolver class is a very simple application of the <dns_sd.h> API.  More specifically:
+
+o When you call -start, SRVResolver uses DNSServiceQueryRecord to create a DNS query for the SRV record.
+
+o It then calls DNSServiceRefSockFD to get the socket on which results of that query are returned.
+
+o It wraps that socket in CFSocket and schedules it on the runloop.
+
+o When data arrives on the socket, the CFSocket calls its callback (SDRefSocketCallback).  This calls DNSServiceProcessResult to run the callback associated with the query (QueryRecordCallback).
+
+o QueryRecordCallback passes the resulting record to -[SRVResolver _processRecord:length:].  This parses the record and adds a entry to the results array.
+
+IMPORTANT: This sample uses CFSocket to integrate DNS-SD with the run loop, rather than DNSServiceSetDispatchQueue.  DNSServiceSetDispatchQueue would make the code a lot easier, but CFSocket has a couple of advantages (it allows you to support older systems, and it allows you to target specific run loops and run loop modes).  If you're looking for an example of how to use DNSServiceSetDispatchQueue, check out the DNSSDObjects sample code.
+
+<https://developer.apple.com/library/mac/#samplecode/DNSSDObjects/>
+
+Caveats
+-------
+The <dns_sd.h> API does not, in general, support timeouts.  The idea is that the API is asynchronous so you can cancel the operation at any time.  Thus, if you want to implement a timeout, implement it within your own code and then just cancel your <dns_sd.h> operation.
+
+Similarly, the SRVResolver class does not implement a timeout.  If you start a query, you can't be guaranteed to get a failure; it may just keep running forever.  If you want to time out, you'll have to implement that yourself (probably using an NSTimer).
+
+Note that SRVResolver does pass kDNSServiceFlagsReturnIntermediates to DNSServiceQueryRecord, so if we get an authoritative NXDomain response then the operation will fail straight away.  However, there's no guarantee that such a response will be received; for example, if the DNS server is down or unreachable, no NXDomain response will be received and the operation will just keep running.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Feb 2010) was the first shipping version.
+
+1.1 (Jul 2012) was a minor update to adopt the latest tools and techniques (most notably, ARC).
+
+Share and Enjoy.
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+30 Jul 2012
