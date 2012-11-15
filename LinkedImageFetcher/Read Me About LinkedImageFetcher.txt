@@ -1,0 +1,136 @@
+Read Me About LinkedImageFetcher
+================================
+1.3
+
+LinkedImageFetcher shows how to use NSOperation for both CPU operations and run loop-based network operations.  The code downloads an HTML page, parses the page using libxml2's HTML parser, and then downloads all of the images referenced by that page.
+
+LinkedImageFetcher requires Mac OS X 10.6 or later.  In addition, the core concepts work on iOS 4.0 and later.  The code should also work on Mac OS X 10.5, iOS 2.x and iOS 3.x, but it has not been tested on those systems.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About LinkedImageFetcher.txt -- This file.
+o LinkedImageFetcher.xcodeproj -- An Xcode project for the sample.
+o build -- A built binary for the project.
+o LinkedImageFetcher.[hm] -- A class that implements the fetching engine.
+o main.m -- A test program for the above.
+o PageGetOperation.[hm] -- An NSOperation subclass that downloads an HTML page via HTTP.
+o LinkFinder.[hm] -- An NSOperation subclass that parses HTML data looking for links.
+o ImageDownloadOperation.[hm] -- An NSOperation subclass that gets an image via HTTP and stores it on disk.
+o Core Code -- This directory contains number of classes, the most important of which are:
+  - QRunLoopOperation.[hm] -- An abstract NSOperation subclass 
+    for implementing run loop based operations.
+  - QHTTPOperation.[hm] -- A QRunLoopOperation subclass that runs 
+    an HTTP request.
+  - QHTMLLinkFinder.[hm] -- An NSOperation subclass that finds links 
+    in an HTML document.
+  - QWatchedOperationQueue.[hm] -- A NSOperationQueue subclass that 
+    makes it easy hear about operations finishing.
+o UnitTests -- Unit tests for the QRunLoopOperation.
+
+Using the Sample
+----------------
+To test the sample, open a Terminal window and change into the sample directory:
+
+$ cd Downloads/LinkedImageFetcher/
+
+Then run the program, passing it a URL as the first argument:
+
+IMPORTANT: The follow tests assume you have the CUPS web interface enabled.  This is enabled by default on older systems, but disabled by default on 10.8.  To run these tests on 10.8 and later, enable the CUPS web interface using the <x-man-page://8/cupsctl> command (as shown below).  If you don't want to modify your CUPS setup, point the tool at any other well-formed HTML resource.
+
+$ cupsctl WebInterface=yes
+
+$ build/Debug/LinkedImageFetcher http://127.0.0.1:631
+http://127.0.0.1:631
+  page get done
+  http://127.0.0.1:631/images/right.gif
+    image download to: /var/[...]/-Tmp-/images/right-2.gif
+  http://127.0.0.1:631/images/cups-icon.png
+    image download to: /var/[...]/-Tmp-/images/cups-icon-2.png
+  http://127.0.0.1:631/images/left.gif
+    image download to: /var/[...]/-Tmp-/images/left-2.gif
+
+This downloads the specified page, parses it to find the images, and then downloads those images.
+
+You can also run it with a maximum depth argument, which causes it to follow links up to a certain depth.  For example, the following will download images on the specified page, and on any page linked to by the specified page.
+
+$ build/Debug/LinkedImageFetcher http://127.0.0.1:631 1
+http://127.0.0.1:631
+  page get done
+http://www.cups.org/
+  page is duplicate
+http://www.cups.org/newsgroups.php?gcups.general
+  page URL is complex
+http://127.0.0.1:631/admin
+  page is duplicate
+http://www.cups.org/newsgroups.php?gcups.development
+  page URL is complex
+  http://127.0.0.1:631/
+    page get done
+  http://127.0.0.1:631/images/left.gif
+    image is duplicate
+  http://127.0.0.1:631/images/right.gif
+    image is duplicate
+  http://127.0.0.1:631/images/cups-icon.png
+    image is duplicate
+  http://127.0.0.1:631/admin
+    page get done
+  http://127.0.0.1:631/admin
+    page parse error: NSXMLParserErrorDomain 76
+  http://127.0.0.1:631/images/left.gif
+    image download to: /var/[...]/-Tmp-/images/left-3.gif
+  http://127.0.0.1:631/help/options.html
+    page get done
+[...]
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.3.3 on Mac OS X 10.7.4 with the Mac OS X 10.7 SDK.  You should be able to just open the project, select the LinkedImageFetcher scheme and choose Build from the Product menu.  The resulting program should be compatible with computers running Mac OS X 10.6 and later.  The bulk of my testing was done with Mac OS X 10.6.8 and Mac OS X 10.7.4.
+
+How It Works
+------------
+There are three critical classes in this sample, QRunLoopOperation, QHTTPOperation and QWatchedOperationQueue.  QRunLoopOperation is an abstract class for implementing run loop based NSOperations.  It takes care of a lot of the mechanics of integrating the run loop with NSOperation.  For example, because run loop operations don't need a separate thread, it overrides isConcurrent to return YES.  It also takes care of managing the state of the operation and passing control to callbacks running on the run loop thread.
+
+IMPORTANT: Implementing a concurrent operation correctly is tricky business.  The sample includes a UnitTest target which tests QRunLoopOperation thoroughly.
+
+QHTTPOperation is a subclass of QRunLoopOperation that uses NSURLConnection to issue a single HTTP request and gather the response.  QRunLoopOperation takes care of most of the fiddly details; QHTTPOperation just implements -operationDidStart and -operationWillFinish to start up and tear down the NSURLConnection, respectively.  The QHTTPOperation object is the NSURLConnection delegate, and it handles a number of delegate callbacks, but the most critical are -connectionDidFinishLoading: and -connection:didFailWithError:, both of which cause the operation to complete.
+
+The other critical class is QWatchedOperationQueue.  This provides an easy way to monitor operations for completion.  Specifically, it provides a way to add an operation to the queue and associate it with a selector.  When the operation completes, it calls the selector on the target object on the target thread.
+
+LinkedImageFetcher builds on these two critical technologies to do its work.  It uses a mixture of concurrent and standard (non-concurrent) operations to do its job.  For example, it uses various subclasses of QHTTPOperation (a concurrent operation) to run its networking, but it also uses a standard operation, LinkFinder, to parse HTML looking for links.  All of this is coordinated using a QWatchedOperationQueue, which makes it easy to move on to the next stage of the fetch once the previous stage has finished.
+
+Caveats
+-------
+While the LinkedImageFetcher source code should be fully compatible with Mac OS X 10.5, it has been not been tested on that system recently.  Moreover, to use the code on Mac OS X 10.5 you will need to work around a problem with later Mac OS X SDKs, which have an incorrect value for the libxml2 library version number <rdar://problem/7028708>.  If you want to build this code so that it run on Mac OS X 10.5, you can apply either of the following workarounds:
+
+o build with the Mac OS X 10.5 SDK
+
+o adopt the technique shown in QA1659
+
+<http://developer.apple.com/library/ios/#qa/qa1659/>
+
+Note: QA1659 specifically discusses iOS, but the underlying problem is the same on Mac OS X and the workaround is very similar (you add a reference to the Mac OS X 10.5 SDK version of libxml2 to your "Other Link Flags" build setting).
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.3 (Jul 2012) updated QRunLoopOperation to fix one known bug.  Added a suite of unit tests to test QRunLoopOperation extensively.  General code tidy.
+
+1.2 (Jul 2010) adopted the QRunLoopOperation base class for QHTTPOperation (critically, this includes a fix for the operation cancellation logic) and corrected various problems with running on Mac OS X 10.5.
+
+1.1 (Jun 2010) had minor changes to accommodate post-WWDC feedback.
+
+1.0 (May 2010) was attached to the WWDC 2010 presentation, "Network Apps for iPhone OS", part 1 and 2 (session 207 and 208).
+
+<http://developer.apple.com/videos/wwdc/2010/>
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+24 Jul 2012
