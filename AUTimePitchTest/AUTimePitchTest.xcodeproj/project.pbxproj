@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		2B14F146124AA3A8001DB7FB /* tick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2B14F145124AA3A8001DB7FB /* tick.aiff */; };
+		2B297F62123837D0002F0DF3 /* AUGraphController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B297F5F123837D0002F0DF3 /* AUGraphController.mm */; };
+		2B297F63123837D0002F0DF3 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B297F61123837D0002F0DF3 /* MyViewController.m */; };
+		2B297F66123837EA002F0DF3 /* AUTimePitchTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B297F65123837EA002F0DF3 /* AUTimePitchTestAppDelegate.m */; };
+		2B53012C15E30093005CFE4F /* CAComponentDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B53012415E30093005CFE4F /* CAComponentDescription.cpp */; };
+		2B53012D15E30093005CFE4F /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B53012815E30093005CFE4F /* CAStreamBasicDescription.cpp */; };
+		2B53012E15E30093005CFE4F /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B53012A15E30093005CFE4F /* CAXException.cpp */; };
+		2B61B8EC125283FE00CA7C17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B61B8EA125283FE00CA7C17 /* InfoPlist.strings */; };
+		2B7EF3FE123AD97F00D6ED22 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7EF3FD123AD97F00D6ED22 /* CoreAudio.framework */; };
+		2B7EF40C123AD9A500D6ED22 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7EF40B123AD9A500D6ED22 /* AudioToolbox.framework */; };
+		2B7EF410123AD9BA00D6ED22 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7EF40F123AD9BA00D6ED22 /* AudioUnit.framework */; };
+		2B7EF458123ADBE300D6ED22 /* SpeechTrack.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EF457123ADBE300D6ED22 /* SpeechTrack.mp4 */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* AUTimePitchTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUTimePitchTest_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2B14F145124AA3A8001DB7FB /* tick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = tick.aiff; sourceTree = "<group>"; };
+		2B297F5E123837D0002F0DF3 /* AUGraphController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUGraphController.h; path = Classes/AUGraphController.h; sourceTree = "<group>"; };
+		2B297F5F123837D0002F0DF3 /* AUGraphController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AUGraphController.mm; path = Classes/AUGraphController.mm; sourceTree = "<group>"; };
+		2B297F60123837D0002F0DF3 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyViewController.h; path = Classes/MyViewController.h; sourceTree = "<group>"; };
+		2B297F61123837D0002F0DF3 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyViewController.m; path = Classes/MyViewController.m; sourceTree = "<group>"; };
+		2B297F64123837EA002F0DF3 /* AUTimePitchTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUTimePitchTestAppDelegate.h; path = Classes/AUTimePitchTestAppDelegate.h; sourceTree = "<group>"; };
+		2B297F65123837EA002F0DF3 /* AUTimePitchTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUTimePitchTestAppDelegate.m; path = Classes/AUTimePitchTestAppDelegate.m; sourceTree = "<group>"; };
+		2B53012415E30093005CFE4F /* CAComponentDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAComponentDescription.cpp; sourceTree = "<group>"; };
+		2B53012515E30093005CFE4F /* CAComponentDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAComponentDescription.h; sourceTree = "<group>"; };
+		2B53012615E30093005CFE4F /* CADebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugger.h; sourceTree = "<group>"; };
+		2B53012715E30093005CFE4F /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		2B53012815E30093005CFE4F /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		2B53012915E30093005CFE4F /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		2B53012A15E30093005CFE4F /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		2B53012B15E30093005CFE4F /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		2B61B8EB125283FE00CA7C17 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B7EF3FD123AD97F00D6ED22 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		2B7EF40B123AD9A500D6ED22 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2B7EF40F123AD9BA00D6ED22 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		2B7EF457123ADBE300D6ED22 /* SpeechTrack.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpeechTrack.mp4; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* AUTimePitchTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AUTimePitchTest-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AUTimePitchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUTimePitchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				2B7EF3FE123AD97F00D6ED22 /* CoreAudio.framework in Frameworks */,
+				2B7EF40C123AD9A500D6ED22 /* AudioToolbox.framework in Frameworks */,
+				2B7EF410123AD9BA00D6ED22 /* AudioUnit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B297F64123837EA002F0DF3 /* AUTimePitchTestAppDelegate.h */,
+				2B297F65123837EA002F0DF3 /* AUTimePitchTestAppDelegate.m */,
+				2B297F5E123837D0002F0DF3 /* AUGraphController.h */,
+				2B297F5F123837D0002F0DF3 /* AUGraphController.mm */,
+				2B297F60123837D0002F0DF3 /* MyViewController.h */,
+				2B297F61123837D0002F0DF3 /* MyViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7EF3FD123AD97F00D6ED22 /* CoreAudio.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				2B7EF40F123AD9BA00D6ED22 /* AudioUnit.framework */,
+				2B7EF40B123AD9A500D6ED22 /* AudioToolbox.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AUTimePitchTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AUTimePitchTest */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				2B53012315E30093005CFE4F /* PublicUtility */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AUTimePitchTest;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* AUTimePitchTest_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				2B14F145124AA3A8001DB7FB /* tick.aiff */,
+				2B7EF457123ADBE300D6ED22 /* SpeechTrack.mp4 */,
+				8D1107310486CEB800E47090 /* AUTimePitchTest-Info.plist */,
+				2B61B8EA125283FE00CA7C17 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B53012315E30093005CFE4F /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				2B53012415E30093005CFE4F /* CAComponentDescription.cpp */,
+				2B53012515E30093005CFE4F /* CAComponentDescription.h */,
+				2B53012615E30093005CFE4F /* CADebugger.h */,
+				2B53012715E30093005CFE4F /* CAMath.h */,
+				2B53012815E30093005CFE4F /* CAStreamBasicDescription.cpp */,
+				2B53012915E30093005CFE4F /* CAStreamBasicDescription.h */,
+				2B53012A15E30093005CFE4F /* CAXException.cpp */,
+				2B53012B15E30093005CFE4F /* CAXException.h */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* AUTimePitchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AUTimePitchTest" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AUTimePitchTest;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AUTimePitchTest;
+			productReference = 8D1107320486CEB800E47090 /* AUTimePitchTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AUTimePitchTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AUTimePitchTest */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AUTimePitchTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				2B7EF458123ADBE300D6ED22 /* SpeechTrack.mp4 in Resources */,
+				2B14F146124AA3A8001DB7FB /* tick.aiff in Resources */,
+				2B61B8EC125283FE00CA7C17 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2B297F62123837D0002F0DF3 /* AUGraphController.mm in Sources */,
+				2B297F63123837D0002F0DF3 /* MyViewController.m in Sources */,
+				2B297F66123837EA002F0DF3 /* AUTimePitchTestAppDelegate.m in Sources */,
+				2B53012C15E30093005CFE4F /* CAComponentDescription.cpp in Sources */,
+				2B53012D15E30093005CFE4F /* CAStreamBasicDescription.cpp in Sources */,
+				2B53012E15E30093005CFE4F /* CAXException.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2B61B8EA125283FE00CA7C17 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B61B8EB125283FE00CA7C17 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AUTimePitchTest_Prefix.pch;
+				INFOPLIST_FILE = "AUTimePitchTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AUTimePitchTest;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AUTimePitchTest_Prefix.pch;
+				INFOPLIST_FILE = "AUTimePitchTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AUTimePitchTest;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AUTimePitchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AUTimePitchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
