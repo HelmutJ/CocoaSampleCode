@@ -1,0 +1,104 @@
+Read Me About NotifyTool
+========================
+1.1
+
+NotifyTool is a simple example of how to use the BSD notify API <x-man-page://3/notify>.  It shows how to post notifications, and how to receive them using a file descriptor, using a Mach port, and from a runloop.
+
+The notify API was introduced in Mac OS X 10.3.  In theory, this code could run back to that release (except for the GCD code, which requires 10.6).  However, to simplify development and testing, the sample currently only supports Mac OS X 10.7 and later.
+
+IMPORTANT: This sample is intended to be just that, a sample.  If you want to play around with BSD notifications from the command line, you can use the built-in <x-man-page://1/notifyutil> command.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About NotifyTool.txt -- This file.
+
+o NotifyTool.c -- C source code for the program.
+
+o NotifyTool.xcodeproj -- An Xcode project for the program.
+
+o build -- A built version of the above.
+
+Using the Sample
+----------------
+To listen for a notification, open a Terminal window, change into the sample directory, and run the tool with the "listen" command:
+
+$ build/Debug/NotifyTool listen foo
+Listening using a file descriptor:
+
+The tool will run forever, waiting for the notification to be posted.  To post a notification, open another Terminal window and use the "post" command:
+
+$ build/Debug/NotifyTool post foo
+
+You'll see the notification show up in the listening window.
+
+$ build/Debug/NotifyTool listen foo
+Listening using a file descriptor:
+foo (0)
+
+Use ^C to quit the listener.
+
+You can listen for and post multiple notifications:
+
+$ build/Debug/NotifyTool listen foo bar baz
+Listening using a file descriptor:
+
+$ build/Debug/NotifyTool post foo baz
+
+$ build/Debug/NotifyTool listen foo bar baz
+Listening using a file descriptor:
+foo (0)
+baz (2)
+
+By default the listen command listens using a file descriptor.  You can also listen using raw Mach APIs or using CoreFoundation APIs to integrate with the runloop:
+
+$ build/Debug/NotifyTool listenMach foo bar baz
+Listening using Mach:
+foo (0)
+baz (2)
+^C
+$ build/Debug/NotifyTool listenCF foo bar baz
+Listening using Core Foundation:
+foo (0)
+baz (2)
+^C
+$ build/Debug/NotifyTool listenGCD foo bar baz
+Listening using GCD:
+foo (1)
+baz (3)
+^C
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.4 on Mac OS X 10.7.4.  You should be able to just open the project and choose Build from the Build menu.  This will build the NotifyTool command line tool inside the "build" directory.
+
+How it Works
+------------
+The implementation is just a straightforward use of the <x-man-page://3/notify> API.  For more details, see the comments in the source code.
+
+Caveats
+-------
+Systems prior to Mac OS X 10.6 will error if you listen for two notifications on the same file descriptor.  For example:
+
+$ ./NotifyTool listen foo bar baz
+registration failed: bar: NOTIFY_STATUS_INVALID_FILE (4)
+
+This is caused by a bug in notify_register_file_descriptor's support for the NOTIFY_REUSE flag <rdar://problem/5479205>.  The workaround is to either use a different notification mechanism or to avoid NOTIFY_REUSE (that is, allocate a new file descriptor for each notification).
+
+For a list of notification keys used by Apple system software, look in the header file <notify_keys.h>.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, mail <dts@apple.com> and I'll try to fix them up.
+
+1.0 (Sep 2007) was the first shipping version.
+
+1.1 (Aug 2012) was an update to use the latest tools and techniques, including a command to listen via GCD.
+
+Share and Enjoy.
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+9 Aug 2012
