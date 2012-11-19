@@ -1,0 +1,88 @@
+Read Me About CocoaEcho
+=======================
+1.1
+
+CocoaEcho shows how to write a basic echo client/server pair.  It demonstrates how to make services available on both IPv4 and IPv6, publishing the services using Bonjour, and how to respond to network events asynchronously.
+
+CocoaEcho requires Mac OS X 10.7 although the basic concepts will work on Mac OS X 10.4 and later.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About CocoaEcho.txt -- This file.
+o CocoaEcho.xcodeproj -- An Xcode project that builds both the client and the server.
+o Client -- The source code to the client application.
+o Server -- The source code to the server tool.
+o build -- Pre-built binary.
+
+Within the "Client" directory you'll find:
+
+o Info.plist, main.m -- Standard application boilerplate.
+o MainMenu.xib -- The application's user interface.
+o EchoClientAppDelegate.[hm] -- The application delegate, which implements all of the echo client functionality.
+
+Within the "Server" directory you'll find:
+
+o main.m -- The main function, which simply instantiates an EchoServer object and runs it.
+o EchoServer.[hm] -- The server class.
+o EchoConnection.[hm] -- A class that runs a single echo connection.
+
+Using the Sample
+----------------
+To test the sample, first open a Terminal window and run the server:
+
+$ cd ~/Downloads/CocoaEchoServer
+$
+$ build/Debug/CocoaEchoServer 
+2012-07-27 17:33:39.152 CocoaEchoServer[2016:707] Started server on port 54118.
+[...]
+
+Then launch the client application.  You'll see a list of servers on the left of the window, including the server you just started.  Click on a server, then click in the request text field, enter some text and press Return.  The text will be sent to the server, which will echo it back to the client, which will display it.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.4.3 on Mac OS X 10.7.4.  There are two targets, one for the client and one for the server.  To build a target, just select that target from the scheme popup and choose Build from the Build menu.
+
+How it Works
+------------
+The code is a very simple application of NSStream for networking.  The server opens its listening sockets using CFSocket and then advertises their presence via Bonjour using NSNetService.  For each incoming connection it creates a stream pair (NSInputStream and NSOutputStream) and then passes the stream pair to a connection object that runs the connection.
+
+The client app browses for services using Bonjour (NSNetServiceBrowser), putting the results into an array.  The table view is bound to that array and thus displays the list of services.  When the user clicks on a service the client opens a connection to it as a stream pair (NSInputStream and NSOutputStream again).  When the user presses return in the text field the client sends the text down the output stream.  The client also reads any data coming in on the input stream and displays it in the response field.
+
+Caveats
+-------
+This sample makes a number of simplifying assumptions:
+
+o code structure -- The client application does all of its networking at the app delegate layer.  This is generally a mistake; in most cases you want to do your networking at the model layer.
+
+o security -- This sample ignores security issues, which is never good for production code.
+
+o error handling -- The sample does minimal error handling, enough to prevent it from crashing or getting stuck in incorrect states.  A real app needs better error handling, including automatic retries, user status updates, and so on.
+
+o performance -- The sample ignores performance issues completely.
+
+o Bonjour -- The sample's use of Bonjour is rather rudimentary (for example, it only browses in the local domain and doesn't sort the incoming services).  If you're implementing Bonjour in a real application, you should look at the PictureSharing sample code.
+
+<https://developer.apple.com/library/mac/#samplecode/PictureSharing/>
+
+o reusability -- The sample does not contain any reusable components.  If you're building a new client/server app from scratch, you might want to look at the RemoteCurrency sample code, which includes a number of reusable classes.
+
+<https://developer.apple.com/library/mac/#samplecode/RemoteCurrency/>
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Jun 2005) was the first shipping version.
+
+1.1 (Jul 2012) is a major update to simplify and modernize the code.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+30 Jul 2012

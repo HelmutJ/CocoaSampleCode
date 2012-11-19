@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E498E60C15C2B37A00A61C2F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E498E60B15C2B37A00A61C2F /* Cocoa.framework */; };
+		E4E549FC15C2B8390079B7AF /* EchoClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E549F515C2B8390079B7AF /* EchoClientAppDelegate.m */; };
+		E4E549FE15C2B8390079B7AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E549F715C2B8390079B7AF /* main.m */; };
+		E4E54A0415C2B9CD0079B7AF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4E54A0315C2B9CD0079B7AF /* MainMenu.xib */; };
+		E4E54A1C15C2BA100079B7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E54A1B15C2BA100079B7AF /* Foundation.framework */; };
+		E4E54A2715C2BA330079B7AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E549F915C2B8390079B7AF /* main.m */; };
+		E4E54A2815C2BA330079B7AF /* EchoServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E549FB15C2B8390079B7AF /* EchoServer.m */; };
+		E4E54A3215C2D5AD0079B7AF /* EchoConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E54A2F15C2D4990079B7AF /* EchoConnection.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4E54A1715C2BA100079B7AF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E498E60715C2B37A00A61C2F /* CocoaEcho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaEcho.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E498E60B15C2B37A00A61C2F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E4E549F415C2B8390079B7AF /* EchoClientAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoClientAppDelegate.h; sourceTree = "<group>"; };
+		E4E549F515C2B8390079B7AF /* EchoClientAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoClientAppDelegate.m; sourceTree = "<group>"; };
+		E4E549F615C2B8390079B7AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E549F715C2B8390079B7AF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4E549F915C2B8390079B7AF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4E549FA15C2B8390079B7AF /* EchoServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoServer.h; sourceTree = "<group>"; };
+		E4E549FB15C2B8390079B7AF /* EchoServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoServer.m; sourceTree = "<group>"; };
+		E4E54A0315C2B9CD0079B7AF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		E4E54A1915C2BA100079B7AF /* CocoaEchoServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CocoaEchoServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E54A1B15C2BA100079B7AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4E54A2E15C2D4990079B7AF /* EchoConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoConnection.h; sourceTree = "<group>"; };
+		E4E54A2F15C2D4990079B7AF /* EchoConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchoConnection.m; sourceTree = "<group>"; };
+		E4E54A6515C2FD1B0079B7AF /* Read Me About CocoaEcho.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Read Me About CocoaEcho.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E498E60415C2B37A00A61C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E498E60C15C2B37A00A61C2F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4E54A1615C2BA100079B7AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4E54A1C15C2BA100079B7AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E498E5FC15C2B37900A61C2F = {
+			isa = PBXGroup;
+			children = (
+				E4E54A6515C2FD1B0079B7AF /* Read Me About CocoaEcho.txt */,
+				E4E549F315C2B8390079B7AF /* Client */,
+				E4E549F815C2B8390079B7AF /* Server */,
+				E498E60A15C2B37A00A61C2F /* Frameworks */,
+				E498E60815C2B37A00A61C2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E498E60815C2B37A00A61C2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E498E60715C2B37A00A61C2F /* CocoaEcho.app */,
+				E4E54A1915C2BA100079B7AF /* CocoaEchoServer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E498E60A15C2B37A00A61C2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E498E60B15C2B37A00A61C2F /* Cocoa.framework */,
+				E4E54A1B15C2BA100079B7AF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4E549F315C2B8390079B7AF /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				E4E549F615C2B8390079B7AF /* Info.plist */,
+				E4E549F715C2B8390079B7AF /* main.m */,
+				E4E549F415C2B8390079B7AF /* EchoClientAppDelegate.h */,
+				E4E549F515C2B8390079B7AF /* EchoClientAppDelegate.m */,
+				E4E54A0315C2B9CD0079B7AF /* MainMenu.xib */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		E4E549F815C2B8390079B7AF /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				E4E549F915C2B8390079B7AF /* main.m */,
+				E4E549FA15C2B8390079B7AF /* EchoServer.h */,
+				E4E549FB15C2B8390079B7AF /* EchoServer.m */,
+				E4E54A2E15C2D4990079B7AF /* EchoConnection.h */,
+				E4E54A2F15C2D4990079B7AF /* EchoConnection.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E498E60615C2B37A00A61C2F /* CocoaEcho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E498E61815C2B37B00A61C2F /* Build configuration list for PBXNativeTarget "CocoaEcho" */;
+			buildPhases = (
+				E498E60315C2B37A00A61C2F /* Sources */,
+				E498E60415C2B37A00A61C2F /* Frameworks */,
+				E498E60515C2B37A00A61C2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaEcho;
+			productName = CocoaEcho;
+			productReference = E498E60715C2B37A00A61C2F /* CocoaEcho.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4E54A1815C2BA100079B7AF /* CocoaEchoServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4E54A2415C2BA100079B7AF /* Build configuration list for PBXNativeTarget "CocoaEchoServer" */;
+			buildPhases = (
+				E4E54A1515C2BA100079B7AF /* Sources */,
+				E4E54A1615C2BA100079B7AF /* Frameworks */,
+				E4E54A1715C2BA100079B7AF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaEchoServer;
+			productName = CocoaEchoServer;
+			productReference = E4E54A1915C2BA100079B7AF /* CocoaEchoServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E498E5FE15C2B37900A61C2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E498E60115C2B37900A61C2F /* Build configuration list for PBXProject "CocoaEcho" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E498E5FC15C2B37900A61C2F;
+			productRefGroup = E498E60815C2B37A00A61C2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E498E60615C2B37A00A61C2F /* CocoaEcho */,
+				E4E54A1815C2BA100079B7AF /* CocoaEchoServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E498E60515C2B37A00A61C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4E54A0415C2B9CD0079B7AF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E498E60315C2B37A00A61C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4E549FC15C2B8390079B7AF /* EchoClientAppDelegate.m in Sources */,
+				E4E549FE15C2B8390079B7AF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4E54A1515C2BA100079B7AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4E54A2715C2BA330079B7AF /* main.m in Sources */,
+				E4E54A2815C2BA330079B7AF /* EchoServer.m in Sources */,
+				E4E54A3215C2D5AD0079B7AF /* EchoConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E498E61615C2B37B00A61C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E498E61715C2B37B00A61C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E498E61915C2B37B00A61C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Client/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E498E61A15C2B37B00A61C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Client/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E4E54A2515C2BA100079B7AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E4E54A2615C2BA100079B7AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E498E60115C2B37900A61C2F /* Build configuration list for PBXProject "CocoaEcho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E498E61615C2B37B00A61C2F /* Debug */,
+				E498E61715C2B37B00A61C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E498E61815C2B37B00A61C2F /* Build configuration list for PBXNativeTarget "CocoaEcho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E498E61915C2B37B00A61C2F /* Debug */,
+				E498E61A15C2B37B00A61C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4E54A2415C2BA100079B7AF /* Build configuration list for PBXNativeTarget "CocoaEchoServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4E54A2515C2BA100079B7AF /* Debug */,
+				E4E54A2615C2BA100079B7AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E498E5FE15C2B37900A61C2F /* Project object */;
+}
