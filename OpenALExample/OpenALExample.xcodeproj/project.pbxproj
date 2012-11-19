@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A166010096DA53D00C1D0CC /* AirportTerminalVerbPreset.aupreset in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A16600E096DA53D00C1D0CC /* AirportTerminalVerbPreset.aupreset */; };
+		8A166011096DA53D00C1D0CC /* DelayVerbPreset.aupreset in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A16600F096DA53D00C1D0CC /* DelayVerbPreset.aupreset */; };
+		8AB05DF9096C7A6800AB5C62 /* CathedralPreset.aupreset in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB05DF7096C7A6800AB5C62 /* CathedralPreset.aupreset */; };
+		8AB05DFA096C7A6800AB5C62 /* MedChamberPreset.aupreset in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB05DF8096C7A6800AB5C62 /* MedChamberPreset.aupreset */; };
+		8AF74CAA0A5DC7E100DBFBFE /* sound_voices.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AF74CA90A5DC7E100DBFBFE /* sound_voices.wav */; };
+		8AFA6888084D49A80005575E /* sound_bubbles.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AFA6884084D49A80005575E /* sound_bubbles.wav */; };
+		8AFA6889084D49A80005575E /* sound_electric.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AFA6885084D49A80005575E /* sound_electric.wav */; };
+		8AFA688A084D49A80005575E /* sound_engine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8AFA6886084D49A80005575E /* sound_engine.wav */; };
+		8B37C6D80818740A00B0F810 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B37C6D70818740A00B0F810 /* OpenAL.framework */; };
+		8BAF15420818567B00BAF972 /* MyOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF15410818567B00BAF972 /* MyOpenGLView.m */; };
+		8BAF15470818568C00BAF972 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF15460818568C00BAF972 /* Scene.m */; };
+		8BAF154C081856A300BAF972 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF154B081856A300BAF972 /* Controller.m */; };
+		8BAF15550818573E00BAF972 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAF15530818573E00BAF972 /* OpenGL.framework */; };
+		8BDFA3DF0831781C00E85315 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F70FEEC40C86154F009D0E8D /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = F70FEEC30C86154F009D0E8D /* MyOpenALSupport.c */; };
+		F7AADDD40C861DB500F66FF9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AADDD30C861DB500F66FF9 /* CoreFoundation.framework */; };
+		F7AADDE20C861DF900F66FF9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AADDE10C861DF900F66FF9 /* AudioToolbox.framework */; };
+		F7E188DE0EBB9009003AB44C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7E188DC0EBB9009003AB44C /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AB34CF90A4B075A00754CFB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ReverbPresets;
+			dstSubfolderSpec = 7;
+			files = (
+				8AB05DF9096C7A6800AB5C62 /* CathedralPreset.aupreset in CopyFiles */,
+				8AB05DFA096C7A6800AB5C62 /* MedChamberPreset.aupreset in CopyFiles */,
+				8A166010096DA53D00C1D0CC /* AirportTerminalVerbPreset.aupreset in CopyFiles */,
+				8A166011096DA53D00C1D0CC /* DelayVerbPreset.aupreset in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8A16600E096DA53D00C1D0CC /* AirportTerminalVerbPreset.aupreset */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = AirportTerminalVerbPreset.aupreset; sourceTree = "<group>"; };
+		8A16600F096DA53D00C1D0CC /* DelayVerbPreset.aupreset */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = DelayVerbPreset.aupreset; sourceTree = "<group>"; };
+		8A4DC71F0821664B00E64D06 /* OpenALExample_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenALExample_Prefix.pch; sourceTree = "<group>"; };
+		8AB05DF7096C7A6800AB5C62 /* CathedralPreset.aupreset */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = CathedralPreset.aupreset; sourceTree = "<group>"; };
+		8AB05DF8096C7A6800AB5C62 /* MedChamberPreset.aupreset */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = MedChamberPreset.aupreset; sourceTree = "<group>"; };
+		8AD46F280A6329B2004AE167 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		8AF74CA90A5DC7E100DBFBFE /* sound_voices.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_voices.wav; sourceTree = "<group>"; };
+		8AFA6884084D49A80005575E /* sound_bubbles.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_bubbles.wav; sourceTree = "<group>"; };
+		8AFA6885084D49A80005575E /* sound_electric.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_electric.wav; sourceTree = "<group>"; };
+		8AFA6886084D49A80005575E /* sound_engine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_engine.wav; sourceTree = "<group>"; };
+		8B37C6D70818740A00B0F810 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
+		8BAF15400818567B00BAF972 /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = "<group>"; };
+		8BAF15410818567B00BAF972 /* MyOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOpenGLView.m; sourceTree = "<group>"; };
+		8BAF15450818568C00BAF972 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		8BAF15460818568C00BAF972 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		8BAF154A081856A300BAF972 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		8BAF154B081856A300BAF972 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		8BAF15530818573E00BAF972 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* OpenALExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenALExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70FEEC20C86154F009D0E8D /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
+		F70FEEC30C86154F009D0E8D /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
+		F7AADDD30C861DB500F66FF9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		F7AADDE10C861DF900F66FF9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		F7E188DD0EBB9009003AB44C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				8BAF15550818573E00BAF972 /* OpenGL.framework in Frameworks */,
+				8B37C6D80818740A00B0F810 /* OpenAL.framework in Frameworks */,
+				8BDFA3DF0831781C00E85315 /* AppKit.framework in Frameworks */,
+				F7AADDD40C861DB500F66FF9 /* CoreFoundation.framework in Frameworks */,
+				F7AADDE20C861DF900F66FF9 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* CocoaClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8BAF15400818567B00BAF972 /* MyOpenGLView.h */,
+				8BAF15410818567B00BAF972 /* MyOpenGLView.m */,
+				8BAF15450818568C00BAF972 /* Scene.h */,
+				8BAF15460818568C00BAF972 /* Scene.m */,
+				8BAF154A081856A300BAF972 /* Controller.h */,
+				8BAF154B081856A300BAF972 /* Controller.m */,
+			);
+			name = CocoaClasses;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7AADDE10C861DF900F66FF9 /* AudioToolbox.framework */,
+				F7AADDD30C861DB500F66FF9 /* CoreFoundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* OpenALExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* BasicCocoaOpenAL */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* CocoaClasses */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = BasicCocoaOpenAL;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8AD46F280A6329B2004AE167 /* ReadMe.rtf */,
+				8A4DC71F0821664B00E64D06 /* OpenALExample_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				F70FEEC20C86154F009D0E8D /* MyOpenALSupport.h */,
+				F70FEEC30C86154F009D0E8D /* MyOpenALSupport.c */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7E188DC0EBB9009003AB44C /* MainMenu.xib */,
+				8A02453F099A827F0041B443 /* SoundFiles */,
+				8A02451D099A81AB0041B443 /* ReverbPresets */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B37C6D70818740A00B0F810 /* OpenAL.framework */,
+				8BAF15530818573E00BAF972 /* OpenGL.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A02451D099A81AB0041B443 /* ReverbPresets */ = {
+			isa = PBXGroup;
+			children = (
+				8A16600E096DA53D00C1D0CC /* AirportTerminalVerbPreset.aupreset */,
+				8A16600F096DA53D00C1D0CC /* DelayVerbPreset.aupreset */,
+				8AB05DF7096C7A6800AB5C62 /* CathedralPreset.aupreset */,
+				8AB05DF8096C7A6800AB5C62 /* MedChamberPreset.aupreset */,
+			);
+			path = ReverbPresets;
+			sourceTree = "<group>";
+		};
+		8A02453F099A827F0041B443 /* SoundFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8AF74CA90A5DC7E100DBFBFE /* sound_voices.wav */,
+				8AFA6884084D49A80005575E /* sound_bubbles.wav */,
+				8AFA6885084D49A80005575E /* sound_electric.wav */,
+				8AFA6886084D49A80005575E /* sound_engine.wav */,
+			);
+			path = SoundFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* OpenALExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ACC35DD087CA62B00AEF41C /* Build configuration list for PBXNativeTarget "OpenALExample" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8AB34CF90A4B075A00754CFB /* CopyFiles */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenALExample;
+			productInstallPath = "$(HOME)/Applications";
+			productName = BasicCocoaOpenAL;
+			productReference = 8D1107320486CEB800E47090 /* OpenALExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 8ACC35E1087CA62B00AEF41C /* Build configuration list for PBXProject "OpenALExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* BasicCocoaOpenAL */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* OpenALExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				8AFA6888084D49A80005575E /* sound_bubbles.wav in Resources */,
+				8AFA6889084D49A80005575E /* sound_electric.wav in Resources */,
+				8AFA688A084D49A80005575E /* sound_engine.wav in Resources */,
+				8AF74CAA0A5DC7E100DBFBFE /* sound_voices.wav in Resources */,
+				F7E188DE0EBB9009003AB44C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				8BAF15420818567B00BAF972 /* MyOpenGLView.m in Sources */,
+				8BAF15470818568C00BAF972 /* Scene.m in Sources */,
+				8BAF154C081856A300BAF972 /* Controller.m in Sources */,
+				F70FEEC40C86154F009D0E8D /* MyOpenALSupport.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7E188DC0EBB9009003AB44C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7E188DD0EBB9009003AB44C /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8ACC35DE087CA62B00AEF41C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpenALExample_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = OpenALExample;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		8ACC35DF087CA62B00AEF41C /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpenALExample_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = OpenALExample;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Deployment;
+		};
+		8ACC35E0087CA62B00AEF41C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpenALExample_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = OpenALExample;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		8ACC35E2087CA62B00AEF41C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Development;
+		};
+		8ACC35E3087CA62B00AEF41C /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Deployment;
+		};
+		8ACC35E4087CA62B00AEF41C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8ACC35DD087CA62B00AEF41C /* Build configuration list for PBXNativeTarget "OpenALExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ACC35DE087CA62B00AEF41C /* Development */,
+				8ACC35DF087CA62B00AEF41C /* Deployment */,
+				8ACC35E0087CA62B00AEF41C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		8ACC35E1087CA62B00AEF41C /* Build configuration list for PBXProject "OpenALExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ACC35E2087CA62B00AEF41C /* Development */,
+				8ACC35E3087CA62B00AEF41C /* Deployment */,
+				8ACC35E4087CA62B00AEF41C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
