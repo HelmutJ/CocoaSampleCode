@@ -1,0 +1,69 @@
+Read Me About SimplePing
+========================
+1.3
+
+SimplePing demonstrates ping (ICMP) send and receive.
+
+SimplePing runs on Mac OS X 10.7 and later, although the core code works just fine on all versions of iOS and the underlying approach works on earlier versions of Mac OS X (back to 10.2).
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SimplePing.txt -- This file.
+o SimplePing.xcodeproj -- An Xcode project for the sample.
+o build -- Contains a pre-built binary for testing purposes.
+o SimplePing.[hm] -- The core ping code.
+o main.m -- A simple command line test program for the core code.
+
+Using the Sample
+----------------
+To test the sample, just run it with a single host name argument.  For example:
+
+$ cd ~/Downloads/SimplePing
+$ build/Debug/SimplePing www.apple.com
+2010-02-19 21:38:17.439 SimplePing[96502:903] pinging 92.123.193.15
+2010-02-19 21:38:17.444 SimplePing[96502:903] #0 sent
+2010-02-19 21:38:17.510 SimplePing[96502:903] #0 received
+2010-02-19 21:38:18.447 SimplePing[96502:903] #1 sent
+2010-02-19 21:38:18.513 SimplePing[96502:903] #1 received
+^C
+
+The program will keep pinging until you stop it with ^C.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.4.3 on Mac OS X 10.7 with the Mac OS X 10.7 SDK.  You should be able to just open the project and choose Build from the Build menu.  The resulting program should be compatible with Mac OS X 10.7 and later.  The bulk of my testing was done on Mac OS X 10.7.4.
+
+How It Works
+------------
+On most platforms ping requires privileges (it's implemented with a raw IP socket).  Mac OS X 10.2 and later, and all versions of iOS, include a special facility that allows you to ping without privileges.  Specifically, you can open a special, non-privileged ICMP socket that allows you to send and receive pings.  Look at the -[SimplePing startWithHostAddress] method for the details.
+
+Beyond that, SimplePing is a very simply application of CFHost (for name-to-address resolution) and CFSocket (for integrating the ICMP socket into the runloop).
+
+Caveats
+-------
+The sample only supports IPv4.  In most network programs it's easy to support both IPv4 and IPv6 simultaneously, and that's what we generally recommend, but that's not the case with ping.  IPv6 ping is quite different from IPv4 ping, making it a non-trivial extension of this code.
+
+Much of what SimplePing does with CFSocket can also be done with GCD.  Specifically, GCD makes it easy to integrate a BSD Socket into a typical run loop based program.  This sample uses CFSocket because a) there are other examples of using GCD for socket-based networking, b) there are cases where CFSocket has advantages over GCD (for example, if you want to target a specific run loop, or a specific run loop mode).
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0.1 (Oct 2003) was the first shipping version.
+
+1.1 (Feb 2010) is a complete rewrite with the twin goals of tidying the code and making the core code portable to iPhone OS.
+
+1.2 (Mar 2010) to fix a trivial problem that was causing the SimplePing module to not compile for iOS out of the box.
+
+1.3 (Jul 2012) was a minor update to adopt the latest tools and techniques (most notably, ARC).
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+30 Jul 2012
