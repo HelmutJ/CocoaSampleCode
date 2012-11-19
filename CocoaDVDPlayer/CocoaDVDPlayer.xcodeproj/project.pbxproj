@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84553D24152E118C006B3CFF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84553D23152E118C006B3CFF /* Cocoa.framework */; };
+		84553D30152E118C006B3CFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D2F152E118C006B3CFF /* main.m */; };
+		84553D3A152E118C006B3CFF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84553D38152E118C006B3CFF /* MainMenu.xib */; };
+		84553D53152E14E0006B3CFF /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D4A152E14E0006B3CFF /* Bookmark.m */; };
+		84553D54152E14E0006B3CFF /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D4C152E14E0006B3CFF /* Controller.m */; };
+		84553D55152E14E0006B3CFF /* ControlWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D4E152E14E0006B3CFF /* ControlWindow.m */; };
+		84553D56152E14E0006B3CFF /* PlaybackTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D50152E14E0006B3CFF /* PlaybackTime.m */; };
+		84553D57152E14E0006B3CFF /* VideoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84553D52152E14E0006B3CFF /* VideoWindow.m */; };
+		84553D68152E157C006B3CFF /* Action.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D5B152E157C006B3CFF /* Action.tiff */; };
+		84553D69152E157C006B3CFF /* Camera.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D5C152E157C006B3CFF /* Camera.tiff */; };
+		84553D6A152E157C006B3CFF /* developer.png in Resources */ = {isa = PBXBuildFile; fileRef = 84553D5D152E157C006B3CFF /* developer.png */; };
+		84553D6B152E157C006B3CFF /* Eject.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D5E152E157C006B3CFF /* Eject.tiff */; };
+		84553D6C152E157C006B3CFF /* Forward.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D5F152E157C006B3CFF /* Forward.tiff */; };
+		84553D6D152E157C006B3CFF /* Menu.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D60152E157C006B3CFF /* Menu.tiff */; };
+		84553D6E152E157C006B3CFF /* New.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D61152E157C006B3CFF /* New.tiff */; };
+		84553D6F152E157C006B3CFF /* Next.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D62152E157C006B3CFF /* Next.tiff */; };
+		84553D70152E157C006B3CFF /* Pause.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D63152E157C006B3CFF /* Pause.tiff */; };
+		84553D71152E157C006B3CFF /* Play.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D64152E157C006B3CFF /* Play.tiff */; };
+		84553D72152E157C006B3CFF /* Previous.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D65152E157C006B3CFF /* Previous.tiff */; };
+		84553D73152E157C006B3CFF /* Reverse.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D66152E157C006B3CFF /* Reverse.tiff */; };
+		84553D74152E157C006B3CFF /* Stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 84553D67152E157C006B3CFF /* Stop.tiff */; };
+		84553D7B152E15CE006B3CFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84553D79152E15CE006B3CFF /* Localizable.strings */; };
+		84553D87152E213A006B3CFF /* DVDPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84553D86152E213A006B3CFF /* DVDPlayback.framework */; };
+		845CF5FE152E5D6F00406D58 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 845CF5FD152E5D6F00406D58 /* ReadMe.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84553D1F152E118C006B3CFF /* CocoaDVDPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaDVDPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84553D23152E118C006B3CFF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		84553D26152E118C006B3CFF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		84553D27152E118C006B3CFF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84553D28152E118C006B3CFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84553D2B152E118C006B3CFF /* CocoaDVDPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaDVDPlayer-Info.plist"; sourceTree = "<group>"; };
+		84553D2F152E118C006B3CFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84553D31152E118C006B3CFF /* CocoaDVDPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaDVDPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		84553D39152E118C006B3CFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		84553D49152E14E0006B3CFF /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookmark.h; sourceTree = "<group>"; };
+		84553D4A152E14E0006B3CFF /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmark.m; sourceTree = "<group>"; };
+		84553D4B152E14E0006B3CFF /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		84553D4C152E14E0006B3CFF /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		84553D4D152E14E0006B3CFF /* ControlWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlWindow.h; sourceTree = "<group>"; };
+		84553D4E152E14E0006B3CFF /* ControlWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlWindow.m; sourceTree = "<group>"; };
+		84553D4F152E14E0006B3CFF /* PlaybackTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackTime.h; sourceTree = "<group>"; };
+		84553D50152E14E0006B3CFF /* PlaybackTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackTime.m; sourceTree = "<group>"; };
+		84553D51152E14E0006B3CFF /* VideoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWindow.h; sourceTree = "<group>"; };
+		84553D52152E14E0006B3CFF /* VideoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWindow.m; sourceTree = "<group>"; };
+		84553D5B152E157C006B3CFF /* Action.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Action.tiff; sourceTree = "<group>"; };
+		84553D5C152E157C006B3CFF /* Camera.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Camera.tiff; sourceTree = "<group>"; };
+		84553D5D152E157C006B3CFF /* developer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = developer.png; sourceTree = "<group>"; };
+		84553D5E152E157C006B3CFF /* Eject.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Eject.tiff; sourceTree = "<group>"; };
+		84553D5F152E157C006B3CFF /* Forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Forward.tiff; sourceTree = "<group>"; };
+		84553D60152E157C006B3CFF /* Menu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Menu.tiff; sourceTree = "<group>"; };
+		84553D61152E157C006B3CFF /* New.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = New.tiff; sourceTree = "<group>"; };
+		84553D62152E157C006B3CFF /* Next.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Next.tiff; sourceTree = "<group>"; };
+		84553D63152E157C006B3CFF /* Pause.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Pause.tiff; sourceTree = "<group>"; };
+		84553D64152E157C006B3CFF /* Play.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Play.tiff; sourceTree = "<group>"; };
+		84553D65152E157C006B3CFF /* Previous.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Previous.tiff; sourceTree = "<group>"; };
+		84553D66152E157C006B3CFF /* Reverse.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Reverse.tiff; sourceTree = "<group>"; };
+		84553D67152E157C006B3CFF /* Stop.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Stop.tiff; sourceTree = "<group>"; };
+		84553D7A152E15CE006B3CFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84553D86152E213A006B3CFF /* DVDPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVDPlayback.framework; path = System/Library/Frameworks/DVDPlayback.framework; sourceTree = SDKROOT; };
+		845CF5FD152E5D6F00406D58 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84553D1C152E118C006B3CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84553D87152E213A006B3CFF /* DVDPlayback.framework in Frameworks */,
+				84553D24152E118C006B3CFF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84553D14152E118C006B3CFF = {
+			isa = PBXGroup;
+			children = (
+				845CF5FD152E5D6F00406D58 /* ReadMe.txt */,
+				84553D29152E118C006B3CFF /* CocoaDVDPlayer */,
+				84553D22152E118C006B3CFF /* Frameworks */,
+				84553D20152E118C006B3CFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84553D20152E118C006B3CFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84553D1F152E118C006B3CFF /* CocoaDVDPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84553D22152E118C006B3CFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84553D23152E118C006B3CFF /* Cocoa.framework */,
+				84553D86152E213A006B3CFF /* DVDPlayback.framework */,
+				84553D25152E118C006B3CFF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84553D25152E118C006B3CFF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84553D26152E118C006B3CFF /* AppKit.framework */,
+				84553D27152E118C006B3CFF /* CoreData.framework */,
+				84553D28152E118C006B3CFF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		84553D29152E118C006B3CFF /* CocoaDVDPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				84553D49152E14E0006B3CFF /* Bookmark.h */,
+				84553D4A152E14E0006B3CFF /* Bookmark.m */,
+				84553D4B152E14E0006B3CFF /* Controller.h */,
+				84553D4C152E14E0006B3CFF /* Controller.m */,
+				84553D4D152E14E0006B3CFF /* ControlWindow.h */,
+				84553D4E152E14E0006B3CFF /* ControlWindow.m */,
+				84553D4F152E14E0006B3CFF /* PlaybackTime.h */,
+				84553D50152E14E0006B3CFF /* PlaybackTime.m */,
+				84553D51152E14E0006B3CFF /* VideoWindow.h */,
+				84553D52152E14E0006B3CFF /* VideoWindow.m */,
+				84553D38152E118C006B3CFF /* MainMenu.xib */,
+				84553D5A152E157C006B3CFF /* Images */,
+				84553D2A152E118C006B3CFF /* Supporting Files */,
+			);
+			path = CocoaDVDPlayer;
+			sourceTree = "<group>";
+		};
+		84553D2A152E118C006B3CFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84553D79152E15CE006B3CFF /* Localizable.strings */,
+				84553D2B152E118C006B3CFF /* CocoaDVDPlayer-Info.plist */,
+				84553D2F152E118C006B3CFF /* main.m */,
+				84553D31152E118C006B3CFF /* CocoaDVDPlayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84553D5A152E157C006B3CFF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84553D5B152E157C006B3CFF /* Action.tiff */,
+				84553D5C152E157C006B3CFF /* Camera.tiff */,
+				84553D5D152E157C006B3CFF /* developer.png */,
+				84553D5E152E157C006B3CFF /* Eject.tiff */,
+				84553D5F152E157C006B3CFF /* Forward.tiff */,
+				84553D60152E157C006B3CFF /* Menu.tiff */,
+				84553D61152E157C006B3CFF /* New.tiff */,
+				84553D62152E157C006B3CFF /* Next.tiff */,
+				84553D63152E157C006B3CFF /* Pause.tiff */,
+				84553D64152E157C006B3CFF /* Play.tiff */,
+				84553D65152E157C006B3CFF /* Previous.tiff */,
+				84553D66152E157C006B3CFF /* Reverse.tiff */,
+				84553D67152E157C006B3CFF /* Stop.tiff */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84553D1E152E118C006B3CFF /* CocoaDVDPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84553D3D152E118C006B3CFF /* Build configuration list for PBXNativeTarget "CocoaDVDPlayer" */;
+			buildPhases = (
+				84553D1B152E118C006B3CFF /* Sources */,
+				84553D1C152E118C006B3CFF /* Frameworks */,
+				84553D1D152E118C006B3CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaDVDPlayer;
+			productName = CocoaDVDPlayer;
+			productReference = 84553D1F152E118C006B3CFF /* CocoaDVDPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84553D16152E118C006B3CFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 84553D19152E118C006B3CFF /* Build configuration list for PBXProject "CocoaDVDPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84553D14152E118C006B3CFF;
+			productRefGroup = 84553D20152E118C006B3CFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84553D1E152E118C006B3CFF /* CocoaDVDPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84553D1D152E118C006B3CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84553D3A152E118C006B3CFF /* MainMenu.xib in Resources */,
+				84553D68152E157C006B3CFF /* Action.tiff in Resources */,
+				84553D69152E157C006B3CFF /* Camera.tiff in Resources */,
+				84553D6A152E157C006B3CFF /* developer.png in Resources */,
+				84553D6B152E157C006B3CFF /* Eject.tiff in Resources */,
+				84553D6C152E157C006B3CFF /* Forward.tiff in Resources */,
+				84553D6D152E157C006B3CFF /* Menu.tiff in Resources */,
+				84553D6E152E157C006B3CFF /* New.tiff in Resources */,
+				84553D6F152E157C006B3CFF /* Next.tiff in Resources */,
+				84553D70152E157C006B3CFF /* Pause.tiff in Resources */,
+				84553D71152E157C006B3CFF /* Play.tiff in Resources */,
+				84553D72152E157C006B3CFF /* Previous.tiff in Resources */,
+				84553D73152E157C006B3CFF /* Reverse.tiff in Resources */,
+				84553D74152E157C006B3CFF /* Stop.tiff in Resources */,
+				84553D7B152E15CE006B3CFF /* Localizable.strings in Resources */,
+				845CF5FE152E5D6F00406D58 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84553D1B152E118C006B3CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84553D30152E118C006B3CFF /* main.m in Sources */,
+				84553D53152E14E0006B3CFF /* Bookmark.m in Sources */,
+				84553D54152E14E0006B3CFF /* Controller.m in Sources */,
+				84553D55152E14E0006B3CFF /* ControlWindow.m in Sources */,
+				84553D56152E14E0006B3CFF /* PlaybackTime.m in Sources */,
+				84553D57152E14E0006B3CFF /* VideoWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84553D38152E118C006B3CFF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84553D39152E118C006B3CFF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		84553D79152E15CE006B3CFF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84553D7A152E15CE006B3CFF /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84553D3B152E118C006B3CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84553D3C152E118C006B3CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84553D3E152E118C006B3CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaDVDPlayer/CocoaDVDPlayer-Prefix.pch";
+				INFOPLIST_FILE = "CocoaDVDPlayer/CocoaDVDPlayer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84553D3F152E118C006B3CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaDVDPlayer/CocoaDVDPlayer-Prefix.pch";
+				INFOPLIST_FILE = "CocoaDVDPlayer/CocoaDVDPlayer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84553D19152E118C006B3CFF /* Build configuration list for PBXProject "CocoaDVDPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84553D3B152E118C006B3CFF /* Debug */,
+				84553D3C152E118C006B3CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84553D3D152E118C006B3CFF /* Build configuration list for PBXNativeTarget "CocoaDVDPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84553D3E152E118C006B3CFF /* Debug */,
+				84553D3F152E118C006B3CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84553D16152E118C006B3CFF /* Project object */;
+}
