@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		58F968A60B60353300250736 /* All Examples */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 58F968AD0B60358200250736 /* Build configuration list for PBXAggregateTarget "All Examples" */;
+			buildPhases = (
+			);
+			dependencies = (
+				58F968A80B60353A00250736 /* PBXTargetDependency */,
+				5889916C1165593100AE7077 /* PBXTargetDependency */,
+				58F968AA0B60353F00250736 /* PBXTargetDependency */,
+			);
+			name = "All Examples";
+			productName = "All Examples";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		58898EAC07B1B19900AC31E8 /* DemonstrateConvolution.c in Sources */ = {isa = PBXBuildFile; fileRef = 58898EA607B1B19900AC31E8 /* DemonstrateConvolution.c */; };
+		58898EAF07B1B19900AC31E8 /* Demonstrate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 58898EA907B1B19900AC31E8 /* Demonstrate.h */; };
+		58898EB007B1B19900AC31E8 /* DemonstrateFFT.c in Sources */ = {isa = PBXBuildFile; fileRef = 58898EAA07B1B19900AC31E8 /* DemonstrateFFT.c */; };
+		58898EB107B1B19900AC31E8 /* DemonstrateFFT2D.c in Sources */ = {isa = PBXBuildFile; fileRef = 58898EAB07B1B19900AC31E8 /* DemonstrateFFT2D.c */; };
+		58898EBE07B1B1E200AC31E8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58898EBC07B1B1E200AC31E8 /* Accelerate.framework */; };
+		5889915E116558C000AE7077 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58898EBC07B1B1E200AC31E8 /* Accelerate.framework */; };
+		58899166116558E700AE7077 /* DTMF.DFT.c in Sources */ = {isa = PBXBuildFile; fileRef = 58899165116558E700AE7077 /* DTMF.DFT.c */; };
+		5889916A1165590B00AE7077 /* DemonstrateDFT.c in Sources */ = {isa = PBXBuildFile; fileRef = 588991691165590B00AE7077 /* DemonstrateDFT.c */; };
+		58F968740B6032D000250736 /* DTMF.FFT.c in Sources */ = {isa = PBXBuildFile; fileRef = 58F968730B6032D000250736 /* DTMF.FFT.c */; };
+		58F968750B6033BC00250736 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58898EBC07B1B1E200AC31E8 /* Accelerate.framework */; };
+		8DD76FAC0486AB0100D96B5E /* Demonstrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Demonstrate.c */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5889916B1165593100AE7077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5889915A116558C000AE7077;
+			remoteInfo = DTMF.DFT;
+		};
+		58F968A70B60353A00250736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76FA90486AB0100D96B5E;
+			remoteInfo = vDSPExampleSource;
+		};
+		58F968A90B60353F00250736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58F9685D0B6031EC00250736;
+			remoteInfo = DTMF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				58898EAF07B1B19900AC31E8 /* Demonstrate.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* Demonstrate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Demonstrate.c; sourceTree = "<group>"; };
+		58898EA607B1B19900AC31E8 /* DemonstrateConvolution.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DemonstrateConvolution.c; sourceTree = "<group>"; };
+		58898EA907B1B19900AC31E8 /* Demonstrate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Demonstrate.h; sourceTree = "<group>"; };
+		58898EAA07B1B19900AC31E8 /* DemonstrateFFT.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DemonstrateFFT.c; sourceTree = "<group>"; };
+		58898EAB07B1B19900AC31E8 /* DemonstrateFFT2D.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DemonstrateFFT2D.c; sourceTree = "<group>"; };
+		58898EBC07B1B1E200AC31E8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		58899163116558C000AE7077 /* DTMF.DFT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DTMF.DFT; sourceTree = BUILT_PRODUCTS_DIR; };
+		58899165116558E700AE7077 /* DTMF.DFT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DTMF.DFT.c; sourceTree = "<group>"; };
+		588991691165590B00AE7077 /* DemonstrateDFT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DemonstrateDFT.c; sourceTree = "<group>"; };
+		58F9685E0B6031EC00250736 /* DTMF.FFT */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DTMF.FFT; sourceTree = BUILT_PRODUCTS_DIR; };
+		58F968730B6032D000250736 /* DTMF.FFT.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DTMF.FFT.c; sourceTree = "<group>"; };
+		8DD76FB20486AB0100D96B5E /* Demonstrate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Demonstrate; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5889915D116558C000AE7077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5889915E116558C000AE7077 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58F9685C0B6031EC00250736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58F968750B6033BC00250736 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58898EBE07B1B1E200AC31E8 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* vDSPExampleSource */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				5889901F07B1B1F200AC31E8 /* External Frameworks and References */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = vDSPExampleSource;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07 /* Demonstrate.c */,
+				58898EA907B1B19900AC31E8 /* Demonstrate.h */,
+				58898EA607B1B19900AC31E8 /* DemonstrateConvolution.c */,
+				588991691165590B00AE7077 /* DemonstrateDFT.c */,
+				58898EAA07B1B19900AC31E8 /* DemonstrateFFT.c */,
+				58898EAB07B1B19900AC31E8 /* DemonstrateFFT2D.c */,
+				58899165116558E700AE7077 /* DTMF.DFT.c */,
+				58F968730B6032D000250736 /* DTMF.FFT.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* Demonstrate */,
+				58F9685E0B6031EC00250736 /* DTMF.FFT */,
+				58899163116558C000AE7077 /* DTMF.DFT */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5889901F07B1B1F200AC31E8 /* External Frameworks and References */ = {
+			isa = PBXGroup;
+			children = (
+				58898EBC07B1B1E200AC31E8 /* Accelerate.framework */,
+			);
+			name = "External Frameworks and References";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5889915A116558C000AE7077 /* DTMF.DFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5889915F116558C000AE7077 /* Build configuration list for PBXNativeTarget "DTMF.DFT" */;
+			buildPhases = (
+				5889915B116558C000AE7077 /* Sources */,
+				5889915D116558C000AE7077 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTMF.DFT;
+			productName = DTMF;
+			productReference = 58899163116558C000AE7077 /* DTMF.DFT */;
+			productType = "com.apple.product-type.tool";
+		};
+		58F9685D0B6031EC00250736 /* DTMF.FFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58F968620B60320400250736 /* Build configuration list for PBXNativeTarget "DTMF.FFT" */;
+			buildPhases = (
+				58F9685B0B6031EC00250736 /* Sources */,
+				58F9685C0B6031EC00250736 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTMF.FFT;
+			productName = DTMF;
+			productReference = 58F9685E0B6031EC00250736 /* DTMF.FFT */;
+			productType = "com.apple.product-type.tool";
+		};
+		8DD76FA90486AB0100D96B5E /* Demonstrate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5815B5150B57103200395C37 /* Build configuration list for PBXNativeTarget "Demonstrate" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demonstrate;
+			productInstallPath = "$(HOME)/bin";
+			productName = vDSPExampleSource;
+			productReference = 8DD76FB20486AB0100D96B5E /* Demonstrate */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = 5815B5110B57103200395C37 /* Build configuration list for PBXProject "vDSPExamples" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* vDSPExampleSource */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58F968A60B60353300250736 /* All Examples */,
+				8DD76FA90486AB0100D96B5E /* Demonstrate */,
+				5889915A116558C000AE7077 /* DTMF.DFT */,
+				58F9685D0B6031EC00250736 /* DTMF.FFT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5889915B116558C000AE7077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58899166116558E700AE7077 /* DTMF.DFT.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58F9685B0B6031EC00250736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58F968740B6032D000250736 /* DTMF.FFT.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76FAC0486AB0100D96B5E /* Demonstrate.c in Sources */,
+				58898EAC07B1B19900AC31E8 /* DemonstrateConvolution.c in Sources */,
+				58898EB007B1B19900AC31E8 /* DemonstrateFFT.c in Sources */,
+				58898EB107B1B19900AC31E8 /* DemonstrateFFT2D.c in Sources */,
+				5889916A1165590B00AE7077 /* DemonstrateDFT.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5889916C1165593100AE7077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5889915A116558C000AE7077 /* DTMF.DFT */;
+			targetProxy = 5889916B1165593100AE7077 /* PBXContainerItemProxy */;
+		};
+		58F968A80B60353A00250736 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76FA90486AB0100D96B5E /* Demonstrate */;
+			targetProxy = 58F968A70B60353A00250736 /* PBXContainerItemProxy */;
+		};
+		58F968AA0B60353F00250736 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58F9685D0B6031EC00250736 /* DTMF.FFT */;
+			targetProxy = 58F968A90B60353F00250736 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5815B5120B57103200395C37 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Development;
+		};
+		5815B5130B57103200395C37 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Deployment;
+		};
+		5815B5140B57103200395C37 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.7.sdk";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		5815B5160B57103200395C37 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = Demonstrate;
+			};
+			name = Development;
+		};
+		5815B5170B57103200395C37 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = Demonstrate;
+			};
+			name = Deployment;
+		};
+		5815B5180B57103200395C37 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = Demonstrate;
+			};
+			name = Default;
+		};
+		58899160116558C000AE7077 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = DTMF.DFT;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		58899161116558C000AE7077 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = DTMF.DFT;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		58899162116558C000AE7077 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = DTMF.DFT;
+				ZERO_LINK = YES;
+			};
+			name = Default;
+		};
+		58F968630B60320400250736 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = DTMF.FFT;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		58F968640B60320400250736 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = DTMF.FFT;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		58F968650B60320400250736 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = DTMF.FFT;
+				ZERO_LINK = YES;
+			};
+			name = Default;
+		};
+		58F968AE0B60358200250736 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "All Examples";
+			};
+			name = Development;
+		};
+		58F968AF0B60358200250736 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = "All Examples";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		58F968B00B60358200250736 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "All Examples";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5815B5110B57103200395C37 /* Build configuration list for PBXProject "vDSPExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5815B5120B57103200395C37 /* Development */,
+				5815B5130B57103200395C37 /* Deployment */,
+				5815B5140B57103200395C37 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		5815B5150B57103200395C37 /* Build configuration list for PBXNativeTarget "Demonstrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5815B5160B57103200395C37 /* Development */,
+				5815B5170B57103200395C37 /* Deployment */,
+				5815B5180B57103200395C37 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		5889915F116558C000AE7077 /* Build configuration list for PBXNativeTarget "DTMF.DFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58899160116558C000AE7077 /* Development */,
+				58899161116558C000AE7077 /* Deployment */,
+				58899162116558C000AE7077 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		58F968620B60320400250736 /* Build configuration list for PBXNativeTarget "DTMF.FFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58F968630B60320400250736 /* Development */,
+				58F968640B60320400250736 /* Deployment */,
+				58F968650B60320400250736 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		58F968AD0B60358200250736 /* Build configuration list for PBXAggregateTarget "All Examples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58F968AE0B60358200250736 /* Development */,
+				58F968AF0B60358200250736 /* Deployment */,
+				58F968B00B60358200250736 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
