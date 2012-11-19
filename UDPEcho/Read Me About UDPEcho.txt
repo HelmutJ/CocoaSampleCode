@@ -1,0 +1,96 @@
+Read Me About UDPEcho
+=====================
+1.1
+
+UDPEcho shows how to do UDP communications with CFSocket.
+
+UDPEcho requires Mac OS X 10.7 or later, although the core concepts should work on all versions of Mac OS X and iOS.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About UDPEcho.txt -- This file.
+o UDPEcho.xcodeproj -- An Xcode project for the sample.
+o build -- A built binary for the project.
+o UDPEcho.[hm] -- A simple class that implements UDP echo client and server.
+o main.m -- A test program for the above.
+
+Using the Sample
+----------------
+To test the sample, open two Terminal windows.  Let's call them A and B.  In A, start the tool in server mode.
+
+A$ cd Downloads/UDPEcho
+A$ build/Debug/UDPEcho -l 7777
+[...] receiving on 0.0.0.0:7777
+
+In B, start the tool in client mode.
+
+B$ build/Debug/UDPEcho localhost 7777
+[...] sending to ::1:7777
+[...] sent "99 bottles of beer on the wall" to ::1:7777
+[...] received "99 bottles of beer on the wall" from ::1:7777
+
+Hit ^C to stop either tool.
+
+You can also <x-man-page://1/nc> to test the program.  For example, to use "nc" as a client:
+
+B$ nc -u localhost 7777
+hello cruel world                   <<< what you type
+hello cruel world                   <<< what gets echoed
+^C
+
+One nice attribute of "nc" is that you can force it to use either IPv4 or IPv6 by passing in the "-4" or "-6" options, respectively.  This allows you to test the behaviour of a specific type of client connecting to a specific type of server.  For example, if you run UDPEcho4 in server mode, you will probably need to pass "-4" to "nc" to successfully connect.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.4.3 on Mac OS X 10.7.4 with Mac OS X 10.7 SDK.  You should be able to just open the project and choose Build from the Build menu.  The resulting program should be compatible with all computers running Mac OS X 10.7 and later.  The bulk of my testing was done with an Mac OS X 10.7.4.
+
+There are actually two targets in the project.  The default target, UDPEcho, builds the code to work with both IPv4 and IPv6.  The other target, UDPEcho4, builds the code to work with IPv4 only.  See "How It Works", below, for more information about this.
+
+When To Use CFSocket
+--------------------
+CFSocket is the lowest level Mac OS X networking API.  You should use it only when there are no higher-level alternatives.  The two most common places where you might need to use CFSocket are:
+
+o accepting incoming TCP connections -- CFSocket, with the kCFSocketAcceptCallBack callback type, is the preferred mechanism for this.  There are numerous examples of this on <http://developer.apple.com>.
+
+o dealing with non-TCP sockets -- There are lots of nice, high-level APIs for dealing with TCP and the various protocols layered on top of TCP.  However, if you need to deal with non-TCP sockets, CFSocket is your best bet.
+
+As this sample is based around UDP, CFSocket features heavily in the code.
+
+How It Works
+------------
+The UDPEcho class is a fairly simple application of CFSocket as it applies to UDP datagrams.  It also uses CFHost for asynchronous name-to-address resolution.  On the CFSocket front, the critical routine is -setupSocketConnectedToAddress:port:error:.  This sets up a UDP socket for either send or receive, and then wraps the resulting socket within a CFSocket that's scheduled on the runloop.
+
+There are actually two versions of -setupSocketConnectedToAddress:port:error:.  By default it create an IPv6 socket and uses that for all communications, dealing with IPv4 clients via mapped IPv4 addresses.  If creating an IPv6 socket fails (as it would on iOS versions prior to iOS 5.0), it falls back to using IPv4 exclusively.  However, if you set the UDPECHO_IPV4_ONLY compile-time variable, the code uses a different version of -setupSocketConnectedToAddress:port:error: that only supports IPv4.  This code is significantly smaller and easier to read, so I've included it for those people who only want to support IPv4, or who are just getting started.
+
+When used in client mode UDPEcho uses a connected UDP socket.  This has a couple of nice advantages:
+
+o You hear about delivery failures.  If sending a packet generates an ICMP response due to a delivery failure, the kernel is smart enough to note the error on the sending connected socket.
+
+o It informs the kernel of your intent.  If you only plan to use a socket to talk to a particular destination, connecting the socket tells the kernel what you're doing, so that the kernel can make more intelligent decisions about how to handle your socket.  While the places where this is useful on current systems are somewhat obscure, it may be more useful in the future.
+
+When using CFSocket, many operations can be done using CFSocket calls or by calling BSD sockets directly.  For example, to send data you can call either CFSocketSendData or <x-man-page://2/sendto>.  This sample prefers the latter over the former.  That is, it only uses CFSocket where it's absolutely necessary.  My experience is that CFSocket is extremely valuable for runloop integration, but doesn't add much value over standard BSD sockets otherwise.
+
+Caveats
+-------
+If you want to send or receive large UDP datagrams, you will probably need to increase the size of the send and receive socket buffers.  You can do this by calling <x-man-page://2/setsockopt> with the SO_SNDBUF and SO_RCVBUF options.
+
+Much of what UDPEcho does with CFSocket can also be done with GCD.  Specifically, GCD makes it easy to integrate a BSD Socket into a typical run loop based program.  This sample uses CFSocket because a) there are other examples of using GCD for socket-based networking, b) there are cases where CFSocket has advantages over GCD (for example, if you want to target a specific run loop, or a specific run loop mode).
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Feb 2010) was the first shipping version.
+
+1.1 (Feb 2012) is a minor update to adopt the latest tools and techniques (most notably, ARC).
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+30 Jul 2012
