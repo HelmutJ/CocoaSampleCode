@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AudioCodecSDK</string>
+	<key>CFBundleGetInfoString</key>
+	<string>CoreAudio Codec SDK Components</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.mycompany.myformat</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>CoreAudio Codec SDK Components</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>AudioComponents</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>adec</string>
+			<key>subtype</key>
+			<string>DEMO</string>
+			<key>manufacturer</key>
+			<string>Acme</string>
+			<key>version</key>
+			<integer>65536</integer>
+			<key>name</key>
+			<string>Acme IMA4 Decoder</string>
+			<key>description</key>
+			<string>An AudioCodec that decodes IMA4 into linear PCM data</string>
+			<key>factoryFunction</key>
+			<string>ACAppleIMA4DecoderFactory</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>aenc</string>
+			<key>subtype</key>
+			<string>DEMO</string>
+			<key>manufacturer</key>
+			<string>Acme</string>
+			<key>version</key>
+			<integer>65536</integer>
+			<key>name</key>
+			<string>Acme IMA4 Encoder</string>
+			<key>description</key>
+			<string>An AudioCodec that encodes linear PCM data into IMA4</string>
+			<key>factoryFunction</key>
+			<string>ACAppleIMA4EncoderFactory</string>
+		</dict>
+	</array>
+</dict>
+</plist>
