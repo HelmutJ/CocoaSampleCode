@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B838888139D716C004ED098 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B838887139D716C004ED098 /* AVFoundation.framework */; };
+		1B83888B139D717E004ED098 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B83888A139D717E004ED098 /* CoreMedia.framework */; };
+		1BB2E861139D5E1900749B68 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB2E860139D5E1900749B68 /* Cocoa.framework */; };
+		1BB2E86B139D5E1900749B68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BB2E869139D5E1900749B68 /* InfoPlist.strings */; };
+		1BB2E86D139D5E1900749B68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E86C139D5E1900749B68 /* main.m */; };
+		1BB2E874139D5E1900749B68 /* AVScreenShackDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB2E873139D5E1900749B68 /* AVScreenShackDocument.m */; };
+		1BB2E877139D5E1900749B68 /* AVScreenShackDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB2E875139D5E1900749B68 /* AVScreenShackDocument.xib */; };
+		1BB2E87A139D5E1A00749B68 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB2E878139D5E1A00749B68 /* MainMenu.xib */; };
+		1BED9B85139D6E5900A332BD /* AVScreenShackPresetTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BED9B82139D6E5900A332BD /* AVScreenShackPresetTransformer.m */; };
+		1BED9B86139D6E5900A332BD /* DrawMouseBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BED9B84139D6E5900A332BD /* DrawMouseBoxView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B838887139D716C004ED098 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B83888A139D717E004ED098 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1BB2E85C139D5E1900749B68 /* AVScreenShack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVScreenShack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB2E860139D5E1900749B68 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1BB2E863139D5E1900749B68 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1BB2E864139D5E1900749B68 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1BB2E865139D5E1900749B68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BB2E868139D5E1900749B68 /* AVScreenShack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVScreenShack-Info.plist"; sourceTree = "<group>"; };
+		1BB2E86A139D5E1900749B68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BB2E86C139D5E1900749B68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BB2E86E139D5E1900749B68 /* AVScreenShack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVScreenShack-Prefix.pch"; sourceTree = "<group>"; };
+		1BB2E872139D5E1900749B68 /* AVScreenShackDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVScreenShackDocument.h; sourceTree = "<group>"; };
+		1BB2E873139D5E1900749B68 /* AVScreenShackDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVScreenShackDocument.m; sourceTree = "<group>"; };
+		1BB2E876139D5E1900749B68 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AVScreenShackDocument.xib; sourceTree = "<group>"; };
+		1BB2E879139D5E1A00749B68 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1BED9B81139D6E5900A332BD /* AVScreenShackPresetTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVScreenShackPresetTransformer.h; sourceTree = "<group>"; };
+		1BED9B82139D6E5900A332BD /* AVScreenShackPresetTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVScreenShackPresetTransformer.m; sourceTree = "<group>"; };
+		1BED9B83139D6E5900A332BD /* DrawMouseBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawMouseBoxView.h; sourceTree = "<group>"; };
+		1BED9B84139D6E5900A332BD /* DrawMouseBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawMouseBoxView.m; sourceTree = "<group>"; };
+		28A368FB158963E700C0B779 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BB2E859139D5E1900749B68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B83888B139D717E004ED098 /* CoreMedia.framework in Frameworks */,
+				1B838888139D716C004ED098 /* AVFoundation.framework in Frameworks */,
+				1BB2E861139D5E1900749B68 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BB2E851139D5E1700749B68 = {
+			isa = PBXGroup;
+			children = (
+				28A368FB158963E700C0B779 /* ReadMe.txt */,
+				1BB2E866139D5E1900749B68 /* AVScreenShack */,
+				1BB2E85F139D5E1900749B68 /* Frameworks */,
+				1BB2E85D139D5E1900749B68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BB2E85D139D5E1900749B68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2E85C139D5E1900749B68 /* AVScreenShack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BB2E85F139D5E1900749B68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2E860139D5E1900749B68 /* Cocoa.framework */,
+				1B83888A139D717E004ED098 /* CoreMedia.framework */,
+				1B838887139D716C004ED098 /* AVFoundation.framework */,
+				1BB2E862139D5E1900749B68 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BB2E862139D5E1900749B68 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2E863139D5E1900749B68 /* AppKit.framework */,
+				1BB2E864139D5E1900749B68 /* CoreData.framework */,
+				1BB2E865139D5E1900749B68 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1BB2E866139D5E1900749B68 /* AVScreenShack */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2E872139D5E1900749B68 /* AVScreenShackDocument.h */,
+				1BB2E873139D5E1900749B68 /* AVScreenShackDocument.m */,
+				1BED9B81139D6E5900A332BD /* AVScreenShackPresetTransformer.h */,
+				1BED9B82139D6E5900A332BD /* AVScreenShackPresetTransformer.m */,
+				1BED9B83139D6E5900A332BD /* DrawMouseBoxView.h */,
+				1BED9B84139D6E5900A332BD /* DrawMouseBoxView.m */,
+				1BB2E875139D5E1900749B68 /* AVScreenShackDocument.xib */,
+				1BB2E878139D5E1A00749B68 /* MainMenu.xib */,
+				1BB2E867139D5E1900749B68 /* Supporting Files */,
+			);
+			path = AVScreenShack;
+			sourceTree = "<group>";
+		};
+		1BB2E867139D5E1900749B68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BB2E868139D5E1900749B68 /* AVScreenShack-Info.plist */,
+				1BB2E869139D5E1900749B68 /* InfoPlist.strings */,
+				1BB2E86C139D5E1900749B68 /* main.m */,
+				1BB2E86E139D5E1900749B68 /* AVScreenShack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BB2E85B139D5E1900749B68 /* AVScreenShack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB2E87D139D5E1A00749B68 /* Build configuration list for PBXNativeTarget "AVScreenShack" */;
+			buildPhases = (
+				1BB2E858139D5E1900749B68 /* Sources */,
+				1BB2E859139D5E1900749B68 /* Frameworks */,
+				1BB2E85A139D5E1900749B68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVScreenShack;
+			productName = AVScreenShack;
+			productReference = 1BB2E85C139D5E1900749B68 /* AVScreenShack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BB2E853139D5E1700749B68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1BB2E856139D5E1700749B68 /* Build configuration list for PBXProject "AVScreenShack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1BB2E851139D5E1700749B68;
+			productRefGroup = 1BB2E85D139D5E1900749B68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BB2E85B139D5E1900749B68 /* AVScreenShack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BB2E85A139D5E1900749B68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB2E86B139D5E1900749B68 /* InfoPlist.strings in Resources */,
+				1BB2E877139D5E1900749B68 /* AVScreenShackDocument.xib in Resources */,
+				1BB2E87A139D5E1A00749B68 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BB2E858139D5E1900749B68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB2E86D139D5E1900749B68 /* main.m in Sources */,
+				1BB2E874139D5E1900749B68 /* AVScreenShackDocument.m in Sources */,
+				1BED9B85139D6E5900A332BD /* AVScreenShackPresetTransformer.m in Sources */,
+				1BED9B86139D6E5900A332BD /* DrawMouseBoxView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1BB2E869139D5E1900749B68 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BB2E86A139D5E1900749B68 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1BB2E875139D5E1900749B68 /* AVScreenShackDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BB2E876139D5E1900749B68 /* en */,
+			);
+			name = AVScreenShackDocument.xib;
+			sourceTree = "<group>";
+		};
+		1BB2E878139D5E1A00749B68 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BB2E879139D5E1A00749B68 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BB2E87B139D5E1A00749B68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1BB2E87C139D5E1A00749B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1BB2E87E139D5E1A00749B68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVScreenShack/AVScreenShack-Prefix.pch";
+				INFOPLIST_FILE = "AVScreenShack/AVScreenShack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1BB2E87F139D5E1A00749B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVScreenShack/AVScreenShack-Prefix.pch";
+				INFOPLIST_FILE = "AVScreenShack/AVScreenShack-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BB2E856139D5E1700749B68 /* Build configuration list for PBXProject "AVScreenShack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB2E87B139D5E1A00749B68 /* Debug */,
+				1BB2E87C139D5E1A00749B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB2E87D139D5E1A00749B68 /* Build configuration list for PBXNativeTarget "AVScreenShack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB2E87E139D5E1A00749B68 /* Debug */,
+				1BB2E87F139D5E1A00749B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BB2E853139D5E1700749B68 /* Project object */;
+}
