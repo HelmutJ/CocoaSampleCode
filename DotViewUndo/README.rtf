@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1162
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\vieww12220\viewh13900\viewkind0
+\deftab720
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720
+
+\f0\b\fs36 \cf0 DotViewUndo
+\b0\fs24 \
+\
+DotView is a small application which demonstrates a very simple subclass of NSView for:\
+\
+1. 
+\b drawing
+\b0 \
+2. 
+\b event handling
+\b0 \
+3. 
+\b target/action handling
+\b0 \
+\
+This version of DotView adds:\
+\
+4. 
+\b undo support
+\b0 \
+\
+...as a way of demonstrating how NSUndoManager can be used in a simple, non-MVC program to provide undo/redo functionality.  This is done by first declaring DotView's attributes (radius, center, and color) explicitly as properties, then by register undo actions on changes to these attributes.\
+\
+Note that instead of creating explicit setters which call out to the undo manager, we use key value observing (KVO) on the properties. Not having to write explicit setters means that we can use the synthesized implementations, which are atomic and efficient. \
+\
+"Adding undo" is super simple: Whenever some state changes which should be undoable, simply tell the appropriate (in this case, per-window) undo manager what call to make to undo that state change. This call is often the same method with the previous value. With this, redo also becomes automatic.  \
+\
+To tell the undo manager what call to make, you can use:\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\tx10560\tx11520\tx12480\tx13440\tx14400\tx15360\tx16320\tx17280\tx18240\tx19200\tx20160\tx21120\tx22080\tx23040\tx24000\tx24960\tx25920\tx26880\tx27840\tx28800\tx29760\tx30720\tx31680\tx32640\tx33600\tx34560\tx35520\tx36480\tx37440\tx38400\tx39360\tx40320\tx41280\tx42240\tx43200\tx44160\tx45120\tx46080\tx47040\tx48000\tx48960\tx49920\tx50880\tx51840\tx52800\tx53760\tx54720\tx55680\tx56640\tx57600\tx58560\tx59520\tx60480\tx61440\tx62400\tx63360\tx64320\tx65280\tx66240\tx67200\tx68160\tx69120\tx70080\tx71040\tx72000\tx72960\tx73920\tx74880\tx75840\tx76800\tx77760\tx78720\tx79680\tx80640\tx81600\tx82560\tx83520\tx84480\tx85440\tx86400\tx87360\tx88320\tx89280\tx90240\tx91200\tx92160\tx93120\tx94080\tx95040\tx96000\pardeftab720\li480\fi-480
+
+\f1\fs20 \cf0 \CocoaLigature0 - (void)registerUndoWithTarget:(id)target selector:(SEL)selector object:(id)anObject;\
+\
+
+\f0\fs24 \CocoaLigature1 which allows registering simple callbacks with a single object argument. For more sophisticated callbacks, you can use:\
+\
+
+\f1\fs20 \CocoaLigature0 - (id)prepareWithInvocationTarget:(id)target;\
+\
+
+\f0\fs24 \CocoaLigature1 which allows "freeze-drying" any method invocation, to be replayed later. DotView demonstrates the use of both methods.\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720
+\cf0 \
+It's important to emphasize that DotView is a very simple app, where one class (DotView) takes on all the roles of model-view-controller (MVC).  \
+\
+Direct use of NSUndoManager would be unnecessary in a CoreData based app\'97CoreData helps with the object lifecycle management, including undo/redo; in such cases your key value coding (KVC) compliant objects will automatically have undo/redo support. (You can still use NSUndoManager in those cases for further customization.)\
+\
+}
