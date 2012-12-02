@@ -1,0 +1,60 @@
+{\rtf0\ansi{\fonttbl\f1\fswiss Helvetica;\f0\fnil Times-Roman;\f4\fmodern Ohlfs;}
+\paperw9840
+\paperh10160
+\margl120
+\margr120
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\f1\b\i0\ulnone\fs36\fc0\cf0 NSRulerView Client Example\
+
+\f0\b0\fs28 \
+This project demonstrates many of the interactions between an NSRulerView and its client view. It should give you an idea how to go about this when creating a view subclass that really does something.\
+\
+The principal class, RectsView, displays colored rectangles that the user can select and drag around. The RectsView puts markers in the horizontal and vertical rulers showing the placement of the rectangle; manipulating these markers changes the size of the selected rectangle. Removing a marker deletes the selected rectangle, and clicking in the ruler area creates a new rectangle. The user can also lock a rectangle down, so that the markers can't be moved.\
+\
+
+\b RectsView.m
+\b0  defines a lot of methods, but these are the ones primarily related to working with NSRulerViews:\
+\
+
+\pard\tx380\tx4340\b\fc0\cf0 METHOD	ACTION\
+
+\pard\tx380\tx4320\b0\fi-4320\li4320\fc0\cf0 rulerView:shouldMoveMarker:	Denies move if no selection or if selection is locked.\
+
+\fs8 \
+
+\fs28 rulerView:willMoveMarker:	Limits minimum rectangle size and\
+	toLocation:	updates display; try changing this to snap markers to whole units.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:didMoveMarker:	Refreshes ruler display.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:shouldRemoveMarker:	Denies remove of no selection or if selection is locked.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:didRemoveMarker:	Deletes the selected rectangle and refreshes the display.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:shouldAddMarker:	Returns YES, always allowing new rectangles to be added.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:willAddMarker:	Returns the proposed location unchanged;\
+	atLocation:	try changing this to snap markers to whole units.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:didAddMarker:	Creates a new rectangle.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:handleMouseDown:	Adds a new marker to be tracked.\
+
+\pard\tx380\tx4320\fs8\fi-4320\li4320\fc0\cf0 \
+
+\pard\tx380\tx4320\fs28\fi-4320\li4320\fc0\cf0 rulerView:willSetClientView:	Does nothing.\
+
+}
