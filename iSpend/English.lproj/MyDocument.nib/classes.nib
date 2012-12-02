@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {disclosureToggle = id; }; 
+            CLASS = ExpandableViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_bankTransactionView" = NSView; 
+                "_middleBoxView" = NSView; 
+                "_stockTransactionView" = NSView; 
+                "_transactionController" = id; 
+                "_upperTableScrollView" = NSView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {add = id; copy = id; delete = id; paste = id; }; 
+            CLASS = MyDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_transactionController" = id; searchFieldOutlet = NSSearchField; }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = NSDatePicker; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {orderFrontSearchPanel = id; }; 
+            CLASS = SearchController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = Transaction; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = TransactionController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {copy = id; paste = id; }; 
+            CLASS = TransactionsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_document" = id; "_transactionTable" = id; }; 
+            SUPERCLASS = NSArrayController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

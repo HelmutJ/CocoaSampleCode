@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>spend</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>iSpendDocument</string>
+			<key>CFBundleTypeName</key>
+			<string>iSpend Data Format</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.apple.ispend.document</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>MyDocument</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>iSpend</string>
+	<key>CFBundleIconFile</key>
+	<string>iSpendApp</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.iSpend</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>iSpend/Add to iSpend</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>importData</string>
+			<key>NSPortName</key>
+			<string>iSpend</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSRTFPboardType</string>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>iSpend/Copy from iSpend</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>exportData</string>
+			<key>NSPortName</key>
+			<string>iSpend</string>
+			<key>NSReturnTypes</key>
+			<array>
+				<string>NSRTFPboardType</string>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+				<string>public.content</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>iSpend Document</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.apple.ispend.document</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://www.company.com/yourproduct</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>XXXX</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>spend</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
