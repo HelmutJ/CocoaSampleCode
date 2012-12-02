@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {
+            CLASS = BlastApp; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {game = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {go = id; startGame = id; startGameAtLevel = id; stop = id; togglePause = id; }; 
+            CLASS = Game; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                highscoreField = id; 
+                inputIndicator = id; 
+                levelField = id; 
+                livesField = id; 
+                pauseButton = id; 
+                prefsField = id; 
+                scoreField = id; 
+                statusField = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = InputIndicator; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = RemainingHelicopters; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,196 @@
+% This file describes BlastApp levels.
+% Lines which start with '%' are comments and are ignored.
+%
+% Every level is described in 5 lines:
+% 
+% First line has a '+' followed by the level name
+%
+% Second line has the level color, described as three numbers between 0 and 1.
+% These describe the red, green, and blue colors. Can also specify "random" here.
+%
+% Third line describes the ceiling height as letters between 'a' and 'z'.
+% There should be 1 more letter than the number of points (the extra is used to determine the height
+% of the rightmost visible pixel). There can be no more than 150.
+%
+% 'z' is the top of the game area, 'a' is the ground.
+%
+% Fourth line describes the ground height as letters between 'a' and 'z'.
+%
+% Fifth line describes the enemy objects at each location.
+% A dot indicates no enemy; other letters are (values in parens indicate
+% different speeds an object can be at; M is max possible speed):
+%
+%	a	simple missile base
+%	b	smart missile base
+% 	c	hanging base
+%	defgh	small mine (M/2, M/3, M/4, M/5, random)
+% 	jklmn	sentry (M/2, M/3, M/4, M/5, random)
+%	opqrs	fat sentry (M/2, M/3, M/4, M/5, random)
+% 	t	large mine
+%	u	fog
+%       v	back shooter
+%	w	smart mine
+%	x	drop ship
+%	y	arrow base
+%	z	real smart mine
+%	ABC	ameoba mine (M/2, M/3, M/4)
+%	D	stop mine
+%	E	rapid fire hanging base
+%	F	rapid fire missile base
+%	G	random mine
+%	HI8	throton (M/4, random, M/3)
+%	J	smart hanging base
+%	K	rapid fire drop ship
+%	L	proximity mine
+%	M	attack ship
+%	N	gunes
+%	O	big attack ship
+%	P	smart attack ship
+%	Q	timed vertical gate
+%	R	moving timed vertical gate
+%	S	good sheep
+%	T	timed horizontal gate
+%	U	passable vertical gate
+%	V	tough good sheep
+%	W	wave generator
+%	X	bubble mine
+%	Y	boing ball
+%	Z	bouncing boing ball
+%	0	spider
+%	1	tough spider
+%	2	killer missile base
+%	3	bomb shooter
+%	4	bad sheep
+%	5	dum hanging base
+%	6	sneaky hanging base
+%	7	sneaky boing ball
+%	?	dummy boing ball
+%	9	switched gate
+%	+	switch
+%	*	hole
+%	$	killer wave generator
+%	@	donut
+%	&	fourmines
+%
+% Note that if you put an object somewhere, the height of the ground should be the
+% same at that and the next location. If the object is attached to the ceiling,
+% then the ceiling height should be the same where the object is and at the next
+% location.
+%
+% After as many levels as you want, put a '$' to indicate the end.
+% There can be no more than 30 levels.
+%
+% To get BlastApp to use a new level file, put the file somewhere
+% (For instance, if your home directory is /Users/me, you can put it in /Users/me/Levels.txt.)
+%
+% Then, in a shell, type
+%
+%	defaults write BlastApp LevelFile "/Users/me/Levels.txt"
+%
+% To get BlastApp to stop using a custom level file, do
+%
+%	defaults remove BlastApp LevelFile 
+%
+% Do not change this file.
+%
++Level One, the Starter Level.
+0.4 0.2 0.1 
+yywxwwyyyxyyyyyyxxwyyywxyyxyyywxxyyxyyyyyyyvuvvyxyyxxyyyyxvywxyyyyyyyyxyxwyxxyxyyyyyyyyxyuvutsuustrtt
+efgefghgfedcbcmngfedcdhhnmklfedcbffqpbcdefgheddcdcdcbbcbccdcdffkqpnnonmmlkjiiihgffkrpgffghgccbcbbcdee
+......................a..........a...........a......a...a....a....a...a....aa...a.....a....a...a...a.
++Level Two, the Sheep Level.
+0.0 0.8 0.0 
+xxxxwwwwxvwyyyyxxxwwwvvvuuuttssssyttsijpqwxyyyyyyyyyyxyyyyyyyyxvwwxxyywvstxwyxwyxvwxxxxxxxyuwwwvvutss
+bcbdcfdheeeefddjjfejjgjjhbidgjjgbcbcbcbccbddggmmhhlqqpnmkkgfhcceeeeeeeeffgldooooqpnogkljihdccddnnflkk
+........aaa..a.a...a..a......ac........a..a.a.a.a..a....a.......VVVVVV......aaa........c...a.a.a...a.
++Level Three.
+1.0 0.0 0.0
+yxvuvwwvtqsstvwxxxuqnotrtuyyyyyxwwxwuuuvxyyxvsqqqpqtuvyxxwwxxwxxxxxxxvvvvustwxwyyyyyyyyyyyyyyyyxvurqq
+eeecbcefhimlmkkjedbcbeefefjkmmnnoonligfefhihfeffhhhjjkmnnollmoonnmmllkihfecbbbcehjmorsrsrpqqpllkgfeef
+.............a..d....a......a...a....c........acaa.a...a.....a.a.a.a..c.&..aa.ghhhh.......a.ca....a..
++Level Four.
+0.0 0.0 1.0
+xyxyxywxuvstwxvyvpsuvutrooqtvwyzyzyzwvuuuuuuuttssrrxyxyyyyyyyvyyyyyyyyyyuuyppoxyxywxyxxyxvyyyyyyyyyxx
+dedcdcbcehlgdbbbddfegfdecefehcdfimgedffefdedbcbcbdcbcehlqjhgiijijijijijijijideefjjjjokhfefhkjkgbbghlm
+...........w.aa.a.......c............a..c....c.c.c..........a...m...k...m..c.a..aaa.........m.lak.m..
++Level Five, the Easy Level.
+0.6 0.4 0.2
+yxwvutsrqqruvvvvvvvwxxxyyyyyxxxxxyvxxxyxyyyyyyyxwuwxyyyyxyxxyuuyxyxyxyxyxyxyxyxyvsqponmmmmmmmqsrqqqqq
+bcbbbcbcbchihihihihijllkjjihhgffeddcbbdimlmplllllllllllocdefhgcbdgghjkkoonokjgcbdjfeeeffffcbdfghijjcc
+.....................a..a..a..a..a..F.......t.............c..c...a...a.a............t.............ca.
++Level Six.
+0.2 0.0 0.5
+wwvutrooooortuvwussrsvussuvvwrrjrvxywvxwyyxxyxyxwxxxvuuwxxwwyyyyyxxwuuttssrrsrvyxyxyvrvxyxyyyyyxvwstt
+bcccbcdcbcdefghijijkjigfdbcbcbcdbabnopnpoppppbbdcdcdbcdegjkmoqpnmkjihihihihijkgdbcbdgkkllmmhecbcbefee
+.................E.d.........c..q........aaa.a.p...q................c.c.c.....r.o.q..a.a.a........de.
++Level Seven, the Fog Level.
+1.0 0.3 0.0
+xwutrqpruwvwxwxtuwxwxxxywvtststutstuttusrrwtvvvvvquxyywwukvuvwwrstwxxxxxxxxxwxyxwvuvwxxxxyxvwyvurnnqq
+bcbcehlkihikjijifefefhhhijlklklkmlkjkmlklklinpjkjkjkmgcbbcbdcdehjjigbcedddedcdcdfiiiiiipqppmjkcbcecdh
+........u.uu.u.u..uuuaauuuugfeuhduu..uuuc.........u.u.ubuuqup.uua.u..u.bu.u.uu.uuaaaaau..buuuuuu.c...
++Level Eight, the Gothic Level.
+0.3 0.3 0.7
+tyrxsyntytwsywyxuzsyqxuwuwtwuyvwszoupxnyvxwyxunsqstxturxqwuywzsvtyxtxsyuwpvszuwpvrzquswjojjxuywxuyxyw
+fbecjdgbkghalbbpfbdkfhhhaobecnglbgdhhhbffgqcfaedgfhkcdbeabhhdjbldoijicddeeafghhbgfeeddadbcbdceemmbiih
+.............a...w...aa....w.......aa..a...w.w............b...w.......b......a..w.a......c...a.a.waw.
++Level Nine.
+0 0.5 0.3
+stvxyyxvssssrrwxxwvtstvuqorssrnrttuutrppvxyyxvuuvxyyxvuurroosvxyzyyzyywwxyyxvsqomuvvvzyyyxxxyxvvuuttt
+jigeddefhkklmkhghiiedccdefglkjhhjlnnkihhjlljgdcbbccbceffecbbcehjmqrppllhecbbbcehgbcbbccrrqolhecbbcdfg
+....u.u..ac...l..vu.uu........d.d.d.....gu..u.uuub.uu.cuc.Eh.......v.v.u.udud....q.aq..v.c.u.uubcuc..
++Level Ten, the Difficult Level.
+1.0 0 1.0
+ttuuvvuwvyyxywvyxyvvtoojjyxmmkkxywyyyyyxvvvssxyyyuqnjjuxyxvwwxxuvyxvyxyyyyyyuuyyyyyyyyypwxyyxxuuttssp
+ggffekmijcdddeeffeojicbbbcbdcbdcbbcbbceimmmoommnnjfbbccbccbdcehhkjfdbbllmpomjiiisssbbbcdbbbbbbbccffjj
+.............x.......c.....c.c......x...q............b........y.......y......eddef........b.c.cycycw.
++Level 11, the Twisty Level.
+0.0 0.3 1.0
+rrsstuuutsmnstxyyyyyyvvnlkjlyyxwtsqpivwtyyxyxxwvutsrqponmlkuxyyyyyyyyxxwwvttssrssrssttuvvwwvvuuwxyyyy
+gggghfeefdeeefjpqutjjeebbcbbbbcgkdcbbdddjjrqonlkihfecbbbbbbcdhrtttsrrqqmbbcdedefefijjnmnnoonnmmllffff
+......m...D........v.v.....v..........F.a............k.............c.c.c....GGG....b.uuuwuwuw....Fa..
++Level 12, the Real Mean Level.
+1.0 0.6 0.6
+ssuxyxxvvttrrppnnlljjhnqtvwxyyyzyyyzyywuvxyyzyzyyxxyyrxxyyxxwwvvutuvuuuuusttuutxvvwwxxyyxqvvwxwxyzyyy
+cdcdpplheeeeeeeeeeeebbceeegfdbcbbccbbceffcdececebbpggiddppfcbcgjkkjkfgjijffefefghcdcicbcdfggkkoosshhh
+........FFaaaaabaaa.b...vu...uux.uuxu.tuu.uu..uc.E....b.auuDBA&.u.ruqup..uDDDDD.......c...y.y.y.y.E..
++Level 13, the Mellow Level.
+1.0 0.9 0.1
+sssttttuuuttttsssrrsssttuuuvvwwwxxyxwvutsrqqpprrrqqpppoonnnnooppqrrsttuuttssrrqqppqqpponnooopqqqpoopq
+bbbbbccccdddeeeefffffeeeedddccccbbbbbcccbbbbcccddeeffggffffffghfeeeeffhiihhhhgggffffeeeffffgghhhhhhkk
+.............s.p.s...s.o..s.r.s.t.............w.z.M.....LLLLLL..z.zzz......MM.MMM.DLABLGD......L.....
++Level 14.
+1.0 0.0 0.3
+stwvyuvzyxxxwwwvvvvuyyuuppyxqqooxytthhyxxwwwwwwttuuustrsxyyxyyyxxxwwwutqjiqsyyyxxxyyxwwwvutttuvvwvvuu
+edihhnobbcccdddbdmpbbbbjkkicchijkcbbcccbbbrqonlgedbbabccddeecbbcccbccbbbcabccdihdbbbbcdedeklfgfghmccc
+...F...F....JOOOOJ.HF.J....bJ.J...J.J...L.J....J...N.N.N.....OOOPOPJHIL....L....JK.K.JPPPP.J.N.N.JbJ.
++Level 15, the Annoying Level.
+0.0 1.0 1.0 
+pppyxxwwvvuuttssrrqqppoonnmmllkkkkkkkkkkffffffffyyyyyyyyyyyyyyyyyyyiihhggyyyyyyyyyyyxxwwvvuuttssrrqqqq
+kkkkkkkkkkkkkbbkbbbbbbbbbbbbbbgggggggbbbbbbbbbbbbbbuuuuuttuuuuuuccccccccccccuuussssqqoommkkiiggggggggg
+....c.J.E.c.JaE.c.J.E.c.E.E.E.........................E.L..E.......J.J.J.........v.vcvcvcvcvcvJvE..U..
++Level 16, Surfer's Paradise.
+0.0 0.0 1.0 
+uuuuuuuutuvxyyyyyyyxvsoljiijlosvxyyyyyyxvsoljiijlosvxyyyyyyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyy
+ffffffffgfehloqrrqolhecbbbbbbcehloqrrqolhecbbbbbbcehloqrrqbabababababababababababababababababababababb
+...UUUU...................................................................W....W...W..W..W..W.W.W.WWW.
++Level 17. Don't Kill the Sheep.
+1.0 0.0 0.0 
+twxwuvttxyvusuvtvwyxyxvuywxyvwvzyrqxvtsvukhiihihjkjkjjiihgyyyyynnnnoorstwvxywtwxxyzxynxyxyxyxywxvwuvtu
+ifdeiglkdcccchhhhlpqqnjhbbbcklocdbbbbbbbbccccccccccccccbbbbbbbbbbbbgggedeccfeegddbbabffegggfqqkbbbbbii
+....&......b.SSS.......Y..Y.......SSSSS2..SSSSSSSSSSSSJ...Z.Z.Z.....S....2Y.b..2Y2...b...Z..2...SS2...
++Level 18, Sneaky Stuff.
+0.0 1.0 0.0 
+qruvxyyyyyxyxxwtsssppoknxyyxyxxxyxypvwyxywvvyyittqzuvnnhiiiiijklmnopqrstuvwxvqrqqrqqrqqrqqrstttttuuutt
+hiklkkktqaqqqmlghfffbceeccccccccccdffgfioomcccbbbbebbbbbbbdddddcbbbbiffbbbbbffffffbbbbbffggbccccmmmnmm
+....44....445...5445..4.447474744..QT...4.548.444@@445445.6.....v.4..v.4444.+.Q..944R4.9.+..464644J...
++Level 19. Don't Stand Still!
+1.0 0.6 0.0 
+yzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzxzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyzyz
+bababababababababababababababababababababababababacabababababababababababababababababababababababababa
+...3..................................................................................................
++Level 20, The Last Level!
+0.7 0.0 0.8 
+xvuvrswuypoikuyxxywxyxxyxxwwxwwxyyxxxxyqqooooqwvxyyyzyyzyyyzyyzyyyyxyxvvuuttrqonlkuwyxyuywyxyrwvuuuuuu
+bcbcgbcecbbbbbbgbbbabbacbbcbbcbcbbccabchffffffjibonnnnolkbbpoopopabldecbbcbbbbabcebbbjbcbcbcbkdcbeegge
+....X......0....0.............WW.....$$..1.....u..1..u..uF..uu.....W.WJ.J.*........1.R...X......c2J2..
+$

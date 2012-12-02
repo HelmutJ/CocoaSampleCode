@@ -1,0 +1,137 @@
+{\rtf1\mac\ansicpg10000\cocoartf885
+\readonlydoc1{\fonttbl\f0\froman\fcharset77 Times-Roman;\f1\fmodern\fcharset77 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\vieww15980\viewh11260\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f0\fs28 \cf0 BlastApp can use external level data files. The format of an external level data file is described below.\
+\
+Lines which start with 
+\f1\b %
+\f0\b0  are comments and are ignored.\
+\
+Every level is described in 5 lines:\
+\
+First line has a 
+\f1\b +
+\f0\b0  followed by the level name\
+\
+Second line has the level color, described as three floating point numbers between 0 and 1. These describe the red, green, and blue components of the level color. You can also specify "random" here to get a random color.\
+\
+Third line describes the ceiling height as letters between 
+\f1\b a
+\f0\b0  and 
+\f1\b z
+\f0\b0 . 
+\f1\b z
+\f0\b0  is the top of the game area, 
+\f1\b a
+\f0\b0  is the ground. You can have upto 151 letters to describe a game field with 150 "specs".\
+\
+Fourth line describes the ground height as letters between 
+\f1\b a
+\f0\b0  and 
+\f1\b z
+\f0\b0 . Clearly there should be enough room between the ceiling height and the ground height for the helicopter to pass through.\
+\
+Fifth line describes the enemy objects at each location:\
+\
+\pard\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\fi360\ql\qnatural
+
+\f1\fs24 \cf0 a	simple missile base\
+b	smart missile base\
+c	hanging base\
+defgh	small mine (fast, ... slow, random)\
+jklmn	sentry (fast, ... slow, random)\
+opqrs	fat sentry (fast, ... slow, random)\
+t	large mine\
+u	cloud\
+v	back shooter\
+w	smart mine\
+x	drop ship\
+y	arrow base\
+z	real smart mine\
+ABC	ameoba mine (fast, ... slow)\
+D	stop mine\
+E	rapid fire hanging base\
+F	rapid fire missile base\
+G	random mine\
+HI8	throton (slow, random, fast)\
+J	smart hanging base\
+K	rapid fire drop ship\
+L	proximity mine\
+M	attack ship\
+N	gunes\
+O	big attack ship\
+P	smart attack ship\
+Q	timed vertical gate\
+R	moving timed vertical gate\
+S	good sheep\
+T	timed horizontal gate\
+U	passable vertical gate\
+V	tough good sheep\
+W	wave generator\
+X	bubble mine\
+Y	boing ball\
+Z	bouncing boing ball\
+0	spider\
+1	tough spider\
+2	killer missile base\
+3	bomb shooter\
+4	bad sheep\
+5	dum hanging base\
+6	sneaky hanging base\
+7	sneaky boing ball\
+9	switched gate\
++	switch\
+*	hole\
+$	killer wave generator\
+@	donut\
+&	fourmines
+\f0\fs28 \
+
+\f1\fs24 .	no enemy\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f0\fs28 \cf0 \
+Note that if you put an object on the ground somewhere, the height of the ground should be the same as that of the next location. If the object is attached to the ceiling, then the ceiling height should be the same where the object is and at the next location.\
+\
+After as many levels as you want, put a 
+\f1\b $
+\f0\b0  to indicate the end. There can be no more than 30 levels.\
+\
+To get BlastApp to use a new level file, put the file somewhere, and specify the path as a preference by typing the following in a shell: \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f1\fs24 \cf0   defaults write com.apple.BlastApp LevelFile "~/Documents/MyLevels.blastapp"\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f0\fs28 \cf0 \
+To get BlastApp to stop using this level file, do\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f1\fs24 \cf0   defaults remove com.apple.BlastApp LevelFile \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f0\fs28 \cf0 The following shows a sample level file implementing the first two levels of BlastApp:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\pardeftab720\ql\qnatural
+
+\f1\fs24 \cf0 % These are the first two levels of BlastApp.\
+%\
++Level One, the Starter Level.\
+0.4 0.2 0.1 \
+yywxwwyyyxyyyyyyxxwyyywxyyxyyywxxyyxyyyyyyyvuvvyxyyxxyyyyxvywxyyyyyyyyxyxwyxxyxyyyyyyyyxyuvutsuustrtt\
+efgefghgfedcbcmngfedcdhhnmklfedcbffqpbcdefgheddcdcdcbbcbccdcdffkqpnnonmmlkjiiihgffkrpgffghgccbcbbcdee\
+......................a..........a...........a......a...a....a....a...a....aa...a.....a....a...a...a.\
++Level Two, the Sheep Level.\
+0.0 0.8 0.0 \
+xxxxwwwwxvwyyyyxxxwwwvvvuuuttssssyttsijpqwxyyyyyyyyyyxyyyyyyyyxvwwxxyywvstxwyxwyxvwxxxxxxxyuwwwvvutss\
+bcbdcfdheeeefddjjfejjgjjhbidgjjgbcbcbcbccbddggmmhhlqqpnmkkgfhcceeeeeeeeffgldooooqpnogkljihdccddnnflkk\
+........aaa..a.a...a..a......ac........a..a.a.a.a..a....a.......VVVVVV......aaa........c...a.a.a...a.\
+$\
+}
