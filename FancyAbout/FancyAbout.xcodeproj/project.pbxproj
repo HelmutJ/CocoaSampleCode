@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0420BB813D48A7700B69459 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0420BB713D48A7700B69459 /* Cocoa.framework */; };
+		D0420BC213D48A7700B69459 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0420BC013D48A7700B69459 /* InfoPlist.strings */; };
+		D0420BC413D48A7700B69459 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420BC313D48A7700B69459 /* main.m */; };
+		D0420BDC13D48AB900B69459 /* apple.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0420BD413D48AB900B69459 /* apple.gif */; };
+		D0420BDD13D48AB900B69459 /* AboutPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420BD613D48AB900B69459 /* AboutPanelController.m */; };
+		D0420BDE13D48AB900B69459 /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420BD813D48AB900B69459 /* ApplicationController.m */; };
+		D0420BDF13D48AB900B69459 /* NSFancyPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0420BDA13D48AB900B69459 /* NSFancyPanel.m */; };
+		D0420BE013D48AB900B69459 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0420BDB13D48AB900B69459 /* README.txt */; };
+		D0420BEC13D4997500B69459 /* AboutContent.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D0420BEE13D4997500B69459 /* AboutContent.rtf */; };
+		D0420BFB13D49AA600B69459 /* AboutPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0420BFD13D49AA600B69459 /* AboutPanel.xib */; };
+		D0420BFE13D49AAA00B69459 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0420C0013D49AAA00B69459 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0420BB313D48A7700B69459 /* FancyAbout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FancyAbout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0420BB713D48A7700B69459 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D0420BBA13D48A7700B69459 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D0420BBB13D48A7700B69459 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D0420BBC13D48A7700B69459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0420BBF13D48A7700B69459 /* FancyAbout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FancyAbout-Info.plist"; sourceTree = "<group>"; };
+		D0420BC113D48A7700B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0420BC313D48A7700B69459 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0420BC513D48A7700B69459 /* FancyAbout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FancyAbout-Prefix.pch"; sourceTree = "<group>"; };
+		D0420BD413D48AB900B69459 /* apple.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = apple.gif; sourceTree = "<group>"; };
+		D0420BD513D48AB900B69459 /* AboutPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPanelController.h; sourceTree = "<group>"; };
+		D0420BD613D48AB900B69459 /* AboutPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPanelController.m; sourceTree = "<group>"; };
+		D0420BD713D48AB900B69459 /* ApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationController.h; sourceTree = "<group>"; };
+		D0420BD813D48AB900B69459 /* ApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationController.m; sourceTree = "<group>"; };
+		D0420BD913D48AB900B69459 /* NSFancyPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFancyPanel.h; sourceTree = "<group>"; };
+		D0420BDA13D48AB900B69459 /* NSFancyPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFancyPanel.m; sourceTree = "<group>"; };
+		D0420BDB13D48AB900B69459 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D0420BED13D4997500B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/AboutContent.rtf; sourceTree = "<group>"; };
+		D0420BFC13D49AA600B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutPanel.xib; sourceTree = "<group>"; };
+		D0420BFF13D49AAA00B69459 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0420BB013D48A7700B69459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0420BB813D48A7700B69459 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0420BA813D48A7700B69459 = {
+			isa = PBXGroup;
+			children = (
+				D0420BDB13D48AB900B69459 /* README.txt */,
+				D0420BBD13D48A7700B69459 /* FancyAbout */,
+				D0420BB613D48A7700B69459 /* Frameworks */,
+				D0420BB413D48A7700B69459 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0420BB413D48A7700B69459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0420BB313D48A7700B69459 /* FancyAbout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0420BB613D48A7700B69459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0420BB713D48A7700B69459 /* Cocoa.framework */,
+				D0420BB913D48A7700B69459 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0420BB913D48A7700B69459 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0420BBA13D48A7700B69459 /* AppKit.framework */,
+				D0420BBB13D48A7700B69459 /* CoreData.framework */,
+				D0420BBC13D48A7700B69459 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D0420BBD13D48A7700B69459 /* FancyAbout */ = {
+			isa = PBXGroup;
+			children = (
+				D0420BFD13D49AA600B69459 /* AboutPanel.xib */,
+				D0420C0013D49AAA00B69459 /* MainMenu.xib */,
+				D0420BD713D48AB900B69459 /* ApplicationController.h */,
+				D0420BD813D48AB900B69459 /* ApplicationController.m */,
+				D0420BD513D48AB900B69459 /* AboutPanelController.h */,
+				D0420BD613D48AB900B69459 /* AboutPanelController.m */,
+				D0420BD913D48AB900B69459 /* NSFancyPanel.h */,
+				D0420BDA13D48AB900B69459 /* NSFancyPanel.m */,
+				D0420BBE13D48A7700B69459 /* Supporting Files */,
+				D0420BC313D48A7700B69459 /* main.m */,
+				D0420BC513D48A7700B69459 /* FancyAbout-Prefix.pch */,
+			);
+			path = FancyAbout;
+			sourceTree = "<group>";
+		};
+		D0420BBE13D48A7700B69459 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0420BEE13D4997500B69459 /* AboutContent.rtf */,
+				D0420BD413D48AB900B69459 /* apple.gif */,
+				D0420BBF13D48A7700B69459 /* FancyAbout-Info.plist */,
+				D0420BC013D48A7700B69459 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0420BB213D48A7700B69459 /* FancyAbout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0420BD113D48A7700B69459 /* Build configuration list for PBXNativeTarget "FancyAbout" */;
+			buildPhases = (
+				D0420BAF13D48A7700B69459 /* Sources */,
+				D0420BB013D48A7700B69459 /* Frameworks */,
+				D0420BB113D48A7700B69459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FancyAbout;
+			productName = FancyAbout;
+			productReference = D0420BB313D48A7700B69459 /* FancyAbout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0420BAA13D48A7700B69459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Apple, Inc";
+			};
+			buildConfigurationList = D0420BAD13D48A7700B69459 /* Build configuration list for PBXProject "FancyAbout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0420BA813D48A7700B69459;
+			productRefGroup = D0420BB413D48A7700B69459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0420BB213D48A7700B69459 /* FancyAbout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0420BB113D48A7700B69459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0420BC213D48A7700B69459 /* InfoPlist.strings in Resources */,
+				D0420BDC13D48AB900B69459 /* apple.gif in Resources */,
+				D0420BE013D48AB900B69459 /* README.txt in Resources */,
+				D0420BEC13D4997500B69459 /* AboutContent.rtf in Resources */,
+				D0420BFB13D49AA600B69459 /* AboutPanel.xib in Resources */,
+				D0420BFE13D49AAA00B69459 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0420BAF13D48A7700B69459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0420BC413D48A7700B69459 /* main.m in Sources */,
+				D0420BDD13D48AB900B69459 /* AboutPanelController.m in Sources */,
+				D0420BDE13D48AB900B69459 /* ApplicationController.m in Sources */,
+				D0420BDF13D48AB900B69459 /* NSFancyPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0420BC013D48A7700B69459 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420BC113D48A7700B69459 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0420BEE13D4997500B69459 /* AboutContent.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420BED13D4997500B69459 /* en */,
+			);
+			name = AboutContent.rtf;
+			sourceTree = "<group>";
+		};
+		D0420BFD13D49AA600B69459 /* AboutPanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420BFC13D49AA600B69459 /* en */,
+			);
+			name = AboutPanel.xib;
+			sourceTree = "<group>";
+		};
+		D0420C0013D49AAA00B69459 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0420BFF13D49AAA00B69459 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0420BCF13D48A7700B69459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D0420BD013D48A7700B69459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D0420BD213D48A7700B69459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FancyAbout/FancyAbout-Prefix.pch";
+				INFOPLIST_FILE = "FancyAbout/FancyAbout-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0420BD313D48A7700B69459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FancyAbout/FancyAbout-Prefix.pch";
+				INFOPLIST_FILE = "FancyAbout/FancyAbout-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0420BAD13D48A7700B69459 /* Build configuration list for PBXProject "FancyAbout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0420BCF13D48A7700B69459 /* Debug */,
+				D0420BD013D48A7700B69459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0420BD113D48A7700B69459 /* Build configuration list for PBXNativeTarget "FancyAbout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0420BD213D48A7700B69459 /* Debug */,
+				D0420BD313D48A7700B69459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0420BAA13D48A7700B69459 /* Project object */;
+}
