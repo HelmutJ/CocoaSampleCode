@@ -1,0 +1,26 @@
+/* The AccessibilityImageDescription.strings file is a specially-named strings file that maps image names to localized accessibility descriptions.
+
+When an NSImage is created using +imagedNamed: the AccessibilityImageDescription.strings file is checked for a key that matches the name.  If found, the accessibility description of the image is set on the NSImage.
+
+When an NSImage is displayed in an NSImageView/NSImageCell, NSButton/NSButtonCell, NSSegmentedControl/NSSegmentedCell, its accessibility description is automatically reported.
+
+A few items of interest in this example project:
+
+1. The image of the button that expands and collapses subtrees changes to show its state.  Because both images have an accessibility description, the correct description is automatically reported for accessibility purposes as well - without no additional code to toggle the description required.
+
+2. Because all images of the same name returned by +imageNamed: are the same instance of NSImage, they all share the same accessibility description.  In this example that has an interesting implication.
+
+Although the 'subtree expanded' button image and the 'direct line style' segmented control image are visually the same image, they have different semantic meaning.  If we used the same named image for both, they would both have the same accessibility description, which would only be correct in one case.
+
+To address this there are two approaches.  First, we could just use another copy of the image with a different name.  Considering that the visual style of these two buttons could change as the interface evolves, this is a reasonable approach even without accessibility considerations.  
+	
+The other approach would be to set an overridden accessibility attribute value on the UI element itself.  An accessibility description set directy on a button or image or segmented control segment will override the image's description.  We can set the description for buttons and images directly in Interface Builder, but for segmented control segments, we must do so programmatically.
+	
+Since the first approach means that both images can be described to accessibility without adding any code to maintain, this example takes the first approach.
+
+*/
+
+"TreeViewSubtreeCollapsedButton" = "expand subtree";
+"TreeViewSubtreeExpandedButton" = "collapse subtree";
+"TreeViewDirectLinesButton" = "direct line style";
+"TreeViewOrthogonalLinesButton" = "orthogonol line style";
