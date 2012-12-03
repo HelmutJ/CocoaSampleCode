@@ -1,0 +1,22 @@
+{\rtf1\mac\ansicpg10000{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw10840\paperh9160
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 NSUserDefaults Example\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+This very small example shows two common and simple uses of NSUserDefaults for reading/write per app, per user settings.\
+\
+The first sample read/writes a string to user defaults.  On launch, the string is obtained from the user defaults database (using the key "My String") and shown in a textfield. If there's no recorded value for the string, a default value is used instead. Whenever the user changes the value in the textfield, the new value is written to the database. If the new value is the same as the default value, we instead erase the value from the database.\
+\
+Note that the app does not explicitly synchronize the database, which means the new value is not written out until the app quits, at which time it is written out automatically by the AppKit. In most cases this behavior is appropriate.\
+\
+The second sample is recording the location and size of the window in the user defaults database, allowing the window to come up in the same location where the user last left it. NSWindow provides a method to accomplish this, so all that is needed is a key (in this case "My Window") to identify the window. Once you provide this key, NSWindow takes care of everything else. In addition to recording the window position, NSWindow also records the size and the size of the screen, so the window position is "similar" on screens of different sizes.\
+\
+In both of the above samples, the preferences are written to the default location, which is per-user, per-app.  The user is the current logged-in user; the app is the current app, whose identifier comes from the CFBundleIdentifier key supplied in Info.plist. This can be set through the Application Settings tab for the app target in Project Builder.\
+\
+\
+\
+}
