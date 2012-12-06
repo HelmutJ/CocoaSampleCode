@@ -1,0 +1,72 @@
+{\rtf1\mac\ansicpg10000\cocoartf864\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fnil\fcharset77 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs36 \cf0 Spotlighter\
+\
+
+\b0\fs24 Spotlighter is a sample application demonstrating how to use the Cocoa NSMetadataQuery to access the new Spotlight feature in Mac OS 10.4 Tiger.\
+\
+It demonstrates the use of:\
+\
+\'a5 NSMetadataQuery  -- allows you to search for something using the Spotlight API\
+\'a5 NSMetadataItem -- a search result, allowing you to look at attributes for the resulting item\
+\'a5 NSMetadataQueryResultGroup -- allows grouping of results together, for instance by a certain type or size\
+\'a5 General bindings use, including the ability to nest NSArrayControllers for group control\
+\'a5 Transformers to customize the way data is displayed\
+\'a5 Objective-C 2 properties\
+  \
+This application demonstrates a lot of functionality with a little bit of code. Here are the key concepts of what is going on in the MainMenu.nib file:\
+ \
+The 
+\b AppController
+\b0  is what actually creates a single NSMetadataQuery instance and exposes it by a path named "
+\b query
+\b0 ". \
+\
+The main search NSTextField is bound to 
+\b AppController.searchKey
+\b0 . When the 
+\b searchKey
+\b0  changes, it modifies the predicate that NSMetadataQuery uses for searching. \
+\
+The "Found 0 items" label has a displayPatternValue to show 
+\b AppController.query.resultCount
+\b0 . \
+\
+The 
+\b AllResults
+\b0  NSArrayController is bound to 
+\b AppController.query.results
+\b0 . The
+\b  results 
+\b0 contains NSMetadataItem(s). An NSMetadataItem exposes all possible kMDItemxxxx values available for a file. To see all possible values, take a look at MDItem.h. These items give you information about the file, and you can bind to them. For instance, the main results NSTableView's column binds to 
+\b AllResults.arrangedObjects.kMDItemPath 
+\b0 in order to display the path to the search result. You could use the inspector to change the "Model Key Path" to kMDItemFSName instead of kMDItemPath and the NSTableView would then display the file system name instead of the path. Or, you could choose do display any other kMDItemxxxx value.\
+\
+For grouped results, the 
+\b FirstGrouping 
+\b0 NSArrayController has its contentArray bound to 
+\b AppController.query.groupedResults. 
+\b0 the groupedResults consist of 
+\f1\fs20 \CocoaLigature0 NSMetadataQueryResultGroup 
+\f0\fs24 \CocoaLigature1 instances, which have a subgroups attribute. This allows the 
+\b SecondGrouping's 
+\b0 contentArray to bind to 
+\b FirstGrouping.selection.subgroups, 
+\b0 and the 
+\b FinalGroup's 
+\b0 contentArray
+\b  
+\b0 to bind to 
+\b SecondGrouping.selection.results
+\b0 .\
+\
+Each column in the last NSTableView binds to the NSMetadataItem(s) that are in the 
+\b FinalGroup.
+\b0  They display the appropriate kMDItemxxxx attributes for each item, using NSTransformers to customize the way the data is displayed.\
+\
+One final note: once a query has been executed, it is "alive" and will automatically update the results when new items appear or disappear that match the search criteria. Using the "Kill" button will stop the query from being alive.\
+\
+}
