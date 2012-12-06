@@ -1,0 +1,27 @@
+{\rtf1\mac\ansicpg10000{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw10840\paperh9160
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs36 \cf0 CFNotificationCenter Example (Observing)\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+This example shows a simple use of the CFNotificationCenter functionality in CoreFoundation.  You should build both this and the NotificationPoster examples to see notifications in action.\
+\
+Note that this example is a Cocoa application, but the core functionality that is being shown is based on CoreFoundation and can be used the same way in a Carbon application. In fact, if you were really writing a Cocoa application, you would probably use NSNotification (the Cocoa face of CFNotificationCenter) instead of CFNotificationCenter.\
+\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f0\b\fs28 \cf0 Notification Observer\
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+This example produces an application called 
+\f0\b StockObserver
+\f1\b0 , which lets you enter stock symbols that you are interested in observing. You can enter "all" to observe all stock price changes. \
+\
+This app registers for notifications using the suspension behavior of CFNotificationSuspensionBehaviorDeliverImmediately, which means it wants to hear of notifications as they are delivered. This way even if in the background, this app can show the new price. Apps that do not care about the changes unless they are front-most can register with other suspension behaviors, for instance, CFNotificationSuspensionBehaviorHold or CFNotificationSuspensionBehaviorCoalesce. Carbon and Cocoa both control the suspension behavior by suspending notifications when the app is not active (that is, not frontmost), so these allow the notifications to be queued up in the server, without waking the app up, until the app comes to the front. \
+\
+The files StockObserver.m and StockObserver.h contain the Cocoa user interface bits; the pure CF code is in NotificationObserve.c.\
+}
