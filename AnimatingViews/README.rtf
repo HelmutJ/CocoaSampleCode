@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf902
+\readonlydoc1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\vieww9340\viewh8600\viewkind0
+\deftab720
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs36 \cf0 AnimatingViews
+\b0\fs24 \
+\
+AnimatingViews is a small application which demonstrates a very simple subclass of NSView for:\
+\
+1. arranging subviews in one of several different layouts\
+2. animating subviews on layout change\
+\
+SimpleLayoutView.m implements the subclass. \
+\
+The view itself does no drawing (and thus it has no drawRect: override); its contents are simply the subviews that have been added to it.  Although this demo just adds colored boxes, any kind of view can be added.\
+\
+The currently selected layout style is saved as the layoutStyle property. The layout method will recompute the layout and change the frames of subviews to their new locations.  By setting the frame on [view animator] rather than just the view, the subviews are asynchronously animated to their new locations.\
+\
+Note that the view does not relayout automatically on many other state changes. Hence the action methods to add/remove subviews also call layout to cause an explicit layout. \
+\
+This sample also demonstrates how to create colored NSBox instances using API added in Leopard.\
+}
