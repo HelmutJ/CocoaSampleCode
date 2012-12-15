@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		877A8B10138CC5AB0026542D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877A8B0F138CC5AB0026542D /* Cocoa.framework */; };
+		877A8B1A138CC5AC0026542D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877A8B18138CC5AC0026542D /* InfoPlist.strings */; };
+		877A8B1C138CC5AC0026542D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 877A8B1B138CC5AC0026542D /* main.m */; };
+		877A8B23138CC5AC0026542D /* MultiPhotoFrameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 877A8B22138CC5AC0026542D /* MultiPhotoFrameAppDelegate.m */; };
+		877A8B26138CC5AC0026542D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877A8B24138CC5AC0026542D /* MainMenu.xib */; };
+		877A8B2D138CC5CB0026542D /* MultiPhotoFrameWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877A8B2C138CC5CB0026542D /* MultiPhotoFrameWindow.xib */; };
+		877A8B30138CC60A0026542D /* MultiPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877A8B2F138CC60A0026542D /* MultiPhotoView.m */; };
+		877A8B32138CC7FF0026542D /* PhotoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877A8B31138CC7FF0026542D /* PhotoCellView.xib */; };
+		877A8B35138CC98C0026542D /* BackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 877A8B34138CC98C0026542D /* BackGroundView.m */; };
+		877A8B39138CCBDA0026542D /* PhotoCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877A8B37138CCBDA0026542D /* PhotoCellViewController.m */; };
+		877A8B3A138CCBDA0026542D /* PhotoCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877A8B38138CCBDA0026542D /* PhotoCellViewController.xib */; };
+		87DA5F8C138D658E006AE4A1 /* WindowDragImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 87DA5F8B138D658E006AE4A1 /* WindowDragImage.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		877A8B0B138CC5AB0026542D /* MultiPhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiPhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		877A8B0F138CC5AB0026542D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		877A8B12138CC5AB0026542D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		877A8B13138CC5AB0026542D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		877A8B14138CC5AB0026542D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		877A8B17138CC5AC0026542D /* MultiPhotoFrame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiPhotoFrame-Info.plist"; sourceTree = "<group>"; };
+		877A8B19138CC5AC0026542D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		877A8B1B138CC5AC0026542D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		877A8B1D138CC5AC0026542D /* MultiPhotoFrame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiPhotoFrame-Prefix.pch"; sourceTree = "<group>"; };
+		877A8B21138CC5AC0026542D /* MultiPhotoFrameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiPhotoFrameAppDelegate.h; sourceTree = "<group>"; };
+		877A8B22138CC5AC0026542D /* MultiPhotoFrameAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoFrameAppDelegate.m; sourceTree = "<group>"; };
+		877A8B25138CC5AC0026542D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		877A8B2C138CC5CB0026542D /* MultiPhotoFrameWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiPhotoFrameWindow.xib; sourceTree = "<group>"; };
+		877A8B2E138CC60A0026542D /* MultiPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPhotoView.h; sourceTree = "<group>"; };
+		877A8B2F138CC60A0026542D /* MultiPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoView.m; sourceTree = "<group>"; };
+		877A8B31138CC7FF0026542D /* PhotoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCellView.xib; sourceTree = "<group>"; };
+		877A8B33138CC98C0026542D /* BackGroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackGroundView.h; sourceTree = "<group>"; };
+		877A8B34138CC98C0026542D /* BackGroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackGroundView.m; sourceTree = "<group>"; };
+		877A8B36138CCBDA0026542D /* PhotoCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCellViewController.h; sourceTree = "<group>"; };
+		877A8B37138CCBDA0026542D /* PhotoCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCellViewController.m; sourceTree = "<group>"; };
+		877A8B38138CCBDA0026542D /* PhotoCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCellViewController.xib; sourceTree = "<group>"; };
+		87DA5F8B138D658E006AE4A1 /* WindowDragImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WindowDragImage.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		877A8B08138CC5AB0026542D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877A8B10138CC5AB0026542D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		877A8B00138CC5AB0026542D = {
+			isa = PBXGroup;
+			children = (
+				877A8B15138CC5AB0026542D /* MultiPhotoFrame */,
+				877A8B0E138CC5AB0026542D /* Frameworks */,
+				877A8B0C138CC5AB0026542D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		877A8B0C138CC5AB0026542D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				877A8B0B138CC5AB0026542D /* MultiPhotoFrame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		877A8B0E138CC5AB0026542D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				877A8B0F138CC5AB0026542D /* Cocoa.framework */,
+				877A8B11138CC5AB0026542D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		877A8B11138CC5AB0026542D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				877A8B12138CC5AB0026542D /* AppKit.framework */,
+				877A8B13138CC5AB0026542D /* CoreData.framework */,
+				877A8B14138CC5AB0026542D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		877A8B15138CC5AB0026542D /* MultiPhotoFrame */ = {
+			isa = PBXGroup;
+			children = (
+				877A8B21138CC5AC0026542D /* MultiPhotoFrameAppDelegate.h */,
+				877A8B22138CC5AC0026542D /* MultiPhotoFrameAppDelegate.m */,
+				877A8B2E138CC60A0026542D /* MultiPhotoView.h */,
+				877A8B2F138CC60A0026542D /* MultiPhotoView.m */,
+				877A8B33138CC98C0026542D /* BackGroundView.h */,
+				877A8B34138CC98C0026542D /* BackGroundView.m */,
+				877A8B36138CCBDA0026542D /* PhotoCellViewController.h */,
+				877A8B37138CCBDA0026542D /* PhotoCellViewController.m */,
+				877A8B38138CCBDA0026542D /* PhotoCellViewController.xib */,
+				877A8B24138CC5AC0026542D /* MainMenu.xib */,
+				877A8B2C138CC5CB0026542D /* MultiPhotoFrameWindow.xib */,
+				877A8B31138CC7FF0026542D /* PhotoCellView.xib */,
+				87DA5F8B138D658E006AE4A1 /* WindowDragImage.png */,
+				877A8B16138CC5AB0026542D /* Supporting Files */,
+			);
+			path = MultiPhotoFrame;
+			sourceTree = "<group>";
+		};
+		877A8B16138CC5AB0026542D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877A8B17138CC5AC0026542D /* MultiPhotoFrame-Info.plist */,
+				877A8B18138CC5AC0026542D /* InfoPlist.strings */,
+				877A8B1B138CC5AC0026542D /* main.m */,
+				877A8B1D138CC5AC0026542D /* MultiPhotoFrame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		877A8B0A138CC5AB0026542D /* MultiPhotoFrame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877A8B29138CC5AC0026542D /* Build configuration list for PBXNativeTarget "MultiPhotoFrame" */;
+			buildPhases = (
+				877A8B07138CC5AB0026542D /* Sources */,
+				877A8B08138CC5AB0026542D /* Frameworks */,
+				877A8B09138CC5AB0026542D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiPhotoFrame;
+			productName = MultiPhotoFrame;
+			productReference = 877A8B0B138CC5AB0026542D /* MultiPhotoFrame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		877A8B02138CC5AB0026542D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = 877A8B05138CC5AB0026542D /* Build configuration list for PBXProject "MultiPhotoFrame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 877A8B00138CC5AB0026542D;
+			productRefGroup = 877A8B0C138CC5AB0026542D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				877A8B0A138CC5AB0026542D /* MultiPhotoFrame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		877A8B09138CC5AB0026542D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877A8B1A138CC5AC0026542D /* InfoPlist.strings in Resources */,
+				877A8B26138CC5AC0026542D /* MainMenu.xib in Resources */,
+				877A8B2D138CC5CB0026542D /* MultiPhotoFrameWindow.xib in Resources */,
+				877A8B32138CC7FF0026542D /* PhotoCellView.xib in Resources */,
+				877A8B3A138CCBDA0026542D /* PhotoCellViewController.xib in Resources */,
+				87DA5F8C138D658E006AE4A1 /* WindowDragImage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		877A8B07138CC5AB0026542D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877A8B1C138CC5AC0026542D /* main.m in Sources */,
+				877A8B23138CC5AC0026542D /* MultiPhotoFrameAppDelegate.m in Sources */,
+				877A8B30138CC60A0026542D /* MultiPhotoView.m in Sources */,
+				877A8B35138CC98C0026542D /* BackGroundView.m in Sources */,
+				877A8B39138CCBDA0026542D /* PhotoCellViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		877A8B18138CC5AC0026542D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877A8B19138CC5AC0026542D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		877A8B24138CC5AC0026542D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877A8B25138CC5AC0026542D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		877A8B27138CC5AC0026542D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		877A8B28138CC5AC0026542D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		877A8B2A138CC5AC0026542D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoFrame/MultiPhotoFrame-Prefix.pch";
+				INFOPLIST_FILE = "MultiPhotoFrame/MultiPhotoFrame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		877A8B2B138CC5AC0026542D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoFrame/MultiPhotoFrame-Prefix.pch";
+				INFOPLIST_FILE = "MultiPhotoFrame/MultiPhotoFrame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		877A8B05138CC5AB0026542D /* Build configuration list for PBXProject "MultiPhotoFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877A8B27138CC5AC0026542D /* Debug */,
+				877A8B28138CC5AC0026542D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877A8B29138CC5AC0026542D /* Build configuration list for PBXNativeTarget "MultiPhotoFrame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877A8B2A138CC5AC0026542D /* Debug */,
+				877A8B2B138CC5AC0026542D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 877A8B02138CC5AB0026542D /* Project object */;
+}
