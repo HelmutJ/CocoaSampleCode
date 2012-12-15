@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9D5AEE350FAA187A006CDA0F /* ATDynamicTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AEE340FAA187A006CDA0F /* ATDynamicTableView.m */; };
+		9D8999A80FBB2A4E0063889D /* ATBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8999A70FBB2A4E0063889D /* ATBorderView.m */; };
+		9D8D1B930FB21E6600C1E1EB /* ATColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D1B920FB21E6600C1E1EB /* ATColorCell.m */; };
+		9D8D1C690FB33A5B00C1E1EB /* ATColorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D1C680FB33A5B00C1E1EB /* ATColorTableController.m */; };
+		9D8D1C8C0FB343D200C1E1EB /* ColorTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D1C8A0FB343D200C1E1EB /* ColorTable.xib */; };
+		9D8D1D690FB37A6100C1E1EB /* ATPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D1D680FB37A6100C1E1EB /* ATPopupWindow.m */; };
+		9DB7EB410FC20DEC00A6422F /* ATFilterBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7EB3B0FC20DEC00A6422F /* ATFilterBrowser.xib */; };
+		9DB7EB420FC20DEC00A6422F /* ATFilterBrowserColumnHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7EB3D0FC20DEC00A6422F /* ATFilterBrowserColumnHeader.xib */; };
+		9DB7EB430FC20DEC00A6422F /* ATFilterBrowserPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7EB3F0FC20DEC00A6422F /* ATFilterBrowserPreview.xib */; };
+		9DB7EB490FC20E0B00A6422F /* ATFilterBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7EB460FC20E0B00A6422F /* ATFilterBrowserController.m */; };
+		9DB7EB4A0FC20E0B00A6422F /* ATFilterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7EB480FC20E0B00A6422F /* ATFilterItem.m */; };
+		9DB878C50FA79D31001C44C5 /* ATImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB878C40FA79D31001C44C5 /* ATImageTextCell.m */; };
+		9DC063BD0FBCD961009F4556 /* ATColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC063BC0FBCD961009F4556 /* ATColorView.m */; };
+		9DCC9B080FB4F22000C75E46 /* ATDblActionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC9B070FB4F22000C75E46 /* ATDblActionImageView.m */; };
+		9DDE9B910FA11FC500BE4471 /* ATContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE9B900FA11FC500BE4471 /* ATContentController.m */; };
+		9DDE9BB20FA12C2600BE4471 /* ATDesktopEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE9BB10FA12C2600BE4471 /* ATDesktopEntity.m */; };
+		9DDE9C1B0FA2167100BE4471 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDE9C1A0FA2167100BE4471 /* Quartz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* AnimatedTableView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTableView_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* AnimatedTableView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimatedTableView-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AnimatedTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5AEE330FAA187A006CDA0F /* ATDynamicTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDynamicTableView.h; sourceTree = "<group>"; };
+		9D5AEE340FAA187A006CDA0F /* ATDynamicTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDynamicTableView.m; sourceTree = "<group>"; };
+		9D8999A60FBB2A4E0063889D /* ATBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBorderView.h; sourceTree = "<group>"; };
+		9D8999A70FBB2A4E0063889D /* ATBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATBorderView.m; sourceTree = "<group>"; };
+		9D8D1B910FB21E6600C1E1EB /* ATColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATColorCell.h; sourceTree = "<group>"; };
+		9D8D1B920FB21E6600C1E1EB /* ATColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATColorCell.m; sourceTree = "<group>"; };
+		9D8D1C670FB33A5B00C1E1EB /* ATColorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATColorTableController.h; sourceTree = "<group>"; };
+		9D8D1C680FB33A5B00C1E1EB /* ATColorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATColorTableController.m; sourceTree = "<group>"; };
+		9D8D1C8B0FB343D200C1E1EB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ColorTable.xib; sourceTree = "<group>"; };
+		9D8D1D670FB37A6100C1E1EB /* ATPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPopupWindow.h; sourceTree = "<group>"; };
+		9D8D1D680FB37A6100C1E1EB /* ATPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPopupWindow.m; sourceTree = "<group>"; };
+		9DB7EB3C0FC20DEC00A6422F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ATFilterBrowser.xib; sourceTree = "<group>"; };
+		9DB7EB3E0FC20DEC00A6422F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ATFilterBrowserColumnHeader.xib; sourceTree = "<group>"; };
+		9DB7EB400FC20DEC00A6422F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ATFilterBrowserPreview.xib; sourceTree = "<group>"; };
+		9DB7EB450FC20E0B00A6422F /* ATFilterBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFilterBrowserController.h; sourceTree = "<group>"; };
+		9DB7EB460FC20E0B00A6422F /* ATFilterBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFilterBrowserController.m; sourceTree = "<group>"; };
+		9DB7EB470FC20E0B00A6422F /* ATFilterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFilterItem.h; sourceTree = "<group>"; };
+		9DB7EB480FC20E0B00A6422F /* ATFilterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFilterItem.m; sourceTree = "<group>"; };
+		9DB878C30FA79D31001C44C5 /* ATImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATImageTextCell.h; sourceTree = "<group>"; };
+		9DB878C40FA79D31001C44C5 /* ATImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATImageTextCell.m; sourceTree = "<group>"; };
+		9DC063BB0FBCD961009F4556 /* ATColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATColorView.h; sourceTree = "<group>"; };
+		9DC063BC0FBCD961009F4556 /* ATColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATColorView.m; sourceTree = "<group>"; };
+		9DCC9B060FB4F22000C75E46 /* ATDblActionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDblActionImageView.h; sourceTree = "<group>"; };
+		9DCC9B070FB4F22000C75E46 /* ATDblActionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDblActionImageView.m; sourceTree = "<group>"; };
+		9DDE9B8F0FA11FC500BE4471 /* ATContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATContentController.h; sourceTree = "<group>"; };
+		9DDE9B900FA11FC500BE4471 /* ATContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATContentController.m; sourceTree = "<group>"; };
+		9DDE9BB00FA12C2600BE4471 /* ATDesktopEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDesktopEntity.h; sourceTree = "<group>"; };
+		9DDE9BB10FA12C2600BE4471 /* ATDesktopEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDesktopEntity.m; sourceTree = "<group>"; };
+		9DDE9C1A0FA2167100BE4471 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				9DDE9C1B0FA2167100BE4471 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE9B8F0FA11FC500BE4471 /* ATContentController.h */,
+				9DDE9B900FA11FC500BE4471 /* ATContentController.m */,
+				9D8D1C670FB33A5B00C1E1EB /* ATColorTableController.h */,
+				9D8D1C680FB33A5B00C1E1EB /* ATColorTableController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE9C1A0FA2167100BE4471 /* Quartz.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AnimatedTableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AnimatedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE9BA30FA1255F00BE4471 /* Model */,
+				9DDE9BA40FA1257400BE4471 /* View */,
+				080E96DDFE201D6D7F000001 /* Controller */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AnimatedTableView;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* AnimatedTableView_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* AnimatedTableView-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				9D8D1C8A0FB343D200C1E1EB /* ColorTable.xib */,
+				9DB7EB3B0FC20DEC00A6422F /* ATFilterBrowser.xib */,
+				9DB7EB3D0FC20DEC00A6422F /* ATFilterBrowserColumnHeader.xib */,
+				9DB7EB3F0FC20DEC00A6422F /* ATFilterBrowserPreview.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DB7EB2F0FC20D7E00A6422F /* TableView & Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9DB878C30FA79D31001C44C5 /* ATImageTextCell.h */,
+				9DB878C40FA79D31001C44C5 /* ATImageTextCell.m */,
+				9D8D1B910FB21E6600C1E1EB /* ATColorCell.h */,
+				9D8D1B920FB21E6600C1E1EB /* ATColorCell.m */,
+				9D5AEE330FAA187A006CDA0F /* ATDynamicTableView.h */,
+				9D5AEE340FAA187A006CDA0F /* ATDynamicTableView.m */,
+			);
+			name = "TableView & Cells";
+			sourceTree = "<group>";
+		};
+		9DB7EB300FC20D9B00A6422F /* Extra Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D8999A60FBB2A4E0063889D /* ATBorderView.h */,
+				9D8999A70FBB2A4E0063889D /* ATBorderView.m */,
+				9DC063BB0FBCD961009F4556 /* ATColorView.h */,
+				9DC063BC0FBCD961009F4556 /* ATColorView.m */,
+				9DCC9B060FB4F22000C75E46 /* ATDblActionImageView.h */,
+				9DCC9B070FB4F22000C75E46 /* ATDblActionImageView.m */,
+			);
+			name = "Extra Views";
+			sourceTree = "<group>";
+		};
+		9DB7EB390FC20DB600A6422F /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7EB450FC20E0B00A6422F /* ATFilterBrowserController.h */,
+				9DB7EB460FC20E0B00A6422F /* ATFilterBrowserController.m */,
+				9DB7EB470FC20E0B00A6422F /* ATFilterItem.h */,
+				9DB7EB480FC20E0B00A6422F /* ATFilterItem.m */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
+		9DDE9BA30FA1255F00BE4471 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE9BB00FA12C2600BE4471 /* ATDesktopEntity.h */,
+				9DDE9BB10FA12C2600BE4471 /* ATDesktopEntity.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9DDE9BA40FA1257400BE4471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7EB2F0FC20D7E00A6422F /* TableView & Cells */,
+				9DB7EB390FC20DB600A6422F /* Browser */,
+				9DB7EB300FC20D9B00A6422F /* Extra Views */,
+				9D8D1D670FB37A6100C1E1EB /* ATPopupWindow.h */,
+				9D8D1D680FB37A6100C1E1EB /* ATPopupWindow.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* AnimatedTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AnimatedTableView" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimatedTableView;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AnimatedTableView;
+			productReference = 8D1107320486CEB800E47090 /* AnimatedTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AnimatedTableView" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AnimatedTableView */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AnimatedTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				9D8D1C8C0FB343D200C1E1EB /* ColorTable.xib in Resources */,
+				9DB7EB410FC20DEC00A6422F /* ATFilterBrowser.xib in Resources */,
+				9DB7EB420FC20DEC00A6422F /* ATFilterBrowserColumnHeader.xib in Resources */,
+				9DB7EB430FC20DEC00A6422F /* ATFilterBrowserPreview.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				9DDE9B910FA11FC500BE4471 /* ATContentController.m in Sources */,
+				9DDE9BB20FA12C2600BE4471 /* ATDesktopEntity.m in Sources */,
+				9DB878C50FA79D31001C44C5 /* ATImageTextCell.m in Sources */,
+				9D5AEE350FAA187A006CDA0F /* ATDynamicTableView.m in Sources */,
+				9D8D1B930FB21E6600C1E1EB /* ATColorCell.m in Sources */,
+				9D8D1C690FB33A5B00C1E1EB /* ATColorTableController.m in Sources */,
+				9D8D1D690FB37A6100C1E1EB /* ATPopupWindow.m in Sources */,
+				9DCC9B080FB4F22000C75E46 /* ATDblActionImageView.m in Sources */,
+				9D8999A80FBB2A4E0063889D /* ATBorderView.m in Sources */,
+				9DC063BD0FBCD961009F4556 /* ATColorView.m in Sources */,
+				9DB7EB490FC20E0B00A6422F /* ATFilterBrowserController.m in Sources */,
+				9DB7EB4A0FC20E0B00A6422F /* ATFilterItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		9D8D1C8A0FB343D200C1E1EB /* ColorTable.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D8D1C8B0FB343D200C1E1EB /* English */,
+			);
+			name = ColorTable.xib;
+			sourceTree = "<group>";
+		};
+		9DB7EB3B0FC20DEC00A6422F /* ATFilterBrowser.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB7EB3C0FC20DEC00A6422F /* English */,
+			);
+			name = ATFilterBrowser.xib;
+			sourceTree = "<group>";
+		};
+		9DB7EB3D0FC20DEC00A6422F /* ATFilterBrowserColumnHeader.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB7EB3E0FC20DEC00A6422F /* English */,
+			);
+			name = ATFilterBrowserColumnHeader.xib;
+			sourceTree = "<group>";
+		};
+		9DB7EB3F0FC20DEC00A6422F /* ATFilterBrowserPreview.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB7EB400FC20DEC00A6422F /* English */,
+			);
+			name = ATFilterBrowserPreview.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AnimatedTableView_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AnimatedTableView-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AnimatedTableView;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AnimatedTableView_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AnimatedTableView-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = AnimatedTableView;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "AnimatedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AnimatedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
