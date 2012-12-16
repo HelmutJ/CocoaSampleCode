@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1021
+\readonlydoc1{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\vieww9860\viewh8420\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs48 \cf0 Cache\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\fs28 \cf0 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b0\fs24 \cf0 Cache demonstrates the use of NSCache to manage images.  It also demonstrates the use of NSTimer and NSBitmapImageRep.\
+\
+The app opens a folder full of images in a window; the images are referenced in ImageFile objects. As the image is displayed, an NSImage is created for the ImageFile, and stored in an NSCache. The cache has total capacity limit of 40 (set arbitrarily, for demo purposes).\
+\
+The top level view in each window is FlashView, a subclass of NSView that can flash a configurable color. When a cache miss occurs, the view is flashed. FlashView uses regular NSView drawing and an NSTimer to do the flash.\
+\
+As you scroll the window up and down, cache access should present a smooth scroll, while cache miss should cause a red flash and a small delay as the image is reloaded from disk.  \
+\
+For demo purposes, if launched without opening a folder, the app will go ahead and create a temporary folder full of images for demo purposes. The images are created by reading a "template" demo image from the app bundle and using NSBitmapImageRep and NSStringDrawing to write a sequence number on each image.\
+\
+This sample app was first used in the Cocoa Performance Techniques talk during WWDC 2008.\
+}
