@@ -1,0 +1,65 @@
+{\rtf1\mac\ansicpg10000\cocoartf792\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\info}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs24 \cf0 XMLBrowser
+\f1\b0 \
+\
+
+\f0\b Objective:\
+\
+
+\f1\b0 Foundation's NSXML classes offer a host of features. This project demonstrates many of them, including the different input options, Key-Value Bindings, XQuery, and pretty printing.\
+\
+Please see related documentation at /Developer/Documentation/Cocoa/Conceptual/NSXML_Concepts then click "Binding NSXML Objects to a User Interface."\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 This sample project contains three points of interest:\
+\
+
+\f0\b MainMenu.nib
+\f1\b0  - This interface file contains object and array controllers connected to the back end, that in turn provide information for UI elements including text fields and tables. Investigate how the bindings tab in the Inspector changes for the different controllers and UI elements.\
+\
+
+\f0\b NodeKindValueTransformer
+\f1\b0  - Node kinds are an enumerated type. To create a more pleasing interface we create a value transformer that changes from the enemerated type to a string, then bind the enumerated values to this transformer in the Bindings palette of Interface Builder.\
+\
+
+\f0\b AppController
+\f1\b0  - The back end to XML Browser. It provides and manipulates the objects to display in the UI.\
+\
+
+\f0\b Overview:
+\f1\b0 \
+\
+
+\f0\b Setting the source
+\f1\b0  - With XML Browser the user can either type in a URL or open a file. After hitting return in the URL bar, the source is retrieved via a http request in [AppController fetchAndDisplayURL:] and the data shown.\
+\
+
+\f0\b Setting input/ouput options
+\f1\b0  - The matrix at the bottom of the Source tab controls some of the input and output options available to NSXMLNodes and NSXMLDocuments. It is hooked up to [AppController setFidelity:].\
+\
+
+\f0\b Transforming the source to an NSXMLDocument
+\f1\b0  - Once the user clicks one of the other tabs [AppController applyNSXML] is called to parse the data into an NSXMLDocument. \
+\
+
+\f0\b Browsing and Editing
+\f1\b0 :\
+In the Editor tab the user can browse and edit the tree, which is done via bindings. All of the bindings stem from the currently parsed document. The article /Developer/Documentation/Cocoa/Conceptual/NSXML_Concepts "Binding NSXML Objects to a User Interface" covers these bindings more in depth.\
+\
+Comments, elements, attributes, and namespaces can be created, and most nodes can be edited. Setting the source before editing is optional. By going directly to the Editing tab the user may create an XML document from scratch.\
+\
+
+\f0\b Applying XQuery
+\f1\b0  - In the XQuery tab you can play with XQuery. For example, if I open http://w3.org, then type ".//a" in the XQuery tab, it will show all of the link tags.\
+\
+
+\f0\b Viewing the tree
+\f1\b0  - By clicking on the Result tab the documents XMLString is accessed and displayed.\
+\
+
+\f0\b *Note
+\f1\b0  - Selecting the source tab followed by any other tab always reparses the source. This may overwrite changes you have made in other tabs.}
