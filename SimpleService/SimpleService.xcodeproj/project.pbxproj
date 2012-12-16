@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7372159C049A927B00C919A3 /* ServiceTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 036354E5FEEE2D177F000001 /* ServiceTest.h */; };
+		737215A0049A927B00C919A3 /* ServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 036354E3FEEE2D177F000001 /* ServiceTest.m */; settings = {ATTRIBUTES = (); }; };
+		737215A1049A927B00C919A3 /* SimpleService_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 036354E7FEEE2D177F000001 /* SimpleService_main.m */; settings = {ATTRIBUTES = (); }; };
+		737215A3049A927B00C919A3 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036354F1FEEE2D177F000001 /* AppKit.framework */; };
+		737215A4049A927B00C919A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036354F2FEEE2D177F000001 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		734E636A049E69EF00C919A3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		036354E3FEEE2D177F000001 /* ServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ServiceTest.m; sourceTree = "<group>"; };
+		036354E5FEEE2D177F000001 /* ServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ServiceTest.h; sourceTree = "<group>"; };
+		036354E7FEEE2D177F000001 /* SimpleService_main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SimpleService_main.m; sourceTree = "<group>"; };
+		036354EFFEEE2D177F000001 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		036354F1FEEE2D177F000001 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		036354F2FEEE2D177F000001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		737215A7049A927B00C919A3 /* Info-SimpleService.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-SimpleService.plist"; sourceTree = "<group>"; };
+		737215A8049A927B00C919A3 /* SimpleService.service */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleService.service; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		737215A2049A927B00C919A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737215A3049A927B00C919A3 /* AppKit.framework in Frameworks */,
+				737215A4049A927B00C919A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		036354DFFEEE2D177F000001 /* SimpleService */ = {
+			isa = PBXGroup;
+			children = (
+				036354EFFEEE2D177F000001 /* README.rtf */,
+				036354E0FEEE2D177F000001 /* Products */,
+				036354E2FEEE2D177F000001 /* Classes */,
+				036354E4FEEE2D177F000001 /* Headers */,
+				036354E6FEEE2D177F000001 /* Other Sources */,
+				036354F0FEEE2D177F000001 /* External Frameworks and Libraries */,
+				737215A7049A927B00C919A3 /* Info-SimpleService.plist */,
+			);
+			name = SimpleService;
+			sourceTree = "<group>";
+		};
+		036354E0FEEE2D177F000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				737215A8049A927B00C919A3 /* SimpleService.service */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		036354E2FEEE2D177F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				036354E3FEEE2D177F000001 /* ServiceTest.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		036354E4FEEE2D177F000001 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				036354E5FEEE2D177F000001 /* ServiceTest.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		036354E6FEEE2D177F000001 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				036354E7FEEE2D177F000001 /* SimpleService_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		036354F0FEEE2D177F000001 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				036354F1FEEE2D177F000001 /* AppKit.framework */,
+				036354F2FEEE2D177F000001 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7372159B049A927B00C919A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7372159C049A927B00C919A3 /* ServiceTest.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7372159A049A927B00C919A3 /* SimpleService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDED708A2ECB4008AC9B5 /* Build configuration list for PBXNativeTarget "SimpleService" */;
+			buildPhases = (
+				7372159B049A927B00C919A3 /* Headers */,
+				7372159E049A927B00C919A3 /* Resources */,
+				7372159F049A927B00C919A3 /* Sources */,
+				737215A2049A927B00C919A3 /* Frameworks */,
+				737215A5049A927B00C919A3 /* Rez */,
+			);
+			buildRules = (
+				734E636A049E69EF00C919A3 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SimpleService;
+			productInstallPath = "$(LOCAL_LIBRARY_DIR)/Services";
+			productName = SimpleService;
+			productReference = 737215A8049A927B00C919A3 /* SimpleService.service */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		036354DEFEEE2D177F000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = B69BDEDB08A2ECB4008AC9B5 /* Build configuration list for PBXProject "SimpleService" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 036354DFFEEE2D177F000001 /* SimpleService */;
+			productRefGroup = 036354E0FEEE2D177F000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7372159A049A927B00C919A3 /* SimpleService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7372159E049A927B00C919A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		737215A5049A927B00C919A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7372159F049A927B00C919A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737215A0049A927B00C919A3 /* ServiceTest.m in Sources */,
+				737215A1049A927B00C919A3 /* SimpleService_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDED808A2ECB4008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleService.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleService;
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDED908A2ECB4008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleService.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleService;
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDEDA08A2ECB4008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleService.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleService;
+				SDKROOT = macosx;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+			};
+			name = Default;
+		};
+		B69BDEDC08A2ECB4008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Development;
+		};
+		B69BDEDD08A2ECB4008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Deployment;
+		};
+		B69BDEDE08A2ECB4008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDED708A2ECB4008AC9B5 /* Build configuration list for PBXNativeTarget "SimpleService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDED808A2ECB4008AC9B5 /* Development */,
+				B69BDED908A2ECB4008AC9B5 /* Deployment */,
+				B69BDEDA08A2ECB4008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDEDB08A2ECB4008AC9B5 /* Build configuration list for PBXProject "SimpleService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDEDC08A2ECB4008AC9B5 /* Development */,
+				B69BDEDD08A2ECB4008AC9B5 /* Deployment */,
+				B69BDEDE08A2ECB4008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 036354DEFEEE2D177F000001 /* Project object */;
+}
