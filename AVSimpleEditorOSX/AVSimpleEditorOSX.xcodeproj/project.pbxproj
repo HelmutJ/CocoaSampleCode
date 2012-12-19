@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF29ED09154E5E1E00440EFB /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF29ED07154E5E1E00440EFB /* music.m4a */; };
+		EF959F411537B6BD00D9FA9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF959F401537B6BD00D9FA9F /* AVFoundation.framework */; };
+		EF959F431537B6CD00D9FA9F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF959F421537B6CC00D9FA9F /* QuartzCore.framework */; };
+		EF959F451537B6DC00D9FA9F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF959F441537B6DC00D9FA9F /* CoreMedia.framework */; };
+		EF959F521537B8F400D9FA9F /* crop.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F461537B8F400D9FA9F /* crop.icns */; };
+		EF959F531537B8F400D9FA9F /* export.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F481537B8F400D9FA9F /* export.icns */; };
+		EF959F541537B8F400D9FA9F /* music.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F4A1537B8F400D9FA9F /* music.icns */; };
+		EF959F551537B8F400D9FA9F /* rotate.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F4C1537B8F400D9FA9F /* rotate.icns */; };
+		EF959F561537B8F400D9FA9F /* trim.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F4E1537B8F400D9FA9F /* trim.icns */; };
+		EF959F571537B8F400D9FA9F /* watermark.icns in Resources */ = {isa = PBXBuildFile; fileRef = EF959F501537B8F400D9FA9F /* watermark.icns */; };
+		EFA806B51537A0EE008DFA61 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA806B41537A0EE008DFA61 /* Cocoa.framework */; };
+		EFA806BF1537A0EF008DFA61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA806BD1537A0EF008DFA61 /* InfoPlist.strings */; };
+		EFA806C11537A0EF008DFA61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806C01537A0EF008DFA61 /* main.m */; };
+		EFA806E81537A270008DFA61 /* AVSEAddMusicCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806D61537A270008DFA61 /* AVSEAddMusicCommand.m */; };
+		EFA806E91537A270008DFA61 /* AVSEAddWatermarkCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806D71537A270008DFA61 /* AVSEAddWatermarkCommand.m */; };
+		EFA806EA1537A270008DFA61 /* AVSECommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806D81537A270008DFA61 /* AVSECommand.m */; };
+		EFA806EB1537A270008DFA61 /* AVSECropCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806D91537A270008DFA61 /* AVSECropCommand.m */; };
+		EFA806EC1537A270008DFA61 /* AVSEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806DA1537A270008DFA61 /* AVSEDocument.m */; };
+		EFA806ED1537A270008DFA61 /* AVSEExportCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806DB1537A270008DFA61 /* AVSEExportCommand.m */; };
+		EFA806EE1537A270008DFA61 /* AVSERotateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806DC1537A270008DFA61 /* AVSERotateCommand.m */; };
+		EFA806EF1537A270008DFA61 /* AVSETrimCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA806DD1537A270008DFA61 /* AVSETrimCommand.m */; };
+		EFA806F01537A270008DFA61 /* AVSEDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA806E21537A270008DFA61 /* AVSEDocument.xib */; };
+		EFA806F11537A270008DFA61 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA806E61537A270008DFA61 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF29ED08154E5E1E00440EFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/music.m4a; sourceTree = "<group>"; };
+		EF959F401537B6BD00D9FA9F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EF959F421537B6CC00D9FA9F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EF959F441537B6DC00D9FA9F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EF959F471537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/crop.icns; sourceTree = "<group>"; };
+		EF959F491537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/export.icns; sourceTree = "<group>"; };
+		EF959F4B1537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/music.icns; sourceTree = "<group>"; };
+		EF959F4D1537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/rotate.icns; sourceTree = "<group>"; };
+		EF959F4F1537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/trim.icns; sourceTree = "<group>"; };
+		EF959F511537B8F400D9FA9F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = en; path = en.lproj/watermark.icns; sourceTree = "<group>"; };
+		EFA806B01537A0EE008DFA61 /* AVSimpleEditorOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVSimpleEditorOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA806B41537A0EE008DFA61 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EFA806B71537A0EE008DFA61 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EFA806B81537A0EE008DFA61 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EFA806B91537A0EE008DFA61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFA806BE1537A0EF008DFA61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFA806C01537A0EF008DFA61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFA806C21537A0EF008DFA61 /* AVSimpleEditorOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVSimpleEditorOSX-Prefix.pch"; sourceTree = "<group>"; };
+		EFA806C61537A0EF008DFA61 /* AVSEDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVSEDocument.h; sourceTree = "<group>"; };
+		EFA806D41537A270008DFA61 /* AVSimpleEditorOSX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AVSimpleEditorOSX-Info.plist"; sourceTree = "<group>"; };
+		EFA806D61537A270008DFA61 /* AVSEAddMusicCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSEAddMusicCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806D71537A270008DFA61 /* AVSEAddWatermarkCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSEAddWatermarkCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806D81537A270008DFA61 /* AVSECommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSECommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806D91537A270008DFA61 /* AVSECropCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSECropCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806DA1537A270008DFA61 /* AVSEDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSEDocument.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806DB1537A270008DFA61 /* AVSEExportCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSEExportCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806DC1537A270008DFA61 /* AVSERotateCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSERotateCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806DD1537A270008DFA61 /* AVSETrimCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVSETrimCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFA806DE1537A270008DFA61 /* AVSEAddMusicCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEAddMusicCommand.h; sourceTree = "<group>"; };
+		EFA806DF1537A270008DFA61 /* AVSEAddWatermarkCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEAddWatermarkCommand.h; sourceTree = "<group>"; };
+		EFA806E01537A270008DFA61 /* AVSECommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSECommand.h; sourceTree = "<group>"; };
+		EFA806E11537A270008DFA61 /* AVSECropCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSECropCommand.h; sourceTree = "<group>"; };
+		EFA806E21537A270008DFA61 /* AVSEDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVSEDocument.xib; sourceTree = "<group>"; };
+		EFA806E31537A270008DFA61 /* AVSEExportCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSEExportCommand.h; sourceTree = "<group>"; };
+		EFA806E41537A270008DFA61 /* AVSERotateCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSERotateCommand.h; sourceTree = "<group>"; };
+		EFA806E51537A270008DFA61 /* AVSETrimCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSETrimCommand.h; sourceTree = "<group>"; };
+		EFA806E61537A270008DFA61 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFA806AD1537A0EE008DFA61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF959F451537B6DC00D9FA9F /* CoreMedia.framework in Frameworks */,
+				EF959F431537B6CD00D9FA9F /* QuartzCore.framework in Frameworks */,
+				EF959F411537B6BD00D9FA9F /* AVFoundation.framework in Frameworks */,
+				EFA806B51537A0EE008DFA61 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFA806A51537A0EE008DFA61 = {
+			isa = PBXGroup;
+			children = (
+				EFA806BA1537A0EE008DFA61 /* AVSimpleEditorOSX */,
+				EFA806B31537A0EE008DFA61 /* Frameworks */,
+				EFA806B11537A0EE008DFA61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFA806B11537A0EE008DFA61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFA806B01537A0EE008DFA61 /* AVSimpleEditorOSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFA806B31537A0EE008DFA61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF959F441537B6DC00D9FA9F /* CoreMedia.framework */,
+				EF959F421537B6CC00D9FA9F /* QuartzCore.framework */,
+				EF959F401537B6BD00D9FA9F /* AVFoundation.framework */,
+				EFA806B41537A0EE008DFA61 /* Cocoa.framework */,
+				EFA806B61537A0EE008DFA61 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFA806B61537A0EE008DFA61 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFA806B71537A0EE008DFA61 /* AppKit.framework */,
+				EFA806B81537A0EE008DFA61 /* CoreData.framework */,
+				EFA806B91537A0EE008DFA61 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EFA806BA1537A0EE008DFA61 /* AVSimpleEditorOSX */ = {
+			isa = PBXGroup;
+			children = (
+				EFA806E01537A270008DFA61 /* AVSECommand.h */,
+				EFA806D81537A270008DFA61 /* AVSECommand.m */,
+				EFA806E51537A270008DFA61 /* AVSETrimCommand.h */,
+				EFA806DD1537A270008DFA61 /* AVSETrimCommand.m */,
+				EFA806E41537A270008DFA61 /* AVSERotateCommand.h */,
+				EFA806DC1537A270008DFA61 /* AVSERotateCommand.m */,
+				EFA806E11537A270008DFA61 /* AVSECropCommand.h */,
+				EFA806D91537A270008DFA61 /* AVSECropCommand.m */,
+				EFA806DE1537A270008DFA61 /* AVSEAddMusicCommand.h */,
+				EFA806D61537A270008DFA61 /* AVSEAddMusicCommand.m */,
+				EFA806DF1537A270008DFA61 /* AVSEAddWatermarkCommand.h */,
+				EFA806D71537A270008DFA61 /* AVSEAddWatermarkCommand.m */,
+				EFA806E31537A270008DFA61 /* AVSEExportCommand.h */,
+				EFA806DB1537A270008DFA61 /* AVSEExportCommand.m */,
+				EFA806C61537A0EF008DFA61 /* AVSEDocument.h */,
+				EFA806DA1537A270008DFA61 /* AVSEDocument.m */,
+				EFA806E21537A270008DFA61 /* AVSEDocument.xib */,
+				EFA806E61537A270008DFA61 /* MainMenu.xib */,
+				EFA806BB1537A0EF008DFA61 /* Supporting Files */,
+			);
+			path = AVSimpleEditorOSX;
+			sourceTree = "<group>";
+		};
+		EFA806BB1537A0EF008DFA61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF29ED07154E5E1E00440EFB /* music.m4a */,
+				EF959F461537B8F400D9FA9F /* crop.icns */,
+				EF959F481537B8F400D9FA9F /* export.icns */,
+				EF959F4A1537B8F400D9FA9F /* music.icns */,
+				EF959F4C1537B8F400D9FA9F /* rotate.icns */,
+				EF959F4E1537B8F400D9FA9F /* trim.icns */,
+				EF959F501537B8F400D9FA9F /* watermark.icns */,
+				EFA806D41537A270008DFA61 /* AVSimpleEditorOSX-Info.plist */,
+				EFA806BD1537A0EF008DFA61 /* InfoPlist.strings */,
+				EFA806C01537A0EF008DFA61 /* main.m */,
+				EFA806C21537A0EF008DFA61 /* AVSimpleEditorOSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFA806AF1537A0EE008DFA61 /* AVSimpleEditorOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFA806D11537A0EF008DFA61 /* Build configuration list for PBXNativeTarget "AVSimpleEditorOSX" */;
+			buildPhases = (
+				EFA806AC1537A0EE008DFA61 /* Sources */,
+				EFA806AD1537A0EE008DFA61 /* Frameworks */,
+				EFA806AE1537A0EE008DFA61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVSimpleEditorOSX;
+			productName = AVSimpleEditorOSX;
+			productReference = EFA806B01537A0EE008DFA61 /* AVSimpleEditorOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFA806A71537A0EE008DFA61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AVSE;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = EFA806AA1537A0EE008DFA61 /* Build configuration list for PBXProject "AVSimpleEditorOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFA806A51537A0EE008DFA61;
+			productRefGroup = EFA806B11537A0EE008DFA61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFA806AF1537A0EE008DFA61 /* AVSimpleEditorOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFA806AE1537A0EE008DFA61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA806BF1537A0EF008DFA61 /* InfoPlist.strings in Resources */,
+				EFA806F01537A270008DFA61 /* AVSEDocument.xib in Resources */,
+				EFA806F11537A270008DFA61 /* MainMenu.xib in Resources */,
+				EF959F521537B8F400D9FA9F /* crop.icns in Resources */,
+				EF959F531537B8F400D9FA9F /* export.icns in Resources */,
+				EF959F541537B8F400D9FA9F /* music.icns in Resources */,
+				EF959F551537B8F400D9FA9F /* rotate.icns in Resources */,
+				EF959F561537B8F400D9FA9F /* trim.icns in Resources */,
+				EF959F571537B8F400D9FA9F /* watermark.icns in Resources */,
+				EF29ED09154E5E1E00440EFB /* music.m4a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFA806AC1537A0EE008DFA61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA806C11537A0EF008DFA61 /* main.m in Sources */,
+				EFA806E81537A270008DFA61 /* AVSEAddMusicCommand.m in Sources */,
+				EFA806E91537A270008DFA61 /* AVSEAddWatermarkCommand.m in Sources */,
+				EFA806EA1537A270008DFA61 /* AVSECommand.m in Sources */,
+				EFA806EB1537A270008DFA61 /* AVSECropCommand.m in Sources */,
+				EFA806EC1537A270008DFA61 /* AVSEDocument.m in Sources */,
+				EFA806ED1537A270008DFA61 /* AVSEExportCommand.m in Sources */,
+				EFA806EE1537A270008DFA61 /* AVSERotateCommand.m in Sources */,
+				EFA806EF1537A270008DFA61 /* AVSETrimCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF29ED07154E5E1E00440EFB /* music.m4a */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF29ED08154E5E1E00440EFB /* en */,
+			);
+			name = music.m4a;
+			sourceTree = "<group>";
+		};
+		EF959F461537B8F400D9FA9F /* crop.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F471537B8F400D9FA9F /* en */,
+			);
+			name = crop.icns;
+			sourceTree = "<group>";
+		};
+		EF959F481537B8F400D9FA9F /* export.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F491537B8F400D9FA9F /* en */,
+			);
+			name = export.icns;
+			sourceTree = "<group>";
+		};
+		EF959F4A1537B8F400D9FA9F /* music.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F4B1537B8F400D9FA9F /* en */,
+			);
+			name = music.icns;
+			sourceTree = "<group>";
+		};
+		EF959F4C1537B8F400D9FA9F /* rotate.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F4D1537B8F400D9FA9F /* en */,
+			);
+			name = rotate.icns;
+			sourceTree = "<group>";
+		};
+		EF959F4E1537B8F400D9FA9F /* trim.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F4F1537B8F400D9FA9F /* en */,
+			);
+			name = trim.icns;
+			sourceTree = "<group>";
+		};
+		EF959F501537B8F400D9FA9F /* watermark.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF959F511537B8F400D9FA9F /* en */,
+			);
+			name = watermark.icns;
+			sourceTree = "<group>";
+		};
+		EFA806BD1537A0EF008DFA61 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFA806BE1537A0EF008DFA61 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFA806CF1537A0EF008DFA61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EFA806D01537A0EF008DFA61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EFA806D21537A0EF008DFA61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimpleEditorOSX/AVSimpleEditorOSX-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "AVSimpleEditorOSX/AVSimpleEditorOSX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EFA806D31537A0EF008DFA61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimpleEditorOSX/AVSimpleEditorOSX-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = "AVSimpleEditorOSX/AVSimpleEditorOSX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFA806AA1537A0EE008DFA61 /* Build configuration list for PBXProject "AVSimpleEditorOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA806CF1537A0EF008DFA61 /* Debug */,
+				EFA806D01537A0EF008DFA61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFA806D11537A0EF008DFA61 /* Build configuration list for PBXNativeTarget "AVSimpleEditorOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA806D21537A0EF008DFA61 /* Debug */,
+				EFA806D31537A0EF008DFA61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFA806A71537A0EE008DFA61 /* Project object */;
+}
