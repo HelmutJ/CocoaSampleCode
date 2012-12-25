@@ -1,0 +1,84 @@
+Read Me About CFHostSample
+==========================
+2.0
+
+CFHostSample shows how to use the CFHost API to do asynchronous DNS name-to-address and address-to-name translation.
+
+CFHostSample requires Mac OS X 10.7 or later.  Additionally, the core code works unmodified on iOS 5.0 or later.
+
+Note: The core concepts should work on any version of iOS and Mac OS X 10.3 or later (where CFHost was introduced), but supporting older platforms will require some tweaks (for example, switching from "weak" references to "unsafe_unretained" references, adding explicit ivars to support the old runtime, and so on).
+
+Before You Start
+----------------
+CFHost is only necessary if you have specialist DNS needs, for example, if you want to map all of the addresses in a log file to their host names.  If you just want to connect to a DNS name, it's both easier and better to use a connect-by-name API, that is, an API that takes a DNS name and does the resolution on your behalf.  For example:
+
+o +[NSHost +getStreamsToHost:port:inputStream:outputStream:] on Mac OS X
+
+o CFStreamCreatePairWithSocketToHost on iOS, as shown in QA1652 "Using NSStreams For A TCP Connection Without NSHost"
+
+<https://developer.apple.com/library/ios/#qa/qa1652/_index.html>
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About CFHostSample.txt -- This document.
+
+o CFHostSample.xcodeproj -- An Xcode project to build the code.
+
+o CFHostSample -- A directory containing the code.
+
+o build -- A directory containing a pre-built binary.
+
+Within the "CFHostSample" directory you'll find:
+
+o main.m -- A command line tool that exercises the core code.
+
+o QCFHostResolver.[hm] -- The core code.
+
+Using the Sample
+----------------
+The sample supports two functions.  To test name-to-address mapping, run the tool with the "-h" option:
+
+$ build/Debug/CFHostSample -h apple.com
+apple.com -> 17.172.224.47, 17.149.160.49
+
+To test address-to-name mapping, run the tool with the "-a" option:
+
+$ build/Debug/CFHostSample -a 17.172.224.47
+17.172.224.47 -> apple.com
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.3.1 on Mac OS X 10.7.3 with the Mac OS X 10.7 SDK.  You should be able to just open the project and choose Build from the Product menu.
+
+How It Works
+------------
+The main program is a simple command line tool that accepts parameters, creates QCFHostResolver objects, runs them, and prints the results.
+
+QCFHostResolver is an Objective-C wrapper around CFHost; read the comments in "QCFHostResolver.h" for more information on how to use it, and the comments in "QCFHostResolver.m" for more information on how it works.
+
+QCFHostResolver builds and works on iOS 5.0 and later.
+
+Caveats
+-------
+The previous version of the sample let you do reachability tests using kCFHostReachability.  This is a rarely used feature of CFHost, and something generally better done with the SCNetworkReachability API, and so it's been removed from the sample.
+
+The bug referenced by the previous version of this sample, <rdar://problem/3612320>, which caused CFHost to fail if you did a reachability query using an address rather than a name, was fixed in Mac OS X 10.4.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Apr 2004) was the first shipping version.
+
+2.0 (Mar 2012) was a major rewrite to use the latest tools and techniques.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+23 Mar 2012
