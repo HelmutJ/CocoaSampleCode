@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		285BC3361409696E00B28B3E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285BC3351409696E00B28B3E /* Cocoa.framework */; };
+		285BC3401409696E00B28B3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 285BC33E1409696E00B28B3E /* InfoPlist.strings */; };
+		285BC3421409696E00B28B3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 285BC3411409696E00B28B3E /* main.m */; };
+		285BC34C1409696E00B28B3E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285BC34A1409696E00B28B3E /* MainMenu.xib */; };
+		28C33413152F5189001158C3 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C33412152F5189001158C3 /* Position.m */; };
+		28E8254114096B900047BD9F /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8253E14096B900047BD9F /* AppController.m */; };
+		28E8254214096B900047BD9F /* JoystickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E8254014096B900047BD9F /* JoystickView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		285BC3311409696E00B28B3E /* BindingsJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BindingsJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		285BC3351409696E00B28B3E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		285BC3381409696E00B28B3E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		285BC3391409696E00B28B3E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		285BC33A1409696E00B28B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		285BC33D1409696E00B28B3E /* BindingsJoystick-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BindingsJoystick-Info.plist"; sourceTree = "<group>"; };
+		285BC33F1409696E00B28B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		285BC3411409696E00B28B3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		285BC3431409696E00B28B3E /* BindingsJoystick-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BindingsJoystick-Prefix.pch"; sourceTree = "<group>"; };
+		285BC34B1409696E00B28B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		28A3613B152F428A006C7660 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		28C33411152F5189001158C3 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		28C33412152F5189001158C3 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		28E8253D14096B900047BD9F /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		28E8253E14096B900047BD9F /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		28E8253F14096B900047BD9F /* JoystickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickView.h; sourceTree = "<group>"; };
+		28E8254014096B900047BD9F /* JoystickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoystickView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		285BC32E1409696E00B28B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285BC3361409696E00B28B3E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		285BC3261409696E00B28B3E = {
+			isa = PBXGroup;
+			children = (
+				28A3613B152F428A006C7660 /* ReadMe.txt */,
+				285BC33B1409696E00B28B3E /* BindingsJoystick */,
+				285BC3341409696E00B28B3E /* Frameworks */,
+				285BC3321409696E00B28B3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		285BC3321409696E00B28B3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				285BC3311409696E00B28B3E /* BindingsJoystick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		285BC3341409696E00B28B3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				285BC3351409696E00B28B3E /* Cocoa.framework */,
+				285BC3371409696E00B28B3E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		285BC3371409696E00B28B3E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				285BC3381409696E00B28B3E /* AppKit.framework */,
+				285BC3391409696E00B28B3E /* CoreData.framework */,
+				285BC33A1409696E00B28B3E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		285BC33B1409696E00B28B3E /* BindingsJoystick */ = {
+			isa = PBXGroup;
+			children = (
+				28E8253D14096B900047BD9F /* AppController.h */,
+				28E8253E14096B900047BD9F /* AppController.m */,
+				28E8253F14096B900047BD9F /* JoystickView.h */,
+				28E8254014096B900047BD9F /* JoystickView.m */,
+				28C33411152F5189001158C3 /* Position.h */,
+				28C33412152F5189001158C3 /* Position.m */,
+				285BC34A1409696E00B28B3E /* MainMenu.xib */,
+				285BC33C1409696E00B28B3E /* Supporting Files */,
+			);
+			path = BindingsJoystick;
+			sourceTree = "<group>";
+		};
+		285BC33C1409696E00B28B3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				285BC33D1409696E00B28B3E /* BindingsJoystick-Info.plist */,
+				285BC33E1409696E00B28B3E /* InfoPlist.strings */,
+				285BC3411409696E00B28B3E /* main.m */,
+				285BC3431409696E00B28B3E /* BindingsJoystick-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		285BC3301409696E00B28B3E /* BindingsJoystick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 285BC34F1409696E00B28B3E /* Build configuration list for PBXNativeTarget "BindingsJoystick" */;
+			buildPhases = (
+				285BC32D1409696E00B28B3E /* Sources */,
+				285BC32E1409696E00B28B3E /* Frameworks */,
+				285BC32F1409696E00B28B3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BindingsJoystick;
+			productName = BindingsJoystick;
+			productReference = 285BC3311409696E00B28B3E /* BindingsJoystick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		285BC3281409696E00B28B3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Apple Inc.";
+			};
+			buildConfigurationList = 285BC32B1409696E00B28B3E /* Build configuration list for PBXProject "BindingsJoystick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 285BC3261409696E00B28B3E;
+			productRefGroup = 285BC3321409696E00B28B3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				285BC3301409696E00B28B3E /* BindingsJoystick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		285BC32F1409696E00B28B3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285BC3401409696E00B28B3E /* InfoPlist.strings in Resources */,
+				285BC34C1409696E00B28B3E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		285BC32D1409696E00B28B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285BC3421409696E00B28B3E /* main.m in Sources */,
+				28E8254114096B900047BD9F /* AppController.m in Sources */,
+				28E8254214096B900047BD9F /* JoystickView.m in Sources */,
+				28C33413152F5189001158C3 /* Position.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		285BC33E1409696E00B28B3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				285BC33F1409696E00B28B3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		285BC34A1409696E00B28B3E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				285BC34B1409696E00B28B3E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		285BC34D1409696E00B28B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		285BC34E1409696E00B28B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		285BC3501409696E00B28B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BindingsJoystick/BindingsJoystick-Prefix.pch";
+				INFOPLIST_FILE = "BindingsJoystick/BindingsJoystick-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		285BC3511409696E00B28B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BindingsJoystick/BindingsJoystick-Prefix.pch";
+				INFOPLIST_FILE = "BindingsJoystick/BindingsJoystick-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		285BC32B1409696E00B28B3E /* Build configuration list for PBXProject "BindingsJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285BC34D1409696E00B28B3E /* Debug */,
+				285BC34E1409696E00B28B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		285BC34F1409696E00B28B3E /* Build configuration list for PBXNativeTarget "BindingsJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				285BC3501409696E00B28B3E /* Debug */,
+				285BC3511409696E00B28B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 285BC3281409696E00B28B3E /* Project object */;
+}
