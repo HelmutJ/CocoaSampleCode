@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C41C0D0D143A664D004E02FD /* 16bit_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = C41C0D0C143A664D004E02FD /* 16bit_gradient.png */; };
+		C42AC0071417F3E7002D3595 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42AC0061417F3E7002D3595 /* Cocoa.framework */; };
+		C42AC0111417F3E7002D3595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C42AC00F1417F3E7002D3595 /* InfoPlist.strings */; };
+		C42AC0131417F3E7002D3595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C42AC0121417F3E7002D3595 /* main.m */; };
+		C42AC01A1417F3E7002D3595 /* DeepImageDisplayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C42AC0191417F3E7002D3595 /* DeepImageDisplayAppDelegate.m */; };
+		C42AC01D1417F3E8002D3595 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42AC01B1417F3E8002D3595 /* MainMenu.xib */; };
+		C42AC02F14182C82002D3595 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = C42AC02E14182C82002D3595 /* ReadMe.txt */; };
+		C4B591531423E777009752FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B591521423E777009752FA /* QuartzCore.framework */; };
+		C4B5915E1424FD14009752FA /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5915D1424FD14009752FA /* CustomView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C41C0D0C143A664D004E02FD /* 16bit_gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16bit_gradient.png; sourceTree = "<group>"; };
+		C42AC0021417F3E7002D3595 /* DeepImageDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepImageDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42AC0061417F3E7002D3595 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C42AC0091417F3E7002D3595 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C42AC00A1417F3E7002D3595 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C42AC00B1417F3E7002D3595 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C42AC00E1417F3E7002D3595 /* DeepImageDisplay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeepImageDisplay-Info.plist"; sourceTree = "<group>"; };
+		C42AC0101417F3E7002D3595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C42AC0121417F3E7002D3595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C42AC0141417F3E7002D3595 /* DeepImageDisplay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeepImageDisplay-Prefix.pch"; sourceTree = "<group>"; };
+		C42AC0181417F3E7002D3595 /* DeepImageDisplayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepImageDisplayAppDelegate.h; sourceTree = "<group>"; };
+		C42AC0191417F3E7002D3595 /* DeepImageDisplayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepImageDisplayAppDelegate.m; sourceTree = "<group>"; };
+		C42AC01C1417F3E8002D3595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C42AC02E14182C82002D3595 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		C4B591521423E777009752FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C4B5915C1424FD14009752FA /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		C4B5915D1424FD14009752FA /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C42ABFFF1417F3E7002D3595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42AC0071417F3E7002D3595 /* Cocoa.framework in Frameworks */,
+				C4B591531423E777009752FA /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C42ABFF71417F3E7002D3595 = {
+			isa = PBXGroup;
+			children = (
+				C42AC02E14182C82002D3595 /* ReadMe.txt */,
+				C42AC00C1417F3E7002D3595 /* DeepImageDisplay */,
+				C42AC0051417F3E7002D3595 /* Frameworks */,
+				C42AC0031417F3E7002D3595 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C42AC0031417F3E7002D3595 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C42AC0021417F3E7002D3595 /* DeepImageDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C42AC0051417F3E7002D3595 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4B591521423E777009752FA /* QuartzCore.framework */,
+				C42AC0061417F3E7002D3595 /* Cocoa.framework */,
+				C42AC0081417F3E7002D3595 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C42AC0081417F3E7002D3595 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C42AC0091417F3E7002D3595 /* AppKit.framework */,
+				C42AC00A1417F3E7002D3595 /* CoreData.framework */,
+				C42AC00B1417F3E7002D3595 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C42AC00C1417F3E7002D3595 /* DeepImageDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				C42AC0181417F3E7002D3595 /* DeepImageDisplayAppDelegate.h */,
+				C42AC0191417F3E7002D3595 /* DeepImageDisplayAppDelegate.m */,
+				C4B5915C1424FD14009752FA /* CustomView.h */,
+				C4B5915D1424FD14009752FA /* CustomView.m */,
+				C42AC01B1417F3E8002D3595 /* MainMenu.xib */,
+				C42AC00D1417F3E7002D3595 /* Supporting Files */,
+			);
+			path = DeepImageDisplay;
+			sourceTree = "<group>";
+		};
+		C42AC00D1417F3E7002D3595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C41C0D0C143A664D004E02FD /* 16bit_gradient.png */,
+				C42AC00E1417F3E7002D3595 /* DeepImageDisplay-Info.plist */,
+				C42AC00F1417F3E7002D3595 /* InfoPlist.strings */,
+				C42AC0121417F3E7002D3595 /* main.m */,
+				C42AC0141417F3E7002D3595 /* DeepImageDisplay-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C42AC0011417F3E7002D3595 /* DeepImageDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42AC0201417F3E8002D3595 /* Build configuration list for PBXNativeTarget "DeepImageDisplay" */;
+			buildPhases = (
+				C42ABFFE1417F3E7002D3595 /* Sources */,
+				C42ABFFF1417F3E7002D3595 /* Frameworks */,
+				C42AC0001417F3E7002D3595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepImageDisplay;
+			productName = DeepImageDisplay;
+			productReference = C42AC0021417F3E7002D3595 /* DeepImageDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C42ABFF91417F3E7002D3595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C42ABFFC1417F3E7002D3595 /* Build configuration list for PBXProject "DeepImageDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C42ABFF71417F3E7002D3595;
+			productRefGroup = C42AC0031417F3E7002D3595 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C42AC0011417F3E7002D3595 /* DeepImageDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C42AC0001417F3E7002D3595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42AC0111417F3E7002D3595 /* InfoPlist.strings in Resources */,
+				C42AC01D1417F3E8002D3595 /* MainMenu.xib in Resources */,
+				C42AC02F14182C82002D3595 /* ReadMe.txt in Resources */,
+				C41C0D0D143A664D004E02FD /* 16bit_gradient.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C42ABFFE1417F3E7002D3595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42AC0131417F3E7002D3595 /* main.m in Sources */,
+				C42AC01A1417F3E7002D3595 /* DeepImageDisplayAppDelegate.m in Sources */,
+				C4B5915E1424FD14009752FA /* CustomView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C42AC00F1417F3E7002D3595 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C42AC0101417F3E7002D3595 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C42AC01B1417F3E8002D3595 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C42AC01C1417F3E8002D3595 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C42AC01E1417F3E8002D3595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C42AC01F1417F3E8002D3595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C42AC0211417F3E8002D3595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeepImageDisplay/DeepImageDisplay-Prefix.pch";
+				INFOPLIST_FILE = "DeepImageDisplay/DeepImageDisplay-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C42AC0221417F3E8002D3595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeepImageDisplay/DeepImageDisplay-Prefix.pch";
+				INFOPLIST_FILE = "DeepImageDisplay/DeepImageDisplay-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C42ABFFC1417F3E7002D3595 /* Build configuration list for PBXProject "DeepImageDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42AC01E1417F3E8002D3595 /* Debug */,
+				C42AC01F1417F3E8002D3595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C42AC0201417F3E8002D3595 /* Build configuration list for PBXNativeTarget "DeepImageDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42AC0211417F3E8002D3595 /* Debug */,
+				C42AC0221417F3E8002D3595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C42ABFF91417F3E7002D3595 /* Project object */;
+}
