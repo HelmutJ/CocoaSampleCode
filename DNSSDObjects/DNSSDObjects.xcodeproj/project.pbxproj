@@ -1,0 +1,253 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E452FE68146014090079100C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E452FE67146014090079100C /* Foundation.framework */; };
+		E4B82F8F146290CC00465EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B82F8C146290CC00465EF5 /* main.m */; };
+		E4B82F9C1462AFD900465EF5 /* DNSSDBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B82F971462AFD900465EF5 /* DNSSDBrowser.m */; };
+		E4B82F9D1462AFD900465EF5 /* DNSSDRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B82F991462AFD900465EF5 /* DNSSDRegistration.m */; };
+		E4B82F9E1462AFD900465EF5 /* DNSSDService.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B82F9B1462AFD900465EF5 /* DNSSDService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E452FE63146014090079100C /* DNSSDObjects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DNSSDObjects; sourceTree = BUILT_PRODUCTS_DIR; };
+		E452FE67146014090079100C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4B82F8C146290CC00465EF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4B82F961462AFD900465EF5 /* DNSSDBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSSDBrowser.h; sourceTree = "<group>"; };
+		E4B82F971462AFD900465EF5 /* DNSSDBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSSDBrowser.m; sourceTree = "<group>"; };
+		E4B82F981462AFD900465EF5 /* DNSSDRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSSDRegistration.h; sourceTree = "<group>"; };
+		E4B82F991462AFD900465EF5 /* DNSSDRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSSDRegistration.m; sourceTree = "<group>"; };
+		E4B82F9A1462AFD900465EF5 /* DNSSDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNSSDService.h; sourceTree = "<group>"; };
+		E4B82F9B1462AFD900465EF5 /* DNSSDService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNSSDService.m; sourceTree = "<group>"; };
+		E4B8301D1467125000465EF5 /* Read Me About DNSSDObjects.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Read Me About DNSSDObjects.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E452FE61146014090079100C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E452FE68146014090079100C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E452FE59146014090079100C = {
+			isa = PBXGroup;
+			children = (
+				E4B8301D1467125000465EF5 /* Read Me About DNSSDObjects.txt */,
+				E4B82F8B146290CC00465EF5 /* DNSSDObjects */,
+				E452FE66146014090079100C /* Frameworks */,
+				E452FE64146014090079100C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E452FE64146014090079100C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E452FE63146014090079100C /* DNSSDObjects */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E452FE66146014090079100C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E452FE67146014090079100C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B82F8B146290CC00465EF5 /* DNSSDObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E4B82F8C146290CC00465EF5 /* main.m */,
+				E4B82F981462AFD900465EF5 /* DNSSDRegistration.h */,
+				E4B82F991462AFD900465EF5 /* DNSSDRegistration.m */,
+				E4B82F961462AFD900465EF5 /* DNSSDBrowser.h */,
+				E4B82F971462AFD900465EF5 /* DNSSDBrowser.m */,
+				E4B82F9A1462AFD900465EF5 /* DNSSDService.h */,
+				E4B82F9B1462AFD900465EF5 /* DNSSDService.m */,
+			);
+			path = DNSSDObjects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E452FE62146014090079100C /* DNSSDObjects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E452FE6E146014090079100C /* Build configuration list for PBXNativeTarget "DNSSDObjects" */;
+			buildPhases = (
+				E452FE60146014090079100C /* Sources */,
+				E452FE61146014090079100C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSSDObjects;
+			productName = QNetService;
+			productReference = E452FE63146014090079100C /* DNSSDObjects */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E452FE5B146014090079100C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = E452FE5E146014090079100C /* Build configuration list for PBXProject "DNSSDObjects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E452FE59146014090079100C;
+			productRefGroup = E452FE64146014090079100C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E452FE62146014090079100C /* DNSSDObjects */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E452FE60146014090079100C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B82F8F146290CC00465EF5 /* main.m in Sources */,
+				E4B82F9C1462AFD900465EF5 /* DNSSDBrowser.m in Sources */,
+				E4B82F9D1462AFD900465EF5 /* DNSSDRegistration.m in Sources */,
+				E4B82F9E1462AFD900465EF5 /* DNSSDService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E452FE6C146014090079100C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wpointer-arith",
+					"-Wstrict-prototypes",
+					"-Wold-style-definition",
+				);
+			};
+			name = Debug;
+		};
+		E452FE6D146014090079100C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wpointer-arith",
+					"-Wstrict-prototypes",
+					"-Wold-style-definition",
+				);
+			};
+			name = Release;
+		};
+		E452FE6F146014090079100C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = DNSSDObjects;
+			};
+			name = Debug;
+		};
+		E452FE70146014090079100C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = DNSSDObjects;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E452FE5E146014090079100C /* Build configuration list for PBXProject "DNSSDObjects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E452FE6C146014090079100C /* Debug */,
+				E452FE6D146014090079100C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E452FE6E146014090079100C /* Build configuration list for PBXNativeTarget "DNSSDObjects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E452FE6F146014090079100C /* Debug */,
+				E452FE70146014090079100C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E452FE5B146014090079100C /* Project object */;
+}
