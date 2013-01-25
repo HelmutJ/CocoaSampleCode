@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9515D14413BA796200FDFCDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9515D14313BA796200FDFCDA /* Foundation.framework */; };
+		9515D14613BA7F7500FDFCDA /* AudioOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9515D14513BA7F7500FDFCDA /* AudioOutput.m */; };
+		952CD96F13BA6A8B007A6886 /* MorseAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD96713BA6A8B007A6886 /* MorseAudio.m */; };
+		952CD97013BA6A8B007A6886 /* MorseSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD96813BA6A8B007A6886 /* MorseSynthesizer.m */; };
+		952CD97113BA6A8B007A6886 /* MorseSynthesizerCF.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD96A13BA6A8B007A6886 /* MorseSynthesizerCF.m */; };
+		952CD97213BA6A8B007A6886 /* MorseTokenBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD96D13BA6A8B007A6886 /* MorseTokenBuffer.m */; };
+		952CD97313BA6A8B007A6886 /* SynthesizerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CD96E13BA6A8B007A6886 /* SynthesizerAPI.m */; };
+		95E7D6FE13B3D2940053E016 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E7D6FD13B3D2940053E016 /* CoreFoundation.framework */; };
+		95FA880313B9086F00BC9047 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA880013B9086F00BC9047 /* AudioToolbox.framework */; };
+		95FA880413B9086F00BC9047 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA880113B9086F00BC9047 /* AudioUnit.framework */; };
+		95FA880513B9086F00BC9047 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA880213B9086F00BC9047 /* CoreAudio.framework */; };
+		95FA880A13B908AA00BC9047 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA880913B908AA00BC9047 /* ApplicationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9508BBDB13B3ECB300B8B080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95E7D6F113B3D2940053E016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9542CE9E13B3E276003EAD52;
+			remoteInfo = SamuelVoice;
+		};
+		95167CB513BB74A200F4A282 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95E7D6F113B3D2940053E016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95167CB013BB743700F4A282;
+			remoteInfo = SamuelVoiceAttributes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9515D14313BA796200FDFCDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9515D14513BA7F7500FDFCDA /* AudioOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioOutput.m; sourceTree = "<group>"; };
+		95167CD713BBADDD00F4A282 /* MorseSynthesizerBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseSynthesizerBuffer.h; sourceTree = "<group>"; };
+		95167CD813BBADDD00F4A282 /* MorseSynthesizerBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseSynthesizerBuffer.m; sourceTree = "<group>"; };
+		952CD96613BA6A8B007A6886 /* MorseAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseAudio.h; sourceTree = "<group>"; };
+		952CD96713BA6A8B007A6886 /* MorseAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MorseAudio.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		952CD96813BA6A8B007A6886 /* MorseSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MorseSynthesizer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		952CD96913BA6A8B007A6886 /* MorseSynthesizerCF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseSynthesizerCF.h; sourceTree = "<group>"; };
+		952CD96A13BA6A8B007A6886 /* MorseSynthesizerCF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseSynthesizerCF.m; sourceTree = "<group>"; };
+		952CD96B13BA6A8B007A6886 /* MorseSynthesizerPriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseSynthesizerPriv.h; sourceTree = "<group>"; };
+		952CD96C13BA6A8B007A6886 /* MorseTokenBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseTokenBuffer.h; sourceTree = "<group>"; };
+		952CD96D13BA6A8B007A6886 /* MorseTokenBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseTokenBuffer.m; sourceTree = "<group>"; };
+		952CD96E13BA6A8B007A6886 /* SynthesizerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynthesizerAPI.m; sourceTree = "<group>"; };
+		953D46FD13DE42CB0088411F /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		9542CEA713B3E276003EAD52 /* Samuel.SpeechVoice */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Samuel.SpeechVoice; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E7D6FA13B3D2940053E016 /* Morse.SpeechSynthesizer */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Morse.SpeechSynthesizer; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E7D6FD13B3D2940053E016 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		95E7D70113B3D2940053E016 /* MorseSynthesizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorseSynthesizer-Info.plist"; sourceTree = "<group>"; };
+		95E7D70513B3D2940053E016 /* MorseSynthesizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MorseSynthesizer-Prefix.pch"; sourceTree = "<group>"; };
+		95FA87F813B8FEF100BC9047 /* AudioOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AudioOutput.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		95FA87FA13B8FEF100BC9047 /* MorseSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MorseSynthesizer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		95FA87FF13B9000000BC9047 /* SpeechEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechEngine.h; path = Headers/SpeechEngine.h; sourceTree = SOURCE_ROOT; };
+		95FA880013B9086F00BC9047 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		95FA880113B9086F00BC9047 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		95FA880213B9086F00BC9047 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		95FA880913B908AA00BC9047 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95E7D6F713B3D2940053E016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95E7D6FE13B3D2940053E016 /* CoreFoundation.framework in Frameworks */,
+				95FA880313B9086F00BC9047 /* AudioToolbox.framework in Frameworks */,
+				95FA880413B9086F00BC9047 /* AudioUnit.framework in Frameworks */,
+				95FA880513B9086F00BC9047 /* CoreAudio.framework in Frameworks */,
+				95FA880A13B908AA00BC9047 /* ApplicationServices.framework in Frameworks */,
+				9515D14413BA796200FDFCDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95E7D6EF13B3D2940053E016 = {
+			isa = PBXGroup;
+			children = (
+				953D46FD13DE42CB0088411F /* ReadMe.txt */,
+				95E7D6FF13B3D2940053E016 /* MorseSynthesizer */,
+				95E7D6FC13B3D2940053E016 /* Frameworks */,
+				95E7D6FB13B3D2940053E016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95E7D6FB13B3D2940053E016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95E7D6FA13B3D2940053E016 /* Morse.SpeechSynthesizer */,
+				9542CEA713B3E276003EAD52 /* Samuel.SpeechVoice */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95E7D6FC13B3D2940053E016 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9515D14313BA796200FDFCDA /* Foundation.framework */,
+				95FA880913B908AA00BC9047 /* ApplicationServices.framework */,
+				95FA880013B9086F00BC9047 /* AudioToolbox.framework */,
+				95FA880113B9086F00BC9047 /* AudioUnit.framework */,
+				95FA880213B9086F00BC9047 /* CoreAudio.framework */,
+				95E7D6FD13B3D2940053E016 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95E7D6FF13B3D2940053E016 /* MorseSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				95FA87F513B8FEBF00BC9047 /* Sources */,
+				95E7D70013B3D2940053E016 /* Supporting Files */,
+			);
+			path = MorseSynthesizer;
+			sourceTree = "<group>";
+		};
+		95E7D70013B3D2940053E016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95E7D70113B3D2940053E016 /* MorseSynthesizer-Info.plist */,
+				95E7D70513B3D2940053E016 /* MorseSynthesizer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95FA87F513B8FEBF00BC9047 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				95FA87FF13B9000000BC9047 /* SpeechEngine.h */,
+				952CD96E13BA6A8B007A6886 /* SynthesizerAPI.m */,
+				95FA87FA13B8FEF100BC9047 /* MorseSynthesizer.h */,
+				952CD96B13BA6A8B007A6886 /* MorseSynthesizerPriv.h */,
+				952CD96813BA6A8B007A6886 /* MorseSynthesizer.m */,
+				952CD96913BA6A8B007A6886 /* MorseSynthesizerCF.h */,
+				952CD96A13BA6A8B007A6886 /* MorseSynthesizerCF.m */,
+				95167CD713BBADDD00F4A282 /* MorseSynthesizerBuffer.h */,
+				95167CD813BBADDD00F4A282 /* MorseSynthesizerBuffer.m */,
+				952CD96C13BA6A8B007A6886 /* MorseTokenBuffer.h */,
+				952CD96D13BA6A8B007A6886 /* MorseTokenBuffer.m */,
+				952CD96613BA6A8B007A6886 /* MorseAudio.h */,
+				952CD96713BA6A8B007A6886 /* MorseAudio.m */,
+				95FA87F813B8FEF100BC9047 /* AudioOutput.h */,
+				9515D14513BA7F7500FDFCDA /* AudioOutput.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		95167CB013BB743700F4A282 /* SamuelVoiceAttributes */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--xml MorseSynthesizer/Samuel.vd \"$(BUILT_PRODUCTS_DIR)\"/SamuelVoiceAttributes";
+			buildConfigurationList = 95167CB313BB743800F4A282 /* Build configuration list for PBXLegacyTarget "SamuelVoiceAttributes" */;
+			buildPhases = (
+			);
+			buildToolPath = ./Scripts/BuildVoiceDescription;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = SamuelVoiceAttributes;
+			passBuildSettingsInEnvironment = 1;
+			productName = SamuelVoiceAttributes;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		9542CE9E13B3E276003EAD52 /* SamuelVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9542CEA413B3E276003EAD52 /* Build configuration list for PBXNativeTarget "SamuelVoice" */;
+			buildPhases = (
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95167CB613BB74A200F4A282 /* PBXTargetDependency */,
+			);
+			name = SamuelVoice;
+			productName = MorseSynthesizer;
+			productReference = 9542CEA713B3E276003EAD52 /* Samuel.SpeechVoice */;
+			productType = "com.apple.product-type.bundle";
+		};
+		95E7D6F913B3D2940053E016 /* Morse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95E7D70813B3D2940053E016 /* Build configuration list for PBXNativeTarget "Morse" */;
+			buildPhases = (
+				95E7D6F613B3D2940053E016 /* Sources */,
+				95E7D6F713B3D2940053E016 /* Frameworks */,
+				95E7D6F813B3D2940053E016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9508BBDC13B3ECB300B8B080 /* PBXTargetDependency */,
+			);
+			name = Morse;
+			productName = MorseSynthesizer;
+			productReference = 95E7D6FA13B3D2940053E016 /* Morse.SpeechSynthesizer */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95E7D6F113B3D2940053E016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Apple Computer";
+			};
+			buildConfigurationList = 95E7D6F413B3D2940053E016 /* Build configuration list for PBXProject "MorseSynthesizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 95E7D6EF13B3D2940053E016;
+			productRefGroup = 95E7D6FB13B3D2940053E016 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95E7D6F913B3D2940053E016 /* Morse */,
+				9542CE9E13B3E276003EAD52 /* SamuelVoice */,
+				95167CB013BB743700F4A282 /* SamuelVoiceAttributes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95E7D6F813B3D2940053E016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95E7D6F613B3D2940053E016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952CD96F13BA6A8B007A6886 /* MorseAudio.m in Sources */,
+				952CD97013BA6A8B007A6886 /* MorseSynthesizer.m in Sources */,
+				952CD97113BA6A8B007A6886 /* MorseSynthesizerCF.m in Sources */,
+				952CD97213BA6A8B007A6886 /* MorseTokenBuffer.m in Sources */,
+				952CD97313BA6A8B007A6886 /* SynthesizerAPI.m in Sources */,
+				9515D14613BA7F7500FDFCDA /* AudioOutput.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9508BBDC13B3ECB300B8B080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9542CE9E13B3E276003EAD52 /* SamuelVoice */;
+			targetProxy = 9508BBDB13B3ECB300B8B080 /* PBXContainerItemProxy */;
+		};
+		95167CB613BB74A200F4A282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95167CB013BB743700F4A282 /* SamuelVoiceAttributes */;
+			targetProxy = 95167CB513BB74A200F4A282 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		95167CB113BB743700F4A282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95167CB213BB743700F4A282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9542CEA513B3E276003EAD52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseSynthesizer/MorseSynthesizer-Prefix.pch";
+				INFOPLIST_FILE = "MorseSynthesizer/MorseVoice-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
+					VOICE_INFO_IN_PLIST,
+					"VOICE_PLIST=\\\"\"${BUILT_PRODUCTS_DIR}\"/SamuelVoiceAttributes\\\"",
+				);
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Speech/Voices";
+				PRODUCT_NAME = Samuel;
+				WRAPPER_EXTENSION = SpeechVoice;
+			};
+			name = Debug;
+		};
+		9542CEA613B3E276003EAD52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseSynthesizer/MorseSynthesizer-Prefix.pch";
+				INFOPLIST_FILE = "MorseSynthesizer/MorseVoice-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
+					VOICE_INFO_IN_PLIST,
+					"VOICE_PLIST=\\\"\"${BUILT_PRODUCTS_DIR}\"/SamuelVoiceAttributes\\\"",
+				);
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Speech/Voices";
+				PRODUCT_NAME = Samuel;
+				WRAPPER_EXTENSION = SpeechVoice;
+			};
+			name = Release;
+		};
+		95E7D70613B3D2940053E016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		95E7D70713B3D2940053E016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		95E7D70913B3D2940053E016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseSynthesizer/MorseSynthesizer-Prefix.pch";
+				INFOPLIST_FILE = "MorseSynthesizer/MorseSynthesizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Speech/Synthesizers";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = SpeechSynthesizer;
+			};
+			name = Debug;
+		};
+		95E7D70A13B3D2940053E016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseSynthesizer/MorseSynthesizer-Prefix.pch";
+				INFOPLIST_FILE = "MorseSynthesizer/MorseSynthesizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Speech/Synthesizers";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = SpeechSynthesizer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95167CB313BB743800F4A282 /* Build configuration list for PBXLegacyTarget "SamuelVoiceAttributes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95167CB113BB743700F4A282 /* Debug */,
+				95167CB213BB743700F4A282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9542CEA413B3E276003EAD52 /* Build configuration list for PBXNativeTarget "SamuelVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9542CEA513B3E276003EAD52 /* Debug */,
+				9542CEA613B3E276003EAD52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95E7D6F413B3D2940053E016 /* Build configuration list for PBXProject "MorseSynthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95E7D70613B3D2940053E016 /* Debug */,
+				95E7D70713B3D2940053E016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95E7D70813B3D2940053E016 /* Build configuration list for PBXNativeTarget "Morse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95E7D70913B3D2940053E016 /* Debug */,
+				95E7D70A13B3D2940053E016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95E7D6F113B3D2940053E016 /* Project object */;
+}

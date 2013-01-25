@@ -1,0 +1,150 @@
+#!/usr/bin/ruby
+#
+# File: BuildVoiceDescription
+# 
+# Abstract: Compile the voice attributes for a voice into a binary
+#           or XML representation.
+# 
+# Version: 1.0
+# 
+# Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
+# Apple Inc. ("Apple") in consideration of your agreement to the
+# following terms, and your use, installation, modification or
+# redistribution of this Apple software constitutes acceptance of these
+# terms.  If you do not agree with these terms, please do not use,
+# install, modify or redistribute this Apple software.
+# 
+# In consideration of your agreement to abide by the following terms, and
+# subject to these terms, Apple grants you a personal, non-exclusive
+# license, under Apple's copyrights in this original Apple software (the
+# "Apple Software"), to use, reproduce, modify and redistribute the Apple
+# Software, with or without modifications, in source and/or binary forms;
+# provided that if you redistribute the Apple Software in its entirety and
+# without modifications, you must retain this notice and the following
+# text and disclaimers in all such redistributions of the Apple Software. 
+# Neither the name, trademarks, service marks or logos of Apple Inc. 
+# may be used to endorse or promote products derived from the Apple
+# Software without specific prior written permission from Apple.  Except
+# as expressly stated in this notice, no other rights or licenses, express
+# or implied, are granted by Apple herein, including but not limited to
+# any patent rights that may be infringed by your derivative works or by
+# other works in which the Apple Software may be incorporated.
+# 
+# The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+# MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+# THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+# OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+# 
+# IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+# OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+# MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+# AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+# STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+# 
+# Copyright (C) 2011 Apple Inc. All Rights Reserved.
+#
+
+require 'ftools'
+
+GENDER = {
+  :neuter => 0,
+  :male   => 1,
+  :female => 2
+}
+
+GENDER_SYM = %w{VoiceGenderNeuter VoiceGenderMale VoiceGenderFemale}
+
+SCRIPT = {
+  :utf8   => 0x08000100,
+  :utf16  => 0x0100,
+  :roman  => 0
+}
+
+voice_creator = '????'
+voice_id      = 0
+version       = 1
+name          = 'Nomen Nescio'
+demo_text     = 'Who am I? What am I doing here?'
+gender        = :neuter
+age           = 1
+script        = :roman
+language      = 0
+region        = 0
+locale        = 'en_US'
+supportedCharacters = [[33,126]]
+individuallySpokenCharacters = [[33,126]]
+
+$GENERATE_BINARY = true
+if ARGV[0] == "--binary"
+  ARGV.shift
+elsif ARGV[0] == "--xml"
+  ARGV.shift
+  $GENERATE_BINARY = false
+end
+#
+# Process input specification
+#
+IN = File.open(ARGV[0])
+eval IN.read
+#
+# Normalize certain parameters
+#
+if voice_id.kind_of?(Numeric)
+  voice_id = [voice_id].pack('N')
+end
+unless gender.kind_of?(Numeric)
+  gender = GENDER[gender]
+end
+unless script.kind_of?(Numeric)
+  script = SCRIPT[script]
+end
+#
+# Generate output
+#
+def characterSet(set)
+  "<array>" + 
+  set.map do |range|
+    ("\n%24s<dict>" % [""]) +
+    ("\n%32s<key>UnicodeCharBegin</key><integer>%d</integer>" % ["", range[0]]) +
+    ("\n%32s<key>UnicodeCharEnd</key><integer>%d</integer>" % ["", range[1]]) +
+    ("\n%24s</dict>" % [""])
+   end.join("") + ("\n%16s</array>" % [""])
+end
+
+File.makedirs(File.dirname(ARGV[1]))
+File.open(ARGV[1], 'w') do |OUT|
+  if $GENERATE_BINARY
+    if script > 32767
+      longScript = script
+      script     = 0xFFFF
+    else
+      longScript = 0
+    end
+    OUT.print [0x016a, voice_creator, voice_id, version, name.length, name, demo_text.length, demo_text, 
+               gender, age, script, language, region, longScript, 0, 0, 0].pack('N A4A4 N Ca63 Ca255 nnnnn NNNN')
+  else
+    OUT.print <<END
+        <key>VoiceAttributes</key>
+	<dict>
+		<key>VoiceSynthesizerNumericID</key>
+		<integer>#{voice_creator.unpack('N')}</integer>
+		<key>VoiceNumericID</key>
+		<integer>#{voice_id.unpack('N')}</integer>
+		<key>VoiceVersion</key> <integer>#{version}</integer>
+		<key>VoiceName</key> <string>#{name}</string>
+		<key>VoiceDemoText</key> <string>#{demo_text}</string>
+		<key>VoiceGender</key> <string>#{GENDER_SYM[gender]}</string>
+		<key>VoiceAge</key> <integer>#{age}</integer>
+		<key>VoiceLocaleIdentifier</key> <string>#{locale}</string>
+                <key>VoiceSupportedCharacters</key>
+                #{characterSet(supportedCharacters)}
+                <key>VoiceIndividuallySpokenCharacters</key>
+                #{characterSet(individuallySpokenCharacters)}
+	</dict>
+END
+  end 
+end
