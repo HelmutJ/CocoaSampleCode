@@ -1,0 +1,103 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\vieww17960\viewh14960\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+
+\f0\b\fs36 \cf0 ViewController
+\b0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj
+\cf0 February 5, 2007\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 "ViewController" is a Cocoa sample application that demonstrates how to use the 
+\f1\fs20 NSViewController
+\f0\fs24  class.  The 
+\f1\fs20 NSViewController
+\f0\fs24  class serves roughly the same purpose of 
+\f1\fs20 NSWindowController
+\f0\fs24 , in that it manages an associated 
+\f1\fs20 NSView
+\f0\fs24  from a nib file.  It does the same sort of memory management of top-level objects that 
+\f1\fs20 NSWindowController
+\f0\fs24  does.  The 
+\f1\fs20 NSViewController 
+\f0\fs24 is usually the File's Owner of the nib file.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj
+
+\b \cf0 About the Sample
+\b0 \
+"ViewController" shows how you can swap in and out NSViews from separate nib files onto your window.\
+\
+A popup button will present four different choices -\
+1) \ul CustomImageView\ulnone  - loads the custom 
+\f1\fs20 NSView
+\f0\fs24  found in "CustomImageView.nib" which h olds the 
+\f1\fs20 NSImageView
+\f0\fs24 .\
+The File's Owner of this nib is CustomImageViewController, a subclass of 
+\f1\fs20 NSViewController
+\f0\fs24 .\
+\
+2) \ul CustomTableView\ulnone  - loads the custom 
+\f1\fs20 NSView
+\f0\fs24  found in "CustomTableView.nib" which holds the 
+\f1\fs20 NSTableView
+\f0\fs24 .\
+The File's Owner of this nib is CustomTableViewController, a subclass of 
+\f1\fs20 NSViewController
+\f0\fs24 .\
+\
+3) \ul CustomVideoView\ulnone  - load the custom 
+\f1\fs20 NSView
+\f0\fs24  found in "CustomVideoView.nib" which holds a 
+\f1\fs20 QTMovieView
+\f0\fs24 .\
+The File's Owner of this nib is CustomVideoViewController, a subclass of 
+\f1\fs20 NSViewController
+\f0\fs24 .\
+\
+4) \ul CustomCameraView\ulnone  - load the custom 
+\f1\fs20 NSView
+\f0\fs24  found in "CustomCameraView.nib" which holds a QCView (Quartz Composer).\
+This does not use a subclass of NSViewController as QC gives easy access to the iSight camera without using any code.\
+The file "iSight.qtz" is used to hook up the iSight camera.\
+\
+Two NSTextField values in the window are bound to:\
+1) The view controller's title which is obtained from 
+\f1\fs20 [NSViewController title] 
+\f0\fs24 method.\
+2) The View controller's 
+\f1\fs20 representedObject
+\f0\fs24  - which in this case is the number of subviews found in the nib (i.e. the 
+\f1\fs20 representedObject
+\f0\fs24  is an 
+\f1\fs20 NSNumber
+\f0\fs24 ).\
+So case number two illustrates how you can bind to the 
+\f1\fs20 representedObject
+\f0\fs24 .\
+\
+
+\b Using the Sample
+\b0 \
+Simply build and run the sample using Xcode.  Choose between the four popup choices to display each corresponding NSViews.\
+\
+	\
+
+\b Changes from Previous Versions
+\b0 \
+n/a\
+\
+\
+
+\b Feedback and Bug Reports
+\b0 \
+Please send all feedback about this sample to:\
+<http://developer.apple.com/contact/feedback.html>\
+\
+Please submit any bug reports about this sample to:\
+<http://developer.apple.com/bugreporter>}
