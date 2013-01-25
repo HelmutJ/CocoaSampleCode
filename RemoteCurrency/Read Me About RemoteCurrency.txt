@@ -1,0 +1,186 @@
+Read Me About RemoteCurrency
+============================
+1.0
+
+RemoteCurrency is a sample that recasts the classic Cocoa 'Currency Converter' example as a network application.  Its main goal is to show how you might implement a command-oriented networking protocol within the Cocoa idiom.
+
+RemoteCurrency requires Mac OS X 10.7 or later, although the core concepts will work any recent version of Mac OS X and all versions of iOS.
+
+The Sample In Context
+---------------------
+RemoteCurrency addresses three major issues with the existing suite of networking sample code:
+
+o complexity -- On the complexity scale, RemoteCurrency fits between PictureSharing and MVCNetworking.  It is substantially more complex than PictureSharing, and more of its components are intended to be reusable.  However, it is substantially simpler than MVCNetworking, which is intended to be a production quality app.
+
+<http://developer.apple.com/library/mac/#samplecode/PictureSharing/>
+<http://developer.apple.com/library/ios/#samplecode/MVCNetworking/>
+
+o TCP server -- RemoteCurrency includes a TCP server class, QServer, that is significantly better (both in terms of modernity and overall correctness) than other TCP server samples in the developer library.
+
+o using NSStreams for TCP -- The existing TCP streams samples are all very simple.  Specifically:
+
+- WiTap only sends single byte commands across the stream
+
+<http://developer.apple.com/library/ios/#samplecode/WiTap/>
+
+- SimpleNetworkStreams transfers bulk data, but it doesn't use any framing for that data
+
+<http://developer.apple.com/library/ios/#samplecode/SimpleNetworkStreams/>
+
+- PictureSharing frames the data it sends (with a leading count and a trailing checksum) but it is still very simple
+
+<http://developer.apple.com/library/mac/#samplecode/PictureSharing/>
+
+In contrast, RemoteCurrency implements a reasonably complex command line protocol, making it a good starting off point if you need to implement a traditional Internet protocol like POP, SMTP, FTP and so on.
+
+Finally, while RemoteCurrency makes extensive use of Bonjour, the core concepts are not dependent on Bonjour at all.  Specifically:
+
+o On the server side, you can disable Bonjour trivially by tweaking the code that sets up the server.  In fact, there's a command line argument, -B, that does this.
+
+o On the client side, it's easy to change the code to connect to a DNS name and port number by using the code from QA1652 "Using NSStreams For A TCP Connection Without NSHost".
+
+<http://developer.apple.com/library/ios/#qa/qa2009/qa1652.html>
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About RemoteCurrency.txt -- This document.
+
+o RemoteCurrency.xcworkspace -- An Xcode workspace that makes it easy to work with the two projects included in the sample.
+
+o Libraries -- A directory containing reusable code, much of which is common to both projects.
+
+o RemoteCurrencyClient -- A directory containing the project and source code to build the client application.
+
+o RemoteCurrencyServer -- A directory containing the project and source code to build the server tool.
+
+Within the Libraries directory you'll find the following items:
+
+o QServer.{h,m} -- A reusable class that implements a TCP listening server.  This supports IPv4 and, if available, IPv6.  It also takes care of registering the server with Bonjour, if applicable.
+
+o QCommandConnection.{h,m} -- A reusable class that manages a single command-oriented TCP connection.
+
+o QCommandLineConnection.{h,m} -- A subclass of QCommandConnection that manages a command-oriented TCP connection where the commands are delimited by CR LF (as it common with Internet protocols like POP, SMTP, FTP, and so on).
+
+o QBrowser.{h,m} -- A reusable class that manages a Bonjour browse operation.
+
+Within the RemoteCurrencyClient directory you will find:
+
+o RemoteCurrencyClient.xcodeproj -- An Xcode project for the app.
+
+o build -- A directory containing a pre-built binary.
+
+o main.m, Info.plist, MainMenu.xib, AppDelegate.{h,m} -- Standard Cocoa application stuff.
+
+o MainWindowController.{h,m}, MainWindow.xib -- A class that runs the main window.
+
+o RemoteCurrencyConverter.{h,m} -- A model-level object that manages the networking.
+
+o RemoteCurrencyClientConnection.{h,m} -- A subclass of QCommandLineConnection that implements the client side of the remote currency protocol (see below).
+
+Within the RemoteCurrencyServer directory you will find:
+
+o RemoteCurrencyServer.xcodeproj An Xcode project for the tool.
+
+o build -- A directory containing a pre-built binary.
+
+o main.m -- The main entry point.  This just handles the command arguments and then instantiates and calls a RemoteCurrencyServer object to do the real work.
+
+o RemoteCurrencyServer.{h,m} -- The main server object.
+
+o RemoteCurrencyServerConnection.{h,m} -- A subclass of QCommandLineConnection that implements the server side of the remote currency protocol (see below).
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.1 on Mac OS X 10.7.  You can open each project independently or, if you like, open "RemoteCurrency.xcworkspace" and work with them simultaneously.
+
+Using the Sample
+----------------
+To run the sample, first start the server:
+
+$ cd Downloads/RemoteCurrency
+$ RemoteCurrencyServer/build/Debug/RemoteCurrencyServer
+
+The server supports a number of command line options:
+
+o -p port -- This lets you specify the port the server should listen on.  If you don't specify a port, it listens on port 12345 or, if that's busy, some anonymous port.
+
+o -4 -- This prevents the server from using IPv6.
+
+o -B -- This prevents the server from registering with Bonjour.  Note that, if you set this, and the port that the server tries to listen on is busy, the server will fail to start up (on the grounds that no one will be able to find it).
+
+You can test the server using telnet.  For example:
+
+$ telnet localhost 12345
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+help
+  convert <name> <value> to <name>
+  goodbye
+  hello
+  help
+  stop
++ OK
+convert GBP 1 to USD
+  1.56
++ OK
+goodbye
++ Goodbye Cruel World!
+Connection closed by foreign host.
+
+Once you know that the server is running properly, you can launch the client app.  You should see a list of remote currency servers, including the one you just started.  Click on that server to select it.  Then twiddle the conversion UI (the currency popups and the value) and watch currency conversions happen!
+
+How it Works
+------------
+Obviously you have to consider the client and server independently.  Let's start with the server.  The server is actually very simple.  All of the heavy lifting is done in the various library classes, meaning that the server only has three jobs to do:
+
+o It must parse its command line parameters and use them to start the server itself.  See "main.m" and the RemoteCurrencyServer class.
+
+o It must accept connections and parse commands coming in on those connections.  The former is done in RemoteCurrencyServer and the latter in RemoteCurrencyServerConnection.
+
+o It must actually implement the commands and respond appropriately.  This is all done in RemoteCurrencyServer.  For an example, look at the -[RemoteCurrencyServer remoteCurrencyServerConnection:convertCommand:] method.
+
+The client, in contrast, is somewhat more complex.  At its core is the RemoteCurrencyConverter class, which is a model-level object that takes care of talking to a specific remote currency server.  This class uses RemoteCurrencyClientConnection to actually do the networking.  Above that there is a reasonably complex window controller, MainWindowController, that displays a list of available servers (populated by the QBrowser class) and, when the user selects a server, creates an instance of RemoteCurrencyConverter to manage that conversation.  MainWindowController makes extensive use of Cocoa bindings, so there's very little code to manage the user interface; the UI just adapts as various properties of the MainWindowController object change.
+
+Remote Currency Protocol
+------------------------
+The remote currency on-the-wire protocol is a very simple command-line protocol.  You can learn more about it by reading the comments in "RemoteCurrencyServerConnection.h".
+
+Caveats
+-------
+Both the client and the server contain a hardwired list of currencies that they will convert, and the server contains a list of hardwire conversion rates.  It would be relatively easy to fix this (have the server get the list of currencies and their conversion rates from the net [1] and have the client get the list of supported currencies from the server), but doing that was beyond the scope of the sample.
+
+Both programs log a whole bunch of information via NSLog.  Real programs should log via ASL <x-man-page://3/asl> and have some sort of mechanism to enable and disable logging.
+
+The client is very resilient of errors, but it's not good about showing those errors to the user.  This is mostly just a user interface issue; the client actually gets the error and logs it, it just doesn't implement a mechanism to show the error to the user.
+
+RemoteCurrency does not implement any form of security.  This means that:
+
+o The server will service requests from any client.
+
+o The client will trust its requests to any server.
+
+o The conversion occurs in plaintext, which means anyone can snoop it.
+
+Extending RemoteCurrency to solve these security problems would not be too hard (specifically, the underlying networking mechanism, CFSocketStream, makes it easy to support TLS) but it was beyond the scope of this sample.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0 (Aug 2011) was the first shipping version.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+1 Aug 2011
+
+[1] Courtesy of the European Central Bank.
+
+<http://www.ecb.int/stats/exchange/eurofxref/html/index.en.html>

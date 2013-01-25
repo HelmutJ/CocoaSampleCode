@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E45A3CDA138EA0720089A06B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B03C6212B7B68B00A1642B /* CoreServices.framework */; };
+		E470785412B92EE6008EA01C /* QCommandLineConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E470785312B92EE6008EA01C /* QCommandLineConnection.m */; };
+		E470785712B92FEE008EA01C /* RemoteCurrencyServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E470785612B92FEE008EA01C /* RemoteCurrencyServerConnection.m */; };
+		E4B03C5F12B7B67500A1642B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B03C5E12B7B67500A1642B /* main.m */; };
+		E4B03C6112B7B68700A1642B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B03C6012B7B68700A1642B /* Foundation.framework */; };
+		E4B03C7012B7B6B000A1642B /* RemoteCurrencyServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B03C6F12B7B6B000A1642B /* RemoteCurrencyServer.m */; };
+		E4B03C7B12B7B6F600A1642B /* QCommandConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B03C7612B7B6F600A1642B /* QCommandConnection.m */; };
+		E4B03C7C12B7B6F600A1642B /* QServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B03C7812B7B6F600A1642B /* QServer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E41782C3138E88DA00A30272 /* RemoteCurrencyServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RemoteCurrencyServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		E470785212B92EE6008EA01C /* QCommandLineConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = QCommandLineConnection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E470785312B92EE6008EA01C /* QCommandLineConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QCommandLineConnection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E470785512B92FEE008EA01C /* RemoteCurrencyServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RemoteCurrencyServerConnection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E470785612B92FEE008EA01C /* RemoteCurrencyServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RemoteCurrencyServerConnection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E4B03C5E12B7B67500A1642B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E4B03C6012B7B68700A1642B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4B03C6212B7B68B00A1642B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		E4B03C6E12B7B6B000A1642B /* RemoteCurrencyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RemoteCurrencyServer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E4B03C6F12B7B6B000A1642B /* RemoteCurrencyServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RemoteCurrencyServer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E4B03C7512B7B6F600A1642B /* QCommandConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = QCommandConnection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E4B03C7612B7B6F600A1642B /* QCommandConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QCommandConnection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E4B03C7712B7B6F600A1642B /* QServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = QServer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E4B03C7812B7B6F600A1642B /* QServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QServer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B03C6112B7B68700A1642B /* Foundation.framework in Frameworks */,
+				E45A3CDA138EA0720089A06B /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* RemoteCurrencyServer */ = {
+			isa = PBXGroup;
+			children = (
+				E4B03C5E12B7B67500A1642B /* main.m */,
+				E4B03C6E12B7B6B000A1642B /* RemoteCurrencyServer.h */,
+				E4B03C6F12B7B6B000A1642B /* RemoteCurrencyServer.m */,
+				E470785512B92FEE008EA01C /* RemoteCurrencyServerConnection.h */,
+				E470785612B92FEE008EA01C /* RemoteCurrencyServerConnection.m */,
+				E4B03C7412B7B6F600A1642B /* Libraries */,
+				E4B03C6612B7B69300A1642B /* Frameworks */,
+				E41782C3138E88DA00A30272 /* RemoteCurrencyServer */,
+			);
+			name = RemoteCurrencyServer;
+			sourceTree = "<group>";
+		};
+		E4B03C6612B7B69300A1642B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4B03C6012B7B68700A1642B /* Foundation.framework */,
+				E4B03C6212B7B68B00A1642B /* CoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B03C7412B7B6F600A1642B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E470785212B92EE6008EA01C /* QCommandLineConnection.h */,
+				E470785312B92EE6008EA01C /* QCommandLineConnection.m */,
+				E4B03C7512B7B6F600A1642B /* QCommandConnection.h */,
+				E4B03C7612B7B6F600A1642B /* QCommandConnection.m */,
+				E4B03C7712B7B6F600A1642B /* QServer.h */,
+				E4B03C7812B7B6F600A1642B /* QServer.m */,
+			);
+			name = Libraries;
+			path = ../Libraries;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* RemoteCurrencyServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "RemoteCurrencyServer" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteCurrencyServer;
+			productInstallPath = "$(HOME)/bin";
+			productName = RemoteCurrencyServer;
+			productReference = E41782C3138E88DA00A30272 /* RemoteCurrencyServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "RemoteCurrencyServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* RemoteCurrencyServer */;
+			productRefGroup = 08FB7794FE84155DC02AAC07 /* RemoteCurrencyServer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* RemoteCurrencyServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B03C5F12B7B67500A1642B /* main.m in Sources */,
+				E4B03C7012B7B6B000A1642B /* RemoteCurrencyServer.m in Sources */,
+				E4B03C7B12B7B6F600A1642B /* QCommandConnection.m in Sources */,
+				E4B03C7C12B7B6F600A1642B /* QServer.m in Sources */,
+				E470785412B92EE6008EA01C /* QCommandLineConnection.m in Sources */,
+				E470785712B92FEE008EA01C /* RemoteCurrencyServerConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RemoteCurrencyServer;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = RemoteCurrencyServer;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wpointer-arith",
+					"-Wstrict-prototypes",
+					"-Wold-style-definition",
+				);
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wpointer-arith",
+					"-Wstrict-prototypes",
+					"-Wold-style-definition",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "RemoteCurrencyServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "RemoteCurrencyServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
