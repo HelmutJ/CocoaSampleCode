@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BED278B139E11C2001D9919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BED278A139E11C2001D9919 /* main.m */; };
+		1BED2796139E120D001D9919 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BED2795139E120D001D9919 /* AVFoundation.framework */; };
+		1BED2798139E1214001D9919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BED2797139E1214001D9919 /* QuartzCore.framework */; };
+		1BED279A139E121C001D9919 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BED2799139E121C001D9919 /* Cocoa.framework */; };
+		AF8368E313D63CB100349544 /* AVVideoWall.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8368E213D63CB100349544 /* AVVideoWall.m */; };
+		AFBE4F7013DE390A00295F63 /* AVVideoWall+TerminalIO.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBE4F6F13DE390A00295F63 /* AVVideoWall+TerminalIO.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BED2781139E11C2001D9919 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1BED2783139E11C2001D9919 /* avvideowall */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = avvideowall; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BED278A139E11C2001D9919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BED278D139E11C2001D9919 /* avvideowall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "avvideowall-Prefix.pch"; sourceTree = "<group>"; };
+		1BED2795139E120D001D9919 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1BED2797139E1214001D9919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1BED2799139E121C001D9919 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AF8368E113D63CB100349544 /* AVVideoWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVVideoWall.h; sourceTree = "<group>"; };
+		AF8368E213D63CB100349544 /* AVVideoWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVVideoWall.m; sourceTree = "<group>"; };
+		AFBE4F6E13DE390A00295F63 /* AVVideoWall+TerminalIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVVideoWall+TerminalIO.h"; sourceTree = "<group>"; };
+		AFBE4F6F13DE390A00295F63 /* AVVideoWall+TerminalIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVVideoWall+TerminalIO.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BED2780139E11C2001D9919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BED279A139E121C001D9919 /* Cocoa.framework in Frameworks */,
+				1BED2798139E1214001D9919 /* QuartzCore.framework in Frameworks */,
+				1BED2796139E120D001D9919 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BED2778139E11C2001D9919 = {
+			isa = PBXGroup;
+			children = (
+				1BED2789139E11C2001D9919 /* avvideowall */,
+				1BED2786139E11C2001D9919 /* Frameworks */,
+				1BED2784139E11C2001D9919 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BED2784139E11C2001D9919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BED2783139E11C2001D9919 /* avvideowall */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BED2786139E11C2001D9919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BED2799139E121C001D9919 /* Cocoa.framework */,
+				1BED2797139E1214001D9919 /* QuartzCore.framework */,
+				1BED2795139E120D001D9919 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BED2789139E11C2001D9919 /* avvideowall */ = {
+			isa = PBXGroup;
+			children = (
+				AF8368E113D63CB100349544 /* AVVideoWall.h */,
+				AF8368E213D63CB100349544 /* AVVideoWall.m */,
+				AFBE4F6E13DE390A00295F63 /* AVVideoWall+TerminalIO.h */,
+				AFBE4F6F13DE390A00295F63 /* AVVideoWall+TerminalIO.m */,
+				1BED278A139E11C2001D9919 /* main.m */,
+				1BED278C139E11C2001D9919 /* Supporting Files */,
+			);
+			path = avvideowall;
+			sourceTree = "<group>";
+		};
+		1BED278C139E11C2001D9919 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BED278D139E11C2001D9919 /* avvideowall-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BED2782139E11C2001D9919 /* avvideowall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BED2792139E11C2001D9919 /* Build configuration list for PBXNativeTarget "avvideowall" */;
+			buildPhases = (
+				1BED277F139E11C2001D9919 /* Sources */,
+				1BED2780139E11C2001D9919 /* Frameworks */,
+				1BED2781139E11C2001D9919 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = avvideowall;
+			productName = avvideowall;
+			productReference = 1BED2783139E11C2001D9919 /* avvideowall */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BED277A139E11C2001D9919 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1BED277D139E11C2001D9919 /* Build configuration list for PBXProject "avvideowall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1BED2778139E11C2001D9919;
+			productRefGroup = 1BED2784139E11C2001D9919 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BED2782139E11C2001D9919 /* avvideowall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BED277F139E11C2001D9919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BED278B139E11C2001D9919 /* main.m in Sources */,
+				AF8368E313D63CB100349544 /* AVVideoWall.m in Sources */,
+				AFBE4F7013DE390A00295F63 /* AVVideoWall+TerminalIO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1BED2790139E11C2001D9919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1BED2791139E11C2001D9919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1BED2793139E11C2001D9919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avvideowall/avvideowall-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1BED2794139E11C2001D9919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "avvideowall/avvideowall-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BED277D139E11C2001D9919 /* Build configuration list for PBXProject "avvideowall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BED2790139E11C2001D9919 /* Debug */,
+				1BED2791139E11C2001D9919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BED2792139E11C2001D9919 /* Build configuration list for PBXNativeTarget "avvideowall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BED2793139E11C2001D9919 /* Debug */,
+				1BED2794139E11C2001D9919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BED277A139E11C2001D9919 /* Project object */;
+}
