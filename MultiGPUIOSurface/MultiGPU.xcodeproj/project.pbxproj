@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4F0934CC11BEC75E00897344 /* MultiGPUApps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4F0934D311BEC78300897344 /* Build configuration list for PBXAggregateTarget "MultiGPUApps" */;
+			buildPhases = (
+			);
+			dependencies = (
+				4F0934D211BEC76500897344 /* PBXTargetDependency */,
+				4F0934D011BEC76300897344 /* PBXTargetDependency */,
+			);
+			name = MultiGPUApps;
+			productName = MultiGPUApps;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4F0934B611BEC6EB00897344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4F0934B811BEC6EB00897344 /* MultiGPUMig.defs in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A38480DDE41BB0081E0D7 /* MultiGPUMig.defs */; settings = {ATTRIBUTES = (Client, Server, ); }; };
+		4F0934B911BEC6EB00897344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4F0934C111BEC6EB00897344 /* bluepony.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905E11BC6B7F00ED1E0D /* bluepony.c */; };
+		4F0934C311BEC6EB00897344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4F0934C411BEC6EB00897344 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0A38780DDE436A0081E0D7 /* OpenGL.framework */; };
+		4F0934C511BEC6EB00897344 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5FEBF0E36D44F0048611E /* IOSurface.framework */; };
+		4F0934EF11BEC7E500897344 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0934EC11BEC7E500897344 /* ServerController.m */; };
+		4F0934F011BEC7E500897344 /* ServerOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0934EE11BEC7E500897344 /* ServerOpenGLView.m */; };
+		4F09350B11BEC8BB00897344 /* ClientMainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4F09350911BEC8BB00897344 /* ClientMainMenu.nib */; };
+		4F09352211BEC97600897344 /* ClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F09350411BEC85500897344 /* ClientController.m */; };
+		4F09352311BEC97600897344 /* ClientOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F09350611BEC85500897344 /* ClientOpenGLView.m */; };
+		4F0A38790DDE436A0081E0D7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0A38780DDE436A0081E0D7 /* OpenGL.framework */; };
+		4F6A905811BC6B5C00ED1E0D /* atlantis.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905211BC6B5C00ED1E0D /* atlantis.c */; };
+		4F6A905911BC6B5C00ED1E0D /* dolphin.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905411BC6B5C00ED1E0D /* dolphin.c */; };
+		4F6A905A11BC6B5C00ED1E0D /* shark.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905511BC6B5C00ED1E0D /* shark.c */; };
+		4F6A905B11BC6B5C00ED1E0D /* swim.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905611BC6B5C00ED1E0D /* swim.c */; };
+		4F6A905C11BC6B5C00ED1E0D /* whale.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F6A905711BC6B5C00ED1E0D /* whale.c */; };
+		4FD5FE9A0E36D37A0048611E /* MultiGPUMig.defs in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A38480DDE41BB0081E0D7 /* MultiGPUMig.defs */; settings = {ATTRIBUTES = (Client, Server, ); }; };
+		4FD5FEC00E36D44F0048611E /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD5FEBF0E36D44F0048611E /* IOSurface.framework */; };
+		8D11072A0486CEB800E47090 /* ServerMainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* ServerMainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F0934CF11BEC76300897344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = MultiGPUServer;
+		};
+		4F0934D111BEC76500897344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0934B311BEC6EB00897344;
+			remoteInfo = MultiGPUClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ServerMainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* MultiGPU_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiGPU_Prefix.pch; sourceTree = "<group>"; };
+		4F0934C911BEC6EB00897344 /* MultiGPUClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiGPUClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0934EB11BEC7E500897344 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
+		4F0934EC11BEC7E500897344 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
+		4F0934ED11BEC7E500897344 /* ServerOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOpenGLView.h; sourceTree = "<group>"; };
+		4F0934EE11BEC7E500897344 /* ServerOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOpenGLView.m; sourceTree = "<group>"; };
+		4F09350311BEC85500897344 /* ClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientController.h; sourceTree = "<group>"; };
+		4F09350411BEC85500897344 /* ClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientController.m; sourceTree = "<group>"; };
+		4F09350511BEC85500897344 /* ClientOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientOpenGLView.h; sourceTree = "<group>"; };
+		4F09350611BEC85500897344 /* ClientOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientOpenGLView.m; sourceTree = "<group>"; };
+		4F09350A11BEC8BB00897344 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ClientMainMenu.nib; sourceTree = "<group>"; };
+		4F0935A111BECAAA00897344 /* ClientInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClientInfo.plist; sourceTree = "<group>"; };
+		4F0A38480DDE41BB0081E0D7 /* MultiGPUMig.defs */ = {isa = PBXFileReference; explicitFileType = sourcecode.mig; fileEncoding = 4; path = MultiGPUMig.defs; sourceTree = "<group>"; };
+		4F0A38780DDE436A0081E0D7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		4F6A905211BC6B5C00ED1E0D /* atlantis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = atlantis.c; sourceTree = "<group>"; };
+		4F6A905311BC6B5C00ED1E0D /* atlantis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atlantis.h; sourceTree = "<group>"; };
+		4F6A905411BC6B5C00ED1E0D /* dolphin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dolphin.c; sourceTree = "<group>"; };
+		4F6A905511BC6B5C00ED1E0D /* shark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shark.c; sourceTree = "<group>"; };
+		4F6A905611BC6B5C00ED1E0D /* swim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swim.c; sourceTree = "<group>"; };
+		4F6A905711BC6B5C00ED1E0D /* whale.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = whale.c; sourceTree = "<group>"; };
+		4F6A905E11BC6B7F00ED1E0D /* bluepony.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bluepony.c; sourceTree = "<group>"; };
+		4FD5FEBF0E36D44F0048611E /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = /System/Library/Frameworks/IOSurface.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* ServerInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerInfo.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* MultiGPUServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiGPUServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEC883913F9F9EB0067E60D /* bluepony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bluepony.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F0934C211BEC6EB00897344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0934C311BEC6EB00897344 /* Cocoa.framework in Frameworks */,
+				4F0934C411BEC6EB00897344 /* OpenGL.framework in Frameworks */,
+				4F0934C511BEC6EB00897344 /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				4F0A38790DDE436A0081E0D7 /* OpenGL.framework in Frameworks */,
+				4FD5FEC00E36D44F0048611E /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD5FEBF0E36D44F0048611E /* IOSurface.framework */,
+				4F0A38780DDE436A0081E0D7 /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* MultiGPUServer.app */,
+				4F0934C911BEC6EB00897344 /* MultiGPUClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* MultiGPU */ = {
+			isa = PBXGroup;
+			children = (
+				4F09350211BEC83E00897344 /* ClientClasses */,
+				4F0934EA11BEC7C600897344 /* ServerClasses */,
+				4F0934A611BEC5EC00897344 /* Common */,
+				4F6A905D11BC6B6C00ED1E0D /* BluePony */,
+				4F6A905111BC6B4700ED1E0D /* Atlantis */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = MultiGPU;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F0935A111BECAAA00897344 /* ClientInfo.plist */,
+				4F09350911BEC8BB00897344 /* ClientMainMenu.nib */,
+				8D1107310486CEB800E47090 /* ServerInfo.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* ServerMainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F0934A611BEC5EC00897344 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F0A38480DDE41BB0081E0D7 /* MultiGPUMig.defs */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				32CA4F630368D1EE00C91783 /* MultiGPU_Prefix.pch */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		4F0934EA11BEC7C600897344 /* ServerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4F0934EB11BEC7E500897344 /* ServerController.h */,
+				4F0934EC11BEC7E500897344 /* ServerController.m */,
+				4F0934ED11BEC7E500897344 /* ServerOpenGLView.h */,
+				4F0934EE11BEC7E500897344 /* ServerOpenGLView.m */,
+			);
+			name = ServerClasses;
+			sourceTree = "<group>";
+		};
+		4F09350211BEC83E00897344 /* ClientClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4F09350311BEC85500897344 /* ClientController.h */,
+				4F09350411BEC85500897344 /* ClientController.m */,
+				4F09350511BEC85500897344 /* ClientOpenGLView.h */,
+				4F09350611BEC85500897344 /* ClientOpenGLView.m */,
+			);
+			name = ClientClasses;
+			sourceTree = "<group>";
+		};
+		4F6A905111BC6B4700ED1E0D /* Atlantis */ = {
+			isa = PBXGroup;
+			children = (
+				4F6A905211BC6B5C00ED1E0D /* atlantis.c */,
+				4F6A905311BC6B5C00ED1E0D /* atlantis.h */,
+				4F6A905411BC6B5C00ED1E0D /* dolphin.c */,
+				4F6A905511BC6B5C00ED1E0D /* shark.c */,
+				4F6A905611BC6B5C00ED1E0D /* swim.c */,
+				4F6A905711BC6B5C00ED1E0D /* whale.c */,
+			);
+			name = Atlantis;
+			sourceTree = "<group>";
+		};
+		4F6A905D11BC6B6C00ED1E0D /* BluePony */ = {
+			isa = PBXGroup;
+			children = (
+				4F6A905E11BC6B7F00ED1E0D /* bluepony.c */,
+				AFEC883913F9F9EB0067E60D /* bluepony.h */,
+			);
+			name = BluePony;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F0934B311BEC6EB00897344 /* MultiGPUClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F0934C611BEC6EB00897344 /* Build configuration list for PBXNativeTarget "MultiGPUClient" */;
+			buildPhases = (
+				4F0934B411BEC6EB00897344 /* Resources */,
+				4F0934B711BEC6EB00897344 /* Sources */,
+				4F0934C211BEC6EB00897344 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiGPUClient;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MultiGPU;
+			productReference = 4F0934C911BEC6EB00897344 /* MultiGPUClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D1107260486CEB800E47090 /* MultiGPUServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MultiGPUServer" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiGPUServer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MultiGPU;
+			productReference = 8D1107320486CEB800E47090 /* MultiGPUServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiGPU" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MultiGPU */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F0934CC11BEC75E00897344 /* MultiGPUApps */,
+				8D1107260486CEB800E47090 /* MultiGPUServer */,
+				4F0934B311BEC6EB00897344 /* MultiGPUClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F0934B411BEC6EB00897344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0934B611BEC6EB00897344 /* InfoPlist.strings in Resources */,
+				4F09350B11BEC8BB00897344 /* ClientMainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* ServerMainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0934B711BEC6EB00897344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0934B811BEC6EB00897344 /* MultiGPUMig.defs in Sources */,
+				4F0934B911BEC6EB00897344 /* main.m in Sources */,
+				4F0934C111BEC6EB00897344 /* bluepony.c in Sources */,
+				4F09352211BEC97600897344 /* ClientController.m in Sources */,
+				4F09352311BEC97600897344 /* ClientOpenGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD5FE9A0E36D37A0048611E /* MultiGPUMig.defs in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				4F6A905811BC6B5C00ED1E0D /* atlantis.c in Sources */,
+				4F6A905911BC6B5C00ED1E0D /* dolphin.c in Sources */,
+				4F6A905A11BC6B5C00ED1E0D /* shark.c in Sources */,
+				4F6A905B11BC6B5C00ED1E0D /* swim.c in Sources */,
+				4F6A905C11BC6B5C00ED1E0D /* whale.c in Sources */,
+				4F0934EF11BEC7E500897344 /* ServerController.m in Sources */,
+				4F0934F011BEC7E500897344 /* ServerOpenGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F0934D011BEC76300897344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* MultiGPUServer */;
+			targetProxy = 4F0934CF11BEC76300897344 /* PBXContainerItemProxy */;
+		};
+		4F0934D211BEC76500897344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0934B311BEC6EB00897344 /* MultiGPUClient */;
+			targetProxy = 4F0934D111BEC76500897344 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* ServerMainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = ServerMainMenu.nib;
+			sourceTree = "<group>";
+		};
+		4F09350911BEC8BB00897344 /* ClientMainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F09350A11BEC8BB00897344 /* English */,
+			);
+			name = ClientMainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F0934C711BEC6EB00897344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiGPU_Prefix.pch;
+				INFOPLIST_FILE = ClientInfo.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MultiGPUClient;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4F0934C811BEC6EB00897344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiGPU_Prefix.pch;
+				INFOPLIST_FILE = ClientInfo.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_MIGFLAGS = "-sheader MultiGPUMigServer.h";
+				PRODUCT_NAME = MultiGPUClient;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4F0934CD11BEC75E00897344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = MultiGPUApps;
+			};
+			name = Debug;
+		};
+		4F0934CE11BEC75E00897344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = MultiGPUApps;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiGPU_Prefix.pch;
+				INFOPLIST_FILE = ServerInfo.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = MultiGPUServer;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiGPU_Prefix.pch;
+				INFOPLIST_FILE = ServerInfo.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_MIGFLAGS = "-sheader MultiGPUMigServer.h";
+				PRODUCT_NAME = MultiGPUServer;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F0934C611BEC6EB00897344 /* Build configuration list for PBXNativeTarget "MultiGPUClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0934C711BEC6EB00897344 /* Debug */,
+				4F0934C811BEC6EB00897344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F0934D311BEC78300897344 /* Build configuration list for PBXAggregateTarget "MultiGPUApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F0934CD11BEC75E00897344 /* Debug */,
+				4F0934CE11BEC75E00897344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MultiGPUServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiGPU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
