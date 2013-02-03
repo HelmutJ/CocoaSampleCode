@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D009C1AF13CFB56400BEF613 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = D009C1AE13CFB56400BEF613 /* ReadMe.txt */; };
+		D02B52F213CF6A6E001B99AA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02B52F113CF6A6E001B99AA /* Carbon.framework */; };
+		D096F3B613CCF2170038BF93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D096F3B513CCF2170038BF93 /* Cocoa.framework */; };
+		D096F3C013CCF2170038BF93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D096F3BE13CCF2170038BF93 /* InfoPlist.strings */; };
+		D096F3C213CCF2170038BF93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D096F3C113CCF2170038BF93 /* main.m */; };
+		D096F3C613CCF2170038BF93 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D096F3C413CCF2170038BF93 /* Credits.rtf */; };
+		D096F3CC13CCF2170038BF93 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D096F3CA13CCF2170038BF93 /* MainMenu.xib */; };
+		D096F3E713CD07070038BF93 /* ColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D096F3DF13CD07070038BF93 /* ColorView.m */; };
+		D096F3E813CD07070038BF93 /* DragMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = D096F3E113CD07070038BF93 /* DragMatrix.m */; };
+		D096F3E913CD07070038BF93 /* OverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D096F3E313CD07070038BF93 /* OverlayWindow.m */; };
+		D096F3EA13CD07070038BF93 /* TransparentButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D096F3E513CD07070038BF93 /* TransparentButtonCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D009C1AE13CFB56400BEF613 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		D02B52F113CF6A6E001B99AA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D096F3B113CCF2170038BF93 /* FunkyOverlayWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunkyOverlayWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D096F3B513CCF2170038BF93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D096F3B813CCF2170038BF93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D096F3B913CCF2170038BF93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D096F3BA13CCF2170038BF93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D096F3BD13CCF2170038BF93 /* FunkyOverlayWindow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunkyOverlayWindow-Info.plist"; sourceTree = "<group>"; };
+		D096F3BF13CCF2170038BF93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D096F3C113CCF2170038BF93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D096F3C313CCF2170038BF93 /* FunkyOverlayWindow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunkyOverlayWindow-Prefix.pch"; sourceTree = "<group>"; };
+		D096F3C513CCF2170038BF93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D096F3CB13CCF2170038BF93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D096F3DE13CD07070038BF93 /* ColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorView.h; sourceTree = "<group>"; };
+		D096F3DF13CD07070038BF93 /* ColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorView.m; sourceTree = "<group>"; };
+		D096F3E013CD07070038BF93 /* DragMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragMatrix.h; sourceTree = "<group>"; };
+		D096F3E113CD07070038BF93 /* DragMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragMatrix.m; sourceTree = "<group>"; };
+		D096F3E213CD07070038BF93 /* OverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindow.h; sourceTree = "<group>"; };
+		D096F3E313CD07070038BF93 /* OverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindow.m; sourceTree = "<group>"; };
+		D096F3E413CD07070038BF93 /* TransparentButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentButtonCell.h; sourceTree = "<group>"; };
+		D096F3E513CD07070038BF93 /* TransparentButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentButtonCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D096F3AE13CCF2170038BF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02B52F213CF6A6E001B99AA /* Carbon.framework in Frameworks */,
+				D096F3B613CCF2170038BF93 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D096F3A613CCF2170038BF93 = {
+			isa = PBXGroup;
+			children = (
+				D009C1AE13CFB56400BEF613 /* ReadMe.txt */,
+				D096F3BB13CCF2170038BF93 /* FunkyOverlayWindow */,
+				D096F3B413CCF2170038BF93 /* Frameworks */,
+				D096F3B213CCF2170038BF93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D096F3B213CCF2170038BF93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D096F3B113CCF2170038BF93 /* FunkyOverlayWindow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D096F3B413CCF2170038BF93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D02B52F113CF6A6E001B99AA /* Carbon.framework */,
+				D096F3B513CCF2170038BF93 /* Cocoa.framework */,
+				D096F3B713CCF2170038BF93 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D096F3B713CCF2170038BF93 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D096F3B813CCF2170038BF93 /* AppKit.framework */,
+				D096F3B913CCF2170038BF93 /* CoreData.framework */,
+				D096F3BA13CCF2170038BF93 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D096F3BB13CCF2170038BF93 /* FunkyOverlayWindow */ = {
+			isa = PBXGroup;
+			children = (
+				D096F3DE13CD07070038BF93 /* ColorView.h */,
+				D096F3DF13CD07070038BF93 /* ColorView.m */,
+				D096F3E013CD07070038BF93 /* DragMatrix.h */,
+				D096F3E113CD07070038BF93 /* DragMatrix.m */,
+				D096F3E213CD07070038BF93 /* OverlayWindow.h */,
+				D096F3E313CD07070038BF93 /* OverlayWindow.m */,
+				D096F3E413CD07070038BF93 /* TransparentButtonCell.h */,
+				D096F3E513CD07070038BF93 /* TransparentButtonCell.m */,
+				D096F3CA13CCF2170038BF93 /* MainMenu.xib */,
+				D096F3BC13CCF2170038BF93 /* Supporting Files */,
+			);
+			path = FunkyOverlayWindow;
+			sourceTree = "<group>";
+		};
+		D096F3BC13CCF2170038BF93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D096F3BD13CCF2170038BF93 /* FunkyOverlayWindow-Info.plist */,
+				D096F3BE13CCF2170038BF93 /* InfoPlist.strings */,
+				D096F3C113CCF2170038BF93 /* main.m */,
+				D096F3C313CCF2170038BF93 /* FunkyOverlayWindow-Prefix.pch */,
+				D096F3C413CCF2170038BF93 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D096F3B013CCF2170038BF93 /* FunkyOverlayWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D096F3CF13CCF2170038BF93 /* Build configuration list for PBXNativeTarget "FunkyOverlayWindow" */;
+			buildPhases = (
+				D096F3AD13CCF2170038BF93 /* Sources */,
+				D096F3AE13CCF2170038BF93 /* Frameworks */,
+				D096F3AF13CCF2170038BF93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FunkyOverlayWindow;
+			productName = FunkyOverlayWindow;
+			productReference = D096F3B113CCF2170038BF93 /* FunkyOverlayWindow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D096F3A813CCF2170038BF93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Apple, Inc";
+			};
+			buildConfigurationList = D096F3AB13CCF2170038BF93 /* Build configuration list for PBXProject "FunkyOverlayWindow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D096F3A613CCF2170038BF93;
+			productRefGroup = D096F3B213CCF2170038BF93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D096F3B013CCF2170038BF93 /* FunkyOverlayWindow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D096F3AF13CCF2170038BF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F3C013CCF2170038BF93 /* InfoPlist.strings in Resources */,
+				D096F3C613CCF2170038BF93 /* Credits.rtf in Resources */,
+				D096F3CC13CCF2170038BF93 /* MainMenu.xib in Resources */,
+				D009C1AF13CFB56400BEF613 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D096F3AD13CCF2170038BF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D096F3C213CCF2170038BF93 /* main.m in Sources */,
+				D096F3E713CD07070038BF93 /* ColorView.m in Sources */,
+				D096F3E813CD07070038BF93 /* DragMatrix.m in Sources */,
+				D096F3E913CD07070038BF93 /* OverlayWindow.m in Sources */,
+				D096F3EA13CD07070038BF93 /* TransparentButtonCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D096F3BE13CCF2170038BF93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D096F3BF13CCF2170038BF93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D096F3C413CCF2170038BF93 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D096F3C513CCF2170038BF93 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D096F3CA13CCF2170038BF93 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D096F3CB13CCF2170038BF93 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D096F3CD13CCF2170038BF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D096F3CE13CCF2170038BF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D096F3D013CCF2170038BF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunkyOverlayWindow/FunkyOverlayWindow-Prefix.pch";
+				INFOPLIST_FILE = "FunkyOverlayWindow/FunkyOverlayWindow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D096F3D113CCF2170038BF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FunkyOverlayWindow/FunkyOverlayWindow-Prefix.pch";
+				INFOPLIST_FILE = "FunkyOverlayWindow/FunkyOverlayWindow-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D096F3AB13CCF2170038BF93 /* Build configuration list for PBXProject "FunkyOverlayWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F3CD13CCF2170038BF93 /* Debug */,
+				D096F3CE13CCF2170038BF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D096F3CF13CCF2170038BF93 /* Build configuration list for PBXNativeTarget "FunkyOverlayWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D096F3D013CCF2170038BF93 /* Debug */,
+				D096F3D113CCF2170038BF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D096F3A813CCF2170038BF93 /* Project object */;
+}
