@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		520BD19009CF76A100DE012F /* TAttachedScripts.m in Sources */ = {isa = PBXBuildFile; fileRef = 520BD18E09CF76A100DE012F /* TAttachedScripts.m */; };
+		52710AE709CA45670055C513 /* gong.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710ADC09CA45670055C513 /* gong.png */; };
+		52710AE809CA45670055C513 /* backp.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710ADD09CA45670055C513 /* backp.png */; };
+		52710AE909CA45670055C513 /* playp.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710ADE09CA45670055C513 /* playp.png */; };
+		52710AEA09CA45670055C513 /* pausep.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710ADF09CA45670055C513 /* pausep.png */; };
+		52710AEB09CA45670055C513 /* repeaton.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE009CA45670055C513 /* repeaton.png */; };
+		52710AEC09CA45670055C513 /* shuffleoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE109CA45670055C513 /* shuffleoff.png */; };
+		52710AED09CA45670055C513 /* gong.aif in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE209CA45670055C513 /* gong.aif */; };
+		52710AEE09CA45670055C513 /* forwardp.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE309CA45670055C513 /* forwardp.png */; };
+		52710AEF09CA45670055C513 /* repeatoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE409CA45670055C513 /* repeatoff.png */; };
+		52710AF009CA45670055C513 /* repeatone.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE509CA45670055C513 /* repeatone.png */; };
+		52710AF109CA45670055C513 /* shuffleon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52710AE609CA45670055C513 /* shuffleon.png */; };
+		5282CE7309CB755C00E2969C /* TCallScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 5282CE7109CB755C00E2969C /* TCallScript.m */; };
+		5282D03609CB87ED00E2969C /* AEDescUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5282D03409CB87ED00E2969C /* AEDescUtils.m */; };
+		5533997F07EF849700C2E088 /* AttachedScripts.applescript in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5533996707EF83D900C2E088 /* AttachedScripts.applescript */; };
+		5533998007EF849700C2E088 /* AttachedScripts.scpt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5533996807EF83D900C2E088 /* AttachedScripts.scpt */; };
+		5533999C07EF8D7600C2E088 /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5533999A07EF8D7600C2E088 /* MyController.m */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5533997E07EF849100C2E088 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				5533997F07EF849700C2E088 /* AttachedScripts.applescript in CopyFiles */,
+				5533998007EF849700C2E088 /* AttachedScripts.scpt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* AttachAScript_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachAScript_Prefix.pch; sourceTree = "<group>"; };
+		520BD18D09CF76A100DE012F /* TAttachedScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAttachedScripts.h; sourceTree = "<group>"; };
+		520BD18E09CF76A100DE012F /* TAttachedScripts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAttachedScripts.m; sourceTree = "<group>"; };
+		52710ADC09CA45670055C513 /* gong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gong.png; path = art/gong.png; sourceTree = "<group>"; };
+		52710ADD09CA45670055C513 /* backp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backp.png; path = art/backp.png; sourceTree = "<group>"; };
+		52710ADE09CA45670055C513 /* playp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playp.png; path = art/playp.png; sourceTree = "<group>"; };
+		52710ADF09CA45670055C513 /* pausep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pausep.png; path = art/pausep.png; sourceTree = "<group>"; };
+		52710AE009CA45670055C513 /* repeaton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = repeaton.png; path = art/repeaton.png; sourceTree = "<group>"; };
+		52710AE109CA45670055C513 /* shuffleoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shuffleoff.png; path = art/shuffleoff.png; sourceTree = "<group>"; };
+		52710AE209CA45670055C513 /* gong.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = gong.aif; path = art/gong.aif; sourceTree = "<group>"; };
+		52710AE309CA45670055C513 /* forwardp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forwardp.png; path = art/forwardp.png; sourceTree = "<group>"; };
+		52710AE409CA45670055C513 /* repeatoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = repeatoff.png; path = art/repeatoff.png; sourceTree = "<group>"; };
+		52710AE509CA45670055C513 /* repeatone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = repeatone.png; path = art/repeatone.png; sourceTree = "<group>"; };
+		52710AE609CA45670055C513 /* shuffleon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shuffleon.png; path = art/shuffleon.png; sourceTree = "<group>"; };
+		5282CE7009CB755C00E2969C /* TCallScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCallScript.h; sourceTree = "<group>"; };
+		5282CE7109CB755C00E2969C /* TCallScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCallScript.m; sourceTree = "<group>"; };
+		5282D03309CB87ED00E2969C /* AEDescUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDescUtils.h; sourceTree = "<group>"; };
+		5282D03409CB87ED00E2969C /* AEDescUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDescUtils.m; sourceTree = "<group>"; };
+		5533996707EF83D900C2E088 /* AttachedScripts.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = AttachedScripts.applescript; sourceTree = "<group>"; };
+		5533996807EF83D900C2E088 /* AttachedScripts.scpt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file; path = AttachedScripts.scpt; sourceTree = "<group>"; };
+		5533999907EF8D7600C2E088 /* MyController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
+		5533999A07EF8D7600C2E088 /* MyController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AttachAScript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttachAScript.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* App Specific Classes */ = {
+			isa = PBXGroup;
+			children = (
+				520BD18D09CF76A100DE012F /* TAttachedScripts.h */,
+				520BD18E09CF76A100DE012F /* TAttachedScripts.m */,
+				5533999907EF8D7600C2E088 /* MyController.h */,
+				5533999A07EF8D7600C2E088 /* MyController.m */,
+			);
+			name = "App Specific Classes";
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AttachAScript.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* iTunesRemote */ = {
+			isa = PBXGroup;
+			children = (
+				5282D05609CB88F800E2969C /* General Classes */,
+				080E96DDFE201D6D7F000001 /* App Specific Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				52710A9509CA38080055C513 /* Scripts */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = iTunesRemote;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* AttachAScript_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				5282D05709CB894700E2969C /* art */,
+				52710AE209CA45670055C513 /* gong.aif */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52710A9509CA38080055C513 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				5533996707EF83D900C2E088 /* AttachedScripts.applescript */,
+				5533996807EF83D900C2E088 /* AttachedScripts.scpt */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		5282D05609CB88F800E2969C /* General Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5282CE7009CB755C00E2969C /* TCallScript.h */,
+				5282CE7109CB755C00E2969C /* TCallScript.m */,
+				5282D03309CB87ED00E2969C /* AEDescUtils.h */,
+				5282D03409CB87ED00E2969C /* AEDescUtils.m */,
+			);
+			name = "General Classes";
+			sourceTree = "<group>";
+		};
+		5282D05709CB894700E2969C /* art */ = {
+			isa = PBXGroup;
+			children = (
+				52710AE609CA45670055C513 /* shuffleon.png */,
+				52710ADE09CA45670055C513 /* playp.png */,
+				52710ADF09CA45670055C513 /* pausep.png */,
+				52710AE009CA45670055C513 /* repeaton.png */,
+				52710AE109CA45670055C513 /* shuffleoff.png */,
+				52710AE309CA45670055C513 /* forwardp.png */,
+				52710AE409CA45670055C513 /* repeatoff.png */,
+				52710AE509CA45670055C513 /* repeatone.png */,
+				52710ADD09CA45670055C513 /* backp.png */,
+				52710ADC09CA45670055C513 /* gong.png */,
+			);
+			name = art;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* AttachAScript */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5231525409CA2A2900910008 /* Build configuration list for PBXNativeTarget "AttachAScript" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				5533997907EF841E00C2E088 /* ShellScript */,
+				5533997E07EF849100C2E088 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AttachAScript;
+			productInstallPath = "$(HOME)/Applications";
+			productName = iTunesRemote;
+			productReference = 8D1107320486CEB800E47090 /* AttachAScript.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 5231525809CA2A2900910008 /* Build configuration list for PBXProject "AttachAScript" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* iTunesRemote */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AttachAScript */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				52710AE709CA45670055C513 /* gong.png in Resources */,
+				52710AE809CA45670055C513 /* backp.png in Resources */,
+				52710AE909CA45670055C513 /* playp.png in Resources */,
+				52710AEA09CA45670055C513 /* pausep.png in Resources */,
+				52710AEB09CA45670055C513 /* repeaton.png in Resources */,
+				52710AEC09CA45670055C513 /* shuffleoff.png in Resources */,
+				52710AED09CA45670055C513 /* gong.aif in Resources */,
+				52710AEE09CA45670055C513 /* forwardp.png in Resources */,
+				52710AEF09CA45670055C513 /* repeatoff.png in Resources */,
+				52710AF009CA45670055C513 /* repeatone.png in Resources */,
+				52710AF109CA45670055C513 /* shuffleon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5533997907EF841E00C2E088 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				AttachedScripts.applescript,
+			);
+			outputPaths = (
+				AttachedScripts.scpt,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "osacompile -d -o AttachedScripts.scpt AttachedScripts.applescript";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				5533999C07EF8D7600C2E088 /* MyController.m in Sources */,
+				5282CE7309CB755C00E2969C /* TCallScript.m in Sources */,
+				5282D03609CB87ED00E2969C /* AEDescUtils.m in Sources */,
+				520BD19009CF76A100DE012F /* TAttachedScripts.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5231525509CA2A2900910008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AttachAScript_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = AttachAScript;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		5231525609CA2A2900910008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AttachAScript_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = AttachAScript;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		5231525909CA2A2900910008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5231525A09CA2A2900910008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5231525409CA2A2900910008 /* Build configuration list for PBXNativeTarget "AttachAScript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5231525509CA2A2900910008 /* Debug */,
+				5231525609CA2A2900910008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5231525809CA2A2900910008 /* Build configuration list for PBXProject "AttachAScript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5231525909CA2A2900910008 /* Debug */,
+				5231525A09CA2A2900910008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
