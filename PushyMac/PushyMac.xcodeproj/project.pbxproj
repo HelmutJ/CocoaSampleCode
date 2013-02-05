@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFF8DCB41384470D00FB11DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF8DCB31384470D00FB11DA /* Cocoa.framework */; };
+		BFF8DCBE1384470D00FB11DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFF8DCBC1384470D00FB11DA /* InfoPlist.strings */; };
+		BFF8DCC11384470D00FB11DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DCC01384470D00FB11DA /* main.m */; };
+		BFF8DCC71384470E00FB11DA /* PushyMacAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF8DCC61384470E00FB11DA /* PushyMacAppDelegate.m */; };
+		BFF8DCCA1384470E00FB11DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF8DCC81384470E00FB11DA /* MainMenu.xib */; };
+		BFF8DCD51384842F00FB11DA /* bogus.caf in Resources */ = {isa = PBXBuildFile; fileRef = BFF8DCD41384842F00FB11DA /* bogus.caf */; };
+		BFF8DCD7138484ED00FB11DA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF8DCD6138484ED00FB11DA /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BFF8DCAF1384470D00FB11DA /* PushyMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushyMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF8DCB31384470D00FB11DA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BFF8DCB61384470D00FB11DA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BFF8DCB71384470D00FB11DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BFF8DCB81384470D00FB11DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFF8DCBB1384470D00FB11DA /* PushyMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PushyMac-Info.plist"; sourceTree = "<group>"; };
+		BFF8DCBD1384470D00FB11DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFF8DCBF1384470D00FB11DA /* PushyMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PushyMac-Prefix.pch"; sourceTree = "<group>"; };
+		BFF8DCC01384470D00FB11DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFF8DCC51384470E00FB11DA /* PushyMacAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushyMacAppDelegate.h; sourceTree = "<group>"; };
+		BFF8DCC61384470E00FB11DA /* PushyMacAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushyMacAppDelegate.m; sourceTree = "<group>"; };
+		BFF8DCC91384470E00FB11DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BFF8DCD41384842F00FB11DA /* bogus.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bogus.caf; sourceTree = "<group>"; };
+		BFF8DCD6138484ED00FB11DA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFF8DCAC1384470D00FB11DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF8DCD7138484ED00FB11DA /* AudioToolbox.framework in Frameworks */,
+				BFF8DCB41384470D00FB11DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFF8DCA41384470D00FB11DA = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCB91384470D00FB11DA /* PushyMac */,
+				BFF8DCB21384470D00FB11DA /* Frameworks */,
+				BFF8DCB01384470D00FB11DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFF8DCB01384470D00FB11DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCAF1384470D00FB11DA /* PushyMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF8DCB21384470D00FB11DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCD6138484ED00FB11DA /* AudioToolbox.framework */,
+				BFF8DCB31384470D00FB11DA /* Cocoa.framework */,
+				BFF8DCB51384470D00FB11DA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFF8DCB51384470D00FB11DA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCB61384470D00FB11DA /* AppKit.framework */,
+				BFF8DCB71384470D00FB11DA /* CoreData.framework */,
+				BFF8DCB81384470D00FB11DA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BFF8DCB91384470D00FB11DA /* PushyMac */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCC51384470E00FB11DA /* PushyMacAppDelegate.h */,
+				BFF8DCC61384470E00FB11DA /* PushyMacAppDelegate.m */,
+				BFF8DCC81384470E00FB11DA /* MainMenu.xib */,
+				BFF8DCBA1384470D00FB11DA /* Supporting Files */,
+			);
+			path = PushyMac;
+			sourceTree = "<group>";
+		};
+		BFF8DCBA1384470D00FB11DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8DCBB1384470D00FB11DA /* PushyMac-Info.plist */,
+				BFF8DCBC1384470D00FB11DA /* InfoPlist.strings */,
+				BFF8DCBF1384470D00FB11DA /* PushyMac-Prefix.pch */,
+				BFF8DCC01384470D00FB11DA /* main.m */,
+				BFF8DCD41384842F00FB11DA /* bogus.caf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFF8DCAE1384470D00FB11DA /* PushyMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF8DCCD1384470E00FB11DA /* Build configuration list for PBXNativeTarget "PushyMac" */;
+			buildPhases = (
+				BFF8DCAB1384470D00FB11DA /* Sources */,
+				BFF8DCAC1384470D00FB11DA /* Frameworks */,
+				BFF8DCAD1384470D00FB11DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushyMac;
+			productName = PushyMac;
+			productReference = BFF8DCAF1384470D00FB11DA /* PushyMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFF8DCA61384470D00FB11DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "OCOGS - DTS";
+			};
+			buildConfigurationList = BFF8DCA91384470D00FB11DA /* Build configuration list for PBXProject "PushyMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFF8DCA41384470D00FB11DA;
+			productRefGroup = BFF8DCB01384470D00FB11DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFF8DCAE1384470D00FB11DA /* PushyMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFF8DCAD1384470D00FB11DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF8DCBE1384470D00FB11DA /* InfoPlist.strings in Resources */,
+				BFF8DCCA1384470E00FB11DA /* MainMenu.xib in Resources */,
+				BFF8DCD51384842F00FB11DA /* bogus.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFF8DCAB1384470D00FB11DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF8DCC11384470D00FB11DA /* main.m in Sources */,
+				BFF8DCC71384470E00FB11DA /* PushyMacAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFF8DCBC1384470D00FB11DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF8DCBD1384470D00FB11DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFF8DCC81384470E00FB11DA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF8DCC91384470E00FB11DA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFF8DCCB1384470E00FB11DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Apple Inc. - Worldwide Developer Relations";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-Wl,-no_pie";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BFF8DCCC1384470E00FB11DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Apple Inc. - Worldwide Developer Relations";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-Wl,-no_pie";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BFF8DCCE1384470E00FB11DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PushyMac/PushyMac-Prefix.pch";
+				INFOPLIST_FILE = "PushyMac/PushyMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFF8DCCF1384470E00FB11DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PushyMac/PushyMac-Prefix.pch";
+				INFOPLIST_FILE = "PushyMac/PushyMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFF8DCA91384470D00FB11DA /* Build configuration list for PBXProject "PushyMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF8DCCB1384470E00FB11DA /* Debug */,
+				BFF8DCCC1384470E00FB11DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF8DCCD1384470E00FB11DA /* Build configuration list for PBXNativeTarget "PushyMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF8DCCE1384470E00FB11DA /* Debug */,
+				BFF8DCCF1384470E00FB11DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFF8DCA61384470D00FB11DA /* Project object */;
+}
