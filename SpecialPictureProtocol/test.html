@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>SpecialPictureProtocol Example</title>
+</head>
+<body>
+<script type="text/javascript" language="JavaScript1.4"><!--
+
+function NewText() {
+	var textField = document.getElementById('stringtext');
+	if (  textField.value != '' ) {
+		var imageList = document.getElementById('image_list');
+		var theNewURL = 'special:///' + escape(textField.value);
+		imageList.innerHTML = '<img src="' + theNewURL + '" id="stringimage"><br>' + imageList.innerHTML;
+	}
+}
+
+// -->
+</script>
+
+	<img src="special:///Example">
+	
+	<!-- we have implemented a special NSURLProtocol that uses the 'special'
+	scheme to identify urls it is capable of handling.  Our protocol simply
+	renders the path part of the URL into a jpeg image.  We use this scheme
+	here to produce images in the html.  -->
+	
+	<form action="" method="get" onSubmit="return false;">
+
+		<p>Type your text here:<br> 
+		<input name="seconds" id="stringtext" type="text" size="21" onKeyUp="NewText();" value="Special Example"></p>
+		<p>Images will appear below as you type:</p>
+		<div id="image_list">
+			<img src="special:///Special%20Example" id="stringimage">
+		</div>
+	</form>	
+	
+<script type="text/javascript" language="JavaScript1.4"><!--
+
+	document.getElementById('stringtext').select();
+	
+// -->
+</script>
+
+</body>
+</html>
