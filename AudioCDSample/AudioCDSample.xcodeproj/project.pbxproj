@@ -1,0 +1,217 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		848B643F1366159500F203C2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848B643E1366159500F203C2 /* CoreFoundation.framework */; };
+		848B64411366159B00F203C2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848B64401366159B00F203C2 /* IOKit.framework */; };
+		848B6443136615C400F203C2 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848B6442136615C400F203C2 /* Carbon.framework */; };
+		84F565F413660FC00039D219 /* AudioCDSample.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F565F313660FC00039D219 /* AudioCDSample.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84F565ED13660FC00039D219 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		848B643E1366159500F203C2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		848B64401366159B00F203C2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		848B6442136615C400F203C2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		84F565EF13660FC00039D219 /* AudioCDSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AudioCDSample; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F565F313660FC00039D219 /* AudioCDSample.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = AudioCDSample.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F565EC13660FC00039D219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848B6443136615C400F203C2 /* Carbon.framework in Frameworks */,
+				848B643F1366159500F203C2 /* CoreFoundation.framework in Frameworks */,
+				848B64411366159B00F203C2 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848B64441366160A00F203C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				848B6442136615C400F203C2 /* Carbon.framework */,
+				848B643E1366159500F203C2 /* CoreFoundation.framework */,
+				848B64401366159B00F203C2 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F565E413660FC00039D219 = {
+			isa = PBXGroup;
+			children = (
+				84F565F213660FC00039D219 /* AudioCDSample */,
+				848B64441366160A00F203C2 /* Frameworks */,
+				84F565F013660FC00039D219 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84F565F013660FC00039D219 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F565EF13660FC00039D219 /* AudioCDSample */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F565F213660FC00039D219 /* AudioCDSample */ = {
+			isa = PBXGroup;
+			children = (
+				84F565F313660FC00039D219 /* AudioCDSample.c */,
+			);
+			path = AudioCDSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F565EE13660FC00039D219 /* AudioCDSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F565F813660FC00039D219 /* Build configuration list for PBXNativeTarget "AudioCDSample" */;
+			buildPhases = (
+				84F565EB13660FC00039D219 /* Sources */,
+				84F565EC13660FC00039D219 /* Frameworks */,
+				84F565ED13660FC00039D219 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioCDSample;
+			productName = AudioCDSample;
+			productReference = 84F565EF13660FC00039D219 /* AudioCDSample */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F565E613660FC00039D219 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 84F565E913660FC00039D219 /* Build configuration list for PBXProject "AudioCDSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84F565E413660FC00039D219;
+			productRefGroup = 84F565F013660FC00039D219 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F565EE13660FC00039D219 /* AudioCDSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F565EB13660FC00039D219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F565F413660FC00039D219 /* AudioCDSample.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84F565F613660FC00039D219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84F565F713660FC00039D219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84F565F913660FC00039D219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84F565FA13660FC00039D219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F565E913660FC00039D219 /* Build configuration list for PBXProject "AudioCDSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F565F613660FC00039D219 /* Debug */,
+				84F565F713660FC00039D219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F565F813660FC00039D219 /* Build configuration list for PBXNativeTarget "AudioCDSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F565F913660FC00039D219 /* Debug */,
+				84F565FA13660FC00039D219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F565E613660FC00039D219 /* Project object */;
+}
