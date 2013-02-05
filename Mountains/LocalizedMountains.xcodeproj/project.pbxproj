@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A717A99D0DDF9659006BEF11 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = A717A99B0DDF9659006BEF11 /* MainMenu.nib */; };
+		A73CA72C0DDE45E500ECC08F /* Mountains.icns in Resources */ = {isa = PBXBuildFile; fileRef = A73CA72B0DDE45E500ECC08F /* Mountains.icns */; };
+		A7D81CC10DDC9D77008980F0 /* MountainsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D81CC00DDC9D77008980F0 /* MountainsController.m */; };
+		A7D81CC70DDCAB8B008980F0 /* Mountain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D81CC60DDCAB8B008980F0 /* Mountain.m */; };
+		A7D81CCC0DDCB788008980F0 /* Mountains.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7D81CCB0DDCB788008980F0 /* Mountains.plist */; };
+		A7D81CD00DDCB86F008980F0 /* Mountains.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7D81CCF0DDCB86F008980F0 /* Mountains.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* Mountains_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mountains_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* LocalizedMountains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizedMountains.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A717A90C0DDF62EB006BEF11 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A717A90D0DDF62EF006BEF11 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A717A90E0DDF62F3006BEF11 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A717A91A0DDF652E006BEF11 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Mountains.strings; sourceTree = "<group>"; };
+		A717A91B0DDF652E006BEF11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Mountains.plist; sourceTree = "<group>"; };
+		A717A9270DDF653B006BEF11 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Mountains.strings; sourceTree = "<group>"; };
+		A717A9280DDF653B006BEF11 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/Mountains.plist; sourceTree = "<group>"; };
+		A717A9290DDF6545006BEF11 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Mountains.strings; sourceTree = "<group>"; };
+		A717A92A0DDF6545006BEF11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/Mountains.plist; sourceTree = "<group>"; };
+		A717A99C0DDF9659006BEF11 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = zh_TW; path = zh_TW.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		A717A99E0DDF9666006BEF11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ru; path = ru.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		A717A99F0DDF9680006BEF11 /* ja */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ja; path = ja.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		A717A9A00DDF9688006BEF11 /* fr */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = fr; path = fr.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		A717A9A10DDF9690006BEF11 /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		A717A9A20DDF9697006BEF11 /* en-Dsrt */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = "en-Dsrt"; path = "en-Dsrt.lproj/MainMenu.nib"; sourceTree = "<group>"; };
+		A73CA72B0DDE45E500ECC08F /* Mountains.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Mountains.icns; sourceTree = "<group>"; };
+		A7D6AD4B0DDD49FC00A5C548 /* en-Dsrt */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "en-Dsrt"; path = "en-Dsrt.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A7D6AD4C0DDD4A0C00A5C548 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7D6AD4D0DDD4A1900A5C548 /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7D6AD530DDD4A4800A5C548 /* en-Dsrt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "en-Dsrt"; path = "en-Dsrt.lproj/Mountains.plist"; sourceTree = "<group>"; };
+		A7D6AD540DDD4A4B00A5C548 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ru; path = ru.lproj/Mountains.plist; sourceTree = "<group>"; };
+		A7D6AD550DDD4A5400A5C548 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = zh_TW; path = zh_TW.lproj/Mountains.plist; sourceTree = "<group>"; };
+		A7D6AD570DDD4A6300A5C548 /* en-Dsrt */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "en-Dsrt"; path = "en-Dsrt.lproj/Mountains.strings"; sourceTree = "<group>"; };
+		A7D6AD580DDD4A6600A5C548 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Mountains.strings; sourceTree = "<group>"; };
+		A7D6AD590DDD4A6C00A5C548 /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Mountains.strings; sourceTree = "<group>"; };
+		A7D81CBF0DDC9D77008980F0 /* MountainsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountainsController.h; sourceTree = "<group>"; };
+		A7D81CC00DDC9D77008980F0 /* MountainsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountainsController.m; sourceTree = "<group>"; };
+		A7D81CC50DDCAB8B008980F0 /* Mountain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mountain.h; sourceTree = "<group>"; };
+		A7D81CC60DDCAB8B008980F0 /* Mountain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mountain.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A7D81CC50DDCAB8B008980F0 /* Mountain.h */,
+				A7D81CC60DDCAB8B008980F0 /* Mountain.m */,
+				A7D81CBF0DDC9D77008980F0 /* MountainsController.h */,
+				A7D81CC00DDC9D77008980F0 /* MountainsController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* LocalizedMountains.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Mountains */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Mountains;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Mountains_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				A717A99B0DDF9659006BEF11 /* MainMenu.nib */,
+				A73CA72B0DDE45E500ECC08F /* Mountains.icns */,
+				A7D81CCB0DDCB788008980F0 /* Mountains.plist */,
+				A7D81CCF0DDCB86F008980F0 /* Mountains.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* LocalizedMountains */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "LocalizedMountains" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			comments = "LocalizedMountains is a small application which demonstrates how to internationalize and localize an application.\n\nSome of the techniques illustrated are:\n\nUsing localized strings and other data;\n\nGetting data from an NSLocale;\n\nUsing an NSLocale with other classes such as NSDateFormatter to generate appropriately localized results;\n\nCreating a custom locale that overrides some settings from the user-set locale; and\n\nEmbedding parameter ordering information in the format string used with [ NSString stringWithFormat:(NSString*)format...].\n\nMountains has two classes: Mountain and MountainsController.\n\nThe Mountain class is a simple key-value coded class that holds three pieces of information about a particular mountain: its name, its height (in meters), and the date it was first climbed (if known).  These are represented using an NSString, NSNumber, and NSDate, respectively.\n\nThe MountainsController class coordinates the user interface.  It has a list of mountains and uses a table view to let the user select one.  It also allows the user to override the locale's calendar.  \n\nThere are six localizations provided:  en (English), fr (French), ru (Russian), ja (Japanese), zh_Hant (traditional Chinese), and en-Dsrt (Deseret).  The Deseret localization is provided to illustrate that users are not limited to the locales built into the system.  \n\nEach localization contains four files: InfoPlist.strings (the localized messages used by AppKit to display copyright information), MainMenu.nib (the nib), Mountains.plist (a locale-specific list of interesting mountains), and Mountains.strings (localized strings).\n";
+			dependencies = (
+			);
+			name = LocalizedMountains;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Mountains;
+			productReference = 8D1107320486CEB800E47090 /* LocalizedMountains.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LocalizedMountains" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				"en-Dsrt",
+				ru,
+				zh_TW,
+				en,
+				fr,
+				ja,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Mountains */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* LocalizedMountains */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				A7D81CCC0DDCB788008980F0 /* Mountains.plist in Resources */,
+				A7D81CD00DDCB86F008980F0 /* Mountains.strings in Resources */,
+				A73CA72C0DDE45E500ECC08F /* Mountains.icns in Resources */,
+				A717A99D0DDF9659006BEF11 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				A7D81CC10DDC9D77008980F0 /* MountainsController.m in Sources */,
+				A7D81CC70DDCAB8B008980F0 /* Mountain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7D6AD4B0DDD49FC00A5C548 /* en-Dsrt */,
+				A7D6AD4C0DDD4A0C00A5C548 /* ru */,
+				A7D6AD4D0DDD4A1900A5C548 /* zh_TW */,
+				A717A90C0DDF62EB006BEF11 /* en */,
+				A717A90D0DDF62EF006BEF11 /* fr */,
+				A717A90E0DDF62F3006BEF11 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A717A99B0DDF9659006BEF11 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A717A99C0DDF9659006BEF11 /* zh_TW */,
+				A717A99E0DDF9666006BEF11 /* ru */,
+				A717A99F0DDF9680006BEF11 /* ja */,
+				A717A9A00DDF9688006BEF11 /* fr */,
+				A717A9A10DDF9690006BEF11 /* en */,
+				A717A9A20DDF9697006BEF11 /* en-Dsrt */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		A7D81CCB0DDCB788008980F0 /* Mountains.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7D6AD530DDD4A4800A5C548 /* en-Dsrt */,
+				A7D6AD540DDD4A4B00A5C548 /* ru */,
+				A7D6AD550DDD4A5400A5C548 /* zh_TW */,
+				A717A91B0DDF652E006BEF11 /* en */,
+				A717A9280DDF653B006BEF11 /* fr */,
+				A717A92A0DDF6545006BEF11 /* ja */,
+			);
+			name = Mountains.plist;
+			sourceTree = "<group>";
+		};
+		A7D81CCF0DDCB86F008980F0 /* Mountains.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7D6AD570DDD4A6300A5C548 /* en-Dsrt */,
+				A7D6AD580DDD4A6600A5C548 /* ru */,
+				A7D6AD590DDD4A6C00A5C548 /* zh_TW */,
+				A717A91A0DDF652E006BEF11 /* en */,
+				A717A9270DDF653B006BEF11 /* fr */,
+				A717A9290DDF6545006BEF11 /* ja */,
+			);
+			name = Mountains.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mountains_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = LocalizedMountains;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mountains_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Mountains;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "LocalizedMountains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LocalizedMountains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
