@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0E01D1B13CE123D0077B8DC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E01D1A13CE123D0077B8DC /* Cocoa.framework */; };
+		D0E01D2513CE123D0077B8DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0E01D2313CE123D0077B8DC /* InfoPlist.strings */; };
+		D0E01D2713CE123D0077B8DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01D2613CE123D0077B8DC /* main.m */; };
+		D0E01D2B13CE123D0077B8DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D0E01D2913CE123D0077B8DC /* Credits.rtf */; };
+		D0E01D2E13CE123D0077B8DC /* AnimatedSliderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01D2D13CE123D0077B8DC /* AnimatedSliderAppDelegate.m */; };
+		D0E01D3113CE123D0077B8DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E01D2F13CE123D0077B8DC /* MainMenu.xib */; };
+		D0E01D3913CE1E130077B8DC /* NSSliderExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01D3813CE1E130077B8DC /* NSSliderExtensions.m */; };
+		D0E01D3B13CE21CC0077B8DC /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E01D3A13CE21CC0077B8DC /* Quartz.framework */; };
+		D0E01D3D13CE392D0077B8DC /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0E01D3C13CE392D0077B8DC /* ReadMe.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0E01D1613CE123D0077B8DC /* AnimatedSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E01D1A13CE123D0077B8DC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D0E01D1D13CE123D0077B8DC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D0E01D1E13CE123D0077B8DC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D0E01D1F13CE123D0077B8DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0E01D2213CE123D0077B8DC /* AnimatedSlider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimatedSlider-Info.plist"; sourceTree = "<group>"; };
+		D0E01D2413CE123D0077B8DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0E01D2613CE123D0077B8DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0E01D2813CE123D0077B8DC /* AnimatedSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimatedSlider-Prefix.pch"; sourceTree = "<group>"; };
+		D0E01D2A13CE123D0077B8DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D0E01D2C13CE123D0077B8DC /* AnimatedSliderAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedSliderAppDelegate.h; sourceTree = "<group>"; };
+		D0E01D2D13CE123D0077B8DC /* AnimatedSliderAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedSliderAppDelegate.m; sourceTree = "<group>"; };
+		D0E01D3013CE123D0077B8DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D0E01D3713CE1E130077B8DC /* NSSliderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSliderExtensions.h; sourceTree = "<group>"; };
+		D0E01D3813CE1E130077B8DC /* NSSliderExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSliderExtensions.m; sourceTree = "<group>"; };
+		D0E01D3A13CE21CC0077B8DC /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		D0E01D3C13CE392D0077B8DC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0E01D1313CE123D0077B8DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E01D3B13CE21CC0077B8DC /* Quartz.framework in Frameworks */,
+				D0E01D1B13CE123D0077B8DC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0E01D0B13CE123C0077B8DC = {
+			isa = PBXGroup;
+			children = (
+				D0E01D3C13CE392D0077B8DC /* ReadMe.txt */,
+				D0E01D2013CE123D0077B8DC /* AnimatedSlider */,
+				D0E01D1913CE123D0077B8DC /* Frameworks */,
+				D0E01D1713CE123D0077B8DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0E01D1713CE123D0077B8DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01D1613CE123D0077B8DC /* AnimatedSlider.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0E01D1913CE123D0077B8DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01D3A13CE21CC0077B8DC /* Quartz.framework */,
+				D0E01D1A13CE123D0077B8DC /* Cocoa.framework */,
+				D0E01D1C13CE123D0077B8DC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0E01D1C13CE123D0077B8DC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01D1D13CE123D0077B8DC /* AppKit.framework */,
+				D0E01D1E13CE123D0077B8DC /* CoreData.framework */,
+				D0E01D1F13CE123D0077B8DC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D0E01D2013CE123D0077B8DC /* AnimatedSlider */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01D2C13CE123D0077B8DC /* AnimatedSliderAppDelegate.h */,
+				D0E01D2D13CE123D0077B8DC /* AnimatedSliderAppDelegate.m */,
+				D0E01D3713CE1E130077B8DC /* NSSliderExtensions.h */,
+				D0E01D3813CE1E130077B8DC /* NSSliderExtensions.m */,
+				D0E01D2F13CE123D0077B8DC /* MainMenu.xib */,
+				D0E01D2113CE123D0077B8DC /* Supporting Files */,
+			);
+			path = AnimatedSlider;
+			sourceTree = "<group>";
+		};
+		D0E01D2113CE123D0077B8DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E01D2213CE123D0077B8DC /* AnimatedSlider-Info.plist */,
+				D0E01D2313CE123D0077B8DC /* InfoPlist.strings */,
+				D0E01D2613CE123D0077B8DC /* main.m */,
+				D0E01D2813CE123D0077B8DC /* AnimatedSlider-Prefix.pch */,
+				D0E01D2913CE123D0077B8DC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0E01D1513CE123D0077B8DC /* AnimatedSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E01D3413CE123D0077B8DC /* Build configuration list for PBXNativeTarget "AnimatedSlider" */;
+			buildPhases = (
+				D0E01D1213CE123D0077B8DC /* Sources */,
+				D0E01D1313CE123D0077B8DC /* Frameworks */,
+				D0E01D1413CE123D0077B8DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimatedSlider;
+			productName = AnimatedSlider;
+			productReference = D0E01D1613CE123D0077B8DC /* AnimatedSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0E01D0D13CE123C0077B8DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Apple, Inc";
+			};
+			buildConfigurationList = D0E01D1013CE123C0077B8DC /* Build configuration list for PBXProject "AnimatedSlider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0E01D0B13CE123C0077B8DC;
+			productRefGroup = D0E01D1713CE123D0077B8DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0E01D1513CE123D0077B8DC /* AnimatedSlider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0E01D1413CE123D0077B8DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E01D2513CE123D0077B8DC /* InfoPlist.strings in Resources */,
+				D0E01D2B13CE123D0077B8DC /* Credits.rtf in Resources */,
+				D0E01D3113CE123D0077B8DC /* MainMenu.xib in Resources */,
+				D0E01D3D13CE392D0077B8DC /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0E01D1213CE123D0077B8DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E01D2713CE123D0077B8DC /* main.m in Sources */,
+				D0E01D2E13CE123D0077B8DC /* AnimatedSliderAppDelegate.m in Sources */,
+				D0E01D3913CE1E130077B8DC /* NSSliderExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0E01D2313CE123D0077B8DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E01D2413CE123D0077B8DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0E01D2913CE123D0077B8DC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E01D2A13CE123D0077B8DC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D0E01D2F13CE123D0077B8DC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E01D3013CE123D0077B8DC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0E01D3213CE123D0077B8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D0E01D3313CE123D0077B8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D0E01D3513CE123D0077B8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimatedSlider/AnimatedSlider-Prefix.pch";
+				INFOPLIST_FILE = "AnimatedSlider/AnimatedSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0E01D3613CE123D0077B8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimatedSlider/AnimatedSlider-Prefix.pch";
+				INFOPLIST_FILE = "AnimatedSlider/AnimatedSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0E01D1013CE123C0077B8DC /* Build configuration list for PBXProject "AnimatedSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E01D3213CE123D0077B8DC /* Debug */,
+				D0E01D3313CE123D0077B8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E01D3413CE123D0077B8DC /* Build configuration list for PBXNativeTarget "AnimatedSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E01D3513CE123D0077B8DC /* Debug */,
+				D0E01D3613CE123D0077B8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0E01D0D13CE123C0077B8DC /* Project object */;
+}
