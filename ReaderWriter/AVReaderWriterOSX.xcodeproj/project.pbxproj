@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE33EA631370DF3100F77FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE33EA621370DF3100F77FCE /* Cocoa.framework */; };
+		EE33EA6D1370DF3100F77FCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE33EA6B1370DF3100F77FCE /* InfoPlist.strings */; };
+		EE33EA701370DF3100F77FCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33EA6F1370DF3100F77FCE /* main.m */; };
+		EE33EA761370DF3100F77FCE /* RWDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EE33EA751370DF3100F77FCE /* RWDocument.m */; };
+		EE33EA791370DF3100F77FCE /* RWDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE33EA771370DF3100F77FCE /* RWDocument.xib */; };
+		EE33EA7C1370DF3100F77FCE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE33EA7A1370DF3100F77FCE /* MainMenu.xib */; };
+		EEB8F96C1399AF67004FEB2E /* RWProgressPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB8F96B1399AF67004FEB2E /* RWProgressPanelController.m */; };
+		EEB8F96F1399AFA0004FEB2E /* RWProgressPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB8F96E1399AFA0004FEB2E /* RWProgressPanel.xib */; };
+		EEDD0D04139D9946008A5566 /* AudioOnly2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD0D03139D9946008A5566 /* AudioOnly2x.png */; };
+		EEDD0D07139D9A42008A5566 /* ErrorLoading2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDD0D06139D9A42008A5566 /* ErrorLoading2x.png */; };
+		EEFB898D137C8F9600CE44DF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFB8988137C8F9600CE44DF /* AudioToolbox.framework */; };
+		EEFB898E137C8F9600CE44DF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFB8989137C8F9600CE44DF /* AVFoundation.framework */; };
+		EEFB898F137C8F9600CE44DF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFB898A137C8F9600CE44DF /* CoreMedia.framework */; };
+		EEFB8990137C8F9600CE44DF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFB898B137C8F9600CE44DF /* CoreVideo.framework */; };
+		EEFB8991137C8F9600CE44DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFB898C137C8F9600CE44DF /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE33EA5E1370DF3100F77FCE /* AVReaderWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVReaderWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE33EA621370DF3100F77FCE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EE33EA651370DF3100F77FCE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EE33EA661370DF3100F77FCE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EE33EA671370DF3100F77FCE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EE33EA6A1370DF3100F77FCE /* AVReaderWriterOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AVReaderWriterOSX-Info.plist"; sourceTree = "<group>"; };
+		EE33EA6C1370DF3100F77FCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE33EA6E1370DF3100F77FCE /* AVReaderWriterOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVReaderWriterOSX-Prefix.pch"; sourceTree = "<group>"; };
+		EE33EA6F1370DF3100F77FCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE33EA741370DF3100F77FCE /* RWDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWDocument.h; sourceTree = "<group>"; };
+		EE33EA751370DF3100F77FCE /* RWDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWDocument.m; sourceTree = "<group>"; };
+		EE33EA781370DF3100F77FCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RWDocument.xib; sourceTree = "<group>"; };
+		EE33EA7B1370DF3100F77FCE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EEB8F96A1399AF67004FEB2E /* RWProgressPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWProgressPanelController.h; sourceTree = "<group>"; };
+		EEB8F96B1399AF67004FEB2E /* RWProgressPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWProgressPanelController.m; sourceTree = "<group>"; };
+		EEB8F96E1399AFA0004FEB2E /* RWProgressPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWProgressPanel.xib; sourceTree = "<group>"; };
+		EEDD0D03139D9946008A5566 /* AudioOnly2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AudioOnly2x.png; sourceTree = "<group>"; };
+		EEDD0D06139D9A42008A5566 /* ErrorLoading2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ErrorLoading2x.png; sourceTree = "<group>"; };
+		EEFB8988137C8F9600CE44DF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EEFB8989137C8F9600CE44DF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EEFB898A137C8F9600CE44DF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EEFB898B137C8F9600CE44DF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		EEFB898C137C8F9600CE44DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE33EA5B1370DF3100F77FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEFB898D137C8F9600CE44DF /* AudioToolbox.framework in Frameworks */,
+				EEFB898E137C8F9600CE44DF /* AVFoundation.framework in Frameworks */,
+				EEFB898F137C8F9600CE44DF /* CoreMedia.framework in Frameworks */,
+				EEFB8990137C8F9600CE44DF /* CoreVideo.framework in Frameworks */,
+				EEFB8991137C8F9600CE44DF /* QuartzCore.framework in Frameworks */,
+				EE33EA631370DF3100F77FCE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE33EA531370DF3100F77FCE = {
+			isa = PBXGroup;
+			children = (
+				EE33EA681370DF3100F77FCE /* AVReaderWriter */,
+				EE33EA611370DF3100F77FCE /* Frameworks */,
+				EE33EA5F1370DF3100F77FCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE33EA5F1370DF3100F77FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE33EA5E1370DF3100F77FCE /* AVReaderWriter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE33EA611370DF3100F77FCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEFB8988137C8F9600CE44DF /* AudioToolbox.framework */,
+				EEFB8989137C8F9600CE44DF /* AVFoundation.framework */,
+				EEFB898A137C8F9600CE44DF /* CoreMedia.framework */,
+				EEFB898B137C8F9600CE44DF /* CoreVideo.framework */,
+				EEFB898C137C8F9600CE44DF /* QuartzCore.framework */,
+				EE33EA621370DF3100F77FCE /* Cocoa.framework */,
+				EE33EA641370DF3100F77FCE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE33EA641370DF3100F77FCE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE33EA651370DF3100F77FCE /* AppKit.framework */,
+				EE33EA661370DF3100F77FCE /* CoreData.framework */,
+				EE33EA671370DF3100F77FCE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EE33EA681370DF3100F77FCE /* AVReaderWriter */ = {
+			isa = PBXGroup;
+			children = (
+				EE33EA741370DF3100F77FCE /* RWDocument.h */,
+				EE33EA751370DF3100F77FCE /* RWDocument.m */,
+				EEB8F96A1399AF67004FEB2E /* RWProgressPanelController.h */,
+				EEB8F96B1399AF67004FEB2E /* RWProgressPanelController.m */,
+				EEDD0D64139DA9A3008A5566 /* Resources */,
+				EE33EA691370DF3100F77FCE /* Supporting Files */,
+			);
+			path = AVReaderWriter;
+			sourceTree = "<group>";
+		};
+		EE33EA691370DF3100F77FCE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE33EA6A1370DF3100F77FCE /* AVReaderWriterOSX-Info.plist */,
+				EE33EA6B1370DF3100F77FCE /* InfoPlist.strings */,
+				EE33EA6E1370DF3100F77FCE /* AVReaderWriterOSX-Prefix.pch */,
+				EE33EA6F1370DF3100F77FCE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEDD0D64139DA9A3008A5566 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE33EA771370DF3100F77FCE /* RWDocument.xib */,
+				EEB8F96E1399AFA0004FEB2E /* RWProgressPanel.xib */,
+				EE33EA7A1370DF3100F77FCE /* MainMenu.xib */,
+				EEDD0D03139D9946008A5566 /* AudioOnly2x.png */,
+				EEDD0D06139D9A42008A5566 /* ErrorLoading2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE33EA5D1370DF3100F77FCE /* AVReaderWriterOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE33EA7F1370DF3100F77FCE /* Build configuration list for PBXNativeTarget "AVReaderWriterOSX" */;
+			buildPhases = (
+				EE33EA5A1370DF3100F77FCE /* Sources */,
+				EE33EA5B1370DF3100F77FCE /* Frameworks */,
+				EE33EA5C1370DF3100F77FCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVReaderWriterOSX;
+			productName = ReaderWriter;
+			productReference = EE33EA5E1370DF3100F77FCE /* AVReaderWriter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE33EA551370DF3100F77FCE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EE33EA581370DF3100F77FCE /* Build configuration list for PBXProject "AVReaderWriterOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE33EA531370DF3100F77FCE;
+			productRefGroup = EE33EA5F1370DF3100F77FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE33EA5D1370DF3100F77FCE /* AVReaderWriterOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE33EA5C1370DF3100F77FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE33EA6D1370DF3100F77FCE /* InfoPlist.strings in Resources */,
+				EE33EA791370DF3100F77FCE /* RWDocument.xib in Resources */,
+				EE33EA7C1370DF3100F77FCE /* MainMenu.xib in Resources */,
+				EEB8F96F1399AFA0004FEB2E /* RWProgressPanel.xib in Resources */,
+				EEDD0D04139D9946008A5566 /* AudioOnly2x.png in Resources */,
+				EEDD0D07139D9A42008A5566 /* ErrorLoading2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE33EA5A1370DF3100F77FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE33EA701370DF3100F77FCE /* main.m in Sources */,
+				EE33EA761370DF3100F77FCE /* RWDocument.m in Sources */,
+				EEB8F96C1399AF67004FEB2E /* RWProgressPanelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE33EA6B1370DF3100F77FCE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE33EA6C1370DF3100F77FCE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EE33EA771370DF3100F77FCE /* RWDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE33EA781370DF3100F77FCE /* en */,
+			);
+			name = RWDocument.xib;
+			sourceTree = "<group>";
+		};
+		EE33EA7A1370DF3100F77FCE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE33EA7B1370DF3100F77FCE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE33EA7D1370DF3100F77FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE33EA7E1370DF3100F77FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EE33EA801370DF3100F77FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVReaderWriter/AVReaderWriterOSX-Prefix.pch";
+				INFOPLIST_FILE = "AVReaderWriter/AVReaderWriterOSX-Info.plist";
+				PRODUCT_NAME = AVReaderWriter;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE33EA811370DF3100F77FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVReaderWriter/AVReaderWriterOSX-Prefix.pch";
+				INFOPLIST_FILE = "AVReaderWriter/AVReaderWriterOSX-Info.plist";
+				PRODUCT_NAME = AVReaderWriter;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE33EA581370DF3100F77FCE /* Build configuration list for PBXProject "AVReaderWriterOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE33EA7D1370DF3100F77FCE /* Debug */,
+				EE33EA7E1370DF3100F77FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE33EA7F1370DF3100F77FCE /* Build configuration list for PBXNativeTarget "AVReaderWriterOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE33EA801370DF3100F77FCE /* Debug */,
+				EE33EA811370DF3100F77FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE33EA551370DF3100F77FCE /* Project object */;
+}
