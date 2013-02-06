@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {openReadMe = id; }; 
+            CLASS = AppDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cycleAction = id; goTransitionAction = id; transitionChoiceAction = id; }; 
+            CLASS = MyWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cycleTransitionsCheckbox = NSButton; 
+                slideView = SlideshowView; 
+                transitionChoicePopup = NSPopUpButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSDatePicker; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}
