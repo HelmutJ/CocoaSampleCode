@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9C000D31386529500219B6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C000D21386529500219B6D /* Cocoa.framework */; };
+		E9C000DD1386529500219B6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9C000DB1386529500219B6D /* InfoPlist.strings */; };
+		E9C000DF1386529500219B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C000DE1386529500219B6D /* main.m */; };
+		E9C000E61386529500219B6D /* AVSPDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C000E51386529500219B6D /* AVSPDocument.m */; };
+		E9C000E91386529500219B6D /* AVSPDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C000E71386529500219B6D /* AVSPDocument.xib */; };
+		E9C000EC1386529500219B6D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C000EA1386529500219B6D /* MainMenu.xib */; };
+		E9C000FC138652DD00219B6D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C000FB138652DD00219B6D /* AVFoundation.framework */; };
+		E9C001031386549B00219B6D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C001021386549B00219B6D /* CoreMedia.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E9C000CE1386529500219B6D /* AVSimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVSimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C000D21386529500219B6D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E9C000DA1386529500219B6D /* AVSimplePlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AVSimplePlayer-Info.plist"; path = "../AVSimplePlayer/AVSimplePlayer-Info.plist"; sourceTree = "<group>"; };
+		E9C000DC1386529500219B6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9C000DE1386529500219B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../AVSimplePlayer/main.m; sourceTree = "<group>"; };
+		E9C000E01386529500219B6D /* AVSimplePlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AVSimplePlayer-Prefix.pch"; path = "../AVSimplePlayer/AVSimplePlayer-Prefix.pch"; sourceTree = "<group>"; };
+		E9C000E41386529500219B6D /* AVSPDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AVSPDocument.h; path = ../AVSimplePlayer/AVSPDocument.h; sourceTree = "<group>"; };
+		E9C000E51386529500219B6D /* AVSPDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AVSPDocument.m; path = ../AVSimplePlayer/AVSPDocument.m; sourceTree = "<group>"; };
+		E9C000E81386529500219B6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AVSPDocument.xib; sourceTree = "<group>"; };
+		E9C000EB1386529500219B6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E9C000FB138652DD00219B6D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E9C001021386549B00219B6D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9C000CB1386529500219B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C000FC138652DD00219B6D /* AVFoundation.framework in Frameworks */,
+				E9C000D31386529500219B6D /* Cocoa.framework in Frameworks */,
+				E9C001031386549B00219B6D /* CoreMedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9C000C31386529500219B6D = {
+			isa = PBXGroup;
+			children = (
+				E9C000D81386529500219B6D /* AVSimplePlayer */,
+				E9C000D11386529500219B6D /* Frameworks */,
+				E9C000CF1386529500219B6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9C000CF1386529500219B6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9C000CE1386529500219B6D /* AVSimplePlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9C000D11386529500219B6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9C000FB138652DD00219B6D /* AVFoundation.framework */,
+				E9C000D21386529500219B6D /* Cocoa.framework */,
+				E9C001021386549B00219B6D /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9C000D81386529500219B6D /* AVSimplePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E9C000E41386529500219B6D /* AVSPDocument.h */,
+				E9C000E51386529500219B6D /* AVSPDocument.m */,
+				E9C000E71386529500219B6D /* AVSPDocument.xib */,
+				E9C000EA1386529500219B6D /* MainMenu.xib */,
+				E9C000D91386529500219B6D /* Supporting Files */,
+			);
+			name = AVSimplePlayer;
+			path = AVSimplePlayer;
+			sourceTree = "<group>";
+		};
+		E9C000D91386529500219B6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9C000DA1386529500219B6D /* AVSimplePlayer-Info.plist */,
+				E9C000DB1386529500219B6D /* InfoPlist.strings */,
+				E9C000DE1386529500219B6D /* main.m */,
+				E9C000E01386529500219B6D /* AVSimplePlayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9C000CD1386529500219B6D /* AVSimplePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9C000EF1386529500219B6D /* Build configuration list for PBXNativeTarget "AVSimplePlayer" */;
+			buildPhases = (
+				E9C000CA1386529500219B6D /* Sources */,
+				E9C000CB1386529500219B6D /* Frameworks */,
+				E9C000CC1386529500219B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVSimplePlayer;
+			productName = AVSimplePlayer;
+			productReference = E9C000CE1386529500219B6D /* AVSimplePlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9C000C51386529500219B6D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E9C000C81386529500219B6D /* Build configuration list for PBXProject "AVSimplePlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E9C000C31386529500219B6D;
+			productRefGroup = E9C000CF1386529500219B6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9C000CD1386529500219B6D /* AVSimplePlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9C000CC1386529500219B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C000DD1386529500219B6D /* InfoPlist.strings in Resources */,
+				E9C000E91386529500219B6D /* AVSPDocument.xib in Resources */,
+				E9C000EC1386529500219B6D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9C000CA1386529500219B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C000DF1386529500219B6D /* main.m in Sources */,
+				E9C000E61386529500219B6D /* AVSPDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9C000DB1386529500219B6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9C000DC1386529500219B6D /* en */,
+			);
+			name = InfoPlist.strings;
+			path = ../AVSimplePlayer;
+			sourceTree = "<group>";
+		};
+		E9C000E71386529500219B6D /* AVSPDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9C000E81386529500219B6D /* en */,
+			);
+			name = AVSPDocument.xib;
+			path = ../AVSimplePlayer;
+			sourceTree = "<group>";
+		};
+		E9C000EA1386529500219B6D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9C000EB1386529500219B6D /* en */,
+			);
+			name = MainMenu.xib;
+			path = ../AVSimplePlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9C000ED1386529500219B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E9C000EE1386529500219B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E9C000F01386529500219B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimplePlayer/AVSimplePlayer-Prefix.pch";
+				INFOPLIST_FILE = "AVSimplePlayer/AVSimplePlayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E9C000F11386529500219B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AVSimplePlayer/AVSimplePlayer-Prefix.pch";
+				INFOPLIST_FILE = "AVSimplePlayer/AVSimplePlayer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9C000C81386529500219B6D /* Build configuration list for PBXProject "AVSimplePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9C000ED1386529500219B6D /* Debug */,
+				E9C000EE1386529500219B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9C000EF1386529500219B6D /* Build configuration list for PBXNativeTarget "AVSimplePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9C000F01386529500219B6D /* Debug */,
+				E9C000F11386529500219B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9C000C51386529500219B6D /* Project object */;
+}
