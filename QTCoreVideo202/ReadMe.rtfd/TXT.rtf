@@ -1,0 +1,121 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;}
+\vieww24680\viewh24080\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic Pasted Graphic.tiff \width1864 \height1864 \noorient
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+
+\fs72 QTCoreVideo202
+\fs20 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b\fs24 \cf0 05/23/2011\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \ul \ulc0 Description
+\b0 \ulnone \
+\
+\pard\pardeftab720\qj
+\cf0 QTCoreVideo202 is a Cocoa sample demonstrating how to render a QuickTime Movie using OpenGL pixel buffer objects, QuickTime visual context,  and the Core Video pixel buffer pipeline. \
+\
+This is the fourth application in the series that includes QTCoreVideo102, QTCoreVideo103, QTCoreVideo201, and Denoise that leverage a common graphics and media utility toolkits for Snow Leopard.\
+\pard\pardeftab720\ql\qnatural
+\cf0 \
+\'95 
+\b \ul Application
+\b0 \ulnone \
+\
+\'95 QTCVOpenGLController - Controller class for the application.\
+\'95 QTCVOpenGLView - Main view class for the application.\
+\
+\'95 
+\b \ul Utility Kits
+\b0 \ulnone \
+\
+\'95 
+\b Model
+\b0 \
+\
+\'95 CVGLImageBuffer - A facade for mediating between a Core Video image buffer and OpenGL texture 2D, texture rectangle, or FBOs along with PBOs for image capture or updates.\
+\'95 NSPropertyList - Utility class to deserialize a property list file. \
+\'95 OpenGLBitmap - Utility toolkit to save a pixel buffer as bmp, pict, png, gif, jpeg, tga, or jp2000 file(s).\
+\'95 OpenGLCopier - A functor for copying pixels from a source to destination. \
+\'95 OpenGLDrawElements - Utility class to deserialize a property list that describes a VBO draw elements parameters and draws an object using the parameters values.\
+\'95 OpenGLFramebuffer2D - Utility class for managing 2D FBOs.\
+\'95 OpenGLIBO - Utility class that implements a method for generating a 3D object using IBOs.\
+\'95 OpenGLIBORenderer - Class that implements methods for creating an IBO based renderer.\
+\'95 OpenGLIBOIndices - Utility class to deserialize a property list that describes a VBO's indices.\
+\'95 OpenGLIBOGeometry - Utility class to deserialize a property list that describes a IBO normals, vertices, colors, and texture coordinates.\
+\'95 OpenGLImage2DAuthor - A facade for handling PBO read or draw pixels.\
+\'95 OpenGLQuad - A facade for for handling a texture 2D or texture rectangle bound to a VBO quad.\
+\'95 OpenGLPBO - Utility toolkit providing basic functionality for PBOs (pack/unpack).\
+\'95 OpenGLPixelAttributes - Utility class to parse property list file and obtain the desired pixel format attributes.\
+\'95 OpenGLPixelFormat - Utility class to obtain pixel format for an OpenGL view.\
+\'95 OpenGLRotation - Utility class for managing rotation of a 3D object.\
+\'95 OpenGLSurface2D - Utility toolkit for 2D I/O surfaces.\
+\'95 OpenGLTeapot - a facade that implements methods for generating an IBO teapot with enabled sphere map texture coordinate generation.\
+\'95 OpenGLTexture2D - Utility toolkit for handling hinted texture 2D or rectangles.\
+\'95 OpenGLTexture2DAuthor - A facade for managing PBOs for texture read or writes.\
+\'95 QTVisualContext - Utility class for maintaining a QT visual context.\
+\
+\'95 
+\b View
+\b0 \
+	\
+\'95 CVOpenGLView - Core video + OpenGL view toolkit.\
+\'95 OpenGLView - OpenGL view base class.\
+
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0 \cf0 {{\NeXTGraphic GMT Classes.pdf \width16480 \height132680
+}¬}
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\b \cf0 \ul Mac OS X Frameworks
+\b0 \ulnone \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural
+\cf0 In this sample we're using the following framework APIs:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \'95 QTKit is used to play back a QuickTime Movie.\
+\'95 QuickTime Visual Context is used as the drawing destination for the QuickTime Movie.\
+\'95 NSOpenGLView is used as our view, this is where we draw a video frame on a teapot or quad.\
+\'95 Core Video pipeline:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+
+\f0 \cf0 {{\NeXTGraphic QTCoreVideo Pipeline 1.pdf \width9860 \height6520 \noorient
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+
+\f1 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\b \cf0 \ul What is Core Video
+\b0 \ulnone \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\qj
+\cf0 Core Video delivers a modern foundation for video services providing a bridge between QuickTime and the GPU for hardware-accelerated video processing. This highly optimized pipeline for video presentation increases performance and reduces CPU load, freeing up resources for other operations.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\b \cf0 \ul References
+\b0 \ulnone \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\fs20 \cf0 http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptual/CoreVideo/CVProg_Intro/CVProg_Intro.html\
+\
+hhttp://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/QTKitApplicationProgrammingGuide/Introduction/Introduction.html\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f2 \cf0 \
+}
