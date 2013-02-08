@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1016\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset204 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\vieww9000\viewh8400\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs36 \cf0 SimpleBrowser\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b0\fs24 \cf0 SimpleBrowser is a very simple example of how to create a basic NSBrowser delegate implementation. See the ComplexBrowser example for a more interesting example, and to see the use of a custom cell.\
+\
+Two delegate implementation styles are shown and can be turned on and off via a #define in AppController.m. The first style utilizes a new "item-based" API introduced in Mac OS X v10.6. Applications targeting Mac OS X v10.6 and higher should use this new API. For applications that must run on prior releases, an older implementation is shown.\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b\fs28 \cf0 AppController.h/.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b0\fs24 \cf0 The AppController class lives in the MainMenu.xib. It is set as the delegate for the main NSApplication instance, and the delegate for the NSBrowser. It also has a single outlet set to the browser. Turn on or off the USE_ITEM_BASED_API define to try the old and new API. \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b\fs28 \cf0 \
+FileSystemNode.h/.m\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\b0\fs24 \cf0 This class is a simple wrapper around the file system. Its main purpose is to cache the children for a given NSURL. We do this in order to get a consistent children count. \
+}
