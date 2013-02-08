@@ -1,0 +1,108 @@
+Read Me About Son of Silly Balls
+================================
+2.0
+
+Son of Silly Balls is a port of a classic Mac sample, Silly Balls, whose sole purpose is to draw a bunch of randomly coloured, randomly placed, silly balls in a window on the screen.  While the code is quite simple, implementing Silly Balls in Cocoa presented a number of interesting challenges which I describe in the "Coding Notes" section.
+
+Son of Silly Balls was built and tested on Mac OS X 10.6, although it should run on both older and newer versions of Mac OS X with few compatibility issues.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About SonOfSillyBalls.txt -- This document.
+
+o SonOfSillyBalls.xcodeproj -- An Xcode project for the sample.
+
+o SonOfSillyBalls -- A directory containing the source code.
+
+o SonOfSillyBalls.app -- A pre-built binary.
+
+Within the SonOfSillyBalls directory there is the following:
+
+o Info.plist, main.m, MainMenu.xib -- Items you would expect to find in any Cocoa application.
+
+o AppDelegate.{h,m} -- The application delegate class, which manages the application as a whole.
+
+o SillyBallsView.{h,m} -- A view that draws random coloured balls.
+
+Using the Sample
+----------------
+To use the sample, just launch it and watch the fabulous ball drawing.  You can change the rate of drawing with the slider, stop and restart drawing with Start/Stop button, and clear the current set of balls with the Clear button.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 4.0.2 on Mac OS X 10.6.7 with the Mac OS X 10.6 SDK.  You should be able to just open the project and choose Build from the Product menu.  This will build the SonOfSillyBalls application in the "build" directory.
+
+How it Works
+------------
+The sample contains two important classes:
+
+o AppDelegate -- This acts as a controller, holding on to the sample's model data (the running and ballRate properties) and managing the views in the window.  A lot of this code would probably be better placed in an NSWindowController, but I decided not to do that because it makes a very simple sample more complex.
+
+o SillyBallsView -- This is a simple NSView subclass that draws balls.
+
+Caveats
+-------
+The sample ignores localisation issues.
+
+Due to its silly nature, SillyBallsView draws balls directly from a timer callback (after locking focus, of course).  This isn't the recommended approach for standard code.  Rather, the timer would update a representation of the current balls and call -setNeedsDisplay: (or, better yet, -setNeedsDisplay:inRect:), at which point the system would turn call -drawRect:, which would draw the balls based on the afore-mentioned internal representation.  However, the approach used by SillyBallsView does work, and it's reasonable to use given the constraints of this sample.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+1.0d1 was distributed for review inside DTS.
+
+1.0d2 was distributed for review inside Apple.  It includes some documentation and minor comment changes.
+
+1.0d3 is the first widely released version.  The window is now buffered instead of non-retained, and flushWindow is used to force the balls to appear immediately. Drawing is no longer done using PostScript but with the new-in-Rhapsody graphics API (NSBezierPath). The documentation changed to cover the above.
+
+1.0d4 added code to make sure that the main window is active after launch <rdar://problem/1683474>.
+
+1.0d5 got some HI modifications (DG).
+
+2.0 (Apr 2011) is a major update to bring the sample's project and code structure up-to-date with the modern world.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+28 Apr 2011
+
+Appendix: Coding Notes
+======================
+This section contains notes about why and how the code was written the way it was.
+
+[The following coding notes were included in the original version of this sample, and are retained here for historical interest only -- DTS]
+
+Monopolising the CPU
+--------------------
+Silly Balls for Mac OS does not yield the CPU to other processes; it just opens up a window and draws into it until you click the mouse button.  This sort of behaviour is obviously not suitable for the Yellow application environment, so I had to figure out a more appropriate approach.
+
+The approach I used to was to use a timer to draw the balls.  Using the Foundation class NSTimer, you can create a timer that calls a specific method in a specific object on a periodic basis.  So Silly Balls sets up a timer to call -[SillyBallsView -drawAnother:] on a periodic basis.  Each time that method is called it draws another silly ball.  When you drag the slider to set the ball redraw period, I invalidate the repeat timer and create a new one with the correct period.
+
+Drawing
+-------
+The Mac OS provides a very direct drawing model suitable for tasks such as Silly Balls.  You just open up a window, set the port to it, and draw into it.  There is very little to get in the way.
+
+In contrast, the OpenStep [environment] does not allow you to just open up a window and draw.  So I created a new subclass of NSView (the base class for all drawing and event handling objects) and used it to draw my silly balls.  Normally you would do the drawing in a custom view by overriding NSView's drawRect: method.  The system calls your drawRect: method when your area of the screen needs updating.  But silly balls are drawn dynamically, and Silly Balls does not remember the position of each of the balls that its drawn, so there's no way it could redraw them.  Also, the balls are drawn dynamically, at a furious rate. Overriding -drawRect: is not enough for this view.
+
+Instead of doing my drawing in the -drawRect: method, I actually do my drawing in a method, -[SillyBallsView drawAnother:], that is repeatedly called by a timer.  Because I'm drawing outside of an NSView's -drawRect: method, I have to explicitly lock the drawing focus on my view before drawing into it, and unlock the focus afterwards.  You can see the code in -drawAnother:.  This is a significant digression from the standard approach to updating a view.
+
+Note: Locking focus on a view is like calling SetPort on a GrafPort under Mac OS; it sets up the view for you to draw into it.  The -drawRect: method is automatically called with the focus locked on the view.
+
+This all worked, but I found that none of my balls were actually showing up on the screen until I modified some other parts of the window's contents.  I quickly tracked this down to the window backing model.  By default under Yellow, the contents of each window is buffered offscreen so that all drawing goes into the offscreen buffer and is copied on to the screen when all the drawing is done.  This typically results in very clean window updates, but causes problems for a silly application like Silly Balls.
+
+To get around this, I call the window's -flushWindow method immediate after I draw a ball.  This causes the window's backing buffer to be immediately flushed to the screen, and the balls show up in a timely fashion.
+
+Ovals et al
+-----------
+Traditionally under OpenStep, anyone doing sophisticated drawing would do so using direct Display PostScript calls. So doing something that's very easy on Mac OS, like drawing an oval, required you to know some basic PostScript concepts.
+
+Rhapsody introduces a new graphics API [within AppKit] that allows you to do advanced drawing without requiring Display PostScript.  Son of Silly Balls uses this new API to draw the balls.  To see the code, take a look at -[SillyBallsView drawRandomBallInside:] method.  You can learn more about the graphics API by reading the documentation for the NSBezielPath, NSAffineTransform and NSColor classes.
+
+Another area that challenged me was drawing text.  The silly balls drawn by this sample have text inside them, but it wasn't easy finding a way to draw a single line of text.  [I considered building an NSTextField, but thought that would be overkill.]  Just as I was about to give up and draw the text using PostScript (which I've since learnt is a very bad idea), I found a category in AppKit's "NSStringDrawing.h" that adds text drawing methods to the NSString class.
