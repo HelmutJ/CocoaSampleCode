@@ -1,0 +1,37 @@
+{\rtf1\mac\ansicpg10000\cocoartf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\vieww10700\viewh10200\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\ql\qnatural
+
+\f0\b\fs36 \cf0 CompositeLab
+\f1\b0\fs24 \
+\
+CompositeLab is a simple application useful for interactively demonstrating compositing modes in the Quartz display system.\
+\
+Two separate images, source and destination, whose colors (and opacity) are chosen through the use of NSColorWells & the NSColorPanel, are composited together using a compositing mode specified by the user. The images are kept instances of NSImage. One subclass of NSView, CompositeView, manages all target/action methods and drawing.\
+\
+User can select three colors: background, source, and destination. Background color is the color painted in the view in all three panes. The source image is first cleared to transparent, then painted using the source color (unless the source image comes from an image file, in which case the source color is ignored).  The destination image is created the same way, by first clearing the image and then painting in the destination color. Then the destination is composited to the result image using the Copy mode, and the source is composited on top using the user-specified compositing mode.  Finally all three images are displayed in the view using the SourceOver mode. Thus you get to see the three images as seen above the specified background color.\
+\
+NSImages are used with the 
+\f0\b drawMethod:inObject:
+\f1\b0  method.  Three methods (
+\f0\b drawSource:
+\f1\b0 , 
+\f0\b drawDestination:
+\f1\b0 , and 
+\f0\b drawResult:
+\f1\b0 ) provide the graphics commands to draw the three images.  The NSImages call these methods and cache the drawing whenever they need to; this happens when they are composited the first time and whenever they are composited after the contents change (indicated by a call to the 
+\f0\b recache
+\f1\b0  method).  If CompositeLab allowed printing, these methods would also be called during printing, to produce the image at the full resolution of the printer rather than at the resolution they were cached at in the window server.\
+\
+CompositeLab also demonstrates how to accept colors and images dragged in through the use of interapplication drag mechanism. In addition to the minimally required methods (
+\f0\b draggingEntered:
+\f1\b0  and 
+\f0\b performDragOperation:
+\f1\b0 ), CompositeView overrides 
+\f0\b draggingUpdated:
+\f1\b0  and 
+\f0\b draggingExited:
+\f1\b0  to give the user feedback as he or she drags a color over the view without dropping it.\
+}
