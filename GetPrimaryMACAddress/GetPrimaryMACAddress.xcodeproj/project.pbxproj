@@ -1,0 +1,213 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84BB07E21368E02B006527DA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BB07E11368E02B006527DA /* CoreFoundation.framework */; };
+		84BB07E51368E02B006527DA /* GetPrimaryMACAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 84BB07E41368E02B006527DA /* GetPrimaryMACAddress.c */; };
+		84BB07F91368E16F006527DA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BB07F81368E16F006527DA /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84BB07DB1368E02B006527DA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84BB07DD1368E02B006527DA /* GetPrimaryMACAddress */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GetPrimaryMACAddress; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BB07E11368E02B006527DA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		84BB07E41368E02B006527DA /* GetPrimaryMACAddress.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetPrimaryMACAddress.c; sourceTree = "<group>"; };
+		84BB07F81368E16F006527DA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84BB07DA1368E02B006527DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BB07E21368E02B006527DA /* CoreFoundation.framework in Frameworks */,
+				84BB07F91368E16F006527DA /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84BB07D21368E02B006527DA = {
+			isa = PBXGroup;
+			children = (
+				84BB07E31368E02B006527DA /* GetPrimaryMACAddress */,
+				84BB07E01368E02B006527DA /* Frameworks */,
+				84BB07DE1368E02B006527DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84BB07DE1368E02B006527DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84BB07DD1368E02B006527DA /* GetPrimaryMACAddress */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84BB07E01368E02B006527DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84BB07E11368E02B006527DA /* CoreFoundation.framework */,
+				84BB07F81368E16F006527DA /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84BB07E31368E02B006527DA /* GetPrimaryMACAddress */ = {
+			isa = PBXGroup;
+			children = (
+				84BB07E41368E02B006527DA /* GetPrimaryMACAddress.c */,
+			);
+			path = GetPrimaryMACAddress;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84BB07DC1368E02B006527DA /* GetPrimaryMACAddress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BB07E91368E02B006527DA /* Build configuration list for PBXNativeTarget "GetPrimaryMACAddress" */;
+			buildPhases = (
+				84BB07D91368E02B006527DA /* Sources */,
+				84BB07DA1368E02B006527DA /* Frameworks */,
+				84BB07DB1368E02B006527DA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetPrimaryMACAddress;
+			productName = GetPrimaryMACAddress;
+			productReference = 84BB07DD1368E02B006527DA /* GetPrimaryMACAddress */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84BB07D41368E02B006527DA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 84BB07D71368E02B006527DA /* Build configuration list for PBXProject "GetPrimaryMACAddress" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84BB07D21368E02B006527DA;
+			productRefGroup = 84BB07DE1368E02B006527DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84BB07DC1368E02B006527DA /* GetPrimaryMACAddress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84BB07D91368E02B006527DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BB07E51368E02B006527DA /* GetPrimaryMACAddress.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84BB07E71368E02B006527DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		84BB07E81368E02B006527DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		84BB07EA1368E02B006527DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84BB07EB1368E02B006527DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84BB07D71368E02B006527DA /* Build configuration list for PBXProject "GetPrimaryMACAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BB07E71368E02B006527DA /* Debug */,
+				84BB07E81368E02B006527DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BB07E91368E02B006527DA /* Build configuration list for PBXNativeTarget "GetPrimaryMACAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BB07EA1368E02B006527DA /* Debug */,
+				84BB07EB1368E02B006527DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84BB07D41368E02B006527DA /* Project object */;
+}
