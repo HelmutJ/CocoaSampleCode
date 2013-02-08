@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		536F14130D33E1A200B2806D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 536F14110D33E1A200B2806D /* Credits.rtf */; };
+		53CC47720ABB251700F70973 /* DockTileAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CC47700ABB251700F70973 /* DockTileAppDelegate.m */; };
+		53D67A260FD6F3DD001688B3 /* DockTile.docktileplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53D679D50FD6F0DB001688B3 /* DockTile.docktileplugin */; };
+		53D67A8F0FD6F773001688B3 /* DockTilePlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D67A650FD6F5B5001688B3 /* DockTilePlugIn.m */; };
+		53FE44190FD71991007FBB65 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 53FE44180FD71991007FBB65 /* icon.icns */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53D67A2D0FD6F3FE001688B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53D679D40FD6F0DB001688B3;
+			remoteInfo = DockTile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53D67A370FD6F42F001688B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				53D67A260FD6F3DD001688B3 /* DockTile.docktileplugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		41D5F1550FEE95CE004546AB /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		536F14120D33E1A200B2806D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		53CC47700ABB251700F70973 /* DockTileAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DockTileAppDelegate.m; sourceTree = "<group>"; };
+		53CC47710ABB251700F70973 /* DockTileAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DockTileAppDelegate.h; sourceTree = "<group>"; };
+		53D679D50FD6F0DB001688B3 /* DockTile.docktileplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockTile.docktileplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		53D67A640FD6F5B5001688B3 /* DockTilePlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DockTilePlugIn.h; path = DockTilePlugIn/DockTilePlugIn.h; sourceTree = "<group>"; };
+		53D67A650FD6F5B5001688B3 /* DockTilePlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DockTilePlugIn.m; path = DockTilePlugIn/DockTilePlugIn.m; sourceTree = "<group>"; };
+		53D67A890FD6F722001688B3 /* DockTilePlugIn-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DockTilePlugIn-Info.plist"; path = "DockTilePlugIn/DockTilePlugIn-Info.plist"; sourceTree = "<group>"; };
+		53E5B1B10B6021EF0087DD13 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		53FE44180FD71991007FBB65 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* DockTile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DockTile-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* DockTileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DockTileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53D679D30FD6F0DB001688B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* DockTileApp.app */,
+				53D679D50FD6F0DB001688B3 /* DockTile.docktileplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TrackIt */ = {
+			isa = PBXGroup;
+			children = (
+				41D5F1550FEE95CE004546AB /* README.rtf */,
+				29B97315FDCFA39411CA2CEA /* Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				53D6795A0FD6EF91001688B3 /* DockTilePlugin */,
+			);
+			name = TrackIt;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				53E5B1B10B6021EF0087DD13 /* Prefix.pch */,
+				53CC47710ABB251700F70973 /* DockTileAppDelegate.h */,
+				53CC47700ABB251700F70973 /* DockTileAppDelegate.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53FE44180FD71991007FBB65 /* icon.icns */,
+				536F14110D33E1A200B2806D /* Credits.rtf */,
+				8D1107310486CEB800E47090 /* DockTile-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53D6795A0FD6EF91001688B3 /* DockTilePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				53D67A890FD6F722001688B3 /* DockTilePlugIn-Info.plist */,
+				53D67A640FD6F5B5001688B3 /* DockTilePlugIn.h */,
+				53D67A650FD6F5B5001688B3 /* DockTilePlugIn.m */,
+			);
+			name = DockTilePlugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53D679D40FD6F0DB001688B3 /* DockTilePlugIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53D679D90FD6F0DC001688B3 /* Build configuration list for PBXNativeTarget "DockTilePlugIn" */;
+			buildPhases = (
+				53D679D10FD6F0DB001688B3 /* Resources */,
+				53D679D20FD6F0DB001688B3 /* Sources */,
+				53D679D30FD6F0DB001688B3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DockTilePlugIn;
+			productName = DockTile.docktileplugin;
+			productReference = 53D679D50FD6F0DB001688B3 /* DockTile.docktileplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* DockTileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DockTileApp" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				53D67A370FD6F42F001688B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53D67A2E0FD6F3FE001688B3 /* PBXTargetDependency */,
+			);
+			name = DockTileApp;
+			productInstallPath = "$(HOME)/Applications";
+			productName = TrackIt;
+			productReference = 8D1107320486CEB800E47090 /* DockTileApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DockTile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TrackIt */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* DockTileApp */,
+				53D679D40FD6F0DB001688B3 /* DockTilePlugIn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53D679D10FD6F0DB001688B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				536F14130D33E1A200B2806D /* Credits.rtf in Resources */,
+				53FE44190FD71991007FBB65 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53D679D20FD6F0DB001688B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D67A8F0FD6F773001688B3 /* DockTilePlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				53CC47720ABB251700F70973 /* DockTileAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53D67A2E0FD6F3FE001688B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53D679D40FD6F0DB001688B3 /* DockTilePlugIn */;
+			targetProxy = 53D67A2D0FD6F3FE001688B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		536F14110D33E1A200B2806D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536F14120D33E1A200B2806D /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53D679D70FD6F0DC001688B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DockTilePlugIn/DockTilePlugIn-Info.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = DockTile;
+				WRAPPER_EXTENSION = docktileplugin;
+			};
+			name = Debug;
+		};
+		53D679D80FD6F0DC001688B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DockTilePlugIn/DockTilePlugIn-Info.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = DockTile;
+				WRAPPER_EXTENSION = docktileplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = "DockTile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = DockTileApp;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = "DockTile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_DEVELOPER_DIR)/Demos";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = DockTileApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53D679D90FD6F0DC001688B3 /* Build configuration list for PBXNativeTarget "DockTilePlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53D679D70FD6F0DC001688B3 /* Debug */,
+				53D679D80FD6F0DC001688B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DockTileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DockTile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
