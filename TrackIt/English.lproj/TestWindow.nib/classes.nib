@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = CustomView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {activateTrackingArea = id; }; 
+            CLASS = MyWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                myCustomView = CustomView; 
+                myImageView1 = NSImageView; 
+                myImageView2 = NSImageView; 
+                useSoundCheck = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}
