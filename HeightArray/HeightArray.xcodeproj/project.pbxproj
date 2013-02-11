@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* HeightArrayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* HeightArrayAppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E9568E3311AF8349001EEE4E /* HeightArray.vs in Resources */ = {isa = PBXBuildFile; fileRef = E9E45BF111AF1346003B4F90 /* HeightArray.vs */; };
+		E9C86256126FB9700034DD24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C86255126FB9700034DD24 /* QuartzCore.framework */; };
+		E9D4D74D11B06AAA0068316C /* passthrough.vs in Resources */ = {isa = PBXBuildFile; fileRef = E9D4D72A11B068AC0068316C /* passthrough.vs */; };
+		E9D4D74E11B06AAA0068316C /* visualizeArrayTexture.fs in Resources */ = {isa = PBXBuildFile; fileRef = E9D4D73411B068CD0068316C /* visualizeArrayTexture.fs */; };
+		E9E45B9011AF0561003B4F90 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E45B8F11AF0561003B4F90 /* OpenGL.framework */; };
+		E9E45B9A11AF0579003B4F90 /* GeoUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = E9E45B9411AF0579003B4F90 /* GeoUtils.c */; };
+		E9E45B9B11AF0579003B4F90 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9E45B9711AF0579003B4F90 /* GLView.mm */; };
+		E9E45B9C11AF0579003B4F90 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9E45B9811AF0579003B4F90 /* renderer.cpp */; };
+		E9E45BA211AF09FA003B4F90 /* dirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E45B9E11AF09FA003B4F90 /* dirt.jpg */; };
+		E9E45BA311AF09FA003B4F90 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E45B9F11AF09FA003B4F90 /* grass.jpg */; };
+		E9E45BA411AF09FA003B4F90 /* rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E45BA011AF09FA003B4F90 /* rock.jpg */; };
+		E9E45BA511AF09FA003B4F90 /* snow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9E45BA111AF09FA003B4F90 /* snow.jpg */; };
+		E9E45BF011AF133E003B4F90 /* HeightArray.fs in Resources */ = {isa = PBXBuildFile; fileRef = E9E45BEF11AF1315003B4F90 /* HeightArray.fs */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* HeightArrayAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightArrayAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* HeightArrayAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightArrayAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* HeightArray_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightArray_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* HeightArray-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HeightArray-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* HeightArray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeightArray.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF31B2B01301D13A006A0A99 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		E9C86255126FB9700034DD24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		E9D4D72A11B068AC0068316C /* passthrough.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = passthrough.vs; sourceTree = "<group>"; };
+		E9D4D73411B068CD0068316C /* visualizeArrayTexture.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = visualizeArrayTexture.fs; sourceTree = "<group>"; };
+		E9E45B8F11AF0561003B4F90 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E9E45B9411AF0579003B4F90 /* GeoUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GeoUtils.c; sourceTree = "<group>"; };
+		E9E45B9511AF0579003B4F90 /* GeoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoUtils.h; sourceTree = "<group>"; };
+		E9E45B9611AF0579003B4F90 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		E9E45B9711AF0579003B4F90 /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
+		E9E45B9811AF0579003B4F90 /* renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderer.cpp; sourceTree = "<group>"; };
+		E9E45B9911AF0579003B4F90 /* renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderer.h; sourceTree = "<group>"; };
+		E9E45B9E11AF09FA003B4F90 /* dirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dirt.jpg; sourceTree = "<group>"; };
+		E9E45B9F11AF09FA003B4F90 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+		E9E45BA011AF09FA003B4F90 /* rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpg; sourceTree = "<group>"; };
+		E9E45BA111AF09FA003B4F90 /* snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow.jpg; sourceTree = "<group>"; };
+		E9E45BEF11AF1315003B4F90 /* HeightArray.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HeightArray.fs; sourceTree = "<group>"; };
+		E9E45BF111AF1346003B4F90 /* HeightArray.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HeightArray.vs; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				E9E45B9011AF0561003B4F90 /* OpenGL.framework in Frameworks */,
+				E9C86256126FB9700034DD24 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E9E45B9411AF0579003B4F90 /* GeoUtils.c */,
+				E9E45B9511AF0579003B4F90 /* GeoUtils.h */,
+				E9E45B9611AF0579003B4F90 /* GLView.h */,
+				E9E45B9711AF0579003B4F90 /* GLView.mm */,
+				E9E45B9811AF0579003B4F90 /* renderer.cpp */,
+				E9E45B9911AF0579003B4F90 /* renderer.h */,
+				256AC3D80F4B6AC300CF3369 /* HeightArrayAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* HeightArrayAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E9E45B8F11AF0561003B4F90 /* OpenGL.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* HeightArray.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* HeightArray */ = {
+			isa = PBXGroup;
+			children = (
+				AF31B2B01301D13A006A0A99 /* Readme.txt */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = HeightArray;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* HeightArray_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				E9E45BEF11AF1315003B4F90 /* HeightArray.fs */,
+				E9E45BF111AF1346003B4F90 /* HeightArray.vs */,
+				E9D4D72A11B068AC0068316C /* passthrough.vs */,
+				E9D4D73411B068CD0068316C /* visualizeArrayTexture.fs */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9E45B9E11AF09FA003B4F90 /* dirt.jpg */,
+				E9E45B9F11AF09FA003B4F90 /* grass.jpg */,
+				E9E45BA011AF09FA003B4F90 /* rock.jpg */,
+				E9E45BA111AF09FA003B4F90 /* snow.jpg */,
+				8D1107310486CEB800E47090 /* HeightArray-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				E9C86255126FB9700034DD24 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* HeightArray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "HeightArray" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeightArray;
+			productInstallPath = "$(HOME)/Applications";
+			productName = HeightArray;
+			productReference = 8D1107320486CEB800E47090 /* HeightArray.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Apple Inc";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeightArray" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* HeightArray */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* HeightArray */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D4D74D11B06AAA0068316C /* passthrough.vs in Resources */,
+				E9D4D74E11B06AAA0068316C /* visualizeArrayTexture.fs in Resources */,
+				E9E45BF011AF133E003B4F90 /* HeightArray.fs in Resources */,
+				E9568E3311AF8349001EEE4E /* HeightArray.vs in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				E9E45BA211AF09FA003B4F90 /* dirt.jpg in Resources */,
+				E9E45BA311AF09FA003B4F90 /* grass.jpg in Resources */,
+				E9E45BA411AF09FA003B4F90 /* rock.jpg in Resources */,
+				E9E45BA511AF09FA003B4F90 /* snow.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* HeightArrayAppDelegate.m in Sources */,
+				E9E45B9A11AF0579003B4F90 /* GeoUtils.c in Sources */,
+				E9E45B9B11AF0579003B4F90 /* GLView.mm in Sources */,
+				E9E45B9C11AF0579003B4F90 /* renderer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeightArray_Prefix.pch;
+				INFOPLIST_FILE = "HeightArray-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HeightArray;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeightArray_Prefix.pch;
+				INFOPLIST_FILE = "HeightArray-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HeightArray;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "HeightArray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeightArray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
