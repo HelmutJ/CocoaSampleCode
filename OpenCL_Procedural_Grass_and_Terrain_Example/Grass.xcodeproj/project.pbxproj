@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C31C7E130F1C1E2A00DB30FC /* grass_kernels.cl in Resources */ = {isa = PBXBuildFile; fileRef = C31C7E110F1C1E2A00DB30FC /* grass_kernels.cl */; };
+		C31C7E140F1C1E2A00DB30FC /* terrain_kernels.cl in Resources */ = {isa = PBXBuildFile; fileRef = C31C7E120F1C1E2A00DB30FC /* terrain_kernels.cl */; };
+		C31C7E290F1C1E3300DB30FC /* data_loader.m in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E170F1C1E3300DB30FC /* data_loader.m */; };
+		C31C7E2A0F1C1E3300DB30FC /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E180F1C1E3300DB30FC /* camera.cpp */; };
+		C31C7E2B0F1C1E3300DB30FC /* compute_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E190F1C1E3300DB30FC /* compute_engine.cpp */; };
+		C31C7E2C0F1C1E3300DB30FC /* compute_math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E1A0F1C1E3300DB30FC /* compute_math.cpp */; };
+		C31C7E2D0F1C1E3300DB30FC /* grass_simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E1D0F1C1E3300DB30FC /* grass_simulator.cpp */; };
+		C31C7E2E0F1C1E3300DB30FC /* grid_mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E1F0F1C1E3300DB30FC /* grid_mesh.cpp */; };
+		C31C7E2F0F1C1E3300DB30FC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E210F1C1E3300DB30FC /* main.cpp */; };
+		C31C7E300F1C1E3300DB30FC /* mesh_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E220F1C1E3300DB30FC /* mesh_renderer.cpp */; };
+		C31C7E310F1C1E3300DB30FC /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E240F1C1E3300DB30FC /* shader.cpp */; };
+		C31C7E320F1C1E3300DB30FC /* terrain_simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C7E260F1C1E3300DB30FC /* terrain_simulator.cpp */; };
+		C31C7E360F1C1E3F00DB30FC /* sky.frag in Resources */ = {isa = PBXBuildFile; fileRef = C31C7E340F1C1E3F00DB30FC /* sky.frag */; };
+		C31C7E370F1C1E3F00DB30FC /* sky.vert in Resources */ = {isa = PBXBuildFile; fileRef = C31C7E350F1C1E3F00DB30FC /* sky.vert */; };
+		C31C7E3B0F1C1E6A00DB30FC /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C31C7E3A0F1C1E6A00DB30FC /* icon.icns */; };
+		C31C7F3F0F1C1E7A00DB30FC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31C7F3C0F1C1E7A00DB30FC /* GLUT.framework */; };
+		C31C7F400F1C1E7A00DB30FC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31C7F3D0F1C1E7A00DB30FC /* OpenGL.framework */; };
+		C31C7F410F1C1E7A00DB30FC /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31C7F3E0F1C1E7A00DB30FC /* OpenCL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* Grass_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grass_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Grass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31C7E110F1C1E2A00DB30FC /* grass_kernels.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = grass_kernels.cl; path = ./grass_kernels.cl; sourceTree = SOURCE_ROOT; };
+		C31C7E120F1C1E2A00DB30FC /* terrain_kernels.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = terrain_kernels.cl; path = ./terrain_kernels.cl; sourceTree = SOURCE_ROOT; };
+		C31C7E160F1C1E3300DB30FC /* data_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = data_loader.h; path = ./data_loader.h; sourceTree = SOURCE_ROOT; };
+		C31C7E170F1C1E3300DB30FC /* data_loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = data_loader.m; path = ./data_loader.m; sourceTree = SOURCE_ROOT; };
+		C31C7E180F1C1E3300DB30FC /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = camera.cpp; path = ./camera.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E190F1C1E3300DB30FC /* compute_engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = compute_engine.cpp; path = ./compute_engine.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E1A0F1C1E3300DB30FC /* compute_math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = compute_math.cpp; path = ./compute_math.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E1B0F1C1E3300DB30FC /* compute_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compute_types.h; path = ./compute_types.h; sourceTree = SOURCE_ROOT; };
+		C31C7E1C0F1C1E3300DB30FC /* data_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = data_loader.h; path = ./data_loader.h; sourceTree = SOURCE_ROOT; };
+		C31C7E1D0F1C1E3300DB30FC /* grass_simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = grass_simulator.cpp; path = ./grass_simulator.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E1E0F1C1E3300DB30FC /* grass_simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grass_simulator.h; path = ./grass_simulator.h; sourceTree = SOURCE_ROOT; };
+		C31C7E1F0F1C1E3300DB30FC /* grid_mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = grid_mesh.cpp; path = ./grid_mesh.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E200F1C1E3300DB30FC /* grid_mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grid_mesh.h; path = ./grid_mesh.h; sourceTree = SOURCE_ROOT; };
+		C31C7E210F1C1E3300DB30FC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ./main.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E220F1C1E3300DB30FC /* mesh_renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mesh_renderer.cpp; path = ./mesh_renderer.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E230F1C1E3300DB30FC /* mesh_renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mesh_renderer.h; path = ./mesh_renderer.h; sourceTree = SOURCE_ROOT; };
+		C31C7E240F1C1E3300DB30FC /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shader.cpp; path = ./shader.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E250F1C1E3300DB30FC /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shader.h; path = ./shader.h; sourceTree = SOURCE_ROOT; };
+		C31C7E260F1C1E3300DB30FC /* terrain_simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = terrain_simulator.cpp; path = ./terrain_simulator.cpp; sourceTree = SOURCE_ROOT; };
+		C31C7E270F1C1E3300DB30FC /* terrain_simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = terrain_simulator.h; path = ./terrain_simulator.h; sourceTree = SOURCE_ROOT; };
+		C31C7E280F1C1E3300DB30FC /* timing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timing.h; path = ./timing.h; sourceTree = SOURCE_ROOT; };
+		C31C7E340F1C1E3F00DB30FC /* sky.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sky.frag; path = ./sky.frag; sourceTree = SOURCE_ROOT; };
+		C31C7E350F1C1E3F00DB30FC /* sky.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sky.vert; path = ./sky.vert; sourceTree = SOURCE_ROOT; };
+		C31C7E3A0F1C1E6A00DB30FC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = ./icon.icns; sourceTree = SOURCE_ROOT; };
+		C31C7F3C0F1C1E7A00DB30FC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		C31C7F3D0F1C1E7A00DB30FC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		C31C7F3E0F1C1E7A00DB30FC /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+		C37954100F71935700D60BAF /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		C37954110F71935700D60BAF /* compute_engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compute_engine.h; sourceTree = "<group>"; };
+		C37954120F71935700D60BAF /* compute_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compute_math.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				C31C7F3F0F1C1E7A00DB30FC /* GLUT.framework in Frameworks */,
+				C31C7F400F1C1E7A00DB30FC /* OpenGL.framework in Frameworks */,
+				C31C7F410F1C1E7A00DB30FC /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C31C7F3C0F1C1E7A00DB30FC /* GLUT.framework */,
+				C31C7F3D0F1C1E7A00DB30FC /* OpenGL.framework */,
+				C31C7F3E0F1C1E7A00DB30FC /* OpenCL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Grass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Grass */ = {
+			isa = PBXGroup;
+			children = (
+				C31C7E330F1C1E3F00DB30FC /* Shaders */,
+				C31C7E150F1C1E3300DB30FC /* Source Files */,
+				C31C7E100F1C1E2A00DB30FC /* Compute Kernels */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Grass;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C31C7E3A0F1C1E6A00DB30FC /* icon.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C31C7E100F1C1E2A00DB30FC /* Compute Kernels */ = {
+			isa = PBXGroup;
+			children = (
+				C31C7E120F1C1E2A00DB30FC /* terrain_kernels.cl */,
+				C31C7E110F1C1E2A00DB30FC /* grass_kernels.cl */,
+			);
+			name = "Compute Kernels";
+			sourceTree = "<group>";
+		};
+		C31C7E150F1C1E3300DB30FC /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C37954100F71935700D60BAF /* camera.h */,
+				C37954110F71935700D60BAF /* compute_engine.h */,
+				C37954120F71935700D60BAF /* compute_math.h */,
+				32CA4F630368D1EE00C91783 /* Grass_Prefix.pch */,
+				C31C7E160F1C1E3300DB30FC /* data_loader.h */,
+				C31C7E170F1C1E3300DB30FC /* data_loader.m */,
+				C31C7E180F1C1E3300DB30FC /* camera.cpp */,
+				C31C7E190F1C1E3300DB30FC /* compute_engine.cpp */,
+				C31C7E1A0F1C1E3300DB30FC /* compute_math.cpp */,
+				C31C7E1B0F1C1E3300DB30FC /* compute_types.h */,
+				C31C7E1C0F1C1E3300DB30FC /* data_loader.h */,
+				C31C7E1D0F1C1E3300DB30FC /* grass_simulator.cpp */,
+				C31C7E1E0F1C1E3300DB30FC /* grass_simulator.h */,
+				C31C7E1F0F1C1E3300DB30FC /* grid_mesh.cpp */,
+				C31C7E200F1C1E3300DB30FC /* grid_mesh.h */,
+				C31C7E210F1C1E3300DB30FC /* main.cpp */,
+				C31C7E220F1C1E3300DB30FC /* mesh_renderer.cpp */,
+				C31C7E230F1C1E3300DB30FC /* mesh_renderer.h */,
+				C31C7E240F1C1E3300DB30FC /* shader.cpp */,
+				C31C7E250F1C1E3300DB30FC /* shader.h */,
+				C31C7E260F1C1E3300DB30FC /* terrain_simulator.cpp */,
+				C31C7E270F1C1E3300DB30FC /* terrain_simulator.h */,
+				C31C7E280F1C1E3300DB30FC /* timing.h */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C31C7E330F1C1E3F00DB30FC /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C31C7E340F1C1E3F00DB30FC /* sky.frag */,
+				C31C7E350F1C1E3F00DB30FC /* sky.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Grass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Grass" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Grass;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Grass;
+			productReference = 8D1107320486CEB800E47090 /* Grass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Grass" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Grass */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Grass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				C31C7E130F1C1E2A00DB30FC /* grass_kernels.cl in Resources */,
+				C31C7E140F1C1E2A00DB30FC /* terrain_kernels.cl in Resources */,
+				C31C7E360F1C1E3F00DB30FC /* sky.frag in Resources */,
+				C31C7E370F1C1E3F00DB30FC /* sky.vert in Resources */,
+				C31C7E3B0F1C1E6A00DB30FC /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C31C7E290F1C1E3300DB30FC /* data_loader.m in Sources */,
+				C31C7E2A0F1C1E3300DB30FC /* camera.cpp in Sources */,
+				C31C7E2B0F1C1E3300DB30FC /* compute_engine.cpp in Sources */,
+				C31C7E2C0F1C1E3300DB30FC /* compute_math.cpp in Sources */,
+				C31C7E2D0F1C1E3300DB30FC /* grass_simulator.cpp in Sources */,
+				C31C7E2E0F1C1E3300DB30FC /* grid_mesh.cpp in Sources */,
+				C31C7E2F0F1C1E3300DB30FC /* main.cpp in Sources */,
+				C31C7E300F1C1E3300DB30FC /* mesh_renderer.cpp in Sources */,
+				C31C7E310F1C1E3300DB30FC /* shader.cpp in Sources */,
+				C31C7E320F1C1E3300DB30FC /* terrain_simulator.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Grass_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Grass;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Grass_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Grass;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Grass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Grass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
