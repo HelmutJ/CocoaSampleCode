@@ -1,0 +1,214 @@
+Read Me About NullAuthPlugin
+============================
+1.2
+
+NullAuthPlugin is a sample authorization plugin that just dumps out the authorization context in which it's run.  You can use it as a template for writing a new authorization plugin, or you can use it as a tool to debug the authorization process.
+
+NullAuthPlugin requires Mac OS X 10.5 or later, although the basic technique should work back to Mac OS X 10.4.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About NullAuthPlugin.txt -- This file.
+o NullAuthPlugin.xcodeproj -- An Xcode project for the plugin.
+o build -- Contains a prebuilt binary.
+o NullAuthPlugin.c -- C source code for the plugin.
+o Info.plist -- A property list file for the plugin.
+
+Using the Sample
+----------------
+WARNING: The authorization process is fundamental to the operation of the computer.  If you make a mistake during development or installation of an authorization plugin, it's likely that you will not be able to log in in order to fix it.  I recommend that you install the plugin on a development machine with a second bootable partition.
+
+To install the plugin, first copy it to the "SecurityAgentPlugins" folder.  The exact approach depends on your system version.  In Mac OS X 10.5 and later, you should use:
+
+$ cd Downloads/NullAuthPlugin
+$ sudo cp -R build/Debug/NullAuthPlugin.bundle /Library/Security/SecurityAgentPlugins/
+$ sudo chown -R root:wheel /Library/Security/SecurityAgentPlugins/NullAuthPlugin.bundle
+
+Earlier systems do not support authorization plug-ins within the /Library hierarchy <rdar://problem/4883523>, so you have to copy NullAuthPlugin into the /System hierarchy instead.  Here's what to do:
+
+$ cd Desktop/NullAuthPlugin
+$ sudo cp -R build/Debug/NullAuthPlugin.bundle /System/Library/CoreServices/SecurityAgentPlugins/
+
+Now edit the "system.login.console" rule in "/etc/authorization" to invoke the plugin.  You want to add the plug-in to the appropriate place in the "mechanisms" array.  The default "mechanisms" array (on 10.6) looks like this.
+
+    <key>mechanisms</key>
+    <array>
+        <string>builtin:smartcard-sniffer,privileged</string>
+        <string>loginwindow:login</string>
+        <string>builtin:reset-password,privileged</string>
+        <string>builtin:auto-login,privileged</string>
+        <string>builtin:authenticate,privileged</string>
+        <string>loginwindow:success</string>
+        <string>HomeDirMechanism:login,privileged</string>
+        <string>HomeDirMechanism:status</string>
+        <string>MCXMechanism:login</string>
+        <string>loginwindow:done</string>
+    </array>
+
+Use your favourite text editor to invoke the plugin from this array.  For example, to investigate how the "builtin:getuserinfo" mechanism affects the authorization context, add entries that invoke the "NullAuthPlugin" before and after "builtin:getuserinfo".  The resulting "mechanisms" array would look like this.
+
+    <key>mechanisms</key>
+    <array>
+        <string>builtin:smartcard-sniffer,privileged</string>
+        <string>loginwindow:login</string>
+        <string>builtin:reset-password,privileged</string>
+        <string>builtin:auto-login,privileged</string>
+<string>NullAuthPlugin:before</string>
+        <string>builtin:authenticate,privileged</string>
+<string>NullAuthPlugin:after</string>
+        <string>loginwindow:success</string>
+        <string>HomeDirMechanism:login,privileged</string>
+        <string>HomeDirMechanism:status</string>
+        <string>MCXMechanism:login</string>
+        <string>loginwindow:done</string>
+    </array>
+
+In each string (which are outdented to make them obvious), the item before the colon is the plugin name ("NullAuthPlugin") and the item after the colon is the mechanism name.  "NullAuthPlugin" ignores the mechanism name, so you can use it as a comment.
+
+To test the plugin, log out and then log back in.  Upon logging back in, launch the Console application and look at the secure log ("/private/var/log/secure.log").  You'll see entries like those shown below.
+
+IMPORTANT: You have to be an administrator (in group "admin") to view the secure log.  Moreover, on Mac OS X 10.5.x the secure log is not readable even by administrators.  To see the secure log in 10.5.x you can run the following command from Terminal:
+
+$ sudo cat /var/log/secure.log
+
+Note: I've extensively processed these listings to make them easier to read in this context.  Specifically:
+
+o I've remove all log lines not relevant to this discussion.
+o I've removed the standard syslog prefix (date/time, host name, process name/ID).
+o I've added line numbers.
+o I've elided text to limit the line length.
+
+ 1 NullAuth:AuthorizationPluginCreate: callbacks=0x1000418c0
+ 2 NullAuth:AuthorizationPluginCreate: err=0, *outPlugin=0x1001551f0, *outPl[...]
+ 3 NullAuth:MechanismCreate: inPlugin=0x1001551f0, [...], mechanismId='before'
+ 4 NullAuth:MechanismCreate: err=0, *outMechanism=0x100199370
+ 5 NullAuth:MechanismInvoke: inMechanism=0x100199370
+ 6 NullAuth:PrintAuthState: pid=610, ppid=19, euid=92, ruid=92
+ 7 NullAuth:PrintAuthState: SessionGetInfo err=0, actualSessionID=2169337, s[...]
+ 8 NullAuth:PrintAuthState: GetSessionId err=0, sessionID=0x0
+ 9 NullAuth:PrintAuthState: GetArguments err=-60008
+10 GetContextValue key='username', value='quinn'
+11 GetContextValue key='password', value=''
+12 GetContextValue key='uid', value=502
+13 GetContextValue key='gid', value=20
+14 GetContextValue key='home', value='/Users/quinn'
+15 GetContextValue key='longname', value='Quinn'
+16 GetContextValue key='shell', value='/bin/bash'
+17 GetHintValue key='authorize-right', value='system.login.console'
+18 GetHintValue key='authorize-rule', value='system.login.console'
+19 GetHintValue key='client-path', value='/System/Library/CoreServices/login[...]
+20 GetHintValue key='client-pid', value=600
+21 GetHintValue key='client-type', value='BNDL'
+22 GetHintValue key='client-uid', value=0
+23 GetHintValue key='creator-pid', value=600
+24 GetHintValue key='tries', value=0
+25 GetContextValue key='dsAttrTypeStandard:AuthenticationAuthority', value='[...]
+26 NullAuth:MechanismInvoke: err=0
+
+27 NullAuth:MechanismInvoke: inMechanism=0x100199370
+28 NullAuth:PrintAuthState: pid=610, ppid=19, euid=92, ruid=92
+29 NullAuth:PrintAuthState: SessionGetInfo err=0, actualSessionID=2169337, s[...]
+30 NullAuth:PrintAuthState: GetSessionId err=0, sessionID=0x0
+31 NullAuth:PrintAuthState: GetArguments err=-60008
+32 GetContextValue key='username', value='quinn'
+33 GetContextValue key='password', value='********'
+34 GetContextValue key='uid', value=502
+35 GetContextValue key='gid', value=20
+36 GetContextValue key='home', value='/Users/quinn'
+37 GetContextValue key='longname', value='Quinn'
+38 GetContextValue key='shell', value='/bin/bash'
+39 GetHintValue key='authorize-right', value='system.login.console'
+40 GetHintValue key='authorize-rule', value='system.login.console'
+41 GetHintValue key='client-path', value='/System/Library/CoreServices/login[...]
+42 GetHintValue key='client-pid', value=600
+43 GetHintValue key='client-type', value='BNDL'
+44 GetHintValue key='client-uid', value=0
+45 GetHintValue key='creator-pid', value=600
+46 GetHintValue key='tries', value=1
+47 GetContextValue key='dsAttrTypeStandard:AuthenticationAuthority', value='[...]
+48 NullAuth:MechanismInvoke: err=0
+
+49 NullAuth:MechanismCreate: inPlugin=0x1001551f0, [...], mechanismId='after'
+50 NullAuth:MechanismCreate: err=0, *outMechanism=0x109ec38f0
+51 NullAuth:MechanismInvoke: inMechanism=0x109ec38f0
+52 NullAuth:PrintAuthState: pid=610, ppid=19, euid=92, ruid=92
+53 NullAuth:PrintAuthState: SessionGetInfo err=0, actualSessionID=2169337, s[...]
+54 NullAuth:PrintAuthState: GetSessionId err=0, sessionID=0x0
+55 NullAuth:PrintAuthState: GetArguments err=-60008
+56 GetContextValue key='username', value='quinn'
+57 GetContextValue key='password', value='********'
+58 GetContextValue key='uid', value=502
+59 GetContextValue key='gid', value=20
+60 GetContextValue key='home', value='/Users/quinn'
+61 GetContextValue key='longname', value='Quinn'
+62 GetContextValue key='shell', value='/bin/bash'
+63 GetHintValue key='authorize-right', value='system.login.console'
+64 GetHintValue key='authorize-rule', value='system.login.console'
+65 GetHintValue key='client-path', value='/System/Library/CoreServices/login[...]
+66 GetHintValue key='client-pid', value=600
+67 GetHintValue key='client-type', value='BNDL'
+68 GetHintValue key='client-uid', value=0
+69 GetHintValue key='creator-pid', value=600
+70 GetHintValue key='tries', value=1
+71 GetContextValue key='dsAttrTypeStandard:RealName', value='Quinn'
+72 GetContextValue key='dsAttrTypeStandard:GeneratedUID', value='17EB7CAC-C1[...]
+73 GetContextValue key='dsAttrTypeStandard:NFSHomeDirectory', value='/Users/[...]
+74 GetContextValue key='dsAttrTypeStandard:PrimaryGroupID', value='20'
+75 GetContextValue key='dsAttrTypeStandard:UniqueID', value='502'
+76 GetContextValue key='dsAttrTypeStandard:AuthenticationAuthority', value='[...]
+77 NullAuth:MechanismInvoke: err=0
+78 NullAuth:MechanismDestroy: inMechanism=0x100199370
+79 NullAuth:MechanismDestroy: inMechanism=0x109ec38f0
+
+There are three groups of entries here:
+
+A. The first group (lines 1 through 26) is the result of loginwindow trying to log in with an empty password.  It does this before prompting the user to enter their password, just in case the user has no password.  This login attempt fails, which is why you only see the "before" mechanism.
+
+B. The second group (lines 27 through 48) is logged after loginwindow has collected a password from the user and tries to log in for real.  Like B this is the "before" mechanism.
+
+C. The third group (lines 59 through 79) represent the "after" mechanism.  This is run after "builtin:authenticate" has executed, and you'll note that "builtin:getuserinfo" has added numerous entries to the the authorization context (all of the entries whose keys start with "dsAttrTypeStandard").
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.2.5 on Mac OS X 10.6.5.  You should be able to just open the project and choose Build from the Build menu.  This will build "NullAuthPlugin.bundle" in the "build" directory.  The sample was primarily tested on Mac OS X 10.5 and Mac OS X 10.6.
+
+How it Works
+------------
+The authorization plugin architecture is documented on the developer web site.
+
+<http://developer.apple.com/library/mac/#documentation/Security/Reference/AuthorizationPluginRef/Reference/reference.html>
+
+NullAuthPlugin is a trivial example of an authorization plugin.  It dumps out the authorization context to the system log and then returns kAuthorizationResultAllow as the authorization result, which means that authorization automatically proceeds to the next authorization plugin.
+
+Caveats
+-------
+There is no way to iterate through the list of keys in the authorization context.  Thus, the code that prints the context (PrintAuthState) has a hard-coded list of keys that it knows about.  This list is not authoritative; you should feel free to add or remove entries based on your requirements.
+
+IMPORTANT: Many of the keys included in the kStateKeys array are not considered to be part of the defined API; see the comments in the code near the definition of the kStateKeys array for details.
+
+By default NullAuthPlugin will not log your password in plain text to the system log (-:  If you need to log the password, change the definition of kIDontCareIfMyPasswordIsLogged to 1 (in PrintTypedData in "NullAuthPlugin.c") and rebuild.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, mail <dts@apple.com> and I'll try to fix them up.
+
+1.0 (Oct 2005) was the first shipping version.
+
+1.1 (Aug 2007) is a relatively small update to add some useful features:
+
+- It now prints the parent process ID and the results of SessionGetInfo.
+
+- We now support a kPlist key type, as well as the kPlistOrString.
+
+- If you use a mechanism name of "WaitForDebugger", NullAuthPlugin will log a simple message and then wait for you to attach with GDB.
+
+1.2 (Jan 2011) fixes a memory stomping bug <rdar://problem/7142712> and contains other, mostly editorial, changes.
+
+Share and Enjoy.
+
+Apple Developer Technical Support
+Networking, Communications, Hardware
+
+11 Jan 2011
