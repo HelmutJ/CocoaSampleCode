@@ -1,0 +1,99 @@
+Read Me About PictureSharing
+============================
+2.1
+
+PictureSharing demonstrates how to use NSNetServices to advertise a service using Bonjour, and how to transfer files asynchronously using an NSStream-based NSOperation.
+
+PictureSharing requires Mac OS X 10.5.8 or later.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About PictureSharing.txt -- This file.
+o Server -- A directory containing the server project.
+o Client -- A directory containing the client project.
+o QRunLoopOperation.[hm] -- An abstract subclass of NSOperation for async run loop based operations.  Used by both projects.
+
+Within each of the "Server" and "Client" directories, you'll find the following:
+
+o PictureSharing.xcodeproj (or PictureSharingBrowser.xcodeproj) -- An Xcode project for the program.
+o build -- A directory containing a pre-built binary of the above.
+o ServerAppDelegate.[hm] (or ClientAppDelegate.[hm]) -- The application delegate, which contains the core logic of the program.
+o FileSendOperation.[hm] (or FileReceiveOperation.[hm]) -- An NSOperation subclass that does the file transfer.
+o main.m, Info.plist, MainMenu.xib -- Various bits of boilerplate.
+
+Using the Sample
+----------------
+To use the sample, first launch PictureSharing and click the Start button.  Once it has started, launch PictureSharingBrowser and you should see you the server displayed in the list.  Click a list item to download a picture from the server.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.2.3 on Mac OS X 10.6.4.  You should be able to just open the project and choose Build from the Build menu.
+
+The sample should run on Mac OS X 10.5.8 or later; the bulk of the testing was done on Mac OS X 10.5.8 and Mac OS X 10.6.4.
+
+How it Works
+------------
+This sample illustrates four key concepts:
+
+o Bonjour registration and browsing -- For registration, see -[ServerAppDelegate start] and the various NSNetService delegate callbacks in the same file.  For browsing, see -[ClientAppDelegate startBrowsing] and its associated NSNetService delegate callbacks.
+
+o server side listening using CFSocket -- See -[ServerAppDelegate start], ListeningSocketCallback (in the same file), and -[ServerAppDelegate connectionReceived:].
+
+o file transfer using NSStream -- See FileSendOperation (in Server) and FileReceiveOperation (in Client).
+
+o NSOperation for run loop based networking -- FileSendOperation and FileReceiveOperation are both subclasses of QRunLoopOperation, which is an abstract class for run loop based NSOperations.  Also, both the server and client show how to start, monitor and cancel these operations.
+
+Caveats
+-------
+The server side code should include a timeout.  Right now, if a client goes deaf while downloading a file, the server will wait forever.  It should use a timeout to reap such dead connections.
+
+The client code does not protect itself from very large downloads.  A rogue server could send it a huge amount of data, and thereby fill up the client's disk drive.
+
+There is no security.  All data is sent in the clear.  Neither the client nor the server do authentication or authorisation.
+
+The client code always browses in the default domains (that is, the empty string).  The simplifies the user interface, but can be a little confusing if you discover two services with the same name from different domains (for example, when you enable Back to My Mac).  The client should be revised to support browsing in specific domains <rdar://problem/8221858>.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, please file a bug against it.
+
+<http://developer.apple.com/bugreporter/>
+
+2.1 (Nov 2010) fixed a small but significant bug in the handling of the moreComing flag in the browser <rdar://problem/8667473>.  Show the domain in the browser as a partial workaround for <rdar://problem/8221858>.  In the browser, cancel a running download if the user clicks on a new row.
+
+2.0 (Jul 2010) was a major rewrite.  Changes include:
+
+o merged PictureSharing and PictureSharingBrowser samples
+o updated the Xcode project to recent standards
+o updated the code to use Objective-C 2.x features
+o replaced target/action/outlet with bindings
+o replaced ad hoc asynchronous structure with NSOperation
+o now transfers the original compressed image rather than recompressing
+o uses checksum to detect on-the-wire errors (specifically truncation)
+o Bonjour improvements
+  - no longer resolves every service discovered
+  - uses a default service name based on the user's name
+  - takes advantage of Bonjour's automatic rename feature
+  - remembers the service name across launches
+  - on the client, the service list is now sorted
+o IPv6 support
+o eliminate NSFileHandle in favour of NSStream
+o network writes are no longer synchronous on the main thread!
+o activity indicators
+o Debug menu lets you test various edge cases
+o code tidying, asserts, and comments
+
+1.2 (Jun 2009) changed the base SDK changed to 10.6.
+
+1.1 (Feb 2005) upgraded the project to use a native Xcode target.
+
+1.0 (??? ????) was the first shipping version.
+
+Share and Enjoy
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+30 Nov 2010
