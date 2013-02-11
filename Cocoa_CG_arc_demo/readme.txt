@@ -1,0 +1,3 @@
+The Cocoa CG arc demo shows how to draw both aliased and anti-aliased arcs.  The graphics drawing functions are contained within the MyQuartzView.m file in the drawRect: method.
+
+This sample is based on a Cocoa CG Shell project that simply shows a window with an embedded NSView subclass called MyQuartzView to hold the custom drawing.  While the project itself is Cocoa based, the CG code contained within the drawRect: method is straightforward, easily reused, and fully applicable to Carbon as well.
