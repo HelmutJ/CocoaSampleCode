@@ -1,0 +1,129 @@
+HID Config Save
+Human Interface Device Configuration Save sample
+
+Version 1.0	18 Oct 2007 Initial release.  
+----
+This application is a Carbon NIB sample which demonstrate a simple game applications.  It provides a number of menu options. Configure Input shows the assignment of device elements to application defined actions. The Save and load configuration allows the saving and restoring of the complete configuration to a text file. The Go 
+command shows using the configured inputs in a simple game like environment.  Note, by using multiple Carbon event handlers and due to the HID Manager and Utilities architecture we are able to provide easy on the fly reconfiguration of input.
+
+----
+
+Requirements: Mac OS X 10.5, Xcode 3.2
+
+Packing List
+------------
+The sample contains the following items:
+
+	HID Config Save-Read Me.txt		- this file
+	HID Config Save.xcodeproj		- Xcode project file
+	HID_Config_Save_Prefix.pch		- prefix header file
+	main.m							- main source file
+	HID_Config_SaveAppDelegate.m	- implementation of application delegate class
+	HID_Config_SaveAppDelegate.h	- header for application delegate class
+	HID_Config_Save-Info.plist		- source for info.plist
+	PlayView.m						- implementation of play view class
+	PlayView.h						- header for play view class
+	English.lproj					- English localization files
+		-	MainMenu.xib			- the main nib
+		-	InfoPlist.strings		- strings file
+	HID Utilities					- folder of sources for HID utility files
+		-	HID_Config_Utilities.c	- HID configuration utilitys source
+		-	HID_Error_Handler.c		- HID error utilitys source
+		-	HID_Name_Lookup.c		- HID device/element name lookup source
+		-	HID_Queue_Utilities.c	- HID queue utilitys source
+		-	HID_Utilities.c			- HID utilitys source
+		-	HID_Utilities_External.h	- HID utilitys headers
+		-	IOHIDManager			- folder of sources for IOHID Manager support files
+			-	ImmrHIDUtilAddOn.c	- Immersion (Force Feedback) add on source
+			-	ImmrHIDUtilAddOn.h	- Immersion (Force Feedback) add on header
+			-	IOHIDDevice_.c		- IOHIDDevice source
+			-	IOHIDDevice_.h		- IOHIDDevice header
+			-	IOHIDElement_.c		- IOHIDElement source
+			-	IOHIDElement_.h		- IOHIDElement header
+			⁃	IOHIDLib_.h			- single include header for HID utility files
+		⁃	English.lproj			- HID utilities localization files
+			-	HID_cookie_strings.plist		- HID cookie usage strings
+			-	HID_device_usage_strings.plist	- HID device usage strings
+			-	HID_usage_strings.plist			- HID usage strings
+	build							- contains a prebuilt binary.
+	Application.icns				- Application icon file
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.2 on Mac OS X 10.6.  You should be able to just open the project and choose Build from the Build menu.  This will build "HID Config Save.app" in the "build/debug" or "build/release" directory.
+
+Using the Sample
+----------------
+Launch "HID Config Save"
+Press the "X Axis" button and then press or move a USB HID devices element (key, button, axis, etc) to assign that element to that action.
+Repeat the previous step for the "Y Axis", "Thrust", and "Fire" buttons.
+Click the "Save" button.
+Quit and re-launch the "HID Config" application.
+A window should appear. Note: the buttons should be assigned to the saved configuration.
+Click on the "Play" tab.
+A black view should appear; moving the HID element associated with the X or Y axis should move the dot and crosshairs in the center of the view. Interacting with the "Fire" element should change the crosshairs into (red) laser traces (from the corner of the view). Interacting with the "Thrust" element should change the dots color from yellow to green.
+
+Caveats
+-------
+
+This demonstration application and the set of utilities is constantly evolving to both address any bugs and provide better support for developer requested features. Any suggestions and/or bugs can be directed to the Apple bug reporter at: <http://developer.apple.com/bugreporter/index.html>
+
+We hope this helps people get up and running with the HID Manager APIs introduced in 10.5 in a quick and painless manner.
+
+Credits and Version History
+---------------------------
+
+Version 5.0	27 July 2010
+		Cocoa rewrite! 
+		Element calibration properties now doubles.
+		Device / Element info printf's now use HIDDump[Device/Element]Info.
+
+Version 4.0	18 Oct 2007
+		Update for new Leopard API's and Universal Binary. 
+		Dropped MWCW, Project Builder and all CFM support.
+
+Version 3.2	15 Oct 2004
+		Fixed a bug where HIDGetNextDeviceElement wasn't
+			iterating to the next sibling when returning to the top of the tree.
+		Reformatted for DTS template
+		Changed to using hu_device_t and hu_element_t
+		Added Intro.rtf ( may be merged into generic read me )
+		Added Immersion sources ( for FFB )
+
+Version 3.1	28 Oct 2002
+		General cleanup for web posting.
+
+Version 3.0	First major release since 2.0 in Dec 2K1.
+		Changed all references to "Kernel/IOKit/hidsystem/" to "IOKit/hid/".
+		Added "Queue Empty" callback test code ( it works! ).
+		Changed HIDSaveElementConfig => HIDSaveElementPref
+		Changed HIDRestoreElementConfig => HIDRestoreElementPref
+		GetDeviceElementNameString now uses the "New & Improved!"
+			HIDGetElementNameFromVendorProductUsage instead of the
+			HIDGetUsageName API. 
+		Added menus and routines to rebuild the device list, 
+			and test transaction, polling and pinging devices.
+		Changed the HIDBuildDeviceList call in main to NOT limit 
+			the device list to just gamepads.
+
+Version 2.0: Update for new interface types and include files. Added
+		CFM support in separate CW project.  This CFM
+		application utilizes the HID.Bundle ( containing a MachO
+		dylib ).  The sample is set up to look for the bundle in
+		the same directory as the application ( which could be
+		modified easily to suit developer needs ).  Note, this
+		CFM sample application is bundled ( with the CW project
+		designed to put the executable in the correct place with
+		the correct name for the bundle ) but this is only to
+		support the Nib interface. There is no requirement for a
+		bundled application to use HID Utilities CFM support.
+
+Version 1.1: 	Update.  Updated a number of framework issues.
+
+Version 1.0: 	Initial release.  Application to demonstrate building
+		device list, configuring input for simple game, save and
+		retrieving configuration and handling input for the game.
+		painless manner.
+
+Share and Enjoy.
+Apple Developer Technical Support
