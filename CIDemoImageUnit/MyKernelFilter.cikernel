@@ -1,0 +1,12 @@
+kernel vec4 maskRed(sampler image, float scale, float greenWeight)
+{
+    // Get source pixel
+    vec4   p = sample(image, samplerCoord(image));
+
+    // Compute red vs green with weights, to distinguish
+    // rose from background
+    float  x = scale*(p.r - greenWeight*p.g);
+
+    // Create mask value clamped to 0..1 range
+    return vec4(clamp(x, 0.0, 1.0));
+}
