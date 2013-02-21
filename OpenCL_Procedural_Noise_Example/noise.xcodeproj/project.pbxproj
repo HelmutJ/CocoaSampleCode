@@ -1,0 +1,228 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3149B980E6F211E0075BA9A /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3149B950E6F211E0075BA9A /* GLUT.framework */; };
+		C3149B990E6F211E0075BA9A /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3149B960E6F211E0075BA9A /* OpenCL.framework */; };
+		C3149B9A0E6F211E0075BA9A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3149B970E6F211E0075BA9A /* OpenGL.framework */; };
+		C3149BA70E6F213E0075BA9A /* noise.c in Sources */ = {isa = PBXBuildFile; fileRef = C3149BA50E6F213E0075BA9A /* noise.c */; };
+		C3F54E2A0EEDE0AC0062A7F9 /* noise_kernel.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3F54E290EEDE0A70062A7F9 /* noise_kernel.cl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C39444690DAFF5A0008FFE68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				C3F54E2A0EEDE0AC0062A7F9 /* noise_kernel.cl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		466E0F5F0C932E1A00ED01DB /* noise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = noise; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3149B950E6F211E0075BA9A /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		C3149B960E6F211E0075BA9A /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+		C3149B970E6F211E0075BA9A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		C3149BA50E6F213E0075BA9A /* noise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = noise.c; sourceTree = "<group>"; };
+		C3F54E290EEDE0A70062A7F9 /* noise_kernel.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = noise_kernel.cl; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		466E0F5D0C932E1A00ED01DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3149B980E6F211E0075BA9A /* GLUT.framework in Frameworks */,
+				C3149B990E6F211E0075BA9A /* OpenCL.framework in Frameworks */,
+				C3149B9A0E6F211E0075BA9A /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		466E0F490C93291B00ED01DB = {
+			isa = PBXGroup;
+			children = (
+				C3149A880E6F21010075BA9A /* Frameworks */,
+				C3149A870E6F20FB0075BA9A /* Sources */,
+				C3149A860E6F20F50075BA9A /* Kernels */,
+				466E0F600C932E1A00ED01DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		466E0F600C932E1A00ED01DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				466E0F5F0C932E1A00ED01DB /* noise */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3149A860E6F20F50075BA9A /* Kernels */ = {
+			isa = PBXGroup;
+			children = (
+				C3F54E290EEDE0A70062A7F9 /* noise_kernel.cl */,
+			);
+			name = Kernels;
+			sourceTree = "<group>";
+		};
+		C3149A870E6F20FB0075BA9A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C3149BA50E6F213E0075BA9A /* noise.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		C3149A880E6F21010075BA9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3149B950E6F211E0075BA9A /* GLUT.framework */,
+				C3149B960E6F211E0075BA9A /* OpenCL.framework */,
+				C3149B970E6F211E0075BA9A /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		466E0F5E0C932E1A00ED01DB /* noise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "noise" */;
+			buildPhases = (
+				466E0F5C0C932E1A00ED01DB /* Sources */,
+				466E0F5D0C932E1A00ED01DB /* Frameworks */,
+				C39444690DAFF5A0008FFE68 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = noise;
+			productName = noise;
+			productReference = 466E0F5F0C932E1A00ED01DB /* noise */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		466E0F4B0C93291B00ED01DB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "noise" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 466E0F490C93291B00ED01DB;
+			productRefGroup = 466E0F600C932E1A00ED01DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				466E0F5E0C932E1A00ED01DB /* noise */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		466E0F5C0C932E1A00ED01DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3149BA70E6F213E0075BA9A /* noise.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		466E0F4C0C93291B00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Debug;
+		};
+		466E0F4D0C93291B00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Release;
+		};
+		466E0F620C932E1A00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = noise;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		466E0F630C932E1A00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = noise;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "noise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F4C0C93291B00ED01DB /* Debug */,
+				466E0F4D0C93291B00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "noise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F620C932E1A00ED01DB /* Debug */,
+				466E0F630C932E1A00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 466E0F4B0C93291B00ED01DB /* Project object */;
+}
