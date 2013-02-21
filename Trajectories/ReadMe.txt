@@ -1,0 +1,4 @@
+### OpenCL Trajectories Example ###===========================================================================DESCRIPTION:This tool demonstrates how to execute a simple game physics engine for 
+computing trajectory of a projectile within a framework of OpenCL kernels.
+
+For additional details refer to the files in the Docs directory.===========================================================================BUILD REQUIREMENTS:Mac OS X v10.6 or later===========================================================================RUNTIME REQUIREMENTS:Mac OS X v10.6 or later with OpenCL 1.0===========================================================================CHANGES FROM PREVIOUS VERSIONS:Version 1.0- First version.===========================================================================Copyright (C) 2009 Apple Inc. All rights reserved.

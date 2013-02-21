@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36F5142F0F9D1A4E00CF6C9F /* TrajectoriesKernel.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36F5141D0F9D1A4E00CF6C9F /* TrajectoriesKernel.cl */; };
+		36F514300F9D1A4E00CF6C9F /* Trajectories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F5141F0F9D1A4E00CF6C9F /* Trajectories.cpp */; };
+		36F514320F9D1A4E00CF6C9F /* OpenCLFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F514290F9D1A4E00CF6C9F /* OpenCLFile.cpp */; };
+		36F514330F9D1A4E00CF6C9F /* OpenCLKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F5142A0F9D1A4E00CF6C9F /* OpenCLKernel.cpp */; };
+		36F514340F9D1A4E00CF6C9F /* OpenCLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F5142B0F9D1A4E00CF6C9F /* OpenCLProgram.cpp */; };
+		36F514350F9D1A4E00CF6C9F /* Trajectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36F5142D0F9D1A4E00CF6C9F /* Trajectory.cpp */; };
+		36FF8A5B0FA28812009A387C /* OpenCLBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36FF8A5A0FA28812009A387C /* OpenCLBuffer.cpp */; };
+		C3770EFD0E6F1138009A5A77 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3770EFC0E6F1138009A5A77 /* OpenCL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C39444690DAFF5A0008FFE68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				36F5142F0F9D1A4E00CF6C9F /* TrajectoriesKernel.cl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		36F5141D0F9D1A4E00CF6C9F /* TrajectoriesKernel.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrajectoriesKernel.cl; sourceTree = "<group>"; };
+		36F5141F0F9D1A4E00CF6C9F /* Trajectories.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trajectories.cpp; sourceTree = "<group>"; };
+		36F514230F9D1A4E00CF6C9F /* OpenCLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLFile.h; sourceTree = "<group>"; };
+		36F514240F9D1A4E00CF6C9F /* OpenCLKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLKernel.h; sourceTree = "<group>"; };
+		36F514250F9D1A4E00CF6C9F /* OpenCLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLKit.h; sourceTree = "<group>"; };
+		36F514260F9D1A4E00CF6C9F /* OpenCLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLProgram.h; sourceTree = "<group>"; };
+		36F514290F9D1A4E00CF6C9F /* OpenCLFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCLFile.cpp; sourceTree = "<group>"; };
+		36F5142A0F9D1A4E00CF6C9F /* OpenCLKernel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCLKernel.cpp; sourceTree = "<group>"; };
+		36F5142B0F9D1A4E00CF6C9F /* OpenCLProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCLProgram.cpp; sourceTree = "<group>"; };
+		36F5142D0F9D1A4E00CF6C9F /* Trajectory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trajectory.cpp; sourceTree = "<group>"; };
+		36F5142E0F9D1A4E00CF6C9F /* Trajectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trajectory.h; sourceTree = "<group>"; };
+		36FF8A590FA28806009A387C /* OpenCLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCLBuffer.h; sourceTree = "<group>"; };
+		36FF8A5A0FA28812009A387C /* OpenCLBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenCLBuffer.cpp; sourceTree = "<group>"; };
+		466E0F5F0C932E1A00ED01DB /* trajectories */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trajectories; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3770EFC0E6F1138009A5A77 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		466E0F5D0C932E1A00ED01DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3770EFD0E6F1138009A5A77 /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36F5141B0F9D1A4E00CF6C9F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				36F5141C0F9D1A4E00CF6C9F /* Kernel */,
+				36F5141E0F9D1A4E00CF6C9F /* Main */,
+				36F514200F9D1A4E00CF6C9F /* OpenCL */,
+				36F5142C0F9D1A4E00CF6C9F /* Trajectory */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		36F5141C0F9D1A4E00CF6C9F /* Kernel */ = {
+			isa = PBXGroup;
+			children = (
+				36F5141D0F9D1A4E00CF6C9F /* TrajectoriesKernel.cl */,
+			);
+			path = Kernel;
+			sourceTree = "<group>";
+		};
+		36F5141E0F9D1A4E00CF6C9F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				36F5141F0F9D1A4E00CF6C9F /* Trajectories.cpp */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		36F514200F9D1A4E00CF6C9F /* OpenCL */ = {
+			isa = PBXGroup;
+			children = (
+				36F514210F9D1A4E00CF6C9F /* Headers */,
+				36F514270F9D1A4E00CF6C9F /* Sources */,
+			);
+			path = OpenCL;
+			sourceTree = "<group>";
+		};
+		36F514210F9D1A4E00CF6C9F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				36FF8A590FA28806009A387C /* OpenCLBuffer.h */,
+				36F514240F9D1A4E00CF6C9F /* OpenCLKernel.h */,
+				36F514230F9D1A4E00CF6C9F /* OpenCLFile.h */,
+				36F514260F9D1A4E00CF6C9F /* OpenCLProgram.h */,
+				36F514250F9D1A4E00CF6C9F /* OpenCLKit.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		36F514270F9D1A4E00CF6C9F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				36FF8A5A0FA28812009A387C /* OpenCLBuffer.cpp */,
+				36F5142A0F9D1A4E00CF6C9F /* OpenCLKernel.cpp */,
+				36F514290F9D1A4E00CF6C9F /* OpenCLFile.cpp */,
+				36F5142B0F9D1A4E00CF6C9F /* OpenCLProgram.cpp */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		36F5142C0F9D1A4E00CF6C9F /* Trajectory */ = {
+			isa = PBXGroup;
+			children = (
+				36F5142D0F9D1A4E00CF6C9F /* Trajectory.cpp */,
+				36F5142E0F9D1A4E00CF6C9F /* Trajectory.h */,
+			);
+			path = Trajectory;
+			sourceTree = "<group>";
+		};
+		466E0F490C93291B00ED01DB = {
+			isa = PBXGroup;
+			children = (
+				C3770EF30E6F10CF009A5A77 /* Frameworks */,
+				36F5141B0F9D1A4E00CF6C9F /* Sources */,
+				466E0F600C932E1A00ED01DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		466E0F600C932E1A00ED01DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				466E0F5F0C932E1A00ED01DB /* trajectories */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3770EF30E6F10CF009A5A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3770EFC0E6F1138009A5A77 /* OpenCL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		466E0F5E0C932E1A00ED01DB /* Trajectories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "Trajectories" */;
+			buildPhases = (
+				466E0F5C0C932E1A00ED01DB /* Sources */,
+				466E0F5D0C932E1A00ED01DB /* Frameworks */,
+				C39444690DAFF5A0008FFE68 /* CopyFiles */,
+				C3E793430E807ACA00170815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trajectories;
+			productName = transpose;
+			productReference = 466E0F5F0C932E1A00ED01DB /* trajectories */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		466E0F4B0C93291B00ED01DB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "Trajectories" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 466E0F490C93291B00ED01DB;
+			productRefGroup = 466E0F600C932E1A00ED01DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				466E0F5E0C932E1A00ED01DB /* Trajectories */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3E793430E807ACA00170815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		466E0F5C0C932E1A00ED01DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36F514300F9D1A4E00CF6C9F /* Trajectories.cpp in Sources */,
+				36F514320F9D1A4E00CF6C9F /* OpenCLFile.cpp in Sources */,
+				36F514330F9D1A4E00CF6C9F /* OpenCLKernel.cpp in Sources */,
+				36F514340F9D1A4E00CF6C9F /* OpenCLProgram.cpp in Sources */,
+				36F514350F9D1A4E00CF6C9F /* Trajectory.cpp in Sources */,
+				36FF8A5B0FA28812009A387C /* OpenCLBuffer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		466E0F4C0C93291B00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Debug;
+		};
+		466E0F4D0C93291B00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Release;
+		};
+		466E0F620C932E1A00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = trajectories;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		466E0F630C932E1A00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = transpose;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "Trajectories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F4C0C93291B00ED01DB /* Debug */,
+				466E0F4D0C93291B00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "Trajectories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F620C932E1A00ED01DB /* Debug */,
+				466E0F630C932E1A00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 466E0F4B0C93291B00ED01DB /* Project object */;
+}
