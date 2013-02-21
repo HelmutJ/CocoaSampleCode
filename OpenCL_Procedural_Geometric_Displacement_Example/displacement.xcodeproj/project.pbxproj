@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		466E0F660C932ED500ED01DB /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466E0F650C932ED500ED01DB /* OpenCL.framework */; };
+		466E0F6D0C932F0F00ED01DB /* displacement.c in Sources */ = {isa = PBXBuildFile; fileRef = 466E0F5A0C93299100ED01DB /* displacement.c */; };
+		C361E9F60DD4A34A008EE1E8 /* fresnel.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9EC0DD4A335008EE1E8 /* fresnel.frag */; };
+		C361E9F70DD4A34A008EE1E8 /* fresnel.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9ED0DD4A335008EE1E8 /* fresnel.vert */; };
+		C361E9F80DD4A34A008EE1E8 /* phong.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9EE0DD4A335008EE1E8 /* phong.frag */; };
+		C361E9F90DD4A34A008EE1E8 /* phong.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9EF0DD4A335008EE1E8 /* phong.vert */; };
+		C361E9FD0DD4A34A008EE1E8 /* skybox.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9F30DD4A335008EE1E8 /* skybox.frag */; };
+		C361E9FE0DD4A34A008EE1E8 /* skybox.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9F40DD4A335008EE1E8 /* skybox.vert */; };
+		C361E9FF0DD4A34A008EE1E8 /* stpeters_probe.pfm in CopyFiles */ = {isa = PBXBuildFile; fileRef = C361E9F50DD4A335008EE1E8 /* stpeters_probe.pfm */; };
+		C369604C0DB422F100604CCF /* displacement_kernel.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = C369604B0DB422ED00604CCF /* displacement_kernel.cl */; };
+		C3A5D13D0DAFF417005DF44B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5D13C0DAFF417005DF44B /* OpenGL.framework */; };
+		C3A5D1420DAFF42F005DF44B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A5D1410DAFF42F005DF44B /* GLUT.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C39444690DAFF5A0008FFE68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				C361E9F60DD4A34A008EE1E8 /* fresnel.frag in CopyFiles */,
+				C361E9F70DD4A34A008EE1E8 /* fresnel.vert in CopyFiles */,
+				C361E9F80DD4A34A008EE1E8 /* phong.frag in CopyFiles */,
+				C361E9F90DD4A34A008EE1E8 /* phong.vert in CopyFiles */,
+				C361E9FD0DD4A34A008EE1E8 /* skybox.frag in CopyFiles */,
+				C361E9FE0DD4A34A008EE1E8 /* skybox.vert in CopyFiles */,
+				C361E9FF0DD4A34A008EE1E8 /* stpeters_probe.pfm in CopyFiles */,
+				C369604C0DB422F100604CCF /* displacement_kernel.cl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		466E0F5A0C93299100ED01DB /* displacement.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = displacement.c; sourceTree = "<group>"; };
+		466E0F5F0C932E1A00ED01DB /* displacement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = displacement; sourceTree = BUILT_PRODUCTS_DIR; };
+		466E0F650C932ED500ED01DB /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+		C361E9EC0DD4A335008EE1E8 /* fresnel.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fresnel.frag; sourceTree = "<group>"; };
+		C361E9ED0DD4A335008EE1E8 /* fresnel.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fresnel.vert; sourceTree = "<group>"; };
+		C361E9EE0DD4A335008EE1E8 /* phong.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phong.frag; sourceTree = "<group>"; };
+		C361E9EF0DD4A335008EE1E8 /* phong.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phong.vert; sourceTree = "<group>"; };
+		C361E9F30DD4A335008EE1E8 /* skybox.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skybox.frag; sourceTree = "<group>"; };
+		C361E9F40DD4A335008EE1E8 /* skybox.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skybox.vert; sourceTree = "<group>"; };
+		C361E9F50DD4A335008EE1E8 /* stpeters_probe.pfm */ = {isa = PBXFileReference; lastKnownFileType = file; path = stpeters_probe.pfm; sourceTree = "<group>"; };
+		C369604B0DB422ED00604CCF /* displacement_kernel.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = displacement_kernel.cl; sourceTree = "<group>"; };
+		C3A5D13C0DAFF417005DF44B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		C3A5D1410DAFF42F005DF44B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		466E0F5D0C932E1A00ED01DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466E0F660C932ED500ED01DB /* OpenCL.framework in Frameworks */,
+				C3A5D13D0DAFF417005DF44B /* OpenGL.framework in Frameworks */,
+				C3A5D1420DAFF42F005DF44B /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		466E0F490C93291B00ED01DB = {
+			isa = PBXGroup;
+			children = (
+				C3AF0E7D0E6F460500BBDE72 /* Shaders */,
+				C3AF0E7F0E6F461700BBDE72 /* Images */,
+				C3AF0E7E0E6F460E00BBDE72 /* Kernels */,
+				C3AF0F8C0E6F462400BBDE72 /* Frameworks */,
+				C3AF0F8D0E6F462C00BBDE72 /* Sources */,
+				466E0F600C932E1A00ED01DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		466E0F600C932E1A00ED01DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				466E0F5F0C932E1A00ED01DB /* displacement */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3AF0E7D0E6F460500BBDE72 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C361E9EC0DD4A335008EE1E8 /* fresnel.frag */,
+				C361E9ED0DD4A335008EE1E8 /* fresnel.vert */,
+				C361E9EE0DD4A335008EE1E8 /* phong.frag */,
+				C361E9EF0DD4A335008EE1E8 /* phong.vert */,
+				C361E9F30DD4A335008EE1E8 /* skybox.frag */,
+				C361E9F40DD4A335008EE1E8 /* skybox.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		C3AF0E7E0E6F460E00BBDE72 /* Kernels */ = {
+			isa = PBXGroup;
+			children = (
+				C369604B0DB422ED00604CCF /* displacement_kernel.cl */,
+			);
+			name = Kernels;
+			sourceTree = "<group>";
+		};
+		C3AF0E7F0E6F461700BBDE72 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C361E9F50DD4A335008EE1E8 /* stpeters_probe.pfm */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C3AF0F8C0E6F462400BBDE72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A5D1410DAFF42F005DF44B /* GLUT.framework */,
+				C3A5D13C0DAFF417005DF44B /* OpenGL.framework */,
+				466E0F650C932ED500ED01DB /* OpenCL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3AF0F8D0E6F462C00BBDE72 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				466E0F5A0C93299100ED01DB /* displacement.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		466E0F5E0C932E1A00ED01DB /* displacement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "displacement" */;
+			buildPhases = (
+				466E0F5C0C932E1A00ED01DB /* Sources */,
+				466E0F5D0C932E1A00ED01DB /* Frameworks */,
+				C39444690DAFF5A0008FFE68 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = displacement;
+			productName = displacement;
+			productReference = 466E0F5F0C932E1A00ED01DB /* displacement */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		466E0F4B0C93291B00ED01DB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "displacement" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 466E0F490C93291B00ED01DB;
+			productRefGroup = 466E0F600C932E1A00ED01DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				466E0F5E0C932E1A00ED01DB /* displacement */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		466E0F5C0C932E1A00ED01DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466E0F6D0C932F0F00ED01DB /* displacement.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		466E0F4C0C93291B00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Debug;
+		};
+		466E0F4D0C93291B00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				HEADER_SEARCH_PATHS = ../../inc;
+				LIBRARY_SEARCH_PATHS = ../../lib;
+			};
+			name = Release;
+		};
+		466E0F620C932E1A00ED01DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = displacement;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		466E0F630C932E1A00ED01DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../lib\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = displacement;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		466E0F4E0C93291B00ED01DB /* Build configuration list for PBXProject "displacement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F4C0C93291B00ED01DB /* Debug */,
+				466E0F4D0C93291B00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		466E0F640C932E1A00ED01DB /* Build configuration list for PBXNativeTarget "displacement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E0F620C932E1A00ED01DB /* Debug */,
+				466E0F630C932E1A00ED01DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 466E0F4B0C93291B00ED01DB /* Project object */;
+}
