@@ -1,0 +1,350 @@
+Analysis of Sample Results for Dispatch_Compare
+
+The following results were obtained by running on Mac OS X v10.6 Snow Leopard:
+
+$ Dispatch_Compared -t 60 -m 1000000 -f 16
+Benchmark averaged over: 60 seconds
+CPU speed: 2.66 GHz
+Iterate maximum of: 1000000 times
+Work function folded: 16 times
+
+Note that the actual results may vary greatly depending on the configuration of the machine it is run on.
+
+There are several salient points to observe about these results:
+
+1. The basic act of queuing is much faster than forking a new thread, over 100X when doing 8 or more
+
+2. For this kind of looping, dispatch_apply is always faster than manually creating blocks and queues. In addition, if there is only a single iteration, dispatch_apply will use a fast path to run on the current thread with virtually no overhead.
+
+3. OpenMP has a large initial overhead, probably due to always spinning up at least one (new) thread.  GCD avoids that problem by using a system-wide thread pool, but otherwise they perform very similarly for this type of problem.
+
+4. Unlike with threads, the bulk of GCD's time is usually spent in user space, enabling more efficient scheduling.
+
+5. On this machine, using concurrency (via dispatch_apply) becomes faster than a simple "for loop" when the total work takes around 40 microseconds.  Note that the crossover point could occur sooner with appropriate "striding" of the computation.
+
+6. Creating lots of queues--though bad programming practice--is nonetheless quite cheap, and for small workloads is actually faster than using a single concurrent queue (presumably since all the queues run on the parent thread). However, it is never the optimal solution.  Use a single dispatch_async for small workloads, and a concurrent queue for large ones.
+
+7. Explicitly creating threads is quite expensive: around 20 microseconds on this machine, much more if you're creating lots of them. In a real application, you would need to make sure you didn't create more than absolutely necessary, and the "right" number would vary depending on the hardware involved and what other applications were being run.
+
+Note that if you increase the number of folds (and thus the computation time of the work function) the crossover points from serial to parallel will occur much sooner.  Also, the specific crossover points may vary dramatically on different machines.  In most cases, however, the time spend on short iterations is inconsequential, so you should worry more about optimizing for when there are lots of iterations or large amounts of calculation per iteration.
+
+
+Sample Results for Dispatch_Compare
+
+$ /Users/Shared/Build/Release/Dispatch_Compared -t 60 -m 1000000 -f 16
+Benchmark averaged over: 60 seconds
+CPU speed: 2.66 GHz
+Iterate maximum of: 1000000 times
+Work function folded: 16 times
+
+ASYNCHRONOUS: Microseconds to *initiate* execution (avg. over 60 seconds)
+
+  µsecs±error/1        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.15± 0.43/alloc    =     1.15±0.43    [   +0%]      0.483u +     0.6628s [      0%]
+   2.19± 0.18/array    =     2.19±0.18    [  -48%]      1.465u +     0.6663s [     86%]
+   2.12± 0.22/dsptch_f =     2.12±0.22    [  -46%]      1.354u +      4.102s [    376%]
+   2.44± 0.57/dispatch =     2.44±0.57    [  -53%]      1.623u +       4.47s [    432%]
+  18.71± 4.52/fork     =     18.7±4.5     [  -94%]      3.183u +      18.29s [  1,774%]
+
+  µsecs±error/2        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.62± 0.19/alloc    =     1.24±0.37    [   +0%]     0.5449u +      0.695s [      0%]
+   1.57± 0.09/array    =     3.15±0.17    [  -61%]      2.364u +     0.7167s [    148%]
+   1.45± 0.18/dsptch_f =     2.91±0.37    [  -57%]      2.089u +      5.282s [    494%]
+   2.01± 0.26/dispatch =     4.02±0.53    [  -69%]      3.194u +      5.349s [    589%]
+  20.27± 6.00/fork     =     40.5±12      [  -97%]      12.82u +      52.21s [  5,145%]
+
+  µsecs±error/4        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.35± 0.15/alloc    =     1.42±0.59    [   +0%]        0.7u +     0.7147s [      0%]
+   1.10± 0.16/array    =     4.41±0.65    [  -68%]      3.615u +     0.7172s [    206%]
+   0.86± 0.37/dsptch_f =     3.44±1.5     [  -59%]      2.605u +      5.075s [    443%]
+   1.28± 0.18/dispatch =      5.1±0.71    [  -72%]      4.238u +      5.362s [    579%]
+  43.56±10.65/fork     =      174±43      [  -99%]      39.68u +      342.8s [ 26,937%]
+
+  µsecs±error/8        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.22± 0.15/alloc    =     1.79±1.2     [   +0%]      1.028u +     0.7636s [      0%]
+   0.92± 0.03/array    =     7.35±0.27    [  -76%]       6.53u +     0.7135s [    304%]
+   0.58± 0.06/dsptch_f =     4.62±0.5     [  -61%]      3.798u +      5.202s [    402%]
+   0.90± 0.18/dispatch =     7.18±1.4     [  -75%]      6.307u +      5.137s [    539%]
+  98.19±11.87/fork     =      785±95      [ -100%]        104u +      1,463s [ 87,351%]
+
+  µsecs±error/16       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.17± 3.94/alloc    =     2.74±63      [   +0%]      1.768u +     0.8645s [      0%]
+   0.80± 0.07/array    =     12.9±1.2     [  -79%]      12.03u +     0.7144s [    384%]
+   0.42± 0.04/dsptch_f =     6.79±0.64    [  -60%]      5.975u +      5.219s [    325%]
+   0.68± 0.12/dispatch =     10.9±2       [  -75%]      10.07u +      5.222s [    481%]
+ 162.99±12.96/fork     = 2.61e+03±2.1e+02 [ -100%]      234.7u +      4,240s [169,892%]
+
+  µsecs±error/32       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.16± 4.99/alloc    =     4.96±1.6e+02 [   +0%]      3.353u +      1.068s [      0%]
+   0.71± 0.04/array    =     22.7±1.2     [  -78%]      21.84u +     0.7253s [    411%]
+   0.33± 0.04/dsptch_f =     10.6±1.3     [  -53%]      13.48u +      5.648s [    333%]
+   0.79± 0.23/dispatch =     25.2±7.2     [  -80%]      29.05u +       6.58s [    706%]
+ 236.52±13.09/fork     = 7.57e+03±4.2e+02 [ -100%]      503.1u +  1.111e+04s [262,671%]
+
+  µsecs±error/64       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.22±11.59/alloc    =     14.4±7.4e+02 [   +0%]      6.385u +      1.526s [      0%]
+   0.66± 0.24/array    =     42.4±15      [  -66%]      41.55u +     0.7312s [    435%]
+   0.34± 0.04/dsptch_f =     21.8±2.6     [  -34%]      31.65u +       6.08s [    377%]
+   0.63± 0.15/dispatch =     40.1±9.7     [  -64%]       47.4u +      6.196s [    577%]
+ 295.36±15.24/fork     = 1.89e+04±9.8e+02 [ -100%]      1,039u +  2.622e+04s [344,415%]
+
+  µsecs±error/128      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.27±11.49/alloc    =     34.2±1.5e+03 [   +0%]      12.19u +      2.231s [      0%]
+   0.64± 0.04/array    =     82.1±5.7     [  -58%]      81.22u +     0.7739s [    469%]
+   0.45± 0.07/dsptch_f =     57.8±9.4     [  -41%]      80.36u +      6.816s [    504%]
+   0.73± 0.28/dispatch =     93.2±35      [  -63%]      114.4u +      6.681s [    739%]
+ 311.40±14.49/fork     = 3.99e+04±1.9e+03 [ -100%]      2,084u +  5.462e+04s [393,081%]
+
+  µsecs±error/256      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.12± 1.75/alloc    =     30.9±4.5e+02 [   +0%]      23.92u +        3.6s [      0%]
+   0.62± 0.49/array    =      158±1.3e+02 [  -80%]        157u +     0.8497s [    474%]
+   0.46± 0.07/dsptch_f =      116±19      [  -73%]      157.5u +      11.05s [    512%]
+   0.68± 0.58/dispatch =      173±1.5e+02 [  -82%]      208.5u +      9.335s [    692%]
+ 312.23±29.57/fork     = 7.99e+04±7.6e+03 [ -100%]      3,948u +  1.085e+05s [408,529%]
+
+  µsecs±error/512      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.14± 2.36/alloc    =       74±1.2e+03 [   +0%]      47.22u +      6.607s [      0%]
+   0.62± 0.04/array    =      317±21      [  -77%]      315.3u +     0.9726s [    488%]
+   0.43± 0.05/dsptch_f =      222±26      [  -67%]      306.1u +      14.11s [    495%]
+   0.70± 0.86/dispatch =      359±4.4e+02 [  -79%]      434.4u +      12.66s [    731%]
+ 341.74±15.05/fork     = 1.75e+05±7.7e+03 [ -100%]      8,332u +  2.336e+05s [449,352%]
+
+  µsecs±error/1,024    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.13± 1.37/alloc    =      132±1.4e+03 [   +0%]      94.01u +      11.95s [      0%]
+   0.62± 0.30/array    =      630±3.1e+02 [  -79%]      627.5u +      1.068s [    493%]
+   0.45± 0.06/dsptch_f =      463±64      [  -72%]      640.3u +      23.73s [    527%]
+   0.69± 1.64/dispatch =      709±1.7e+03 [  -81%]      843.7u +      21.28s [    716%]
+ 360.52±15.05/fork     = 3.69e+05±1.5e+04 [ -100%]  1.658e+04u +  4.848e+05s [473,091%]
+
+  µsecs±error/2,048    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.14± 1.10/alloc    =      284±2.3e+03 [   +0%]        189u +      23.51s [      0%]
+   0.61± 0.06/array    = 1.25e+03±1.3e+02 [  -77%]      1,251u +      1.489s [    489%]
+   0.40± 0.06/dsptch_f =      813±1.1e+02 [  -65%]      1,142u +       39.8s [    456%]
+   0.63± 2.49/dispatch = 1.29e+03±5.1e+03 [  -78%]      1,536u +      34.76s [    639%]
+ 386.28±15.08/fork     = 7.91e+05±3.1e+04 [ -100%]  3.328e+04u +  1.016e+06s [493,535%]
+
+  µsecs±error/4,096    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.14± 0.89/alloc    =      582±3.7e+03 [   +0%]      403.9u +      45.66s [      0%]
+   0.61± 0.13/array    = 2.52e+03±5.2e+02 [  -77%]      2,507u +      3.119s [    458%]
+   0.37± 0.06/dsptch_f = 1.51e+03±2.5e+02 [  -61%]      2,129u +      52.21s [    385%]
+   0.53± 0.09/dispatch = 2.18e+03±3.6e+02 [  -73%]      2,759u +      52.36s [    526%]
+ 419.85± 3.02/fork     = 1.72e+06±1.2e+04 [ -100%]  6.283e+04u +  2.145e+06s [491,064%]
+
+  µsecs±error/8,192    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.13± 0.51/alloc    = 1.03e+03±4.1e+03 [   +0%]      829.2u +      90.52s [      0%]
+   0.62± 0.13/array    = 5.07e+03±1.1e+03 [  -80%]      5,044u +      6.089s [    449%]
+   0.36± 0.06/dsptch_f = 2.92e+03±5.3e+02 [  -65%]      4,128u +      93.91s [    359%]
+   0.51± 0.08/dispatch = 4.17e+03±6.5e+02 [  -75%]      5,355u +      92.06s [    492%]
+ 511.74±52.66/fork     = 4.19e+06±4.3e+05 [ -100%]   2.16e+05u +  4.833e+06s [548,833%]
+
+  µsecs±error/16,384   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.13± 0.25/alloc    = 2.16e+03±4.1e+03 [   +0%]      1,501u +      450.9s [      0%]
+   0.64± 0.04/array    = 1.05e+04±7e+02   [  -79%]  1.028e+04u +      218.8s [    438%]
+   0.31± 0.09/dsptch_f = 5.04e+03±1.5e+03 [  -57%]      7,015u +      510.6s [    286%]
+   0.43± 0.23/dispatch =  7.1e+03±3.7e+03 [  -70%]      8,921u +        397s [    377%]
+
+  µsecs±error/32,768   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.14± 0.23/alloc    = 4.52e+03±7.4e+03 [   +0%]      2,944u +      922.4s [      0%]
+   0.63± 0.01/array    = 2.05e+04±4.6e+02 [  -78%]  2.028e+04u +      231.7s [    431%]
+   0.34± 0.07/dsptch_f = 1.12e+04±2.2e+03 [  -60%]  1.513e+04u +      1,910s [    341%]
+   0.47± 0.08/dispatch = 1.55e+04±2.6e+03 [  -71%]  1.918e+04u +      2,033s [    449%]
+
+  µsecs±error/65,536   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.43± 1.57/alloc    =  2.8e+04±1e+05   [   +0%]      5,719u +      1,744s [      0%]
+   0.66± 0.01/array    = 4.33e+04±7.9e+02 [  -35%]  4.251e+04u +      745.4s [    480%]
+   0.33± 0.06/dsptch_f = 2.18e+04±3.8e+03 [  +28%]  2.879e+04u +      5,195s [    355%]
+   0.46± 0.06/dispatch = 3.01e+04±3.9e+03 [   -7%]  3.691e+04u +      5,419s [    467%]
+
+  µsecs±error/131,072  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.42±31.87/alloc    = 1.86e+05±4.2e+06 [   +0%]  1.148e+04u +      5,315s [      0%]
+   0.67± 0.01/array    =  8.8e+04±9.1e+02 [ +112%]  8.706e+04u +      935.2s [    424%]
+   0.32± 0.05/dsptch_f = 4.18e+04±6.5e+03 [ +346%]  5.484e+04u +  1.144e+04s [    295%]
+   0.45± 0.05/dispatch = 5.86e+04±7.1e+03 [ +218%]  7.077e+04u +  1.204e+04s [    393%]
+
+  µsecs±error/262,144  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.85±13.37/alloc    = 2.24e+05±3.5e+06 [   +0%]  2.274e+04u +      7,169s [      0%]
+   0.72± 0.17/array    = 1.89e+05±4.5e+04 [  +18%]  1.811e+05u +      2,961s [    515%]
+   0.31± 0.04/dsptch_f = 8.21e+04±1.1e+04 [ +172%]  1.053e+05u +  2.606e+04s [    339%]
+   0.46± 0.05/dispatch = 1.21e+05±1.4e+04 [  +85%]    1.4e+05u +  3.168e+04s [    474%]
+
+  µsecs±error/524,288  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   0.22± 0.43/alloc    = 1.15e+05±2.3e+05 [   +0%]  4.556e+04u +      8,460s [      0%]
+   0.90± 0.29/array    = 4.73e+05±1.5e+05 [  -76%]  4.315e+05u +      4,137s [    706%]
+   0.31± 0.04/dsptch_f = 1.64e+05±1.9e+04 [  -30%]  2.068e+05u +   5.53e+04s [    385%]
+   0.46± 0.09/dispatch = 2.42e+05±4.8e+04 [  -52%]  2.638e+05u +  7.415e+04s [    526%]
+
+SYNCHRONOUS: Microseconds to *complete* execution (avg. over 60 seconds)
+
+  µsecs±error/1        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   3.59± 0.28/loop     =     3.59±0.28    [   +0%]      2.873u +     0.7078s [      0%]
+   3.64± 0.34/apply    =     3.64±0.34    [   -1%]       2.92u +     0.6984s [      1%]
+  26.03± 5.81/serial   =       26±5.8     [  -86%]      13.34u +      19.47s [    816%]
+  31.70± 8.08/parallel =     31.7±8.1     [  -89%]       13.6u +       28.5s [  1,076%]
+  28.22± 6.09/queues   =     28.2±6.1     [  -87%]      15.53u +      19.61s [    881%]
+  58.37± 9.58/openmp   =     58.4±9.6     [  -94%]      31.38u +      73.56s [  2,831%]
+ 199.05±200.63/thread   =      199±2e+02   [  -98%]      26.08u +      114.1s [  3,814%]
+
+  µsecs±error/2        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   3.30± 0.18/loop     =     6.59±0.37    [   +0%]      5.655u +     0.9082s [      0%]
+   6.81± 1.24/apply    =     13.6±2.5     [  -52%]      10.99u +      9.674s [    215%]
+  14.98± 3.24/serial   =       30±6.5     [  -78%]      18.54u +      19.26s [    476%]
+  18.86± 5.16/parallel =     37.7±10      [  -83%]      21.42u +      38.79s [    817%]
+  18.69± 3.98/queues   =     37.4±8       [  -82%]      27.87u +      28.77s [    763%]
+  29.27± 4.82/openmp   =     58.5±9.6     [  -89%]      35.22u +      74.46s [  1,571%]
+ 236.94±222.33/thread   =      474±4.4e+02 [  -99%]      49.51u +      329.9s [  5,681%]
+
+  µsecs±error/4        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   3.06± 0.12/loop     =     12.2±0.47    [   +0%]      11.28u +     0.9113s [      0%]
+   6.38± 1.38/apply    =     25.5±5.5     [  -52%]      21.63u +      27.37s [    302%]
+   9.60± 2.14/serial   =     38.4±8.6     [  -68%]      27.75u +      20.03s [    292%]
+  14.47± 2.62/parallel =     57.9±10      [  -79%]      42.32u +      58.05s [    723%]
+  13.34± 2.43/queues   =     53.4±9.7     [  -77%]      50.32u +      54.64s [    761%]
+  14.48± 2.44/openmp   =     57.9±9.7     [  -79%]      40.88u +      72.98s [    834%]
+ 765.02±146.39/thread   = 3.06e+03±5.9e+02 [ -100%]      133.5u +      3,056s [ 26,057%]
+
+  µsecs±error/8        = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.94± 0.16/loop     =     23.5±1.2     [   +0%]      22.54u +     0.9127s [      0%]
+   4.93± 0.90/apply    =     39.5±7.2     [  -40%]      38.35u +      39.39s [    232%]
+   6.92± 1.23/serial   =     55.4±9.8     [  -58%]      46.93u +      21.54s [    192%]
+  10.35± 1.59/parallel =     82.8±13      [  -72%]      75.51u +      80.27s [    564%]
+  10.17± 1.63/queues   =     81.3±13      [  -71%]      103.9u +      84.11s [    702%]
+   7.60± 1.40/openmp   =     60.8±11      [  -61%]      52.75u +      71.71s [    431%]
+ 964.98±127.91/thread   = 7.72e+03±1e+03   [ -100%]      244.8u +      7,726s [ 33,892%]
+
+  µsecs±error/16       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.88± 0.04/loop     =       46±0.67    [   +0%]      45.04u +     0.9285s [      0%]
+   2.49± 0.51/apply    =     39.8±8.1     [  +16%]      58.48u +       36.6s [    107%]
+   6.14± 1.21/serial   =     98.3±19      [  -53%]      93.05u +       23.1s [    153%]
+   6.06± 0.95/parallel =     96.9±15      [  -53%]      131.6u +      86.59s [    375%]
+   6.04± 3.83/queues   =     96.6±61      [  -52%]      172.5u +      85.43s [    461%]
+   4.12± 0.67/openmp   =       66±11      [  -30%]      75.33u +      71.15s [    219%]
+1024.88±131.54/thread   = 1.64e+04±2.1e+03 [ -100%]      432.5u +  1.629e+04s [ 36,286%]
+
+  µsecs±error/32       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.86± 0.22/loop     =     91.5±6.9     [   +0%]      90.26u +      1.194s [      0%]
+   1.80± 0.53/apply    =     57.6±17      [  +59%]      113.2u +      38.64s [     66%]
+   4.49± 0.64/serial   =      144±21      [  -36%]      152.9u +      19.62s [     89%]
+   3.90± 0.49/parallel =      125±16      [  -27%]      250.7u +      88.44s [    271%]
+   3.66± 1.51/queues   =      117±48      [  -22%]      293.5u +      58.75s [    285%]
+   2.46± 0.37/openmp   =     78.7±12      [  +16%]        121u +         72s [    111%]
+1141.46±106.05/thread   = 3.65e+04±3.4e+03 [ -100%]        860u +  3.564e+04s [ 39,814%]
+
+  µsecs±error/64       = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.83± 0.02/loop     =      181±1.1     [   +0%]      180.1u +      0.977s [      0%]
+   1.26± 0.18/apply    =     80.8±12      [ +124%]      208.4u +      37.49s [     36%]
+   3.91± 0.28/serial   =      250±18      [  -28%]      286.6u +      22.55s [     71%]
+   2.65± 0.32/parallel =      170±20      [   +7%]      465.5u +      84.52s [    204%]
+   3.38± 0.61/queues   =      217±39      [  -16%]      619.9u +       81.5s [    287%]
+   1.62± 0.25/openmp   =      104±16      [  +75%]      213.2u +      73.02s [     58%]
+1169.36±103.51/thread   = 7.48e+04±6.6e+03 [ -100%]      1,584u +  7.271e+04s [ 40,936%]
+
+  µsecs±error/128      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.82± 0.01/loop     =      361±1.2     [   +0%]        360u +     0.9864s [      0%]
+   1.04± 0.12/apply    =      133±16      [ +171%]      410.1u +      38.65s [     24%]
+   3.69± 0.21/serial   =      473±26      [  -24%]      551.4u +      24.43s [     60%]
+   2.02± 0.22/parallel =      258±28      [  +40%]        822u +      90.94s [    153%]
+   3.35± 0.82/queues   =      428±1.1e+02 [  -16%]      1,239u +      146.7s [    284%]
+   1.26± 0.22/openmp   =      162±29      [ +123%]      417.3u +       77.4s [     37%]
+1180.73±111.26/thread   = 1.51e+05±1.4e+04 [ -100%]      3,014u +  1.471e+05s [ 41,467%]
+
+  µsecs±error/256      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.82± 0.05/loop     =      723±12      [   +0%]      720.5u +      1.633s [      0%]
+   0.92± 0.10/apply    =      235±24      [ +208%]      782.5u +      39.39s [     14%]
+   3.58± 0.19/serial   =      916±50      [  -21%]      1,095u +      28.95s [     56%]
+   1.78± 0.18/parallel =      455±47      [  +59%]      1,585u +        103s [    134%]
+   3.28± 0.21/queues   =      841±55      [  -14%]      2,455u +      270.1s [    277%]
+   1.10± 0.20/openmp   =      282±51      [ +156%]      844.7u +      84.23s [     29%]
+1183.97±125.56/thread   = 3.03e+05±3.2e+04 [ -100%]      6,007u +  2.973e+05s [ 41,909%]
+
+  µsecs±error/512      = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.82± 0.01/loop     = 1.44e+03±6.2     [   +0%]      1,440u +      1.854s [      0%]
+   0.85± 0.08/apply    =      435±42      [ +232%]      1,563u +      40.43s [     11%]
+   3.53± 0.16/serial   = 1.81e+03±80      [  -20%]      2,182u +      37.31s [     54%]
+   1.65± 0.15/parallel =      845±77      [  +71%]      3,121u +      108.9s [    124%]
+   3.23± 0.19/queues   = 1.66e+03±99      [  -13%]      4,773u +      557.7s [    270%]
+   0.94± 0.18/openmp   =      479±91      [ +201%]      1,567u +      81.07s [     14%]
+1184.66±129.03/thread   = 6.07e+05±6.6e+04 [ -100%]  1.179e+04u +  5.956e+05s [ 42,016%]
+
+  µsecs±error/1,024    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.82± 0.01/loop     = 2.88e+03±6.5     [   +0%]      2,880u +      2.214s [      0%]
+   0.82± 0.09/apply    =      837±88      [ +245%]      3,089u +      40.06s [      9%]
+   3.51± 0.14/serial   = 3.59e+03±1.4e+02 [  -20%]      4,361u +       59.2s [     53%]
+   1.59± 0.13/parallel = 1.63e+03±1.3e+02 [  +77%]      6,165u +      136.8s [    119%]
+   3.25± 0.74/queues   = 3.33e+03±7.6e+02 [  -13%]      9,458u +      1,197s [    270%]
+   0.89± 0.14/openmp   =      911±1.5e+02 [ +216%]      3,134u +      93.56s [     12%]
+1211.52±112.92/thread   = 1.24e+06±1.2e+05 [ -100%]  2.385e+04u +  1.207e+06s [ 42,593%]
+
+  µsecs±error/2,048    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.81± 0.01/loop     = 5.77e+03±11      [   +0%]      5,761u +      3.552s [      0%]
+   0.80± 0.07/apply    = 1.63e+03±1.4e+02 [ +254%]      6,050u +      43.06s [      6%]
+   3.44± 0.11/serial   = 7.05e+03±2.2e+02 [  -18%]      8,587u +      98.01s [     51%]
+   1.58± 0.12/parallel = 3.23e+03±2.5e+02 [  +79%]  1.229e+04u +      201.4s [    117%]
+   3.20± 0.23/queues   = 6.56e+03±4.6e+02 [  -12%]  1.869e+04u +      2,287s [    264%]
+   0.82± 0.14/openmp   = 1.67e+03±2.9e+02 [ +244%]      6,030u +      91.75s [      6%]
+1240.29±49.39/thread   = 2.54e+06±1e+05   [ -100%]  4.873e+04u +  2.489e+06s [ 43,926%]
+
+  µsecs±error/4,096    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.81± 0.00/loop     = 1.15e+04±14      [   +0%]  1.152e+04u +      4.097s [      0%]
+   0.78± 0.06/apply    = 3.21e+03±2.6e+02 [ +259%]  1.216e+04u +      45.48s [      6%]
+   3.36± 0.10/serial   = 1.38e+04±4.1e+02 [  -16%]  1.653e+04u +      167.1s [     45%]
+   1.57± 0.11/parallel = 6.41e+03±4.5e+02 [  +80%]  2.448e+04u +      341.7s [    115%]
+   3.28± 0.25/queues   = 1.34e+04±1e+03   [  -14%]  3.785e+04u +      5,071s [    272%]
+   0.78± 0.14/openmp   =  3.2e+03±5.7e+02 [ +260%]  1.184e+04u +       96.2s [      4%]
+1232.05±107.67/thread   = 5.05e+06±4.4e+05 [ -100%]  9.843e+04u +  4.875e+06s [ 43,054%]
+
+  µsecs±error/8,192    = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.79± 0.00/loop     = 2.29e+04±30      [   +0%]  2.288e+04u +      10.48s [      0%]
+   0.77± 0.06/apply    = 6.34e+03±5e+02   [ +261%]  2.444e+04u +       55.8s [      7%]
+   3.29± 0.11/serial   = 2.69e+04±9e+02   [  -15%]   3.23e+04u +        296s [     42%]
+   1.59± 0.13/parallel =  1.3e+04±1.1e+03 [  +76%]  4.841e+04u +      703.4s [    115%]
+   3.09± 0.29/queues   = 2.53e+04±2.4e+03 [   -9%]  7.057e+04u +      6,884s [    238%]
+   0.77± 0.15/openmp   = 6.29e+03±1.2e+03 [ +264%]  2.318e+04u +      106.6s [      2%]
+1237.49±93.46/thread   = 1.01e+07±7.7e+05 [ -100%]  1.768e+05u +  9.877e+06s [ 43,821%]
+
+  µsecs±error/16,384   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.50± 0.00/loop     =  4.1e+04±53      [   +0%]  4.097e+04u +      22.67s [      0%]
+   0.70± 0.05/apply    = 1.14e+04±8.7e+02 [ +259%]   4.43e+04u +      76.68s [      8%]
+   2.95± 0.12/serial   = 4.84e+04±2e+03   [  -15%]  5.843e+04u +      1,495s [     46%]
+   1.49± 0.10/parallel = 2.45e+04±1.7e+03 [  +68%]  9.294e+04u +      1,490s [    130%]
+   3.20± 0.23/queues   = 5.24e+04±3.7e+03 [  -22%]  1.443e+05u +  2.185e+04s [    305%]
+   0.74± 0.10/openmp   = 1.22e+04±1.6e+03 [ +236%]  4.133e+04u +      111.1s [      1%]
+
+  µsecs±error/32,768   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   2.35± 0.00/loop     =  7.7e+04±79      [   +0%]  7.691e+04u +       42.3s [      0%]
+   0.66± 0.05/apply    = 2.15e+04±1.6e+03 [ +258%]  8.354e+04u +      108.5s [      9%]
+   2.71± 0.09/serial   = 8.88e+04±2.9e+03 [  -13%]  1.064e+05u +      3,037s [     42%]
+   1.47± 0.08/parallel = 4.82e+04±2.8e+03 [  +60%]  1.824e+05u +      4,690s [    143%]
+   3.16± 0.22/queues   = 1.03e+05±7.2e+03 [  -26%]  2.824e+05u +  4.546e+04s [    326%]
+   0.73± 0.07/openmp   = 2.39e+04±2.2e+03 [ +221%]  7.746e+04u +      137.8s [      1%]
+
+  µsecs±error/65,536   = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.75± 0.00/loop     = 1.15e+05±86      [   +0%]  1.145e+05u +      75.38s [      0%]
+   0.51± 0.05/apply    = 3.35e+04±3e+03   [ +242%]  1.269e+05u +      205.3s [     11%]
+   2.07± 0.07/serial   = 1.35e+05±4.9e+03 [  -15%]  1.691e+05u +      6,997s [     54%]
+   1.37± 0.05/parallel = 9.01e+04±3.5e+03 [  +27%]  3.374e+05u +  1.177e+04s [    205%]
+   3.19± 0.19/queues   = 2.09e+05±1.2e+04 [  -45%]  5.326e+05u +  1.111e+05s [    462%]
+   0.65± 0.02/openmp   = 4.26e+04±1.3e+03 [ +169%]   1.16e+05u +      175.5s [      1%]
+
+  µsecs±error/131,072  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.56± 0.00/loop     = 2.04e+05±3.4e+02 [   +0%]  2.041e+05u +      150.1s [      0%]
+   0.45± 0.03/apply    = 5.91e+04±4e+03   [ +246%]  2.291e+05u +      226.8s [     12%]
+   1.82± 0.05/serial   = 2.39e+05±6.5e+03 [  -14%]  3.044e+05u +  1.394e+04s [     56%]
+   1.35± 0.04/parallel = 1.76e+05±5.5e+03 [  +16%]  6.554e+05u +  2.749e+04s [    234%]
+   3.33± 0.17/queues   = 4.36e+05±2.2e+04 [  -53%]  1.064e+06u +  2.546e+05s [    546%]
+   0.62± 0.03/openmp   = 8.11e+04±4.2e+03 [ +152%]  2.072e+05u +      242.9s [      2%]
+
+  µsecs±error/262,144  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.44± 0.00/loop     = 3.78e+05±2.6e+02 [   +0%]  3.776e+05u +      182.9s [      0%]
+   0.42± 0.03/apply    =  1.1e+05±6.8e+03 [ +243%]  4.292e+05u +      380.2s [     14%]
+   1.68± 0.05/serial   = 4.41e+05±1.2e+04 [  -14%]   5.69e+05u +  3.531e+04s [     60%]
+   1.32± 0.03/parallel = 3.46e+05±7.6e+03 [   +9%]  1.273e+06u +  6.527e+04s [    254%]
+   3.23± 0.05/queues   = 8.47e+05±1.3e+04 [  -55%]  2.071e+06u +  5.011e+05s [    581%]
+   0.46± 0.03/openmp   = 1.21e+05±6.9e+03 [ +212%]  3.823e+05u +      344.1s [      1%]
+
+  µsecs±error/524,288  = WALL(µs)±error   [+-rate]   USER (µs) +    SYS (µs) [overhead]
+   1.38± 0.00/loop     = 7.23e+05±4.2e+02 [   +0%]  7.221e+05u +      585.3s [      0%]
+   0.40± 0.02/apply    = 2.12e+05±1e+04   [ +241%]  8.258e+05u +      687.3s [     14%]
+   1.62± 0.03/serial   = 8.47e+05±1.5e+04 [  -15%]  1.107e+06u +  8.113e+04s [     64%]
+   1.31± 0.03/parallel = 6.88e+05±1.3e+04 [   +5%]  2.498e+06u +  1.528e+05s [    267%]
+   3.26± 0.03/queues   = 1.71e+06±1.6e+04 [  -58%]  4.125e+06u +  1.041e+06s [    615%]
+   0.41± 0.03/openmp   = 2.17e+05±1.3e+04 [ +233%]  7.304e+05u +      594.9s [      1%]
