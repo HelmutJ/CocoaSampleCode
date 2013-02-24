@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* DFAppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F920D31B0F9CB70C00E5CD98 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920D31A0F9CB70C00E5CD98 /* OpenGL.framework */; };
+		F920D3210F9CB72A00E5CD98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920D3200F9CB72A00E5CD98 /* QuartzCore.framework */; };
+		F920DDD60F9D903E00E5CD98 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920DDD50F9D903E00E5CD98 /* OpenCL.framework */; };
+		F920DF130F9DC45500E5CD98 /* DispatchFractal.cl in Resources */ = {isa = PBXBuildFile; fileRef = F920DE840F9DAD5F00E5CD98 /* DispatchFractal.cl */; };
+		F92373B80F86DB4300E3995E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F92373B60F86DB4300E3995E /* Localizable.strings */; };
+		F92F16C60FD9D23D00CC51E3 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFCA239D0FD9D161007E6EA0 /* ReadMe.txt */; };
+		F93EF30A0F8E57870028CB68 /* DispatchFractal.icns in Resources */ = {isa = PBXBuildFile; fileRef = F93EF3080F8E57870028CB68 /* DispatchFractal.icns */; };
+		F9B50A6A0F7EFCAB00EDF1D4 /* DispatchFractal.c in Sources */ = {isa = PBXBuildFile; fileRef = F9DF74A30F7E731400EC062F /* DispatchFractal.c */; };
+		F9B50A6F0F7EFCDD00EDF1D4 /* DispatchFractal.c in Sources */ = {isa = PBXBuildFile; fileRef = F9DF74A30F7E731400EC062F /* DispatchFractal.c */; };
+		F9DC1C3E0FCFBA9600402602 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DC1C3D0FCFBA9600402602 /* Quartz.framework */; };
+		F9DF74A70F7E731400EC062F /* DispatchFractalCLI.c in Sources */ = {isa = PBXBuildFile; fileRef = F9DF74A40F7E731400EC062F /* DispatchFractalCLI.c */; };
+		F9DF75610F7E7E7C00EC062F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DF75600F7E7E7C00EC062F /* CoreFoundation.framework */; };
+		F9DF76200F7E97D500EC062F /* DFView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DF761F0F7E97D500EC062F /* DFView.m */; };
+		F9DF77ED0F7EC14E00EC062F /* DFFractals.c in Sources */ = {isa = PBXBuildFile; fileRef = F9DF77EC0F7EC14E00EC062F /* DFFractals.c */; settings = {COMPILER_FLAGS = "-O2 -ffast-math"; }; };
+		F9DF77EE0F7EC14E00EC062F /* DFFractals.c in Sources */ = {isa = PBXBuildFile; fileRef = F9DF77EC0F7EC14E00EC062F /* DFFractals.c */; settings = {COMPILER_FLAGS = "-O2 -ffast-math"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* DFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* DFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* DispatchFractal.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchFractal.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* DispatchFractal-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DispatchFractal-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* DispatchFractal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DispatchFractal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCA239D0FD9D161007E6EA0 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		F920D31A0F9CB70C00E5CD98 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		F920D3200F9CB72A00E5CD98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		F920DDD50F9D903E00E5CD98 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+		F920DE840F9DAD5F00E5CD98 /* DispatchFractal.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = DispatchFractal.cl; sourceTree = "<group>"; };
+		F92373B70F86DB4300E3995E /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F93EF3080F8E57870028CB68 /* DispatchFractal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DispatchFractal.icns; sourceTree = "<group>"; };
+		F9DC1C3D0FCFBA9600402602 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		F9DF749C0F7E72E900EC062F /* DispatchFractalCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DispatchFractalCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9DF74A10F7E731400EC062F /* DispatchFractal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchFractal.h; sourceTree = "<group>"; };
+		F9DF74A30F7E731400EC062F /* DispatchFractal.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; path = DispatchFractal.c; sourceTree = "<group>"; };
+		F9DF74A40F7E731400EC062F /* DispatchFractalCLI.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DispatchFractalCLI.c; sourceTree = "<group>"; };
+		F9DF74DD0F7E75A400EC062F /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base.h; path = /usr/include/dispatch/base.h; sourceTree = "<absolute>"; };
+		F9DF74DF0F7E75A400EC062F /* dispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dispatch.h; path = /usr/include/dispatch/dispatch.h; sourceTree = "<absolute>"; };
+		F9DF74E00F7E75A400EC062F /* group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = group.h; path = /usr/include/dispatch/group.h; sourceTree = "<absolute>"; };
+		F9DF74E10F7E75A400EC062F /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = object.h; path = /usr/include/dispatch/object.h; sourceTree = "<absolute>"; };
+		F9DF74E20F7E75A400EC062F /* once.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = once.h; path = /usr/include/dispatch/once.h; sourceTree = "<absolute>"; };
+		F9DF74E30F7E75A400EC062F /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = queue.h; path = /usr/include/dispatch/queue.h; sourceTree = "<absolute>"; };
+		F9DF74E40F7E75A400EC062F /* semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = semaphore.h; path = /usr/include/dispatch/semaphore.h; sourceTree = "<absolute>"; };
+		F9DF74E50F7E75A400EC062F /* source.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = source.h; path = /usr/include/dispatch/source.h; sourceTree = "<absolute>"; };
+		F9DF74E60F7E75A400EC062F /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = time.h; path = /usr/include/dispatch/time.h; sourceTree = "<absolute>"; };
+		F9DF75600F7E7E7C00EC062F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		F9DF761E0F7E97D400EC062F /* DFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFView.h; sourceTree = "<group>"; };
+		F9DF761F0F7E97D500EC062F /* DFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFView.m; sourceTree = "<group>"; };
+		F9DF77EC0F7EC14E00EC062F /* DFFractals.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DFFractals.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				F9DC1C3E0FCFBA9600402602 /* Quartz.framework in Frameworks */,
+				F920D3210F9CB72A00E5CD98 /* QuartzCore.framework in Frameworks */,
+				F920D31B0F9CB70C00E5CD98 /* OpenGL.framework in Frameworks */,
+				F920DDD60F9D903E00E5CD98 /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DF749A0F7E72E900EC062F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DF75610F7E7E7C00EC062F /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3D90F4B6AC300CF3369 /* DFAppDelegate.m */,
+				256AC3D80F4B6AC300CF3369 /* DFAppDelegate.h */,
+				F9DF761F0F7E97D500EC062F /* DFView.m */,
+				F9DF761E0F7E97D400EC062F /* DFView.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				F9DC1C3D0FCFBA9600402602 /* Quartz.framework */,
+				F920D3200F9CB72A00E5CD98 /* QuartzCore.framework */,
+				F920D31A0F9CB70C00E5CD98 /* OpenGL.framework */,
+				F920DDD50F9D903E00E5CD98 /* OpenCL.framework */,
+				F9DF75600F7E7E7C00EC062F /* CoreFoundation.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9DF74DC0F7E75A400EC062F /* dispatch */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* DispatchFractal.app */,
+				F9DF749C0F7E72E900EC062F /* DispatchFractalCLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* DispatchFractal */ = {
+			isa = PBXGroup;
+			children = (
+				BFCA239D0FD9D161007E6EA0 /* ReadMe.txt */,
+				F9B50A830F7EFD1200EDF1D4 /* Fractal */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = DispatchFractal;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F920DE840F9DAD5F00E5CD98 /* DispatchFractal.cl */,
+				F9DF74A40F7E731400EC062F /* DispatchFractalCLI.c */,
+				256AC3F00F4B6AF500CF3369 /* DispatchFractal.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				8D1107310486CEB800E47090 /* DispatchFractal-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				F92373B60F86DB4300E3995E /* Localizable.strings */,
+				F93EF3080F8E57870028CB68 /* DispatchFractal.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9B50A830F7EFD1200EDF1D4 /* Fractal */ = {
+			isa = PBXGroup;
+			children = (
+				F9DF74A30F7E731400EC062F /* DispatchFractal.c */,
+				F9DF74A10F7E731400EC062F /* DispatchFractal.h */,
+				F9DF77EC0F7EC14E00EC062F /* DFFractals.c */,
+			);
+			name = Fractal;
+			sourceTree = "<group>";
+		};
+		F9DF74DC0F7E75A400EC062F /* dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				F9DF74DD0F7E75A400EC062F /* base.h */,
+				F9DF74DF0F7E75A400EC062F /* dispatch.h */,
+				F9DF74E00F7E75A400EC062F /* group.h */,
+				F9DF74E10F7E75A400EC062F /* object.h */,
+				F9DF74E20F7E75A400EC062F /* once.h */,
+				F9DF74E30F7E75A400EC062F /* queue.h */,
+				F9DF74E40F7E75A400EC062F /* semaphore.h */,
+				F9DF74E50F7E75A400EC062F /* source.h */,
+				F9DF74E60F7E75A400EC062F /* time.h */,
+			);
+			name = dispatch;
+			path = /usr/include/dispatch;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* DispatchFractal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DispatchFractal" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DispatchFractal;
+			productInstallPath = "$(HOME)/Applications";
+			productName = DispatchFractal;
+			productReference = 8D1107320486CEB800E47090 /* DispatchFractal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9DF749B0F7E72E900EC062F /* DispatchFractalCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9DF74A00F7E72F500EC062F /* Build configuration list for PBXNativeTarget "DispatchFractalCLI" */;
+			buildPhases = (
+				F9DF74990F7E72E900EC062F /* Sources */,
+				F9DF749A0F7E72E900EC062F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DispatchFractalCLI;
+			productName = DispatchFractalCLI;
+			productReference = F9DF749C0F7E72E900EC062F /* DispatchFractalCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				ORGANIZATIONNAME = "Apple Inc.";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DispatchFractal" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* DispatchFractal */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* DispatchFractal */,
+				F9DF749B0F7E72E900EC062F /* DispatchFractalCLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F920DF130F9DC45500E5CD98 /* DispatchFractal.cl in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				F92373B80F86DB4300E3995E /* Localizable.strings in Resources */,
+				F93EF30A0F8E57870028CB68 /* DispatchFractal.icns in Resources */,
+				F92F16C60FD9D23D00CC51E3 /* ReadMe.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B50A6F0F7EFCDD00EDF1D4 /* DispatchFractal.c in Sources */,
+				F9DF77ED0F7EC14E00EC062F /* DFFractals.c in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* DFAppDelegate.m in Sources */,
+				F9DF76200F7E97D500EC062F /* DFView.m in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9DF74990F7E72E900EC062F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DF74A70F7E731400EC062F /* DispatchFractalCLI.c in Sources */,
+				F9DF77EE0F7EC14E00EC062F /* DFFractals.c in Sources */,
+				F9B50A6A0F7EFCAB00EDF1D4 /* DispatchFractal.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F92373B60F86DB4300E3995E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F92373B70F86DB4300E3995E /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DispatchFractal.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				INFOPLIST_FILE = "DispatchFractal-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = DispatchFractal;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DispatchFractal.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				INFOPLIST_FILE = "DispatchFractal-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = DispatchFractal;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(NATIVE_ARCH_64_BIT)",
+					"$(NATIVE_ARCH_32_BIT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_STRICT_ALIASING = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Winit-self",
+					"-Wpointer-arith",
+					"-Wcast-align",
+					"-Wdisabled-optimization",
+					"-Winline",
+					"-Wno-missing-field-initializers",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(NATIVE_ARCH_64_BIT)",
+					"$(NATIVE_ARCH_32_BIT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_STRICT_ALIASING = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Winit-self",
+					"-Wpointer-arith",
+					"-Wcast-align",
+					"-Wdisabled-optimization",
+					"-Winline",
+					"-Wno-missing-field-initializers",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		F9B50ABA0F7EFF5000EDF1D4 /* Release No Stats */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(NATIVE_ARCH_64_BIT)",
+					"$(NATIVE_ARCH_32_BIT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "FRACTAL_STATISTICS=0";
+				GCC_STRICT_ALIASING = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Winit-self",
+					"-Wpointer-arith",
+					"-Wcast-align",
+					"-Wdisabled-optimization",
+					"-Winline",
+					"-Wno-missing-field-initializers",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = "Release No Stats";
+		};
+		F9B50ABB0F7EFF5000EDF1D4 /* Release No Stats */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DispatchFractal.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				INFOPLIST_FILE = "DispatchFractal-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = DispatchFractal;
+			};
+			name = "Release No Stats";
+		};
+		F9B50ABC0F7EFF5000EDF1D4 /* Release No Stats */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"BLOCK_STATS=1",
+					"$(value)",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = DispatchFractalCLI;
+			};
+			name = "Release No Stats";
+		};
+		F9DF749E0F7E72EA00EC062F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"BLOCK_STATS=1",
+					"$(value)",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = DispatchFractalCLI;
+			};
+			name = Debug;
+		};
+		F9DF749F0F7E72EA00EC062F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DISPATCH_NO_LEGACY=1",
+					"$(value)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"BLOCK_STATS=1",
+					"$(value)",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = DispatchFractalCLI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DispatchFractal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+				F9B50ABB0F7EFF5000EDF1D4 /* Release No Stats */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DispatchFractal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				F9B50ABA0F7EFF5000EDF1D4 /* Release No Stats */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9DF74A00F7E72F500EC062F /* Build configuration list for PBXNativeTarget "DispatchFractalCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9DF749E0F7E72EA00EC062F /* Debug */,
+				F9DF749F0F7E72EA00EC062F /* Release */,
+				F9B50ABC0F7EFF5000EDF1D4 /* Release No Stats */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
