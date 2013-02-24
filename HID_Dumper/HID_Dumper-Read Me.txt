@@ -1,0 +1,66 @@
+HID Dumper
+Human Interface Device (info) dumper sample
+
+Version 1.0 23 Mar 2009 Initial release.  
+----
+
+This Xcode project builds a command line tool that when launched dumps out all HID devices and their properties optionally including all device elements and their properties.
+
+----
+
+Requirements: Mac OS X 10.5, Xcode 3.0
+
+Packing List
+------------
+The sample contains the following items:
+
+    HID_Dumper-Read Me.txt					- this file
+    HID_Dumper.xcodeproj					- Xcode project file
+    HID Utilities							- folder of sources for HID utility files
+		HID_Utilities_External.h			- header file for all HID Utility sources
+		HID_Utilities.c						- HID utility source file
+		HID_Config_Utilities.c				- HID configurations source file
+		HID_Queue_Utilities.c				- HID queues source file
+		HID_Name_Lookup.c					- HID Device/Element name lookup source file
+		HID_Error_Handler.c					- HID Error handling source file
+		IOHIDManager						- IOHID Manager sources
+			IOHIDLib_.h						- IOHIDLib header file
+			IOHIDDevice_.c					- IOHID Device source file
+			IOHIDDevice_.h					- IOHID Device header file
+			IOHIDElement_.h					- IOHID Element header file
+			IOHIDElement_.c					- IOHID Element source file
+			ImmrHIDUtilAddOn.h				- Immersion HID AddOn header file
+			ImmrHIDUtilAddOn.c				- Immersion HID AddOn source file
+		English.lproj						- HID Utility localization files
+			HID_usage_strings.plist			- HID element usage strings
+			HID_device_usage_strings.plist	- HID Device usage strings
+			HID_cookie_strings.plist		- HID Element cookie strings
+    main.c									- main source file
+    configs									- Xcode configuration files
+    build									- contains a prebuilt binary.
+
+Building the Sample
+-------------------
+The sample was built using Xcode 3.1.2 on Mac OS X 10.5.7.  You should be able to just open the project and choose "Build" from the Build menu. This will build "HID Dumper" tool in the "build/debug" or "build/release" directory.
+
+Using the Sample
+----------------
+In terminal "cd" to the projects "build/debug" or "build/release" directory (depending on which one you built) and then type "HID_Dumper".
+All the properties for all attached HID devices should be dumped to the terminal display.
+
+If you specify "-elements" on the command line then all HID elements for each HID device and their properties will be dumped also.
+
+Caveats
+-------
+
+This demonstration application and the set of utilities is constantly evolving to both address any bugs and provide better support for developer requested features. Any suggestions and/or bugs can be directed to the Apple bug reporter at: <http://developer.apple.com/bugreporter/index.html>
+
+We hope this helps people get up and running with the HID Manager APIs introduced in 10.5 in a quick and painless manner.
+
+Credits and Version History
+---------------------------
+
+Version 1.0 23 Mar 2009 Initial release.  
+
+Share and Enjoy.
+Apple Developer Technical Support
