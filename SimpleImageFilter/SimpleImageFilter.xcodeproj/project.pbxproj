@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		733BB382049A8F4600C919A3 /* iffToTiff.m in Sources */ = {isa = PBXBuildFile; fileRef = 036354C4FEEE2C127F000001 /* iffToTiff.m */; settings = {ATTRIBUTES = (); }; };
+		733BB383049A8F4600C919A3 /* SimpleImageFilter_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 036354C5FEEE2C127F000001 /* SimpleImageFilter_main.m */; settings = {ATTRIBUTES = (); }; };
+		733BB385049A8F4600C919A3 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036354D0FEEE2C127F000001 /* AppKit.framework */; };
+		733BB386049A8F4600C919A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036354D1FEEE2C127F000001 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		734E636B049E6A1D00C919A3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		036354C4FEEE2C127F000001 /* iffToTiff.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = iffToTiff.m; sourceTree = "<group>"; };
+		036354C5FEEE2C127F000001 /* SimpleImageFilter_main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SimpleImageFilter_main.m; sourceTree = "<group>"; };
+		036354CDFEEE2C127F000001 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		036354CEFEEE2C127F000001 /* SampleImage.iff */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleImage.iff; sourceTree = "<group>"; };
+		036354D0FEEE2C127F000001 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		036354D1FEEE2C127F000001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		733BB389049A8F4600C919A3 /* Info-SimpleImageFilter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-SimpleImageFilter.plist"; sourceTree = "<group>"; };
+		733BB38A049A8F4600C919A3 /* SimpleImageFilter.service */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleImageFilter.service; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		733BB384049A8F4600C919A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733BB385049A8F4600C919A3 /* AppKit.framework in Frameworks */,
+				733BB386049A8F4600C919A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		036354C0FEEE2C127F000001 /* SimpleImageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				036354CDFEEE2C127F000001 /* README.rtf */,
+				036354C1FEEE2C127F000001 /* Products */,
+				036354C3FEEE2C127F000001 /* Other Sources */,
+				036354C6FEEE2C127F000001 /* Supporting Files */,
+				036354CFFEEE2C127F000001 /* External Frameworks and Libraries */,
+				733BB389049A8F4600C919A3 /* Info-SimpleImageFilter.plist */,
+			);
+			name = SimpleImageFilter;
+			sourceTree = "<group>";
+		};
+		036354C1FEEE2C127F000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				733BB38A049A8F4600C919A3 /* SimpleImageFilter.service */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		036354C3FEEE2C127F000001 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				036354C4FEEE2C127F000001 /* iffToTiff.m */,
+				036354C5FEEE2C127F000001 /* SimpleImageFilter_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		036354C6FEEE2C127F000001 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				036354CEFEEE2C127F000001 /* SampleImage.iff */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		036354CFFEEE2C127F000001 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				036354D0FEEE2C127F000001 /* AppKit.framework */,
+				036354D1FEEE2C127F000001 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		733BB37E049A8F4600C919A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		733BB37D049A8F4600C919A3 /* SimpleImageFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B69BDECD08A2ECB3008AC9B5 /* Build configuration list for PBXNativeTarget "SimpleImageFilter" */;
+			buildPhases = (
+				733BB37E049A8F4600C919A3 /* Headers */,
+				733BB380049A8F4600C919A3 /* Resources */,
+				733BB381049A8F4600C919A3 /* Sources */,
+				733BB384049A8F4600C919A3 /* Frameworks */,
+				733BB387049A8F4600C919A3 /* Rez */,
+			);
+			buildRules = (
+				734E636B049E6A1D00C919A3 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SimpleImageFilter;
+			productInstallPath = "$(LOCAL_LIBRARY_DIR)/Services";
+			productName = SimpleImageFilter;
+			productReference = 733BB38A049A8F4600C919A3 /* SimpleImageFilter.service */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		036354BFFEEE2C127F000001 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B69BDED108A2ECB3008AC9B5 /* Build configuration list for PBXProject "SimpleImageFilter" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 036354C0FEEE2C127F000001 /* SimpleImageFilter */;
+			productRefGroup = 036354C1FEEE2C127F000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				733BB37D049A8F4600C919A3 /* SimpleImageFilter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		733BB380049A8F4600C919A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		733BB387049A8F4600C919A3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		733BB381049A8F4600C919A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733BB382049A8F4600C919A3 /* iffToTiff.m in Sources */,
+				733BB383049A8F4600C919A3 /* SimpleImageFilter_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B69BDECE08A2ECB3008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleImageFilter.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleImageFilter;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		B69BDECF08A2ECB3008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleImageFilter.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleImageFilter;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		B69BDED008A2ECB3008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.h;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-SimpleImageFilter.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Services";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SimpleImageFilter;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = service;
+			};
+			name = Default;
+		};
+		B69BDED208A2ECB3008AC9B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Development;
+		};
+		B69BDED308A2ECB3008AC9B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Deployment;
+		};
+		B69BDED408A2ECB3008AC9B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B69BDECD08A2ECB3008AC9B5 /* Build configuration list for PBXNativeTarget "SimpleImageFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDECE08A2ECB3008AC9B5 /* Development */,
+				B69BDECF08A2ECB3008AC9B5 /* Deployment */,
+				B69BDED008A2ECB3008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		B69BDED108A2ECB3008AC9B5 /* Build configuration list for PBXProject "SimpleImageFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B69BDED208A2ECB3008AC9B5 /* Development */,
+				B69BDED308A2ECB3008AC9B5 /* Deployment */,
+				B69BDED408A2ECB3008AC9B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 036354BFFEEE2C127F000001 /* Project object */;
+}

@@ -1,0 +1,28 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1016\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset204 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\ql\qnatural
+
+\f0\b\fs36 \cf0 SimpleImageFilter\
+\
+
+\b0\fs24 SimpleImageFilter is a filter service that converts IFF (Interchange File Format) images to TIFF, allowing Cocoa applications to load and display IFF images. 
+\b SimpleImageFilter_main.m
+\b0  shows how one might create a filter service; 
+\b iffToTiff.m
+\b0  contains mostly uninteresting code that does the actual image conversion.\
+\
+Note that this program is not meant to be a complete IFF to TIFF converter; it lacks many features, ignores many IFF chunks, doesn't recognize all IFF types, and probably has a few bugs. It's simply provided as an example of a filter service, and as a tool with which developers can check to see if their applications use NSImage in a way that allows them to load images reachable through filter services. If you install this service in your 
+\b ~/Library/Services
+\b0  directory, you should be able to drag and open 
+\b .iff
+\b0  image files in any application which imports images. A sample file (
+\b SampleImage.iff
+\b0 ) is provided for testing purposes.\
+\
+There are some tricky issues in creating a service:\
+\'95 The Info.plist needs to specify NSBGOnly = 1, in order to assure the service does not appear in the dock.\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\pardeftab720\li160\fi-160\ql\qnatural
+\cf0 \'95\'a0Because the input data may be passed on stdin (in which case the argument is /dev/stdin), the service must use classes that are capable of reading from devices (such as NSFileHandle).  [NSData dataWithContentsOfFile:] would fail for that reason.\
+}
