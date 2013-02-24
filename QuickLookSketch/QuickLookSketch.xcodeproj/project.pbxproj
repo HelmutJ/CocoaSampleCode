@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */; };
+		440BBDE80B0537AC0075B7E5 /* QuickLookSketch.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D576316048677EA00EA77CD /* QuickLookSketch.qlgenerator */; };
+		61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */; };
+		627414860B4EEC0B0069E3AD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627414850B4EEC0B0069E3AD /* ApplicationServices.framework */; };
+		6274148C0B4EED590069E3AD /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6274148B0B4EED590069E3AD /* CoreServices.framework */; };
+		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
+		DABC9D950A7A396B00E30D73 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DABC9D940A7A396B00E30D73 /* ReadMe.rtf */; };
+		F20B38230A761A2000C4A8DD /* SKTCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B38130A761A2000C4A8DD /* SKTCircle.h */; };
+		F20B38240A761A2000C4A8DD /* SKTCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B38140A761A2000C4A8DD /* SKTCircle.m */; };
+		F20B38250A761A2000C4A8DD /* SKTDrawDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B38150A761A2000C4A8DD /* SKTDrawDocument.h */; };
+		F20B38260A761A2000C4A8DD /* SKTDrawDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B38160A761A2000C4A8DD /* SKTDrawDocument.m */; };
+		F20B38270A761A2000C4A8DD /* SKTGraphic.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B38170A761A2000C4A8DD /* SKTGraphic.h */; };
+		F20B38280A761A2000C4A8DD /* SKTGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B38180A761A2000C4A8DD /* SKTGraphic.m */; };
+		F20B38290A761A2000C4A8DD /* SKTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B38190A761A2000C4A8DD /* SKTImage.h */; };
+		F20B382A0A761A2000C4A8DD /* SKTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B381A0A761A2000C4A8DD /* SKTImage.m */; };
+		F20B382B0A761A2000C4A8DD /* SKTLine.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B381B0A761A2000C4A8DD /* SKTLine.h */; };
+		F20B382C0A761A2000C4A8DD /* SKTLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B381C0A761A2000C4A8DD /* SKTLine.m */; };
+		F20B382D0A761A2000C4A8DD /* SKTRectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B381D0A761A2000C4A8DD /* SKTRectangle.h */; };
+		F20B382E0A761A2000C4A8DD /* SKTRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B381E0A761A2000C4A8DD /* SKTRectangle.m */; };
+		F20B382F0A761A2000C4A8DD /* SKTRenderingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B381F0A761A2000C4A8DD /* SKTRenderingView.h */; };
+		F20B38300A761A2000C4A8DD /* SKTRenderingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B38200A761A2000C4A8DD /* SKTRenderingView.m */; };
+		F20B38310A761A2000C4A8DD /* SKTTextArea.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B38210A761A2000C4A8DD /* SKTTextArea.h */; };
+		F20B38320A761A2000C4A8DD /* SKTTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B38220A761A2000C4A8DD /* SKTTextArea.m */; };
+		F20B383C0A761A9300C4A8DD /* SKTError.h in Headers */ = {isa = PBXBuildFile; fileRef = F20B383A0A761A9300C4A8DD /* SKTError.h */; };
+		F20B383D0A761A9300C4A8DD /* SKTError.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B383B0A761A9300C4A8DD /* SKTError.m */; };
+		F23287A00A761867004F5233 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F232879F0A761867004F5233 /* Cocoa.framework */; };
+		F28CFC030A3EC0C6000ABFF5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		440BBDFA0B0537B10075B7E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Library/QuickLook;
+			dstSubfolderSpec = 0;
+			files = (
+				440BBDE80B0537AC0075B7E5 /* QuickLookSketch.qlgenerator in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08FB77B6FE84183AC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
+		61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		622150340BBDD60C00126F4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		627414850B4EEC0B0069E3AD /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		6274148B0B4EED590069E3AD /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		8D576316048677EA00EA77CD /* QuickLookSketch.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickLookSketch.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABC9D940A7A396B00E30D73 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		F20B38130A761A2000C4A8DD /* SKTCircle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTCircle.h; sourceTree = "<group>"; };
+		F20B38140A761A2000C4A8DD /* SKTCircle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTCircle.m; sourceTree = "<group>"; };
+		F20B38150A761A2000C4A8DD /* SKTDrawDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTDrawDocument.h; sourceTree = "<group>"; };
+		F20B38160A761A2000C4A8DD /* SKTDrawDocument.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTDrawDocument.m; sourceTree = "<group>"; };
+		F20B38170A761A2000C4A8DD /* SKTGraphic.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTGraphic.h; sourceTree = "<group>"; };
+		F20B38180A761A2000C4A8DD /* SKTGraphic.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTGraphic.m; sourceTree = "<group>"; };
+		F20B38190A761A2000C4A8DD /* SKTImage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTImage.h; sourceTree = "<group>"; };
+		F20B381A0A761A2000C4A8DD /* SKTImage.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTImage.m; sourceTree = "<group>"; };
+		F20B381B0A761A2000C4A8DD /* SKTLine.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTLine.h; sourceTree = "<group>"; };
+		F20B381C0A761A2000C4A8DD /* SKTLine.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTLine.m; sourceTree = "<group>"; };
+		F20B381D0A761A2000C4A8DD /* SKTRectangle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTRectangle.h; sourceTree = "<group>"; };
+		F20B381E0A761A2000C4A8DD /* SKTRectangle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTRectangle.m; sourceTree = "<group>"; };
+		F20B381F0A761A2000C4A8DD /* SKTRenderingView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTRenderingView.h; sourceTree = "<group>"; };
+		F20B38200A761A2000C4A8DD /* SKTRenderingView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTRenderingView.m; sourceTree = "<group>"; };
+		F20B38210A761A2000C4A8DD /* SKTTextArea.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTTextArea.h; sourceTree = "<group>"; };
+		F20B38220A761A2000C4A8DD /* SKTTextArea.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTTextArea.m; sourceTree = "<group>"; };
+		F20B383A0A761A9300C4A8DD /* SKTError.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKTError.h; sourceTree = "<group>"; };
+		F20B383B0A761A9300C4A8DD /* SKTError.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKTError.m; sourceTree = "<group>"; };
+		F232879F0A761867004F5233 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D576313048677EA00EA77CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28CFC030A3EC0C6000ABFF5 /* QuickLook.framework in Frameworks */,
+				F23287A00A761867004F5233 /* Cocoa.framework in Frameworks */,
+				627414860B4EEC0B0069E3AD /* ApplicationServices.framework in Frameworks */,
+				6274148C0B4EED590069E3AD /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* QuickLookSketch */ = {
+			isa = PBXGroup;
+			children = (
+				DABC9D940A7A396B00E30D73 /* ReadMe.rtf */,
+				08FB77AFFE84173DC02AAC07 /* Quick Look Generator */,
+				F23287A30A761877004F5233 /* SketchSources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = QuickLookSketch;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6274148B0B4EED590069E3AD /* CoreServices.framework */,
+				F232879F0A761867004F5233 /* Cocoa.framework */,
+				F28CFC020A3EC0C6000ABFF5 /* QuickLook.framework */,
+				627414850B4EEC0B0069E3AD /* ApplicationServices.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				622150340BBDD60C00126F4B /* Info.plist */,
+				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Quick Look Generator */ = {
+			isa = PBXGroup;
+			children = (
+				61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */,
+				2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */,
+				08FB77B6FE84183AC02AAC07 /* main.c */,
+			);
+			name = "Quick Look Generator";
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D576316048677EA00EA77CD /* QuickLookSketch.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F23287A30A761877004F5233 /* SketchSources */ = {
+			isa = PBXGroup;
+			children = (
+				F20B383A0A761A9300C4A8DD /* SKTError.h */,
+				F20B383B0A761A9300C4A8DD /* SKTError.m */,
+				F20B38130A761A2000C4A8DD /* SKTCircle.h */,
+				F20B38140A761A2000C4A8DD /* SKTCircle.m */,
+				F20B38150A761A2000C4A8DD /* SKTDrawDocument.h */,
+				F20B38160A761A2000C4A8DD /* SKTDrawDocument.m */,
+				F20B38170A761A2000C4A8DD /* SKTGraphic.h */,
+				F20B38180A761A2000C4A8DD /* SKTGraphic.m */,
+				F20B38190A761A2000C4A8DD /* SKTImage.h */,
+				F20B381A0A761A2000C4A8DD /* SKTImage.m */,
+				F20B381B0A761A2000C4A8DD /* SKTLine.h */,
+				F20B381C0A761A2000C4A8DD /* SKTLine.m */,
+				F20B381D0A761A2000C4A8DD /* SKTRectangle.h */,
+				F20B381E0A761A2000C4A8DD /* SKTRectangle.m */,
+				F20B381F0A761A2000C4A8DD /* SKTRenderingView.h */,
+				F20B38200A761A2000C4A8DD /* SKTRenderingView.m */,
+				F20B38210A761A2000C4A8DD /* SKTTextArea.h */,
+				F20B38220A761A2000C4A8DD /* SKTTextArea.m */,
+			);
+			name = SketchSources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D57630E048677EA00EA77CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20B38230A761A2000C4A8DD /* SKTCircle.h in Headers */,
+				F20B38250A761A2000C4A8DD /* SKTDrawDocument.h in Headers */,
+				F20B38270A761A2000C4A8DD /* SKTGraphic.h in Headers */,
+				F20B38290A761A2000C4A8DD /* SKTImage.h in Headers */,
+				F20B382B0A761A2000C4A8DD /* SKTLine.h in Headers */,
+				F20B382D0A761A2000C4A8DD /* SKTRectangle.h in Headers */,
+				F20B382F0A761A2000C4A8DD /* SKTRenderingView.h in Headers */,
+				F20B38310A761A2000C4A8DD /* SKTTextArea.h in Headers */,
+				F20B383C0A761A9300C4A8DD /* SKTError.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D57630D048677EA00EA77CD /* QuickLookSketch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA3261E0896AD4900168862 /* Build configuration list for PBXNativeTarget "QuickLookSketch" */;
+			buildPhases = (
+				8D57630E048677EA00EA77CD /* Headers */,
+				8D57630F048677EA00EA77CD /* Resources */,
+				8D576311048677EA00EA77CD /* Sources */,
+				8D576313048677EA00EA77CD /* Frameworks */,
+				8D576315048677EA00EA77CD /* Rez */,
+				440BBDFA0B0537B10075B7E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickLookSketch;
+			productInstallPath = /Library/Spotlight;
+			productName = QuickLookSketch;
+			productReference = 8D576316048677EA00EA77CD /* QuickLookSketch.qlgenerator */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2CA326220896AD4900168862 /* Build configuration list for PBXProject "QuickLookSketch" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* QuickLookSketch */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D57630D048677EA00EA77CD /* QuickLookSketch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D57630F048677EA00EA77CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
+				DABC9D950A7A396B00E30D73 /* ReadMe.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D576315048677EA00EA77CD /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D576311048677EA00EA77CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D576312048677EA00EA77CD /* main.c in Sources */,
+				2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */,
+				61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */,
+				F20B38240A761A2000C4A8DD /* SKTCircle.m in Sources */,
+				F20B38260A761A2000C4A8DD /* SKTDrawDocument.m in Sources */,
+				F20B38280A761A2000C4A8DD /* SKTGraphic.m in Sources */,
+				F20B382A0A761A2000C4A8DD /* SKTImage.m in Sources */,
+				F20B382C0A761A2000C4A8DD /* SKTLine.m in Sources */,
+				F20B382E0A761A2000C4A8DD /* SKTRectangle.m in Sources */,
+				F20B38300A761A2000C4A8DD /* SKTRenderingView.m in Sources */,
+				F20B38320A761A2000C4A8DD /* SKTTextArea.m in Sources */,
+				F20B383D0A761A9300C4A8DD /* SKTError.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CA3261F0896AD4900168862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_STYLE = Bundle;
+				PRODUCT_NAME = QuickLookSketch;
+				WRAPPER_EXTENSION = qlgenerator;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		2CA326200896AD4900168862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/Frameworks\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_STYLE = Bundle;
+				PRODUCT_NAME = QuickLookSketch;
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Release;
+		};
+		2CA326230896AD4900168862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				VALID_ARCHS = "ppc i386";
+			};
+			name = Debug;
+		};
+		2CA326240896AD4900168862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				VALID_ARCHS = "ppc i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA3261E0896AD4900168862 /* Build configuration list for PBXNativeTarget "QuickLookSketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA3261F0896AD4900168862 /* Debug */,
+				2CA326200896AD4900168862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CA326220896AD4900168862 /* Build configuration list for PBXProject "QuickLookSketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA326230896AD4900168862 /* Debug */,
+				2CA326240896AD4900168862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
