@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EB3AE45079D59B20046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = 08FB7796FE84155DC02AAC07;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		3EB3AE47079D59B20046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = A9707D92049C008800000102;
+		};
+		3EB3AE48079D59B20046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = A9707DA8049C09FE00000102;
+		};
+		3EB3AE49079D59B20046E3F3 = {
+			isa = PBXBuildFile;
+			fileRef = A9707DA9049C09FE00000102;
+		};
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3EB3AE4B079D59B20046E3F3 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 = {
+			isa = PBXFileReference;
+			fileEncoding = 4;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = main.cpp;
+			sourceTree = "<group>";
+		};
+		3EB3AE4C079D59B20046E3F3 = {
+			isa = PBXFileReference;
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			path = PlaySoftMIDI;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9707D92049C008800000102 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioUnit.framework;
+			path = /System/Library/Frameworks/AudioUnit.framework;
+			sourceTree = "<absolute>";
+		};
+		A9707DA8049C09FE00000102 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = /System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = "<absolute>";
+		};
+		A9707DA9049C09FE00000102 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			sourceTree = "<absolute>";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB3AE46079D59B20046E3F3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AE47079D59B20046E3F3,
+				3EB3AE48079D59B20046E3F3,
+				3EB3AE49079D59B20046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0249A662FF388D9811CA2CEA = {
+			isa = PBXGroup;
+			children = (
+				A9707D92049C008800000102,
+				A9707DA8049C09FE00000102,
+				A9707DA9049C09FE00000102,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB7794FE84155DC02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07,
+				0249A662FF388D9811CA2CEA,
+				1AB674ADFE9D54B511CA2CBB,
+			);
+			name = PlaySoftMIDI;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB = {
+			isa = PBXGroup;
+			children = (
+				3EB3AE4C079D59B20046E3F3,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EB3AE43079D59B20046E3F3 = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EB3AE42079D59B20046E3F3 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E8847E0874AB4F00B2DFE8;
+			buildPhases = (
+				3EB3AE43079D59B20046E3F3,
+				3EB3AE44079D59B20046E3F3,
+				3EB3AE46079D59B20046E3F3,
+				3EB3AE4A079D59B20046E3F3,
+				3EB3AE4B079D59B20046E3F3,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaySoftMIDI;
+			productInstallPath = "$(HOME)/bin";
+			productName = PlaySoftMIDI;
+			productReference = 3EB3AE4C079D59B20046E3F3;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 = {
+			isa = PBXProject;
+			buildConfigurationList = A9E884820874AB4F00B2DFE8;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EB3AE42079D59B20046E3F3,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXRezBuildPhase section */
+		3EB3AE4A079D59B20046E3F3 = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB3AE44079D59B20046E3F3 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AE45079D59B20046E3F3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9E8847F0874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = PlaySoftMIDI;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		A9E884800874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = PlaySoftMIDI;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Deployment;
+		};
+		A9E884810874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = PlaySoftMIDI;
+				REZ_EXECUTABLE = YES;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		A9E884830874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Development;
+		};
+		A9E884840874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Deployment;
+		};
+		A9E884850874AB4F00B2DFE8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9E8847E0874AB4F00B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E8847F0874AB4F00B2DFE8,
+				A9E884800874AB4F00B2DFE8,
+				A9E884810874AB4F00B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		A9E884820874AB4F00B2DFE8 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E884830874AB4F00B2DFE8,
+				A9E884840874AB4F00B2DFE8,
+				A9E884850874AB4F00B2DFE8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07;
+}
