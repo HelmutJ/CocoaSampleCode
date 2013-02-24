@@ -1,0 +1,102 @@
+/*
+
+File: ImageMap.txt
+
+Abstract: description of ImageMap widget
+
+Version: <1.0>
+
+© Copyright 2005 Apple Computer, Inc. All rights reserved.
+
+IMPORTANT:  This Apple software is supplied to 
+you by Apple Computer, Inc. ("Apple") in 
+consideration of your agreement to the following 
+terms, and your use, installation, modification 
+or redistribution of this Apple software 
+constitutes acceptance of these terms.  If you do 
+not agree with these terms, please do not use, 
+install, modify or redistribute this Apple 
+software.
+
+In consideration of your agreement to abide by 
+the following terms, and subject to these terms, 
+Apple grants you a personal, non-exclusive 
+license, under Apple's copyrights in this 
+original Apple software (the "Apple Software"), 
+to use, reproduce, modify and redistribute the 
+Apple Software, with or without modifications, in 
+source and/or binary forms; provided that if you 
+redistribute the Apple Software in its entirety 
+and without modifications, you must retain this 
+notice and the following text and disclaimers in 
+all such redistributions of the Apple Software. 
+Neither the name, trademarks, service marks or 
+logos of Apple Computer, Inc. may be used to 
+endorse or promote products derived from the 
+Apple Software without specific prior written 
+permission from Apple.  Except as expressly 
+stated in this notice, no other rights or 
+licenses, express or implied, are granted by 
+Apple herein, including but not limited to any 
+patent rights that may be infringed by your 
+derivative works or by other works in which the 
+Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS 
+IS" basis.  APPLE MAKES NO WARRANTIES, EXPRESS OR 
+IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED 
+WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY 
+AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING 
+THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE 
+OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY 
+SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS 
+OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, 
+REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF 
+THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER 
+UNDER THEORY OF CONTRACT, TORT (INCLUDING 
+NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN 
+IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF 
+SUCH DAMAGE.
+
+*/ 
+
+
+The ImageMap class provides an image and overlayed hot spots that can be clicked by the user. This is similar in functionality to HTML's client-side image maps.
+
+
+Specifying Hot Spots
+
+The hot spots can be specified in one of two ways; manually, using the various addHotSpotForXXX methods; or by using the map from an HTML file.
+
+Using the second approach allows you to take advantage of (numerous) existing tools for creating client-side image maps. Note, the HTML must be XML compliant (e.g. all tags balanced).
+
+Note: client-side image maps specify coordinates from the top-left corner of the image. Because of this, the ImageMap will use flipped coordinates (see NSView's isFlipped method) when its hot spots came from an HTML file. 
+
+For convenience the image and hot spots can be set with a single call:
+
+- (void)setImageAndHotSpotsFromImageAndImageMapNamed:(NSString *)name;
+
+This requires the name of the image, the name of the HTML file, and the name of the map in the HTML file to all be the same. E.g. foo.tiff, foo.html, and <map name="foo">.
+
+Each hot spot has an "info" object associated with it. If you specify the hot spots manually this can be any NSObject. If the hot spots came from an HTML file, the info will be a dictionary of the alt, href, and title attributes from the map's areas. The keys will be the NSStrings, @"alt", @"href", and @"title". The values will be the corresponding attribute values as NSStrings.
+
+
+Responding to Clicks
+
+ImageMap uses target/action a la NSControl. When a hot spot is clicked the action will be sent to the target with the image map passed as the sender. To determine which spot was clicked, call selectedHotSpotInfo on the image map to get the hot spot's info object.
+
+The setHasDefault method controls whether or not the action is invoked when the user clicks on an area of the image not covered by a hot spot. The setDefaultInfo method control what info object is returned by selectedHotSpotInfo in this situation. By default, hasDefault is NO and defaultInfo is nil.
+
+
+Display Options
+
+The setRolloverHighlighting method controls whether or not hot spots highlight as the cursor passes over them.
+
+The setHotSpotsVisible method controls whether or not the hot spots are always highlighted.
+
+The setSelectedHotSpotColor, setRolloverHotSpotColor, and setHotSpotsVisibleColor methods control the colors used to created the various highlighting effects. The setHotSpotCompositeOperation method contols how these colors are composited to create the highlighting effect. The default composite is NSCompositePlusDarker, but if the image is dark, NSCompositePlusLighter will create more visible highlights.
