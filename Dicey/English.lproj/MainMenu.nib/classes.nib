@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {newGame = id; rollDice = id; scoreIt = id; }; 
+            CLASS = DCAppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                diceView = DCDiceView; 
+                difficultLabel = NSTextField; 
+                difficultySlider = NSSlider; 
+                easyLabel = NSTextField; 
+                normalLabel = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {rollDice = id; }; 
+            CLASS = DCDiceView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
