@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {
+                alignBottomEdges = id; 
+                alignHorizontalCenters = id; 
+                alignLeftEdges = id; 
+                alignRightEdges = id; 
+                alignTopEdges = id; 
+                alignVerticalCenters = id; 
+                alignWithGrid = id; 
+                bringToFront = id; 
+                copy = id; 
+                cut = id; 
+                delete = id; 
+                deselectAll = id; 
+                makeNaturalSize = id; 
+                makeSameHeight = id; 
+                makeSameWidth = id; 
+                paste = id; 
+                sendToBack = id; 
+                showOrHideRulers = id; 
+            }; 
+            CLASS = SKTGraphicView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {newDocumentWindow = id; toggleGridConstraining = id; toggleGridShowing = id; }; 
+            CLASS = SKTWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_graphicView" = SKTGraphicView; 
+                "_graphicsController" = NSArrayController; 
+                "_zoomingScrollView" = SKTZoomingScrollView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = SKTZoomingScrollView; LANGUAGE = ObjC; SUPERCLASS = NSScrollView; }
+    ); 
+    IBVersion = 1; 
+}
