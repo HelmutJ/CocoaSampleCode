@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		522DEE2D0F86B76A00F2BE93 /* SimpleScriptingPlugin.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 522DEE2C0F86B76A00F2BE93 /* SimpleScriptingPlugin.sdef */; };
+		523E392C0E0B0D180033798C /* ApplicationPlugInsFolders.m in Sources */ = {isa = PBXBuildFile; fileRef = 523E392B0E0B0D180033798C /* ApplicationPlugInsFolders.m */; };
+		5247606E0F992C4B003DE436 /* SimpleCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 524760680F992C4B003DE436 /* SimpleCommand.m */; };
+		5247606F0F992C4B003DE436 /* DirectParameterCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247606A0F992C4B003DE436 /* DirectParameterCommand.m */; };
+		524760700F992C4B003DE436 /* CommandWithArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247606C0F992C4B003DE436 /* CommandWithArgs.m */; };
+		524A23670F9D1991006EE951 /* PluginVerbs.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 524A23660F9D1991006EE951 /* PluginVerbs.sdef */; };
+		527497470F8C16A100A02BEF /* ScriptingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 527497460F8C16A100A02BEF /* ScriptingPlugin.m */; };
+		5274976D0F8C192000A02BEF /* ScriptingPlugin.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 5274976C0F8C192000A02BEF /* ScriptingPlugin.sdef */; };
+		527497700F8C1BE300A02BEF /* PluginAppCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5274976F0F8C1BE300A02BEF /* PluginAppCategory.m */; };
+		52BC25850F955AA70007910A /* StrongBoxCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC25830F955AA70007910A /* StrongBoxCategory.m */; };
+		52BC25880F955ACC0007910A /* BucketCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC25870F955ACC0007910A /* BucketCategory.m */; };
+		52BC26380F95603F0007910A /* TrinketCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC22B30F95195C0007910A /* TrinketCategory.m */; };
+		52BC263B0F9560460007910A /* TreasureCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BC23020F952BD10007910A /* TreasureCategory.m */; };
+		52C8505C0E09BE7D00754822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8505B0E09BE7D00754822 /* AppDelegate.m */; };
+		52C8505F0E09BE8E00754822 /* AppCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8505E0E09BE8E00754822 /* AppCategory.m */; };
+		52E428A60F93C334007AA22D /* Trinket.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E4289C0F93C334007AA22D /* Trinket.m */; };
+		52E428A70F93C334007AA22D /* Treasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E4289E0F93C334007AA22D /* Treasure.m */; };
+		52E428A80F93C334007AA22D /* StrongBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E428A00F93C334007AA22D /* StrongBox.m */; };
+		52E428A90F93C334007AA22D /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E428A20F93C334007AA22D /* Element.m */; };
+		52E428AA0F93C334007AA22D /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E428A40F93C334007AA22D /* Bucket.m */; };
+		52E428E30F93FB48007AA22D /* Mattress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E428E20F93FB48007AA22D /* Mattress.m */; };
+		52E428F00F93FBD0007AA22D /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E428A20F93C334007AA22D /* Element.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* SimpleScriptingPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScriptingPlugin_Prefix.pch; sourceTree = "<group>"; };
+		522DEE2C0F86B76A00F2BE93 /* SimpleScriptingPlugin.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = SimpleScriptingPlugin.sdef; sourceTree = "<group>"; };
+		523E392A0E0B0D180033798C /* ApplicationPlugInsFolders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationPlugInsFolders.h; sourceTree = "<group>"; };
+		523E392B0E0B0D180033798C /* ApplicationPlugInsFolders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationPlugInsFolders.m; sourceTree = "<group>"; };
+		524760680F992C4B003DE436 /* SimpleCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCommand.m; sourceTree = "<group>"; };
+		524760690F992C4B003DE436 /* SimpleCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCommand.h; sourceTree = "<group>"; };
+		5247606A0F992C4B003DE436 /* DirectParameterCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectParameterCommand.m; sourceTree = "<group>"; };
+		5247606B0F992C4B003DE436 /* DirectParameterCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectParameterCommand.h; sourceTree = "<group>"; };
+		5247606C0F992C4B003DE436 /* CommandWithArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandWithArgs.m; sourceTree = "<group>"; };
+		5247606D0F992C4B003DE436 /* CommandWithArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandWithArgs.h; sourceTree = "<group>"; };
+		524A23660F9D1991006EE951 /* PluginVerbs.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = PluginVerbs.sdef; sourceTree = "<group>"; };
+		527497400F8C165700A02BEF /* ScriptingPlugin.simplePlugIn */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScriptingPlugin.simplePlugIn; sourceTree = BUILT_PRODUCTS_DIR; };
+		527497410F8C165700A02BEF /* ScriptingPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScriptingPlugin-Info.plist"; sourceTree = "<group>"; };
+		527497450F8C16A100A02BEF /* ScriptingPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptingPlugin.h; sourceTree = "<group>"; };
+		527497460F8C16A100A02BEF /* ScriptingPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptingPlugin.m; sourceTree = "<group>"; };
+		5274976C0F8C192000A02BEF /* ScriptingPlugin.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = ScriptingPlugin.sdef; sourceTree = "<group>"; };
+		5274976E0F8C1BE300A02BEF /* PluginAppCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginAppCategory.h; sourceTree = "<group>"; };
+		5274976F0F8C1BE300A02BEF /* PluginAppCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginAppCategory.m; sourceTree = "<group>"; };
+		52BC22B20F95195C0007910A /* TrinketCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrinketCategory.h; sourceTree = "<group>"; };
+		52BC22B30F95195C0007910A /* TrinketCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrinketCategory.m; sourceTree = "<group>"; };
+		52BC23010F952BD10007910A /* TreasureCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureCategory.h; sourceTree = "<group>"; };
+		52BC23020F952BD10007910A /* TreasureCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureCategory.m; sourceTree = "<group>"; };
+		52BC25830F955AA70007910A /* StrongBoxCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrongBoxCategory.m; sourceTree = "<group>"; };
+		52BC25840F955AA70007910A /* StrongBoxCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrongBoxCategory.h; sourceTree = "<group>"; };
+		52BC25860F955ACC0007910A /* BucketCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BucketCategory.h; sourceTree = "<group>"; };
+		52BC25870F955ACC0007910A /* BucketCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BucketCategory.m; sourceTree = "<group>"; };
+		52C850560E09BD4600754822 /* scriptLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scriptLog.h; sourceTree = "<group>"; };
+		52C8505A0E09BE7D00754822 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52C8505B0E09BE7D00754822 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52C8505D0E09BE8E00754822 /* AppCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCategory.h; sourceTree = "<group>"; };
+		52C8505E0E09BE8E00754822 /* AppCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCategory.m; sourceTree = "<group>"; };
+		52E4289C0F93C334007AA22D /* Trinket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trinket.m; sourceTree = "<group>"; };
+		52E4289D0F93C334007AA22D /* Trinket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trinket.h; sourceTree = "<group>"; };
+		52E4289E0F93C334007AA22D /* Treasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Treasure.m; sourceTree = "<group>"; };
+		52E4289F0F93C334007AA22D /* Treasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Treasure.h; sourceTree = "<group>"; };
+		52E428A00F93C334007AA22D /* StrongBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrongBox.m; sourceTree = "<group>"; };
+		52E428A10F93C334007AA22D /* StrongBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrongBox.h; sourceTree = "<group>"; };
+		52E428A20F93C334007AA22D /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		52E428A30F93C334007AA22D /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		52E428A40F93C334007AA22D /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
+		52E428A50F93C334007AA22D /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bucket.h; sourceTree = "<group>"; };
+		52E428E10F93FB48007AA22D /* Mattress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mattress.h; sourceTree = "<group>"; };
+		52E428E20F93FB48007AA22D /* Mattress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mattress.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SimpleScriptingPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleScriptingPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5274973E0F8C165700A02BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* ScriptingPlugin Sources */ = {
+			isa = PBXGroup;
+			children = (
+				524A23650F9D194C006EE951 /* FromSimpleScriptingVerbs */,
+				52BC22B10F95179C0007910A /* Resources */,
+				52E428E10F93FB48007AA22D /* Mattress.h */,
+				52E428E20F93FB48007AA22D /* Mattress.m */,
+				527497450F8C16A100A02BEF /* ScriptingPlugin.h */,
+				527497460F8C16A100A02BEF /* ScriptingPlugin.m */,
+				5274976E0F8C1BE300A02BEF /* PluginAppCategory.h */,
+				5274976F0F8C1BE300A02BEF /* PluginAppCategory.m */,
+				52BC22B20F95195C0007910A /* TrinketCategory.h */,
+				52BC22B30F95195C0007910A /* TrinketCategory.m */,
+				52BC23010F952BD10007910A /* TreasureCategory.h */,
+				52BC23020F952BD10007910A /* TreasureCategory.m */,
+				52BC25860F955ACC0007910A /* BucketCategory.h */,
+				52BC25870F955ACC0007910A /* BucketCategory.m */,
+				52BC25840F955AA70007910A /* StrongBoxCategory.h */,
+				52BC25830F955AA70007910A /* StrongBoxCategory.m */,
+			);
+			name = "ScriptingPlugin Sources";
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SimpleScriptingPlugin.app */,
+				527497400F8C165700A02BEF /* ScriptingPlugin.simplePlugIn */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SimpleScriptingPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* ScriptingPlugin Sources */,
+				524A23B50F9D4458006EE951 /* Sources used in both */,
+				29B97315FDCFA39411CA2CEA /* Application Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = SimpleScriptingPlugin;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Application Sources */ = {
+			isa = PBXGroup;
+			children = (
+				52E4287B0F93C2B1007AA22D /* Scripting Classes */,
+				523E392A0E0B0D180033798C /* ApplicationPlugInsFolders.h */,
+				523E392B0E0B0D180033798C /* ApplicationPlugInsFolders.m */,
+				32CA4F630368D1EE00C91783 /* SimpleScriptingPlugin_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				52C8505A0E09BE7D00754822 /* AppDelegate.h */,
+				52C8505B0E09BE7D00754822 /* AppDelegate.m */,
+				52C8505D0E09BE8E00754822 /* AppCategory.h */,
+				52C8505E0E09BE8E00754822 /* AppCategory.m */,
+			);
+			name = "Application Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				522DEE2C0F86B76A00F2BE93 /* SimpleScriptingPlugin.sdef */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		524A23650F9D194C006EE951 /* FromSimpleScriptingVerbs */ = {
+			isa = PBXGroup;
+			children = (
+				524760690F992C4B003DE436 /* SimpleCommand.h */,
+				524760680F992C4B003DE436 /* SimpleCommand.m */,
+				5247606B0F992C4B003DE436 /* DirectParameterCommand.h */,
+				5247606A0F992C4B003DE436 /* DirectParameterCommand.m */,
+				5247606D0F992C4B003DE436 /* CommandWithArgs.h */,
+				5247606C0F992C4B003DE436 /* CommandWithArgs.m */,
+				524A23660F9D1991006EE951 /* PluginVerbs.sdef */,
+			);
+			name = FromSimpleScriptingVerbs;
+			sourceTree = "<group>";
+		};
+		524A23B50F9D4458006EE951 /* Sources used in both */ = {
+			isa = PBXGroup;
+			children = (
+				52C850560E09BD4600754822 /* scriptLog.h */,
+				52E428A30F93C334007AA22D /* Element.h */,
+				52E428A20F93C334007AA22D /* Element.m */,
+			);
+			name = "Sources used in both";
+			sourceTree = "<group>";
+		};
+		52BC22B10F95179C0007910A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				527497410F8C165700A02BEF /* ScriptingPlugin-Info.plist */,
+				5274976C0F8C192000A02BEF /* ScriptingPlugin.sdef */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		52E4287B0F93C2B1007AA22D /* Scripting Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52E4289D0F93C334007AA22D /* Trinket.h */,
+				52E4289C0F93C334007AA22D /* Trinket.m */,
+				52E4289F0F93C334007AA22D /* Treasure.h */,
+				52E4289E0F93C334007AA22D /* Treasure.m */,
+				52E428A10F93C334007AA22D /* StrongBox.h */,
+				52E428A00F93C334007AA22D /* StrongBox.m */,
+				52E428A50F93C334007AA22D /* Bucket.h */,
+				52E428A40F93C334007AA22D /* Bucket.m */,
+			);
+			name = "Scripting Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5274973F0F8C165700A02BEF /* ScriptingPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 527497440F8C165800A02BEF /* Build configuration list for PBXNativeTarget "ScriptingPlugin" */;
+			buildPhases = (
+				5274973C0F8C165700A02BEF /* Resources */,
+				5274973D0F8C165700A02BEF /* Sources */,
+				5274973E0F8C165700A02BEF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScriptingPlugin;
+			productName = ScriptingPlugin;
+			productReference = 527497400F8C165700A02BEF /* ScriptingPlugin.simplePlugIn */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* SimpleScriptingPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SimpleScriptingPlugin" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleScriptingPlugin;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SimpleScriptingPlugin;
+			productReference = 8D1107320486CEB800E47090 /* SimpleScriptingPlugin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SimpleScriptingPlugin" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SimpleScriptingPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SimpleScriptingPlugin */,
+				5274973F0F8C165700A02BEF /* ScriptingPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5274973C0F8C165700A02BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5274976D0F8C192000A02BEF /* ScriptingPlugin.sdef in Resources */,
+				524A23670F9D1991006EE951 /* PluginVerbs.sdef in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				522DEE2D0F86B76A00F2BE93 /* SimpleScriptingPlugin.sdef in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5274973D0F8C165700A02BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				527497470F8C16A100A02BEF /* ScriptingPlugin.m in Sources */,
+				52E428F00F93FBD0007AA22D /* Element.m in Sources */,
+				52E428E30F93FB48007AA22D /* Mattress.m in Sources */,
+				527497700F8C1BE300A02BEF /* PluginAppCategory.m in Sources */,
+				52BC26380F95603F0007910A /* TrinketCategory.m in Sources */,
+				52BC263B0F9560460007910A /* TreasureCategory.m in Sources */,
+				52BC25850F955AA70007910A /* StrongBoxCategory.m in Sources */,
+				52BC25880F955ACC0007910A /* BucketCategory.m in Sources */,
+				5247606E0F992C4B003DE436 /* SimpleCommand.m in Sources */,
+				5247606F0F992C4B003DE436 /* DirectParameterCommand.m in Sources */,
+				524760700F992C4B003DE436 /* CommandWithArgs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				52C8505C0E09BE7D00754822 /* AppDelegate.m in Sources */,
+				52C8505F0E09BE8E00754822 /* AppCategory.m in Sources */,
+				523E392C0E0B0D180033798C /* ApplicationPlugInsFolders.m in Sources */,
+				52E428A60F93C334007AA22D /* Trinket.m in Sources */,
+				52E428A70F93C334007AA22D /* Treasure.m in Sources */,
+				52E428A80F93C334007AA22D /* StrongBox.m in Sources */,
+				52E428A90F93C334007AA22D /* Element.m in Sources */,
+				52E428AA0F93C334007AA22D /* Bucket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		527497420F8C165800A02BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "ScriptingPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ScriptingPlugin;
+				WRAPPER_EXTENSION = simplePlugIn;
+			};
+			name = Debug;
+		};
+		527497430F8C165800A02BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "ScriptingPlugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ScriptingPlugin;
+				WRAPPER_EXTENSION = simplePlugIn;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SimpleScriptingPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SimpleScriptingPlugin;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SimpleScriptingPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = SimpleScriptingPlugin;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		527497440F8C165800A02BEF /* Build configuration list for PBXNativeTarget "ScriptingPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				527497420F8C165800A02BEF /* Debug */,
+				527497430F8C165800A02BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SimpleScriptingPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SimpleScriptingPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<!--
+
+File: SimpleScriptingPlugin.sdef
+
+Abstract: Starting sdef for a scriptable application.
+
+Version: 1.0
+
+Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
+Apple Inc. ("Apple") in consideration of your agreement to the
+following terms, and your use, installation, modification or
+redistribution of this Apple software constitutes acceptance of these
+terms.  If you do not agree with these terms, please do not use,
+install, modify or redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and
+subject to these terms, Apple grants you a personal, non-exclusive
+license, under Apple's copyrights in this original Apple software (the
+"Apple Software"), to use, reproduce, modify and redistribute the Apple
+Software, with or without modifications, in source and/or binary forms;
+provided that if you redistribute the Apple Software in its entirety and
+without modifications, you must retain this notice and the following
+text and disclaimers in all such redistributions of the Apple Software. 
+Neither the name, trademarks, service marks or logos of Apple Inc. 
+may be used to endorse or promote products derived from the Apple
+Software without specific prior written permission from Apple.  Except
+as expressly stated in this notice, no other rights or licenses, express
+or implied, are granted by Apple herein, including but not limited to
+any patent rights that may be infringed by your derivative works or by
+other works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+Copyright (C) 2009 Apple Inc. All Rights Reserved.
+
+-->
+
+	<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+
+
+		<!-- use XInclude to include the standard suite -->
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+
+
+		<!-- specific suite(s) for the application follow... -->
+	<suite name="Simple Scripting Objects Suite" code="ScOb"
+			description="Simple Scripting Objects application specific scripting facilities.">
+		<!-- put your application specific scripting suite information here -->
+		 
+		
+		<!-- a specialization of the application class.  this will be the root container for all of
+		our objects.  -->
+		<class name="application" code="capp" 
+					description="Our simple application class." inherits="application">
+
+			<cocoa class="NSApplication"/>
+
+			<property name="weight" code="ScWt" type="real" access="r"
+			        description="the weight of all of the items in the application"/>
+					
+			<property name="value" code="valL" type="real" access="r"
+			        description="the value of all of the treasure in the application"/>
+					
+			<element type="treasure"/>
+			
+			<element type="trinket"/>
+			
+			<element type="bucket"/>
+			
+			<element type="strong box">
+				<cocoa key="strongBoxes"/>
+			</element>
+			
+		</class>
+		
+		 
+		   
+		    
+		
+		<!-- the trinket class  -->
+		<class name="trinket" code="ScOT"
+			description="A leaf object that does not contain other objects.">
+			
+			<cocoa class="Trinket"/>
+			
+			<!-- properties -->
+			
+			<property name="id" code="ID  " type="text" access="r"
+				description="The unique identifier.">
+				<cocoa key="uniqueID"/>
+			</property>
+			
+			<property name="name" code="pnam" type="text" access="rw"
+			        description="the item's name"/>
+
+			<property name="shiny" code="TrSh" type="boolean" access="rw"
+			        description="shiny side up!"/>
+					
+			<property name="weight" code="ScWt" type="real" access="rw"
+			        description="the item's weight"/>
+					
+			<property name="description" code="desc" type="text" access="rw"
+			        description="a description of the item"/>
+			
+		</class>
+
+
+
+
+			<!-- enumerate some precious metals for the treasure type -->
+		<enumeration name="preciousmetal" code="PmSp">
+		
+			<cocoa name="PreciousMetal"/>
+			
+			<enumerator name="Tin" code="PmTn" description="Tin">
+				<cocoa name="Tin"/>
+			</enumerator>
+			<enumerator name="Pewter" code="PmPw" description="Pewter">
+				<cocoa name="Pewter"/>
+			</enumerator>
+			<enumerator name="Bronze" code="PmBr" description="Bronze">
+				<cocoa name="Bronze"/>
+			</enumerator>
+			<enumerator name="Silver" code="PmSi" description="Silver">
+				<cocoa name="Silver"/>
+			</enumerator>
+			<enumerator name="Gold" code="PmGo" description="Gold">
+				<cocoa name="Gold"/>
+			</enumerator>
+		</enumeration>
+
+
+			<!-- our treasure object type -->
+		<class name="treasure" code="ScOR" inherits="trinket"
+			description="A leaf object that does not contain other objects.">
+			
+			<cocoa class="Treasure"/>
+			
+			<!-- properties -->
+			
+			<property name="value" code="valL" type="real" access="rw"
+			        description="the item's value"/>
+					
+			<property name="metal" code="SMtl" type="preciousmetal" access="rw"
+			        description="main constituent metal"/>
+			
+		</class>
+		
+		
+		
+		
+		<class name="bucket" code="ScOB"
+			description="An object that can contain other objects.">
+			
+			<cocoa class="Bucket"/>
+			
+			
+			<!-- properties -->
+			
+			<property name="id" code="ID  " type="text" access="r"
+				description="The unique identifier.">
+				<cocoa key="uniqueID"/>
+			</property>
+			
+			<property name="name" code="pnam" type="text" access="rw"
+			        description="the item's name"/>
+			
+			<property name="weight" code="ScWt" type="real" access="r"
+			        description="the weight of all of the items in the bucket"/>
+					
+			<property name="value" code="valL" type="real" access="r"
+			        description="the value of all of the treasure in the bucket"/>
+			
+			<!-- elements -->
+			
+			<element type="treasure"/>
+
+			<element type="trinket"/>
+
+			
+		</class>
+		
+		
+		
+		
+		
+		<class name="strong box" plural="strong boxes" code="ScOS" inherits="bucket"
+			description="An object that can contain other objects.">
+			
+			<cocoa class="StrongBox"/>
+			
+			<!-- properties -->
+								
+			<property name="label" code="clbl" type="text" access="rw"
+			        description="the label on the outside of the box"/>
+			
+			<property name="weight" code="ScWt" type="real" access="r"
+			        description="the weight of all of the items in the strong box"/>
+					
+			<property name="value" code="valL" type="real" access="r"
+			        description="the value of all of the treasure in the strong box"/>
+
+			<!-- elements -->
+			
+			<element type="bucket"/>
+
+			
+		</class>
+
+		 
+	</suite>
+
+
+
+</dictionary>

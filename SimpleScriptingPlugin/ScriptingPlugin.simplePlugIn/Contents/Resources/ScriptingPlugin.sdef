@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<!--
+
+File: ScriptingPlugin.sdef
+
+Abstract: Starting sdef for a scriptable application.
+
+Version: 1.0
+
+Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
+Apple Inc. ("Apple") in consideration of your agreement to the
+following terms, and your use, installation, modification or
+redistribution of this Apple software constitutes acceptance of these
+terms.  If you do not agree with these terms, please do not use,
+install, modify or redistribute this Apple software.
+
+In consideration of your agreement to abide by the following terms, and
+subject to these terms, Apple grants you a personal, non-exclusive
+license, under Apple's copyrights in this original Apple software (the
+"Apple Software"), to use, reproduce, modify and redistribute the Apple
+Software, with or without modifications, in source and/or binary forms;
+provided that if you redistribute the Apple Software in its entirety and
+without modifications, you must retain this notice and the following
+text and disclaimers in all such redistributions of the Apple Software. 
+Neither the name, trademarks, service marks or logos of Apple Inc. 
+may be used to endorse or promote products derived from the Apple
+Software without specific prior written permission from Apple.  Except
+as expressly stated in this notice, no other rights or licenses, express
+or implied, are granted by Apple herein, including but not limited to
+any patent rights that may be infringed by your derivative works or by
+other works in which the Apple Software may be incorporated.
+
+The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+Copyright (C) 2008 Apple Inc. All Rights Reserved.
+
+-->
+
+<dictionary>
+
+		<!-- specific suite(s) for the application follow... -->
+	<suite name="Simple Scripting Plugin Suite" code="ScPs"
+			description="Simple Scripting plugin specific scripting facilities.">
+			
+		<!-- put your application specific scripting suite information here -->
+		
+		
+		<!-- an extension of the application class that includes items added by the plugin.  
+		Uses the class-extension element to extend the application class.
+		http://developer.apple.com/iphone/library/releasenotes/Cocoa/Foundation.html
+		-->
+		<class-extension extends="application" description="plugin addons to the application class.">
+
+			<cocoa class="NSApplication"/>
+
+			<element type="mattress">
+				<cocoa key="mattresses"/>
+			</element>
+
+			<property name="valuable" code="TrVa" type="boolean" access="r"
+			        description="True if the value to weight ratio of all of the items in the app is better than two to one.  Note: Items hidden in mattresses are not counted."/>
+			
+			<responds-to name="randomize weight">
+                <cocoa method="setRandomWeight:"/>
+            </responds-to>
+			
+            <responds-to name="randomize value">
+                <cocoa method="setRandomValue:"/>
+            </responds-to>
+
+		</class-extension>
+		
+		
+		<class name="mattress" plural="mattresses"  code="ScMt"
+			description="An object that can contain other objects - treasures and trinkets.">
+			
+			<cocoa class="Mattress"/>
+			
+			<!-- properties -->
+			
+			<property name="id" code="ID  " type="text" access="r"
+				description="The unique identifier.">
+				<cocoa key="uniqueID"/>
+			</property>
+			
+			<property name="name" code="pnam" type="text" access="rw" description="the item's name"/>
+			
+			<property name="weight" code="ScWt" type="real" access="r" description="the weight of all of the items in the mattress"/>
+					
+			<property name="value" code="valL" type="real" access="r" description="the value of all of the treasure in the mattress"/>
+			
+			<!-- elements -->
+			
+			<element type="treasure"/>
+
+			<element type="trinket"/>
+			
+            <responds-to name="randomize weight">
+                <cocoa method="setRandomWeight:"/>
+            </responds-to>
+			
+            <responds-to name="randomize value">
+                <cocoa method="setRandomValue:"/>
+            </responds-to>
+			
+		</class>
+		
+		
+		
+		
+		
+		
+				<!-- the trinket class  -->
+		<class-extension extends="trinket" description="plugin additions for the Trinket class">
+			
+			<cocoa class="Trinket"/>
+			
+			<!-- properties -->
+			
+			<property name="valuable" code="TrVa" type="boolean" access="r"
+			        description="true if the value to weight ratio is better than two to one"/>
+			
+            <responds-to name="randomize weight">
+                <cocoa method="setRandomWeight:"/>
+            </responds-to>
+
+		</class-extension>
+
+		<command name="randomize weight" code="ScPvRwRw" description="set the weight to a random value">
+		
+			<!-- <direct-parameter type="trinket"/> -->
+						
+			<parameter name="starting from" code="ScLV" type="real" optional="yes" 
+				description="lowest weight allowed">
+				<cocoa key="LowestWeight"/>
+			</parameter>
+			
+			<parameter name="ranging to" code="ScHV" type="real" optional="yes" 
+				description="highest weight allowed">
+				<cocoa key="HighestWeight"/>
+			</parameter>
+
+		</command>
+
+
+
+
+		<class-extension extends="treasure" description="plugin additions for the Treasure class">
+			
+			<cocoa class="Treasure"/>
+			
+			<property name="valuable" code="TrVa" type="boolean" access="r"
+			        description="true if the value to weight ratio is better than two to one"/>
+
+
+            <responds-to name="randomize value">
+                <cocoa method="setRandomValue:"/>
+            </responds-to>
+
+		</class-extension>
+		
+		<command name="randomize value" code="ScPvRvRv" description="set the value to a random number">
+			
+			<!-- <direct-parameter type="treasure"/> -->
+
+			<parameter name="starting from" code="ScLV" type="real" optional="yes" description="lowest value allowed">
+				<cocoa key="LowestValue"/>
+			</parameter>
+			
+			<parameter name="ranging to" code="ScHV" type="real" optional="yes" description="highest value allowed">
+				<cocoa key="HighestValue"/>
+			</parameter>
+
+		</command>
+
+
+
+		
+		
+		<class-extension extends="bucket" code="ScOB" description="plugin additions for the Bucket class.">
+			
+			<cocoa class="Bucket"/>
+			
+			<property name="valuable" code="TrVa" type="boolean" access="r"
+			        description="true if the value to weight ratio is better than two to one"/>
+
+            <responds-to name="randomize weight">
+                <cocoa method="setRandomWeight:"/>
+            </responds-to>
+			
+            <responds-to name="randomize value">
+                <cocoa method="setRandomValue:"/>
+            </responds-to>
+
+		</class-extension>
+		
+		
+		
+		
+		
+		<class-extension extends="strong box" description="plugin additions for the Strong Box class.">
+			
+			<cocoa class="StrongBox"/>
+			
+			<property name="valuable" code="TrVa" type="boolean" access="r"
+			        description="true if the value to weight ratio is better than two to one"/>
+
+            <responds-to name="randomize weight">
+                <cocoa method="setRandomWeight:"/>
+            </responds-to>
+			
+            <responds-to name="randomize value">
+                <cocoa method="setRandomValue:"/>
+            </responds-to>
+
+		</class-extension>
+		
+		
+		
+			<!-- an assortment of commands copied over from the SimpleScriptingVerbs sample -->
+		
+		<command name="do simple command" code="ScPiSsmp" description="run a simple command with no parameters">
+			<cocoa class="SimpleCommand"/>
+			<result type="integer" description="returns the number seven"/>
+		</command>
+		
+		
+		<command name="do direct parameter command" code="ScPiDdCm" description="run a simple command with a direct parameter">
+			<cocoa class="DirectParameterCommand"/>
+			<direct-parameter description="a text parameter passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			<result type="text" description="the direct parameter enclosed in quotes"/>
+		</command>
+		
+		
+		<enumeration name="preferredhands" code="LRnd">
+			<cocoa name="PreferredHands"/>
+			<enumerator name="Left Hand" code="LHrn" description="Prefers Left Hand">
+				<cocoa name="LeftHand"/>
+			</enumerator>
+			<enumerator name="Right Hand" code="RHrn" description="Prefers Right Hand">
+				<cocoa name="RightHand"/>
+			</enumerator>
+		</enumeration>
+
+
+		<command name="do command with args" code="ScPiAaCm" description="run a command with a bunch of arguments">
+			<cocoa class="CommandWithArgs"/>
+			
+			<direct-parameter description="a text parameter passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			
+			<parameter name="blinking" code="savo" type="boolean" optional="yes" 
+				description="a boolean parameter.">
+				<cocoa key="SaveOptions"/>
+			</parameter>
+			
+			<parameter name="preferred hand" code="LRnd" type="preferredhands" optional="yes" 
+				description="a parameter using our enumeration.">
+				<cocoa key="TheHand"/>
+			</parameter>
+			
+			<parameter name="prose" code="Pros" type="text" optional="yes" 
+				description="a text parameter.">
+				<cocoa key="ProseText"/>
+			</parameter>
+			
+			<parameter name="ivalue" code="iVal" type="integer" optional="yes" 
+				description="an integer parameter.">
+				<cocoa key="IntegerValue"/>
+			</parameter>
+			
+			<parameter name="rvalue" code="rVal" type="real" optional="yes" 
+				description="an real number parameter.">
+				<cocoa key="RealValue"/>
+			</parameter>
+			
+			<result type="text" description="the direct parameter enclosed in quotes"/>
+		</command>
+
+		 
+	</suite>
+
+</dictionary>
+
+
