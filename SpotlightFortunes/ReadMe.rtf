@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf975\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\vieww15800\viewh12060\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs34 \cf0 SpotlightFortunes
+\b0\fs24 \
+\
+The SpotlightFortunes sample demonstrates how to provision a Spotlight importer plug-in for a custom UTI, and how to use a Cocoa NSMetadataQuery with bindings to display live Spotlight query results in a table view.\
+\
+This sample was inspired by the classic Unix fortune program. Instead of reading entries from a monolithic .fortunes file, it uses Spotlight to find all files with the 
+\f1 com.example.fortune-file
+\f0  UTI and displays them in a Cocoa table view. Since the focus of this sample is Spotlight's live query support, only minimal support for creating new fortune files is provided. Support for deleting, editing, etc. is left as an exercise for the reader.\
+\
+One design point worth noting is that the Fortunes application never actually reads any of the fortune files it finds. Instead, it relies on its companion Spotlight importer plug-in to index fortune files content as metadata. Specifically, the text of the fortune is stored in Spotlight's 
+\f1 kMDItemDisplayName
+\f0  attribute.\
+\
+Start by building and running the Fortunes application. Drag-and-drop a text selection on the Fortunes window's table view to create a new fortune file. Here are a few witticisms to get you into the spirit of things:\
+\
+The best way to have a good idea is to have a lot of ideas and throw the bad ones away.\
+The mind is not a vessel to be filled, but a fire to be kindled.\
+You shouldn't anthropomorphize computers; they don't like it.\
+\
+Once you have some content, build the FortuneCookie importer plug-in and install it into ~/Library/Spotlight. Then ask Spotlight to re-index your fortune files using the shell command:\
+\
+
+\f1 $ mdimport -r ~/Library/Spotlight/FortuneCookie.mdimporter\
+
+\f0 \
+When Spotlight has successfully used the FortuneCookie importer to index your fortune files, you should see the text of each fortune in the Fortunes application rather than the hash-based filename.\
+\
+What's included in this sample:\
+\
+\'95\'a0The FortuneCookie folder contains an Xcode project for building a stand-alone Spotlight importer plug-in for fortune files.\
+\'95 FortuneCookie.mdimporter is a pre-built version of the plug-in.\
+\'95 The Fortunes folder contains an Xcode project for building the Fortunes application.\
+\'95 Fortunes.app is a pre-built version of the application.\
+\'95 ReadMe is this file.\
+}
