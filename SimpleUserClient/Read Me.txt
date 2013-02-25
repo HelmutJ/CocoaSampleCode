@@ -1,0 +1,84 @@
+Read Me for SimpleUserClient 2.0
+--------------------------------
+August 13, 2008
+
+Illustrates how to add a simple user client to an I/O Kit kernel driver and also shows the corresponding user space routines for calling into the user client. 
+
+
+Sample Requirements
+-------------------
+This sample requires Mac OS X 10.5 and Xcode 3.0 or later to build. It will run on Mac OS X 10.4 or later.
+
+
+Supporting Multiple KPI Versions
+--------------------------------
+The user client in this sample demonstrates both the legacy kernel programming interface (KPI) that supports 32-bit user processes and the current KPI that works with both 32-bit and 64-bit user processes. (The current KPI was added in Mac OS X 10.5.)
+
+Because there is no weak linking in the kernel, there is no way to build a single binary that uses KPIs added in a newer version of Mac OS X while maintaining binary compatibility with older versions of the OS. The way to solve this problem is to take advantage of the "sub-KEXT" feature of the kernel extension loading mechanism. When the system enumerates all of the KEXTs in /System/Library/Extensions, it also looks in each KEXT for a Contents/PlugIns directory. If that directory is present, the system also enumerates any KEXTs found there. (This search is not recursive; only KEXTs at the root of /System/Library/Extensions are checked for sub-KEXTs.)
+
+This sample builds a main KEXT using the Mac OS X 10.5 SDK and specifying a deployment target of Mac OS X 10.5. This KEXT can use any KPIs that were added in that OS version. The sample also builds a sub-KEXT using the Mac OS X 10.4 SDK and specifying a deployment target of Mac OS X 10.4. Both KEXTs are built from the same sources, using a subset of the availability macros to conditionally compile code which can only run on one of the target OS versions.
+
+Next is how to control which KEXT is loaded on which OS version. It's trivial to keep the Mac OS X 10.5 KEXT from loading on earlier versions by specifying dependencies on later version numbers in the KEXT's OSBundleLibraries property. However, this technique won't work in the reverse scenario because much kernel code in a newer OS version will be binary compatible with older releases. Instead, this sample uses the IOProbeScore property to break the matching tie between the main KEXT and sub-KEXT.
+
+
+User Clients and Rosetta
+------------------------
+The user client in this sample shows how to tell if it has been opened by a process running using Rosetta. This technique is intended to be used only during the transition period until the client applications that make use of the user client are universal.
+
+An application running using Rosetta has the opposite (PowerPC) endianness from the user client and driver. I/O Kit will automatically endian-swap scalar parameters passed between an application and a user client, but I/O Kit has no knowledge of the layout of the fields within a structure parameter. This means that the user client has to perform the endian swapping itself if it's running "cross-endian": that is, the user client and the calling application have opposite endianness.
+
+While it's possible to perform the endian swapping inside the driver, it is strongly recommended that you do this inside the user client as shown in this sample. This is for two reasons: the driver itself then doesn't need to be changed, which makes testing easier. It also avoids the complexity of having to track when the driver is currently running cross-endian. The lifecycle of a user client instance is tightly coupled to the application that opens it, so a user client only has to test for cross-endianness once at initialization time.
+
+
+Using the Sample
+----------------
+The sample contains two pieces. The first is a sample I/O Kit driver KEXT called SimpleDriver. This driver includes a user client that shows how to marshal the various combinations of scalar and structure parameters supported by I/O Kit to and from a userland process.
+
+The second piece is a command-line tool that exercises the API exported by the user client. Like the driver, it uses both the 32-bit and 64-bit I/O Kit APIs. The tool is built four-way universal (i386, x86_64, ppc, and ppc64 architectures) and takes advantage of weak linking and conditional compilation to call the appropriate I/O Kit APIs for the target OS and processor architecture. 
+
+The command-line tool also shows how you can provide an abstraction layer between your application and your user client access code. 
+
+You can build both the KEXT and the user space tool at the same time by selecting the 'Build All' target from the pop-up menu. 
+
+The best way to test the driver is to install it into /System/Library/Extensions as follows:
+
+	$ sudo cp -R build/Debug/SimpleDriver.kext /tmp
+	$ sudo mv /tmp/SimpleDriver.kext /System/Library/Extensions
+	$ sudo chown -R root:wheel /System/Library/Extensions/SimpleDriver.kext
+	$ sudo touch /System/Library/Extensions
+	$ sudo killall -HUP kextd
+
+(Sending a SIGHUP to kextd causes it to update its internal list of KEXTs available for loading. See Technical Q&A QA1319 "Installing an I/O Kit KEXT Without Rebooting <http://developer.apple.com/qa/qa2001/qa1319.html> for more details.)
+
+Once the driver is loaded, running SimpleUserClientTool will open a connection and communicate with the user client inside the KEXT.
+
+You can run SimpleUserClientTool from the command line or directly from within Xcode. If you'd like to run the tool from within Xcode, select the 'SimpleUserClientTool' item from the pop-up menu and click the 'Build and Go' icon in the toolbar. The Xcode project also contains custom executables to simplify testing each slice of the universal binary independently by invoking arch(1) (such as forcing the ppc slice to run and thus exercise the Rosetta path). Prior to Mac OS X 10.5, the arch tool only prints the current processor architecture. If you want to force a particular slice to run on an OS version older than Mac OS X 10.5, you can use lipo(1) to thin the executable to the desired architecture:
+
+	$ lipo -thin i386 -output /tmp/SimpleUserClientTool SimpleUserClientTool
+	$ /tmp/SimpleUserClientTool
+
+
+Other Notes
+-----------
+SimpleDriver specifies IOResources as its provider class in its Info.plist. IOResources is commonly used as the provider class for I/O Kit drivers which do not control any actual hardware. Recall that I/O Kit will match only one driver per match category to a provider. While most drivers do not need to define a IOMatchCategory property, those with a IOProviderClass of IOResources must specify a unique value for IOMatchCategory. The symptom of a missing IOMatchCategory property in this case is that your driver will not start after it has been loaded.
+
+The convention is to use the same value for IOMatchCategory as for the driver's class name (IOClass property). The KEXT loading mechanism will issue the following warning if this convention isn't followed: 
+
+extension SimpleDriver_10_4.kext/ has potential problems:
+Warnings
+{
+"A personality matches on IOResources but IOMatchCategory is missing or not equal to its IOClass (driver may fail to win matching)" = true
+}
+
+SimpleDriver uses the same IOMatchCategory value for both its main KEXT and its sub-KEXT. This is to ensure that only one of the two KEXTs will be loaded. That means that the sub-KEXT doesn't follow the IOMatchCategory value convention and you'll see the above warning. In this case, the warning can be safely ignored.
+
+This sample also shows how to conditionally modify the driver's Info.plist file. Xcode 2.x supports preprocessing of Info.plist files via the build settings INFOPLIST_PREPROCESS = YES and INFOPLIST_PREPROCESSOR_DEFINITIONS = $(GCC_PREPROCESSOR_DEFINITIONS). This capability is used to include the IOKitDebug property only in debug builds.
+
+
+Feedback and Bug Reports
+------------------------
+Please send all feedback about this sample to 
+<http://developer.apple.com/contact/feedback.html>.
+
+Please submit any bug reports about this sample to
+<http://developer.apple.com/bugreporter>. 
