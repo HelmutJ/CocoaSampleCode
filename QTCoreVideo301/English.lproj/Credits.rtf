@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf330
+{\fonttbl\f0\fswiss\fcharset0 Haettenschweiler;\f1\fswiss\fcharset0 ArialMT;\f2\fnil\fcharset0 LucidaGrande;
+}
+{\colortbl;\red255\green255\blue255;}
+\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs48 \cf0 QTCoreVideo301
+\fs72 \
+
+\f1\b\fs18 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\fs24 \cf0 Description
+\b0\fs20 :\
+\
+\pard\pardeftab720\ql\qnatural
+
+\fs18 \cf0 QTCoreVideo301 is a Cocoa application demonstrating how to apply GLSL shader effects to a QuickTime Movies in realtime using the combination of GLSL fragment and vertex shaders and the Core Video texture pipeline.\
+\
+This application is the fifth in a series of applications demonstrating the synergy between QTKit, CoreVideo, and OpenGL. QTCoreVideo301 makes use of the classes introduced in QTCoreVideo102 and introduces the GLSLKit class and the notion of  self-contained GLSL units.\
+\
+This sample also demonstrates, through the use of GLSL units, how to use application controls to interact dynamically with a GLSL fragment shaders.  Additionally, this sample makes use of UI animation techniques; to fade-in or fade-out controls depending on a selected video effect (or shader).\
+\
+\ul Base Classes\ulnone :\
+\
+\'95 OpenGLViewKit - Allows you to work with OpenGLViews, interact with objects in 3D space.\
+\'95 QTCoreVideoController - Request broker between the OpenGL models and the OpenGL views.\
+\'95 MemObject - Memory container class.\
+\'95 AlertPanelKit - Utility class for displaying alerts.\
+\
+\ul Derived Classes\ulnone :\
+\
+\'95 QTCoreVideoOpenGLView - Derived from OpenGLViewKit, concrete view class.\
+\'95 QTVisualContextKit - Utility class for maintaining Core Video PixelBuffer and Core Video OpenGL textures.\
+\'95 GLSLKit - Utility toolkit to manage vertex and fragment shaders.\
+\'95 GLSLUnit - Utility toolkit representing a self-contained fragment and vertex shader.\
+\'95 OpenGLQuad - Allows you to instantiate a Quad object as a display list.\
+\'95 OpenGLTeapot - Allows you to instantiate a Teapot object as a display list.\
+\'95 OpenGLTeapotTextured - Derived from OpenGLTeapot maintains a texture associated with a Teapot surface.\
+\
+This sample is part of the QTCoreVideo group of samples. Also see QTCoreVideo101, QTCoreVideo102, QTCoreVideo103, QTCoreVideo201, and QTCoreVideo202.
+\f2\fs22 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural
+
+\f1\fs18 \cf0 In this sample we're using the following framework APIs:\
+QTKit is used to play back a QuickTime Movie.\
+QuickTime Visual Context is used as the drawing destination for the QuickTime Movie.\
+NSOpenGLView is used as our view, this is where we draw a video frame on a teapot or quad.\
+Core Video pipeline:\
+	Movie -> Visual context -> OpenGL transforms -> OpenGL rendering ----> Hardware\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\b \cf0 What is Core Video:
+\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural
+\cf0 Core Video delivers a modern foundation for video services providing a bridge between QuickTime and the GPU for hardware-accelerated video processing. This highly optimized pipeline for video presentation increases performance and reduces CPU load, freeing up resources for other operations.}
