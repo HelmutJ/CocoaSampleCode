@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AppleSamplePCI_10_4</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.YourCompany.driver.SamplePCI_10_4</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.0d1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Matching</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.YourCompany.driver.SamplePCI_10_4</string>
+			<key>IOClass</key>
+			<string>com_YourCompany_driver_SamplePCI_10_4</string>
+			<key>IOMatchCategory</key>
+			<string>com_YourCompany_driver_SamplePCI_10_4</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>ATY*</string>
+				<string>NVDA*</string>
+				<string>display</string>
+			</array>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOUserClientClass</key>
+			<string>com_YourCompany_driver_SamplePCIUserClient_10_4</string>
+			<key>DisplayParameters</key>
+			<dict>
+				<key>brightness</key>
+				<dict>
+					<key>max</key>
+					<integer>127</integer>
+					<key>min</key>
+					<integer>0</integer>
+					<key>value</key>
+					<integer>120</integer>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>8.0.0</string>
+	</dict>
+</dict>
+</plist>
