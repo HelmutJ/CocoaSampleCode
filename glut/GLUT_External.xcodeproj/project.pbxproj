@@ -1,0 +1,1122 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DC2EF510486A6940098B216 /* GLUT_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF5E0370ADEE00C91783 /* GLUT_Prefix.pch */; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8E409B930BCC4D5D0079132C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2EF5A0486A6940098B216 /* Info.plist */; };
+		8E5A3ED60BCD4FEE00D0AF36 /* libForeground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5A3ED50BCD4FEE00D0AF36 /* libForeground.a */; };
+		8E6D26EC05ED0E8500AF4925 /* GLUTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26E505ED0E8500AF4925 /* GLUTWindow.m */; };
+		8E6D26ED05ED0E8500AF4925 /* GLUTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26E605ED0E8500AF4925 /* GLUTView.m */; };
+		8E6D26EE05ED0E8500AF4925 /* GLUTPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26E705ED0E8500AF4925 /* GLUTPreferencesController.m */; };
+		8E6D26EF05ED0E8500AF4925 /* GLUTMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26E805ED0E8500AF4925 /* GLUTMenuItem.m */; };
+		8E6D26F005ED0E8500AF4925 /* GLUTMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26E905ED0E8500AF4925 /* GLUTMenu.m */; };
+		8E6D26F105ED0E8500AF4925 /* GLUTClipboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26EA05ED0E8500AF4925 /* GLUTClipboardController.m */; };
+		8E6D26F205ED0E8500AF4925 /* GLUTApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26EB05ED0E8500AF4925 /* GLUTApplication.m */; };
+		8E6D26FB05ED0EC000AF4925 /* HID_Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26F605ED0EC000AF4925 /* HID_Utilities.c */; };
+		8E6D26FC05ED0EC000AF4925 /* HID_Queue_Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26F705ED0EC000AF4925 /* HID_Queue_Utilities.c */; };
+		8E6D26FD05ED0EC000AF4925 /* HID_Name_Lookup.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26F805ED0EC000AF4925 /* HID_Name_Lookup.c */; };
+		8E6D26FE05ED0EC000AF4925 /* HID_Error_Handler.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26F905ED0EC000AF4925 /* HID_Error_Handler.c */; };
+		8E6D26FF05ED0EC000AF4925 /* HID_Config_Utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D26FA05ED0EC000AF4925 /* HID_Config_Utilities.c */; };
+		8E6D270705ED0EC900AF4925 /* HID_Utilities_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270005ED0EC900AF4925 /* HID_Utilities_Internal.h */; };
+		8E6D270805ED0EC900AF4925 /* HID_Utilities_External.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270105ED0EC900AF4925 /* HID_Utilities_External.h */; };
+		8E6D270905ED0EC900AF4925 /* HID_Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270205ED0EC900AF4925 /* HID_Utilities.h */; };
+		8E6D270A05ED0EC900AF4925 /* HID_Queue_Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270305ED0EC900AF4925 /* HID_Queue_Utilities.h */; };
+		8E6D270B05ED0EC900AF4925 /* HID_Name_Lookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270405ED0EC900AF4925 /* HID_Name_Lookup.h */; };
+		8E6D270C05ED0EC900AF4925 /* HID_Error_Handler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270505ED0EC900AF4925 /* HID_Error_Handler.h */; };
+		8E6D270D05ED0EC900AF4925 /* HID_Config_Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270605ED0EC900AF4925 /* HID_Config_Utilities.h */; };
+		8E6D270F05ED0EF300AF4925 /* GLUTView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D270E05ED0EF300AF4925 /* GLUTView.h */; };
+		8E6D271105ED0EF900AF4925 /* GLUTWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D271005ED0EF900AF4925 /* GLUTWindow.h */; };
+		8E6D271605ED0F4E00AF4925 /* glut.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D271505ED0F4E00AF4925 /* glut.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D271805ED0F6300AF4925 /* glutf90.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D271705ED0F6300AF4925 /* glutf90.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D271A05ED0F6C00AF4925 /* glutbitmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D271905ED0F6C00AF4925 /* glutbitmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D271C05ED0F6F00AF4925 /* glutstroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D271B05ED0F6F00AF4925 /* glutstroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D273205ED0F8500AF4925 /* macx_win.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D271D05ED0F8500AF4925 /* macx_win.m */; };
+		8E6D273305ED0F8500AF4925 /* macx_warp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D271E05ED0F8500AF4925 /* macx_warp.m */; };
+		8E6D273405ED0F8500AF4925 /* macx_util.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D271F05ED0F8500AF4925 /* macx_util.m */; };
+		8E6D273505ED0F8500AF4925 /* macx_tablet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272005ED0F8500AF4925 /* macx_tablet.m */; };
+		8E6D273605ED0F8500AF4925 /* macx_swap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272105ED0F8500AF4925 /* macx_swap.m */; };
+		8E6D273705ED0F8500AF4925 /* macx_space.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272205ED0F8500AF4925 /* macx_space.m */; };
+		8E6D273805ED0F8500AF4925 /* macx_overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272305ED0F8500AF4925 /* macx_overlay.m */; };
+		8E6D273905ED0F8500AF4925 /* macx_modifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272405ED0F8500AF4925 /* macx_modifier.m */; };
+		8E6D273A05ED0F8500AF4925 /* macx_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272505ED0F8500AF4925 /* macx_menu.m */; };
+		8E6D273B05ED0F8500AF4925 /* macx_key.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272605ED0F8500AF4925 /* macx_key.m */; };
+		8E6D273C05ED0F8500AF4925 /* macx_joy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272705ED0F8500AF4925 /* macx_joy.m */; };
+		8E6D273D05ED0F8500AF4925 /* macx_input.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272805ED0F8500AF4925 /* macx_input.m */; };
+		8E6D273E05ED0F8500AF4925 /* macx_init.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272905ED0F8500AF4925 /* macx_init.m */; };
+		8E6D273F05ED0F8500AF4925 /* macx_gamemode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272A05ED0F8500AF4925 /* macx_gamemode.m */; };
+		8E6D274005ED0F8500AF4925 /* macx_fortran.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272B05ED0F8500AF4925 /* macx_fortran.m */; };
+		8E6D274205ED0F8500AF4925 /* macx_event.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272D05ED0F8500AF4925 /* macx_event.m */; };
+		8E6D274305ED0F8500AF4925 /* macx_dstr.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272E05ED0F8500AF4925 /* macx_dstr.m */; };
+		8E6D274405ED0F8500AF4925 /* macx_dials.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D272F05ED0F8500AF4925 /* macx_dials.m */; };
+		8E6D274505ED0F8500AF4925 /* macx_cursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D273005ED0F8500AF4925 /* macx_cursor.m */; };
+		8E6D274605ED0F8500AF4925 /* macx_get.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D273105ED0F8500AF4925 /* macx_get.m */; };
+		8E6D274C05ED0FC700AF4925 /* macx_glut.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D274B05ED0FC700AF4925 /* macx_glut.h */; };
+		8E6D274E05ED0FCE00AF4925 /* macx_utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D274D05ED0FCE00AF4925 /* macx_utilities.h */; };
+		8E6D275005ED0FE300AF4925 /* GLUTApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D274F05ED0FE300AF4925 /* GLUTApplication.h */; };
+		8E6D275205ED0FE700AF4925 /* GLUTClipboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D275105ED0FE700AF4925 /* GLUTClipboardController.h */; };
+		8E6D275405ED0FEC00AF4925 /* GLUTMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D275305ED0FEC00AF4925 /* GLUTMenu.h */; };
+		8E6D275605ED0FF100AF4925 /* GLUTMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D275505ED0FF100AF4925 /* GLUTMenuItem.h */; };
+		8E6D275805ED0FF800AF4925 /* GLUTPreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D275705ED0FF800AF4925 /* GLUTPreferencesController.h */; };
+		8E6D276B05ED102900AF4925 /* glut_vidresize.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275905ED102900AF4925 /* glut_vidresize.c */; };
+		8E6D276C05ED102900AF4925 /* glut_tr24.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275A05ED102900AF4925 /* glut_tr24.c */; };
+		8E6D276D05ED102900AF4925 /* glut_tr10.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275B05ED102900AF4925 /* glut_tr10.c */; };
+		8E6D276E05ED102900AF4925 /* glut_swidth.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275C05ED102900AF4925 /* glut_swidth.c */; };
+		8E6D276F05ED102900AF4925 /* glut_stroke.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275D05ED102900AF4925 /* glut_stroke.c */; };
+		8E6D277005ED102900AF4925 /* glut_hel10.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275E05ED102900AF4925 /* glut_hel10.c */; };
+		8E6D277105ED102900AF4925 /* glut_hel18.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D275F05ED102900AF4925 /* glut_hel18.c */; };
+		8E6D277205ED102900AF4925 /* glut_hel12.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276005ED102900AF4925 /* glut_hel12.c */; };
+		8E6D277305ED102900AF4925 /* glut_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276105ED102900AF4925 /* glut_ext.c */; };
+		8E6D277405ED102900AF4925 /* glut_mroman.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276205ED102900AF4925 /* glut_mroman.c */; };
+		8E6D277505ED102900AF4925 /* glut_8x13.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276305ED102900AF4925 /* glut_8x13.c */; };
+		8E6D277605ED102900AF4925 /* glut_cindex.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276405ED102900AF4925 /* glut_cindex.c */; };
+		8E6D277705ED102900AF4925 /* glut_bwidth.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276505ED102900AF4925 /* glut_bwidth.c */; };
+		8E6D277805ED102900AF4925 /* glut_9x15.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276605ED102900AF4925 /* glut_9x15.c */; };
+		8E6D277905ED102900AF4925 /* glut_bitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276705ED102900AF4925 /* glut_bitmap.c */; };
+		8E6D277A05ED102900AF4925 /* glut_teapot.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276805ED102900AF4925 /* glut_teapot.c */; };
+		8E6D277B05ED102900AF4925 /* glut_roman.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276905ED102900AF4925 /* glut_roman.c */; };
+		8E6D277C05ED102900AF4925 /* glut_shapes.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D276A05ED102900AF4925 /* glut_shapes.c */; };
+		8E6D278405ED10DE00AF4925 /* Caution.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D278305ED10DE00AF4925 /* Caution.tiff */; };
+		8E6D278705ED10FC00AF4925 /* GLUTUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D278505ED10FC00AF4925 /* GLUTUI.strings */; };
+		8E6D278E05ED110900AF4925 /* GLUTPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D278805ED110900AF4925 /* GLUTPreferences.nib */; };
+		8E6D278F05ED110900AF4925 /* GLUT.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D278A05ED110900AF4925 /* GLUT.nib */; };
+		8E6D279005ED110900AF4925 /* GLUTClipboard.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D278C05ED110900AF4925 /* GLUTClipboard.nib */; };
+		8E6D27A505ED111B00AF4925 /* blankCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279205ED111B00AF4925 /* blankCursor.tiff */; };
+		8E6D27A605ED111B00AF4925 /* bottomCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279305ED111B00AF4925 /* bottomCursor.tiff */; };
+		8E6D27A705ED111B00AF4925 /* bottomleftCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279405ED111B00AF4925 /* bottomleftCursor.tiff */; };
+		8E6D27A805ED111B00AF4925 /* bottomrightCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279505ED111B00AF4925 /* bottomrightCursor.tiff */; };
+		8E6D27A905ED111B00AF4925 /* crossCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279605ED111B00AF4925 /* crossCursor.tiff */; };
+		8E6D27AA05ED111B00AF4925 /* cycleCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279705ED111B00AF4925 /* cycleCursor.tiff */; };
+		8E6D27AB05ED111B00AF4925 /* destroyCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279805ED111B00AF4925 /* destroyCursor.tiff */; };
+		8E6D27AC05ED111B00AF4925 /* fingerCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279905ED111B00AF4925 /* fingerCursor.tiff */; };
+		8E6D27AD05ED111B00AF4925 /* helpCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279A05ED111B00AF4925 /* helpCursor.tiff */; };
+		8E6D27AE05ED111B00AF4925 /* leftCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279B05ED111B00AF4925 /* leftCursor.tiff */; };
+		8E6D27AF05ED111B00AF4925 /* leftRightCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279C05ED111B00AF4925 /* leftRightCursor.tiff */; };
+		8E6D27B005ED111B00AF4925 /* rightArrowCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279D05ED111B00AF4925 /* rightArrowCursor.tiff */; };
+		8E6D27B105ED111B00AF4925 /* rightCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279E05ED111B00AF4925 /* rightCursor.tiff */; };
+		8E6D27B205ED111B00AF4925 /* sprayCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D279F05ED111B00AF4925 /* sprayCursor.tiff */; };
+		8E6D27B305ED111B00AF4925 /* topCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D27A005ED111B00AF4925 /* topCursor.tiff */; };
+		8E6D27B405ED111B00AF4925 /* topleftCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D27A105ED111B00AF4925 /* topleftCursor.tiff */; };
+		8E6D27B505ED111B00AF4925 /* toprightCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D27A205ED111B00AF4925 /* toprightCursor.tiff */; };
+		8E6D27B605ED111B00AF4925 /* upDownCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D27A305ED111B00AF4925 /* upDownCursor.tiff */; };
+		8E6D27B705ED111B00AF4925 /* waitCursor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D27A405ED111B00AF4925 /* waitCursor.tiff */; };
+		8E6D27D505ED11AC00AF4925 /* copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27BE05ED11AC00AF4925 /* copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27D605ED11AC00AF4925 /* ex_angle.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27BF05ED11AC00AF4925 /* ex_angle.c */; };
+		8E6D27D705ED11AC00AF4925 /* ex_cut_round.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27C005ED11AC00AF4925 /* ex_cut_round.c */; };
+		8E6D27D805ED11AC00AF4925 /* ex_raw.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27C105ED11AC00AF4925 /* ex_raw.c */; };
+		8E6D27D905ED11AC00AF4925 /* extrude.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27C205ED11AC00AF4925 /* extrude.c */; };
+		8E6D27DA05ED11AC00AF4925 /* extrude.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C305ED11AC00AF4925 /* extrude.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27DB05ED11AC00AF4925 /* gle_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C405ED11AC00AF4925 /* gle_osx.h */; };
+		8E6D27DC05ED11AC00AF4925 /* gutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C505ED11AC00AF4925 /* gutil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27DD05ED11AC00AF4925 /* intersect.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27C605ED11AC00AF4925 /* intersect.c */; };
+		8E6D27DE05ED11AC00AF4925 /* intersect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C705ED11AC00AF4925 /* intersect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27DF05ED11AC00AF4925 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C805ED11AC00AF4925 /* port.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27E005ED11AC00AF4925 /* rot.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27C905ED11AC00AF4925 /* rot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27E105ED11AC00AF4925 /* rot_prince.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27CA05ED11AC00AF4925 /* rot_prince.c */; };
+		8E6D27E205ED11AC00AF4925 /* rotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27CB05ED11AC00AF4925 /* rotate.c */; };
+		8E6D27E305ED11AC00AF4925 /* round_cap.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27CC05ED11AC00AF4925 /* round_cap.c */; };
+		8E6D27E405ED11AC00AF4925 /* segment.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27CD05ED11AC00AF4925 /* segment.c */; };
+		8E6D27E505ED11AC00AF4925 /* segment.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27CE05ED11AC00AF4925 /* segment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27E605ED11AC00AF4925 /* texgen.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27CF05ED11AC00AF4925 /* texgen.c */; };
+		8E6D27E705ED11AC00AF4925 /* tube.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27D005ED11AC00AF4925 /* tube.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27E805ED11AC00AF4925 /* tube_gc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27D105ED11AC00AF4925 /* tube_gc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D27E905ED11AC00AF4925 /* urotate.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27D205ED11AC00AF4925 /* urotate.c */; };
+		8E6D27EA05ED11AC00AF4925 /* view.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27D305ED11AC00AF4925 /* view.c */; };
+		8E6D27EB05ED11AC00AF4925 /* vvector.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27D405ED11AC00AF4925 /* vvector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D280405ED11B500AF4925 /* glsmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27ED05ED11B500AF4925 /* glsmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D280505ED11B500AF4925 /* glsmapint.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6D27EE05ED11B500AF4925 /* glsmapint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E6D280605ED11B500AF4925 /* smap_buildsmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27EF05ED11B500AF4925 /* smap_buildsmap.c */; };
+		8E6D280705ED11B500AF4925 /* smap_context.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F005ED11B500AF4925 /* smap_context.c */; };
+		8E6D280805ED11B500AF4925 /* smap_create.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F105ED11B500AF4925 /* smap_create.c */; };
+		8E6D280905ED11B500AF4925 /* smap_destroy.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F205ED11B500AF4925 /* smap_destroy.c */; };
+		8E6D280A05ED11B500AF4925 /* smap_drawmesh.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F305ED11B500AF4925 /* smap_drawmesh.c */; };
+		8E6D280B05ED11B500AF4925 /* smap_flag.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F405ED11B500AF4925 /* smap_flag.c */; };
+		8E6D280C05ED11B500AF4925 /* smap_get.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F505ED11B500AF4925 /* smap_get.c */; };
+		8E6D280D05ED11B500AF4925 /* smap_getfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F605ED11B500AF4925 /* smap_getfunc.c */; };
+		8E6D280E05ED11B500AF4925 /* smap_gettexdim.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F705ED11B500AF4925 /* smap_gettexdim.c */; };
+		8E6D280F05ED11B500AF4925 /* smap_gettexobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F805ED11B500AF4925 /* smap_gettexobj.c */; };
+		8E6D281005ED11B500AF4925 /* smap_getvec.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27F905ED11B500AF4925 /* smap_getvec.c */; };
+		8E6D281105ED11B500AF4925 /* smap_makemesh.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FA05ED11B500AF4925 /* smap_makemesh.c */; };
+		8E6D281205ED11B500AF4925 /* smap_nearfar.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FB05ED11B500AF4925 /* smap_nearfar.c */; };
+		8E6D281305ED11B500AF4925 /* smap_origin.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FC05ED11B500AF4925 /* smap_origin.c */; };
+		8E6D281405ED11B500AF4925 /* smap_render.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FD05ED11B500AF4925 /* smap_render.c */; };
+		8E6D281505ED11B500AF4925 /* smap_rvec2st.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FE05ED11B500AF4925 /* smap_rvec2st.c */; };
+		8E6D281605ED11B500AF4925 /* smap_set.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D27FF05ED11B500AF4925 /* smap_set.c */; };
+		8E6D281705ED11B500AF4925 /* smap_setfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D280005ED11B500AF4925 /* smap_setfunc.c */; };
+		8E6D281805ED11B500AF4925 /* smap_setvec.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D280105ED11B500AF4925 /* smap_setvec.c */; };
+		8E6D281905ED11B500AF4925 /* smap_texdim.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D280205ED11B500AF4925 /* smap_texdim.c */; };
+		8E6D281A05ED11B500AF4925 /* smap_texobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D280305ED11B500AF4925 /* smap_texobj.c */; };
+		8E6D286005ED141400AF4925 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D285F05ED141400AF4925 /* ApplicationServices.framework */; };
+		8E6D2ABF05ED143400AF4925 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D2ABC05ED143400AF4925 /* CoreFoundation.framework */; };
+		8E6D2AC005ED143400AF4925 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D2ABD05ED143400AF4925 /* IOKit.framework */; };
+		8E6D2AC105ED143400AF4925 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D2ABE05ED143400AF4925 /* OpenGL.framework */; };
+		8E6D30DD05ED189700AF4925 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D30DB05ED189700AF4925 /* AppKit.framework */; };
+		8E6D30DD05ED1897DEADBEEF /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D30DB05ED1897DEADBEEF /* QTKit.framework */; };
+		8E6D30DE05ED189700AF4925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6D30DC05ED189700AF4925 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32DBCF5E0370ADEE00C91783 /* GLUT_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUT_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* GLUT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLUT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5A3ED50BCD4FEE00D0AF36 /* libForeground.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libForeground.a; sourceTree = SOURCE_ROOT; };
+		8E6D26E505ED0E8500AF4925 /* GLUTWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTWindow.m; sourceTree = "<group>"; };
+		8E6D26E605ED0E8500AF4925 /* GLUTView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTView.m; sourceTree = "<group>"; };
+		8E6D26E705ED0E8500AF4925 /* GLUTPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTPreferencesController.m; sourceTree = "<group>"; };
+		8E6D26E805ED0E8500AF4925 /* GLUTMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTMenuItem.m; sourceTree = "<group>"; };
+		8E6D26E905ED0E8500AF4925 /* GLUTMenu.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTMenu.m; sourceTree = "<group>"; };
+		8E6D26EA05ED0E8500AF4925 /* GLUTClipboardController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTClipboardController.m; sourceTree = "<group>"; };
+		8E6D26EB05ED0E8500AF4925 /* GLUTApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GLUTApplication.m; sourceTree = "<group>"; };
+		8E6D26F605ED0EC000AF4925 /* HID_Utilities.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HID_Utilities.c; sourceTree = "<group>"; };
+		8E6D26F705ED0EC000AF4925 /* HID_Queue_Utilities.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HID_Queue_Utilities.c; sourceTree = "<group>"; };
+		8E6D26F805ED0EC000AF4925 /* HID_Name_Lookup.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HID_Name_Lookup.c; sourceTree = "<group>"; };
+		8E6D26F905ED0EC000AF4925 /* HID_Error_Handler.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HID_Error_Handler.c; sourceTree = "<group>"; };
+		8E6D26FA05ED0EC000AF4925 /* HID_Config_Utilities.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = HID_Config_Utilities.c; sourceTree = "<group>"; };
+		8E6D270005ED0EC900AF4925 /* HID_Utilities_Internal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Utilities_Internal.h; sourceTree = "<group>"; };
+		8E6D270105ED0EC900AF4925 /* HID_Utilities_External.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Utilities_External.h; sourceTree = "<group>"; };
+		8E6D270205ED0EC900AF4925 /* HID_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Utilities.h; sourceTree = "<group>"; };
+		8E6D270305ED0EC900AF4925 /* HID_Queue_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Queue_Utilities.h; sourceTree = "<group>"; };
+		8E6D270405ED0EC900AF4925 /* HID_Name_Lookup.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Name_Lookup.h; sourceTree = "<group>"; };
+		8E6D270505ED0EC900AF4925 /* HID_Error_Handler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Error_Handler.h; sourceTree = "<group>"; };
+		8E6D270605ED0EC900AF4925 /* HID_Config_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HID_Config_Utilities.h; sourceTree = "<group>"; };
+		8E6D270E05ED0EF300AF4925 /* GLUTView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTView.h; sourceTree = "<group>"; };
+		8E6D271005ED0EF900AF4925 /* GLUTWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTWindow.h; sourceTree = "<group>"; };
+		8E6D271505ED0F4E00AF4925 /* glut.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glut.h; sourceTree = "<group>"; };
+		8E6D271705ED0F6300AF4925 /* glutf90.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glutf90.h; sourceTree = "<group>"; };
+		8E6D271905ED0F6C00AF4925 /* glutbitmap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glutbitmap.h; sourceTree = "<group>"; };
+		8E6D271B05ED0F6F00AF4925 /* glutstroke.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glutstroke.h; sourceTree = "<group>"; };
+		8E6D271D05ED0F8500AF4925 /* macx_win.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_win.m; sourceTree = "<group>"; };
+		8E6D271E05ED0F8500AF4925 /* macx_warp.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_warp.m; sourceTree = "<group>"; };
+		8E6D271F05ED0F8500AF4925 /* macx_util.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_util.m; sourceTree = "<group>"; };
+		8E6D272005ED0F8500AF4925 /* macx_tablet.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_tablet.m; sourceTree = "<group>"; };
+		8E6D272105ED0F8500AF4925 /* macx_swap.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_swap.m; sourceTree = "<group>"; };
+		8E6D272205ED0F8500AF4925 /* macx_space.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_space.m; sourceTree = "<group>"; };
+		8E6D272305ED0F8500AF4925 /* macx_overlay.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_overlay.m; sourceTree = "<group>"; };
+		8E6D272405ED0F8500AF4925 /* macx_modifier.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_modifier.m; sourceTree = "<group>"; };
+		8E6D272505ED0F8500AF4925 /* macx_menu.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_menu.m; sourceTree = "<group>"; };
+		8E6D272605ED0F8500AF4925 /* macx_key.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_key.m; sourceTree = "<group>"; };
+		8E6D272705ED0F8500AF4925 /* macx_joy.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_joy.m; sourceTree = "<group>"; };
+		8E6D272805ED0F8500AF4925 /* macx_input.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_input.m; sourceTree = "<group>"; };
+		8E6D272905ED0F8500AF4925 /* macx_init.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_init.m; sourceTree = "<group>"; };
+		8E6D272A05ED0F8500AF4925 /* macx_gamemode.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_gamemode.m; sourceTree = "<group>"; };
+		8E6D272B05ED0F8500AF4925 /* macx_fortran.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_fortran.m; sourceTree = "<group>"; };
+		8E6D272D05ED0F8500AF4925 /* macx_event.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_event.m; sourceTree = "<group>"; };
+		8E6D272E05ED0F8500AF4925 /* macx_dstr.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_dstr.m; sourceTree = "<group>"; };
+		8E6D272F05ED0F8500AF4925 /* macx_dials.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_dials.m; sourceTree = "<group>"; };
+		8E6D273005ED0F8500AF4925 /* macx_cursor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_cursor.m; sourceTree = "<group>"; };
+		8E6D273105ED0F8500AF4925 /* macx_get.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = macx_get.m; sourceTree = "<group>"; };
+		8E6D274705ED0F9600AF4925 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		8E6D274B05ED0FC700AF4925 /* macx_glut.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = macx_glut.h; sourceTree = "<group>"; };
+		8E6D274D05ED0FCE00AF4925 /* macx_utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = macx_utilities.h; sourceTree = "<group>"; };
+		8E6D274F05ED0FE300AF4925 /* GLUTApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTApplication.h; sourceTree = "<group>"; };
+		8E6D275105ED0FE700AF4925 /* GLUTClipboardController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTClipboardController.h; sourceTree = "<group>"; };
+		8E6D275305ED0FEC00AF4925 /* GLUTMenu.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTMenu.h; sourceTree = "<group>"; };
+		8E6D275505ED0FF100AF4925 /* GLUTMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTMenuItem.h; sourceTree = "<group>"; };
+		8E6D275705ED0FF800AF4925 /* GLUTPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GLUTPreferencesController.h; sourceTree = "<group>"; };
+		8E6D275905ED102900AF4925 /* glut_vidresize.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_vidresize.c; sourceTree = "<group>"; };
+		8E6D275A05ED102900AF4925 /* glut_tr24.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_tr24.c; sourceTree = "<group>"; };
+		8E6D275B05ED102900AF4925 /* glut_tr10.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_tr10.c; sourceTree = "<group>"; };
+		8E6D275C05ED102900AF4925 /* glut_swidth.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_swidth.c; sourceTree = "<group>"; };
+		8E6D275D05ED102900AF4925 /* glut_stroke.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_stroke.c; sourceTree = "<group>"; };
+		8E6D275E05ED102900AF4925 /* glut_hel10.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_hel10.c; sourceTree = "<group>"; };
+		8E6D275F05ED102900AF4925 /* glut_hel18.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_hel18.c; sourceTree = "<group>"; };
+		8E6D276005ED102900AF4925 /* glut_hel12.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_hel12.c; sourceTree = "<group>"; };
+		8E6D276105ED102900AF4925 /* glut_ext.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_ext.c; sourceTree = "<group>"; };
+		8E6D276205ED102900AF4925 /* glut_mroman.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_mroman.c; sourceTree = "<group>"; };
+		8E6D276305ED102900AF4925 /* glut_8x13.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_8x13.c; sourceTree = "<group>"; };
+		8E6D276405ED102900AF4925 /* glut_cindex.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_cindex.c; sourceTree = "<group>"; };
+		8E6D276505ED102900AF4925 /* glut_bwidth.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_bwidth.c; sourceTree = "<group>"; };
+		8E6D276605ED102900AF4925 /* glut_9x15.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_9x15.c; sourceTree = "<group>"; };
+		8E6D276705ED102900AF4925 /* glut_bitmap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_bitmap.c; sourceTree = "<group>"; };
+		8E6D276805ED102900AF4925 /* glut_teapot.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_teapot.c; sourceTree = "<group>"; };
+		8E6D276905ED102900AF4925 /* glut_roman.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_roman.c; sourceTree = "<group>"; };
+		8E6D276A05ED102900AF4925 /* glut_shapes.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = glut_shapes.c; sourceTree = "<group>"; };
+		8E6D278305ED10DE00AF4925 /* Caution.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Caution.tiff; sourceTree = "<group>"; };
+		8E6D278605ED10FC00AF4925 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/GLUTUI.strings; sourceTree = "<group>"; };
+		8E6D278905ED110900AF4925 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GLUTPreferences.nib; sourceTree = "<group>"; };
+		8E6D278B05ED110900AF4925 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GLUT.nib; sourceTree = "<group>"; };
+		8E6D278D05ED110900AF4925 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GLUTClipboard.nib; sourceTree = "<group>"; };
+		8E6D279205ED111B00AF4925 /* blankCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = blankCursor.tiff; path = Cursors/blankCursor.tiff; sourceTree = "<group>"; };
+		8E6D279305ED111B00AF4925 /* bottomCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = bottomCursor.tiff; path = Cursors/bottomCursor.tiff; sourceTree = "<group>"; };
+		8E6D279405ED111B00AF4925 /* bottomleftCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = bottomleftCursor.tiff; path = Cursors/bottomleftCursor.tiff; sourceTree = "<group>"; };
+		8E6D279505ED111B00AF4925 /* bottomrightCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = bottomrightCursor.tiff; path = Cursors/bottomrightCursor.tiff; sourceTree = "<group>"; };
+		8E6D279605ED111B00AF4925 /* crossCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = crossCursor.tiff; path = Cursors/crossCursor.tiff; sourceTree = "<group>"; };
+		8E6D279705ED111B00AF4925 /* cycleCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = cycleCursor.tiff; path = Cursors/cycleCursor.tiff; sourceTree = "<group>"; };
+		8E6D279805ED111B00AF4925 /* destroyCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = destroyCursor.tiff; path = Cursors/destroyCursor.tiff; sourceTree = "<group>"; };
+		8E6D279905ED111B00AF4925 /* fingerCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = fingerCursor.tiff; path = Cursors/fingerCursor.tiff; sourceTree = "<group>"; };
+		8E6D279A05ED111B00AF4925 /* helpCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = helpCursor.tiff; path = Cursors/helpCursor.tiff; sourceTree = "<group>"; };
+		8E6D279B05ED111B00AF4925 /* leftCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = leftCursor.tiff; path = Cursors/leftCursor.tiff; sourceTree = "<group>"; };
+		8E6D279C05ED111B00AF4925 /* leftRightCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = leftRightCursor.tiff; path = Cursors/leftRightCursor.tiff; sourceTree = "<group>"; };
+		8E6D279D05ED111B00AF4925 /* rightArrowCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = rightArrowCursor.tiff; path = Cursors/rightArrowCursor.tiff; sourceTree = "<group>"; };
+		8E6D279E05ED111B00AF4925 /* rightCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = rightCursor.tiff; path = Cursors/rightCursor.tiff; sourceTree = "<group>"; };
+		8E6D279F05ED111B00AF4925 /* sprayCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = sprayCursor.tiff; path = Cursors/sprayCursor.tiff; sourceTree = "<group>"; };
+		8E6D27A005ED111B00AF4925 /* topCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = topCursor.tiff; path = Cursors/topCursor.tiff; sourceTree = "<group>"; };
+		8E6D27A105ED111B00AF4925 /* topleftCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = topleftCursor.tiff; path = Cursors/topleftCursor.tiff; sourceTree = "<group>"; };
+		8E6D27A205ED111B00AF4925 /* toprightCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = toprightCursor.tiff; path = Cursors/toprightCursor.tiff; sourceTree = "<group>"; };
+		8E6D27A305ED111B00AF4925 /* upDownCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = upDownCursor.tiff; path = Cursors/upDownCursor.tiff; sourceTree = "<group>"; };
+		8E6D27A405ED111B00AF4925 /* waitCursor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = waitCursor.tiff; path = Cursors/waitCursor.tiff; sourceTree = "<group>"; };
+		8E6D27B805ED116D00AF4925 /* GLUT.exp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.exports; path = GLUT.exp; sourceTree = "<group>"; };
+		8E6D27BE05ED11AC00AF4925 /* copy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = copy.h; sourceTree = "<group>"; };
+		8E6D27BF05ED11AC00AF4925 /* ex_angle.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ex_angle.c; sourceTree = "<group>"; };
+		8E6D27C005ED11AC00AF4925 /* ex_cut_round.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ex_cut_round.c; sourceTree = "<group>"; };
+		8E6D27C105ED11AC00AF4925 /* ex_raw.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ex_raw.c; sourceTree = "<group>"; };
+		8E6D27C205ED11AC00AF4925 /* extrude.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = extrude.c; sourceTree = "<group>"; };
+		8E6D27C305ED11AC00AF4925 /* extrude.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = extrude.h; sourceTree = "<group>"; };
+		8E6D27C405ED11AC00AF4925 /* gle_osx.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = gle_osx.h; sourceTree = "<group>"; };
+		8E6D27C505ED11AC00AF4925 /* gutil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = gutil.h; sourceTree = "<group>"; };
+		8E6D27C605ED11AC00AF4925 /* intersect.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = intersect.c; sourceTree = "<group>"; };
+		8E6D27C705ED11AC00AF4925 /* intersect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = intersect.h; sourceTree = "<group>"; };
+		8E6D27C805ED11AC00AF4925 /* port.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = port.h; sourceTree = "<group>"; };
+		8E6D27C905ED11AC00AF4925 /* rot.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rot.h; sourceTree = "<group>"; };
+		8E6D27CA05ED11AC00AF4925 /* rot_prince.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = rot_prince.c; sourceTree = "<group>"; };
+		8E6D27CB05ED11AC00AF4925 /* rotate.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = rotate.c; sourceTree = "<group>"; };
+		8E6D27CC05ED11AC00AF4925 /* round_cap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = round_cap.c; sourceTree = "<group>"; };
+		8E6D27CD05ED11AC00AF4925 /* segment.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = segment.c; sourceTree = "<group>"; };
+		8E6D27CE05ED11AC00AF4925 /* segment.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = segment.h; sourceTree = "<group>"; };
+		8E6D27CF05ED11AC00AF4925 /* texgen.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = texgen.c; sourceTree = "<group>"; };
+		8E6D27D005ED11AC00AF4925 /* tube.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tube.h; sourceTree = "<group>"; };
+		8E6D27D105ED11AC00AF4925 /* tube_gc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = tube_gc.h; sourceTree = "<group>"; };
+		8E6D27D205ED11AC00AF4925 /* urotate.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = urotate.c; sourceTree = "<group>"; };
+		8E6D27D305ED11AC00AF4925 /* view.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = view.c; sourceTree = "<group>"; };
+		8E6D27D405ED11AC00AF4925 /* vvector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vvector.h; sourceTree = "<group>"; };
+		8E6D27ED05ED11B500AF4925 /* glsmap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glsmap.h; sourceTree = "<group>"; };
+		8E6D27EE05ED11B500AF4925 /* glsmapint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = glsmapint.h; sourceTree = "<group>"; };
+		8E6D27EF05ED11B500AF4925 /* smap_buildsmap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_buildsmap.c; sourceTree = "<group>"; };
+		8E6D27F005ED11B500AF4925 /* smap_context.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_context.c; sourceTree = "<group>"; };
+		8E6D27F105ED11B500AF4925 /* smap_create.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_create.c; sourceTree = "<group>"; };
+		8E6D27F205ED11B500AF4925 /* smap_destroy.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_destroy.c; sourceTree = "<group>"; };
+		8E6D27F305ED11B500AF4925 /* smap_drawmesh.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_drawmesh.c; sourceTree = "<group>"; };
+		8E6D27F405ED11B500AF4925 /* smap_flag.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_flag.c; sourceTree = "<group>"; };
+		8E6D27F505ED11B500AF4925 /* smap_get.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_get.c; sourceTree = "<group>"; };
+		8E6D27F605ED11B500AF4925 /* smap_getfunc.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_getfunc.c; sourceTree = "<group>"; };
+		8E6D27F705ED11B500AF4925 /* smap_gettexdim.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_gettexdim.c; sourceTree = "<group>"; };
+		8E6D27F805ED11B500AF4925 /* smap_gettexobj.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_gettexobj.c; sourceTree = "<group>"; };
+		8E6D27F905ED11B500AF4925 /* smap_getvec.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_getvec.c; sourceTree = "<group>"; };
+		8E6D27FA05ED11B500AF4925 /* smap_makemesh.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_makemesh.c; sourceTree = "<group>"; };
+		8E6D27FB05ED11B500AF4925 /* smap_nearfar.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_nearfar.c; sourceTree = "<group>"; };
+		8E6D27FC05ED11B500AF4925 /* smap_origin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_origin.c; sourceTree = "<group>"; };
+		8E6D27FD05ED11B500AF4925 /* smap_render.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_render.c; sourceTree = "<group>"; };
+		8E6D27FE05ED11B500AF4925 /* smap_rvec2st.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_rvec2st.c; sourceTree = "<group>"; };
+		8E6D27FF05ED11B500AF4925 /* smap_set.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_set.c; sourceTree = "<group>"; };
+		8E6D280005ED11B500AF4925 /* smap_setfunc.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_setfunc.c; sourceTree = "<group>"; };
+		8E6D280105ED11B500AF4925 /* smap_setvec.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_setvec.c; sourceTree = "<group>"; };
+		8E6D280205ED11B500AF4925 /* smap_texdim.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_texdim.c; sourceTree = "<group>"; };
+		8E6D280305ED11B500AF4925 /* smap_texobj.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smap_texobj.c; sourceTree = "<group>"; };
+		8E6D285F05ED141400AF4925 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		8E6D2ABC05ED143400AF4925 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		8E6D2ABD05ED143400AF4925 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		8E6D2ABE05ED143400AF4925 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		8E6D30DB05ED189700AF4925 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		8E6D30DB05ED1897DEADBEEF /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		8E6D30DC05ED189700AF4925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E6D286005ED141400AF4925 /* ApplicationServices.framework in Frameworks */,
+				8E6D2ABF05ED143400AF4925 /* CoreFoundation.framework in Frameworks */,
+				8E6D2AC005ED143400AF4925 /* IOKit.framework in Frameworks */,
+				8E6D2AC105ED143400AF4925 /* OpenGL.framework in Frameworks */,
+				8E6D30DD05ED189700AF4925 /* AppKit.framework in Frameworks */,
+				8E6D30DE05ED189700AF4925 /* Foundation.framework in Frameworks */,
+				8E6D30DD05ED1897DEADBEEF /* QTKit.framework in Frameworks */,
+				8E5A3ED60BCD4FEE00D0AF36 /* libForeground.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* GLUT.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* GLUT */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D274705ED0F9600AF4925 /* ReadMe.txt */,
+				8E6D27B805ED116D00AF4925 /* GLUT.exp */,
+				8E6D271405ED0F4200AF4925 /* External Headers */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				8E6D27BC05ED118A00AF4925 /* Subprojects */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = GLUT;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A3ED50BCD4FEE00D0AF36 /* libForeground.a */,
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D278505ED10FC00AF4925 /* GLUTUI.strings */,
+				8E6D278805ED110900AF4925 /* GLUTPreferences.nib */,
+				8E6D278A05ED110900AF4925 /* GLUT.nib */,
+				8E6D278C05ED110900AF4925 /* GLUTClipboard.nib */,
+				8E6D278305ED10DE00AF4925 /* Caution.tiff */,
+				8E6D279205ED111B00AF4925 /* blankCursor.tiff */,
+				8E6D279305ED111B00AF4925 /* bottomCursor.tiff */,
+				8E6D279405ED111B00AF4925 /* bottomleftCursor.tiff */,
+				8E6D279505ED111B00AF4925 /* bottomrightCursor.tiff */,
+				8E6D279605ED111B00AF4925 /* crossCursor.tiff */,
+				8E6D279705ED111B00AF4925 /* cycleCursor.tiff */,
+				8E6D279805ED111B00AF4925 /* destroyCursor.tiff */,
+				8E6D279905ED111B00AF4925 /* fingerCursor.tiff */,
+				8E6D279A05ED111B00AF4925 /* helpCursor.tiff */,
+				8E6D279B05ED111B00AF4925 /* leftCursor.tiff */,
+				8E6D279C05ED111B00AF4925 /* leftRightCursor.tiff */,
+				8E6D279D05ED111B00AF4925 /* rightArrowCursor.tiff */,
+				8E6D279E05ED111B00AF4925 /* rightCursor.tiff */,
+				8E6D279F05ED111B00AF4925 /* sprayCursor.tiff */,
+				8E6D27A005ED111B00AF4925 /* topCursor.tiff */,
+				8E6D27A105ED111B00AF4925 /* topleftCursor.tiff */,
+				8E6D27A205ED111B00AF4925 /* toprightCursor.tiff */,
+				8E6D27A305ED111B00AF4925 /* upDownCursor.tiff */,
+				8E6D27A405ED111B00AF4925 /* waitCursor.tiff */,
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D274F05ED0FE300AF4925 /* GLUTApplication.h */,
+				8E6D26EB05ED0E8500AF4925 /* GLUTApplication.m */,
+				8E6D275105ED0FE700AF4925 /* GLUTClipboardController.h */,
+				8E6D26EA05ED0E8500AF4925 /* GLUTClipboardController.m */,
+				8E6D275305ED0FEC00AF4925 /* GLUTMenu.h */,
+				8E6D26E905ED0E8500AF4925 /* GLUTMenu.m */,
+				8E6D275505ED0FF100AF4925 /* GLUTMenuItem.h */,
+				8E6D26E805ED0E8500AF4925 /* GLUTMenuItem.m */,
+				8E6D275705ED0FF800AF4925 /* GLUTPreferencesController.h */,
+				8E6D26E705ED0E8500AF4925 /* GLUTPreferencesController.m */,
+				8E6D270E05ED0EF300AF4925 /* GLUTView.h */,
+				8E6D26E605ED0E8500AF4925 /* GLUTView.m */,
+				8E6D271005ED0EF900AF4925 /* GLUTWindow.h */,
+				8E6D26E505ED0E8500AF4925 /* GLUTWindow.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D30DB05ED189700AF4925 /* AppKit.framework */,
+				8E6D30DC05ED189700AF4925 /* Foundation.framework */,
+				8E6D285F05ED141400AF4925 /* ApplicationServices.framework */,
+				8E6D2ABC05ED143400AF4925 /* CoreFoundation.framework */,
+				8E6D2ABD05ED143400AF4925 /* IOKit.framework */,
+				8E6D2ABE05ED143400AF4925 /* OpenGL.framework */,
+				8E6D30DB05ED1897DEADBEEF /* QTKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* GLUT_Prefix.pch */,
+				8E6D278205ED10AD00AF4925 /* Mac OS X */,
+				8E6D277F05ED109300AF4925 /* Cross Platform */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8E6D26F505ED0EB000AF4925 /* HID */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D270605ED0EC900AF4925 /* HID_Config_Utilities.h */,
+				8E6D26FA05ED0EC000AF4925 /* HID_Config_Utilities.c */,
+				8E6D270505ED0EC900AF4925 /* HID_Error_Handler.h */,
+				8E6D26F905ED0EC000AF4925 /* HID_Error_Handler.c */,
+				8E6D270405ED0EC900AF4925 /* HID_Name_Lookup.h */,
+				8E6D26F805ED0EC000AF4925 /* HID_Name_Lookup.c */,
+				8E6D270305ED0EC900AF4925 /* HID_Queue_Utilities.h */,
+				8E6D26F705ED0EC000AF4925 /* HID_Queue_Utilities.c */,
+				8E6D270205ED0EC900AF4925 /* HID_Utilities.h */,
+				8E6D26F605ED0EC000AF4925 /* HID_Utilities.c */,
+				8E6D270005ED0EC900AF4925 /* HID_Utilities_Internal.h */,
+				8E6D270105ED0EC900AF4925 /* HID_Utilities_External.h */,
+			);
+			name = HID;
+			sourceTree = "<group>";
+		};
+		8E6D271405ED0F4200AF4925 /* External Headers */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D271505ED0F4E00AF4925 /* glut.h */,
+				8E6D271905ED0F6C00AF4925 /* glutbitmap.h */,
+				8E6D271705ED0F6300AF4925 /* glutf90.h */,
+				8E6D271B05ED0F6F00AF4925 /* glutstroke.h */,
+			);
+			name = "External Headers";
+			sourceTree = "<group>";
+		};
+		8E6D277F05ED109300AF4925 /* Cross Platform */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D276305ED102900AF4925 /* glut_8x13.c */,
+				8E6D276605ED102900AF4925 /* glut_9x15.c */,
+				8E6D276705ED102900AF4925 /* glut_bitmap.c */,
+				8E6D276505ED102900AF4925 /* glut_bwidth.c */,
+				8E6D276405ED102900AF4925 /* glut_cindex.c */,
+				8E6D276105ED102900AF4925 /* glut_ext.c */,
+				8E6D275E05ED102900AF4925 /* glut_hel10.c */,
+				8E6D275F05ED102900AF4925 /* glut_hel18.c */,
+				8E6D276005ED102900AF4925 /* glut_hel12.c */,
+				8E6D276205ED102900AF4925 /* glut_mroman.c */,
+				8E6D276905ED102900AF4925 /* glut_roman.c */,
+				8E6D276A05ED102900AF4925 /* glut_shapes.c */,
+				8E6D275D05ED102900AF4925 /* glut_stroke.c */,
+				8E6D275C05ED102900AF4925 /* glut_swidth.c */,
+				8E6D276805ED102900AF4925 /* glut_teapot.c */,
+				8E6D275B05ED102900AF4925 /* glut_tr10.c */,
+				8E6D275A05ED102900AF4925 /* glut_tr24.c */,
+				8E6D275905ED102900AF4925 /* glut_vidresize.c */,
+			);
+			name = "Cross Platform";
+			sourceTree = "<group>";
+		};
+		8E6D278205ED10AD00AF4925 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D26F505ED0EB000AF4925 /* HID */,
+				8E6D274B05ED0FC700AF4925 /* macx_glut.h */,
+				8E6D274D05ED0FCE00AF4925 /* macx_utilities.h */,
+				8E6D273005ED0F8500AF4925 /* macx_cursor.m */,
+				8E6D272F05ED0F8500AF4925 /* macx_dials.m */,
+				8E6D272E05ED0F8500AF4925 /* macx_dstr.m */,
+				8E6D272D05ED0F8500AF4925 /* macx_event.m */,
+				8E6D272B05ED0F8500AF4925 /* macx_fortran.m */,
+				8E6D272A05ED0F8500AF4925 /* macx_gamemode.m */,
+				8E6D273105ED0F8500AF4925 /* macx_get.m */,
+				8E6D272905ED0F8500AF4925 /* macx_init.m */,
+				8E6D272805ED0F8500AF4925 /* macx_input.m */,
+				8E6D272705ED0F8500AF4925 /* macx_joy.m */,
+				8E6D272605ED0F8500AF4925 /* macx_key.m */,
+				8E6D272505ED0F8500AF4925 /* macx_menu.m */,
+				8E6D272405ED0F8500AF4925 /* macx_modifier.m */,
+				8E6D272305ED0F8500AF4925 /* macx_overlay.m */,
+				8E6D272205ED0F8500AF4925 /* macx_space.m */,
+				8E6D272105ED0F8500AF4925 /* macx_swap.m */,
+				8E6D272005ED0F8500AF4925 /* macx_tablet.m */,
+				8E6D271F05ED0F8500AF4925 /* macx_util.m */,
+				8E6D271E05ED0F8500AF4925 /* macx_warp.m */,
+				8E6D271D05ED0F8500AF4925 /* macx_win.m */,
+			);
+			name = "Mac OS X";
+			sourceTree = "<group>";
+		};
+		8E6D27BC05ED118A00AF4925 /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D27BD05ED11AC00AF4925 /* gle */,
+				8E6D27EC05ED11B500AF4925 /* glsmap */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		8E6D27BD05ED11AC00AF4925 /* gle */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D281D05ED11F800AF4925 /* External Headers */,
+				8E6D282305ED121800AF4925 /* Source */,
+			);
+			path = gle;
+			sourceTree = "<group>";
+		};
+		8E6D27EC05ED11B500AF4925 /* glsmap */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D282605ED122400AF4925 /* External Headers */,
+				8E6D282905ED122D00AF4925 /* Source */,
+				8E6D27ED05ED11B500AF4925 /* glsmap.h */,
+				8E6D27EE05ED11B500AF4925 /* glsmapint.h */,
+			);
+			path = glsmap;
+			sourceTree = "<group>";
+		};
+		8E6D281D05ED11F800AF4925 /* External Headers */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D27BE05ED11AC00AF4925 /* copy.h */,
+				8E6D27C305ED11AC00AF4925 /* extrude.h */,
+				8E6D27C405ED11AC00AF4925 /* gle_osx.h */,
+				8E6D27C505ED11AC00AF4925 /* gutil.h */,
+				8E6D27C705ED11AC00AF4925 /* intersect.h */,
+				8E6D27C805ED11AC00AF4925 /* port.h */,
+				8E6D27C905ED11AC00AF4925 /* rot.h */,
+				8E6D27CE05ED11AC00AF4925 /* segment.h */,
+				8E6D27D005ED11AC00AF4925 /* tube.h */,
+				8E6D27D105ED11AC00AF4925 /* tube_gc.h */,
+				8E6D27D405ED11AC00AF4925 /* vvector.h */,
+			);
+			name = "External Headers";
+			sourceTree = "<group>";
+		};
+		8E6D282305ED121800AF4925 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D27BF05ED11AC00AF4925 /* ex_angle.c */,
+				8E6D27C005ED11AC00AF4925 /* ex_cut_round.c */,
+				8E6D27C105ED11AC00AF4925 /* ex_raw.c */,
+				8E6D27C205ED11AC00AF4925 /* extrude.c */,
+				8E6D27C605ED11AC00AF4925 /* intersect.c */,
+				8E6D27CA05ED11AC00AF4925 /* rot_prince.c */,
+				8E6D27CB05ED11AC00AF4925 /* rotate.c */,
+				8E6D27CC05ED11AC00AF4925 /* round_cap.c */,
+				8E6D27CD05ED11AC00AF4925 /* segment.c */,
+				8E6D27CF05ED11AC00AF4925 /* texgen.c */,
+				8E6D27D205ED11AC00AF4925 /* urotate.c */,
+				8E6D27D305ED11AC00AF4925 /* view.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8E6D282605ED122400AF4925 /* External Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "External Headers";
+			sourceTree = "<group>";
+		};
+		8E6D282905ED122D00AF4925 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D27EF05ED11B500AF4925 /* smap_buildsmap.c */,
+				8E6D27F005ED11B500AF4925 /* smap_context.c */,
+				8E6D27F105ED11B500AF4925 /* smap_create.c */,
+				8E6D27F205ED11B500AF4925 /* smap_destroy.c */,
+				8E6D27F305ED11B500AF4925 /* smap_drawmesh.c */,
+				8E6D27F405ED11B500AF4925 /* smap_flag.c */,
+				8E6D27F505ED11B500AF4925 /* smap_get.c */,
+				8E6D27F605ED11B500AF4925 /* smap_getfunc.c */,
+				8E6D27F705ED11B500AF4925 /* smap_gettexdim.c */,
+				8E6D27F805ED11B500AF4925 /* smap_gettexobj.c */,
+				8E6D27F905ED11B500AF4925 /* smap_getvec.c */,
+				8E6D27FA05ED11B500AF4925 /* smap_makemesh.c */,
+				8E6D27FB05ED11B500AF4925 /* smap_nearfar.c */,
+				8E6D27FC05ED11B500AF4925 /* smap_origin.c */,
+				8E6D27FD05ED11B500AF4925 /* smap_render.c */,
+				8E6D27FE05ED11B500AF4925 /* smap_rvec2st.c */,
+				8E6D27FF05ED11B500AF4925 /* smap_set.c */,
+				8E6D280005ED11B500AF4925 /* smap_setfunc.c */,
+				8E6D280105ED11B500AF4925 /* smap_setvec.c */,
+				8E6D280205ED11B500AF4925 /* smap_texdim.c */,
+				8E6D280305ED11B500AF4925 /* smap_texobj.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF510486A6940098B216 /* GLUT_Prefix.pch in Headers */,
+				8E6D270705ED0EC900AF4925 /* HID_Utilities_Internal.h in Headers */,
+				8E6D270805ED0EC900AF4925 /* HID_Utilities_External.h in Headers */,
+				8E6D270905ED0EC900AF4925 /* HID_Utilities.h in Headers */,
+				8E6D270A05ED0EC900AF4925 /* HID_Queue_Utilities.h in Headers */,
+				8E6D270B05ED0EC900AF4925 /* HID_Name_Lookup.h in Headers */,
+				8E6D270C05ED0EC900AF4925 /* HID_Error_Handler.h in Headers */,
+				8E6D270D05ED0EC900AF4925 /* HID_Config_Utilities.h in Headers */,
+				8E6D270F05ED0EF300AF4925 /* GLUTView.h in Headers */,
+				8E6D271105ED0EF900AF4925 /* GLUTWindow.h in Headers */,
+				8E6D271605ED0F4E00AF4925 /* glut.h in Headers */,
+				8E6D271805ED0F6300AF4925 /* glutf90.h in Headers */,
+				8E6D271A05ED0F6C00AF4925 /* glutbitmap.h in Headers */,
+				8E6D271C05ED0F6F00AF4925 /* glutstroke.h in Headers */,
+				8E6D274C05ED0FC700AF4925 /* macx_glut.h in Headers */,
+				8E6D274E05ED0FCE00AF4925 /* macx_utilities.h in Headers */,
+				8E6D275005ED0FE300AF4925 /* GLUTApplication.h in Headers */,
+				8E6D275205ED0FE700AF4925 /* GLUTClipboardController.h in Headers */,
+				8E6D275405ED0FEC00AF4925 /* GLUTMenu.h in Headers */,
+				8E6D275605ED0FF100AF4925 /* GLUTMenuItem.h in Headers */,
+				8E6D275805ED0FF800AF4925 /* GLUTPreferencesController.h in Headers */,
+				8E6D27D505ED11AC00AF4925 /* copy.h in Headers */,
+				8E6D27DA05ED11AC00AF4925 /* extrude.h in Headers */,
+				8E6D27DB05ED11AC00AF4925 /* gle_osx.h in Headers */,
+				8E6D27DC05ED11AC00AF4925 /* gutil.h in Headers */,
+				8E6D27DE05ED11AC00AF4925 /* intersect.h in Headers */,
+				8E6D27DF05ED11AC00AF4925 /* port.h in Headers */,
+				8E6D27E005ED11AC00AF4925 /* rot.h in Headers */,
+				8E6D27E505ED11AC00AF4925 /* segment.h in Headers */,
+				8E6D27E705ED11AC00AF4925 /* tube.h in Headers */,
+				8E6D27E805ED11AC00AF4925 /* tube_gc.h in Headers */,
+				8E6D27EB05ED11AC00AF4925 /* vvector.h in Headers */,
+				8E6D280405ED11B500AF4925 /* glsmap.h in Headers */,
+				8E6D280505ED11B500AF4925 /* glsmapint.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* GLUT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E7287610BCC070B00E1A77A /* Build configuration list for PBXNativeTarget "GLUT" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+				8DC2EF580486A6940098B216 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLUT;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = GLUT;
+			productReference = 8DC2EF5B0486A6940098B216 /* GLUT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8E7287590BCC070B00E1A77A /* Build configuration list for PBXProject "GLUT_External" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* GLUT */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* GLUT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+				8E6D278405ED10DE00AF4925 /* Caution.tiff in Resources */,
+				8E6D278705ED10FC00AF4925 /* GLUTUI.strings in Resources */,
+				8E6D278E05ED110900AF4925 /* GLUTPreferences.nib in Resources */,
+				8E6D278F05ED110900AF4925 /* GLUT.nib in Resources */,
+				8E6D279005ED110900AF4925 /* GLUTClipboard.nib in Resources */,
+				8E6D27A505ED111B00AF4925 /* blankCursor.tiff in Resources */,
+				8E6D27A605ED111B00AF4925 /* bottomCursor.tiff in Resources */,
+				8E6D27A705ED111B00AF4925 /* bottomleftCursor.tiff in Resources */,
+				8E6D27A805ED111B00AF4925 /* bottomrightCursor.tiff in Resources */,
+				8E6D27A905ED111B00AF4925 /* crossCursor.tiff in Resources */,
+				8E6D27AA05ED111B00AF4925 /* cycleCursor.tiff in Resources */,
+				8E6D27AB05ED111B00AF4925 /* destroyCursor.tiff in Resources */,
+				8E6D27AC05ED111B00AF4925 /* fingerCursor.tiff in Resources */,
+				8E6D27AD05ED111B00AF4925 /* helpCursor.tiff in Resources */,
+				8E6D27AE05ED111B00AF4925 /* leftCursor.tiff in Resources */,
+				8E6D27AF05ED111B00AF4925 /* leftRightCursor.tiff in Resources */,
+				8E6D27B005ED111B00AF4925 /* rightArrowCursor.tiff in Resources */,
+				8E6D27B105ED111B00AF4925 /* rightCursor.tiff in Resources */,
+				8E6D27B205ED111B00AF4925 /* sprayCursor.tiff in Resources */,
+				8E6D27B305ED111B00AF4925 /* topCursor.tiff in Resources */,
+				8E6D27B405ED111B00AF4925 /* topleftCursor.tiff in Resources */,
+				8E6D27B505ED111B00AF4925 /* toprightCursor.tiff in Resources */,
+				8E6D27B605ED111B00AF4925 /* upDownCursor.tiff in Resources */,
+				8E6D27B705ED111B00AF4925 /* waitCursor.tiff in Resources */,
+				8E409B930BCC4D5D0079132C /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8DC2EF580486A6940098B216 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E6D26EC05ED0E8500AF4925 /* GLUTWindow.m in Sources */,
+				8E6D26ED05ED0E8500AF4925 /* GLUTView.m in Sources */,
+				8E6D26EE05ED0E8500AF4925 /* GLUTPreferencesController.m in Sources */,
+				8E6D26EF05ED0E8500AF4925 /* GLUTMenuItem.m in Sources */,
+				8E6D26F005ED0E8500AF4925 /* GLUTMenu.m in Sources */,
+				8E6D26F105ED0E8500AF4925 /* GLUTClipboardController.m in Sources */,
+				8E6D26F205ED0E8500AF4925 /* GLUTApplication.m in Sources */,
+				8E6D26FB05ED0EC000AF4925 /* HID_Utilities.c in Sources */,
+				8E6D26FC05ED0EC000AF4925 /* HID_Queue_Utilities.c in Sources */,
+				8E6D26FD05ED0EC000AF4925 /* HID_Name_Lookup.c in Sources */,
+				8E6D26FE05ED0EC000AF4925 /* HID_Error_Handler.c in Sources */,
+				8E6D26FF05ED0EC000AF4925 /* HID_Config_Utilities.c in Sources */,
+				8E6D273205ED0F8500AF4925 /* macx_win.m in Sources */,
+				8E6D273305ED0F8500AF4925 /* macx_warp.m in Sources */,
+				8E6D273405ED0F8500AF4925 /* macx_util.m in Sources */,
+				8E6D273505ED0F8500AF4925 /* macx_tablet.m in Sources */,
+				8E6D273605ED0F8500AF4925 /* macx_swap.m in Sources */,
+				8E6D273705ED0F8500AF4925 /* macx_space.m in Sources */,
+				8E6D273805ED0F8500AF4925 /* macx_overlay.m in Sources */,
+				8E6D273905ED0F8500AF4925 /* macx_modifier.m in Sources */,
+				8E6D273A05ED0F8500AF4925 /* macx_menu.m in Sources */,
+				8E6D273B05ED0F8500AF4925 /* macx_key.m in Sources */,
+				8E6D273C05ED0F8500AF4925 /* macx_joy.m in Sources */,
+				8E6D273D05ED0F8500AF4925 /* macx_input.m in Sources */,
+				8E6D273E05ED0F8500AF4925 /* macx_init.m in Sources */,
+				8E6D273F05ED0F8500AF4925 /* macx_gamemode.m in Sources */,
+				8E6D274005ED0F8500AF4925 /* macx_fortran.m in Sources */,
+				8E6D274205ED0F8500AF4925 /* macx_event.m in Sources */,
+				8E6D274305ED0F8500AF4925 /* macx_dstr.m in Sources */,
+				8E6D274405ED0F8500AF4925 /* macx_dials.m in Sources */,
+				8E6D274505ED0F8500AF4925 /* macx_cursor.m in Sources */,
+				8E6D274605ED0F8500AF4925 /* macx_get.m in Sources */,
+				8E6D276B05ED102900AF4925 /* glut_vidresize.c in Sources */,
+				8E6D276C05ED102900AF4925 /* glut_tr24.c in Sources */,
+				8E6D276D05ED102900AF4925 /* glut_tr10.c in Sources */,
+				8E6D276E05ED102900AF4925 /* glut_swidth.c in Sources */,
+				8E6D276F05ED102900AF4925 /* glut_stroke.c in Sources */,
+				8E6D277005ED102900AF4925 /* glut_hel10.c in Sources */,
+				8E6D277105ED102900AF4925 /* glut_hel18.c in Sources */,
+				8E6D277205ED102900AF4925 /* glut_hel12.c in Sources */,
+				8E6D277305ED102900AF4925 /* glut_ext.c in Sources */,
+				8E6D277405ED102900AF4925 /* glut_mroman.c in Sources */,
+				8E6D277505ED102900AF4925 /* glut_8x13.c in Sources */,
+				8E6D277605ED102900AF4925 /* glut_cindex.c in Sources */,
+				8E6D277705ED102900AF4925 /* glut_bwidth.c in Sources */,
+				8E6D277805ED102900AF4925 /* glut_9x15.c in Sources */,
+				8E6D277905ED102900AF4925 /* glut_bitmap.c in Sources */,
+				8E6D277A05ED102900AF4925 /* glut_teapot.c in Sources */,
+				8E6D277B05ED102900AF4925 /* glut_roman.c in Sources */,
+				8E6D277C05ED102900AF4925 /* glut_shapes.c in Sources */,
+				8E6D27D605ED11AC00AF4925 /* ex_angle.c in Sources */,
+				8E6D27D705ED11AC00AF4925 /* ex_cut_round.c in Sources */,
+				8E6D27D805ED11AC00AF4925 /* ex_raw.c in Sources */,
+				8E6D27D905ED11AC00AF4925 /* extrude.c in Sources */,
+				8E6D27DD05ED11AC00AF4925 /* intersect.c in Sources */,
+				8E6D27E105ED11AC00AF4925 /* rot_prince.c in Sources */,
+				8E6D27E205ED11AC00AF4925 /* rotate.c in Sources */,
+				8E6D27E305ED11AC00AF4925 /* round_cap.c in Sources */,
+				8E6D27E405ED11AC00AF4925 /* segment.c in Sources */,
+				8E6D27E605ED11AC00AF4925 /* texgen.c in Sources */,
+				8E6D27E905ED11AC00AF4925 /* urotate.c in Sources */,
+				8E6D27EA05ED11AC00AF4925 /* view.c in Sources */,
+				8E6D280605ED11B500AF4925 /* smap_buildsmap.c in Sources */,
+				8E6D280705ED11B500AF4925 /* smap_context.c in Sources */,
+				8E6D280805ED11B500AF4925 /* smap_create.c in Sources */,
+				8E6D280905ED11B500AF4925 /* smap_destroy.c in Sources */,
+				8E6D280A05ED11B500AF4925 /* smap_drawmesh.c in Sources */,
+				8E6D280B05ED11B500AF4925 /* smap_flag.c in Sources */,
+				8E6D280C05ED11B500AF4925 /* smap_get.c in Sources */,
+				8E6D280D05ED11B500AF4925 /* smap_getfunc.c in Sources */,
+				8E6D280E05ED11B500AF4925 /* smap_gettexdim.c in Sources */,
+				8E6D280F05ED11B500AF4925 /* smap_gettexobj.c in Sources */,
+				8E6D281005ED11B500AF4925 /* smap_getvec.c in Sources */,
+				8E6D281105ED11B500AF4925 /* smap_makemesh.c in Sources */,
+				8E6D281205ED11B500AF4925 /* smap_nearfar.c in Sources */,
+				8E6D281305ED11B500AF4925 /* smap_origin.c in Sources */,
+				8E6D281405ED11B500AF4925 /* smap_render.c in Sources */,
+				8E6D281505ED11B500AF4925 /* smap_rvec2st.c in Sources */,
+				8E6D281605ED11B500AF4925 /* smap_set.c in Sources */,
+				8E6D281705ED11B500AF4925 /* smap_setfunc.c in Sources */,
+				8E6D281805ED11B500AF4925 /* smap_setvec.c in Sources */,
+				8E6D281905ED11B500AF4925 /* smap_texdim.c in Sources */,
+				8E6D281A05ED11B500AF4925 /* smap_texobj.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E6D278505ED10FC00AF4925 /* GLUTUI.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E6D278605ED10FC00AF4925 /* English */,
+			);
+			name = GLUTUI.strings;
+			sourceTree = "<group>";
+		};
+		8E6D278805ED110900AF4925 /* GLUTPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E6D278905ED110900AF4925 /* English */,
+			);
+			name = GLUTPreferences.nib;
+			sourceTree = "<group>";
+		};
+		8E6D278A05ED110900AF4925 /* GLUT.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E6D278B05ED110900AF4925 /* English */,
+			);
+			name = GLUT.nib;
+			sourceTree = "<group>";
+		};
+		8E6D278C05ED110900AF4925 /* GLUTClipboard.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E6D278D05ED110900AF4925 /* English */,
+			);
+			name = GLUTClipboard.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E72875A0BCC070B00E1A77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc7400,
+					ppc64,
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		8E72875B0BCC070B00E1A77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc7400,
+					ppc64,
+					i386,
+					x86_64,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+			};
+			name = Release;
+		};
+		8E7287620BCC070B00E1A77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXPORTED_SYMBOLS_FILE = GLUT.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GLUT_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				LIBRARY_STYLE = Dynamic;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					3E000000,
+				);
+				PRODUCT_NAME = GLUT;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		8E7287630BCC070B00E1A77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXPORTED_SYMBOLS_FILE = GLUT.exp;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GLUT_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				LIBRARY_STYLE = Dynamic;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					3E000000,
+				);
+				PRODUCT_NAME = GLUT;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E7287590BCC070B00E1A77A /* Build configuration list for PBXProject "GLUT_External" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E72875A0BCC070B00E1A77A /* Debug */,
+				8E72875B0BCC070B00E1A77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E7287610BCC070B00E1A77A /* Build configuration list for PBXNativeTarget "GLUT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E7287620BCC070B00E1A77A /* Debug */,
+				8E7287630BCC070B00E1A77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
