@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf330
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs36 \cf0 URL CacheInfo
+\fs24 \
+\
+\
+
+\fs28 CacheInfo is a Mac OS X application that demonstrates URL caching behavior using the Cocoa URL loading system. CacheInfo allows the user to choose a URL, load it asynchronously, and observe results such as the data size, load time, and cache usage. The user can adjust the sizes of the shared memory and disk caches and observe how caching is affected during the load.\
+\
+The purpose of CacheInfo is to allow you to experiment to find a good cache configuration for retrieving specific resources from the network using the HTTP protocol. The application allows you to vary the memory and disk cache sizes using NSURLCache and load URL data from the network using NSURLConnection. It tracks whether the cache is used, and reports the elapsed load time. To use this application, you must have a connection to the Internet.\
+\
+A shared URL cache uses two resources: memory and disk. In your application, you can specify how much memory and disk you want to use. You can also specify that the cache use only one of these resources. If you specify enough memory cache, the retrieved data is loaded into the memory cache first. If you specify enough disk cache, after a few seconds the retrieved data is also written to a persistent store on disk. Cacheinfo creates a directory for the disk cache in the application's temporary directory.\
+\
+CacheInfo uses the Foundation networking classes. It does not use CFNetwork directly. \
+\
+\
+USAGE\
+\
+CacheInfo is designed to load images using the HTTP protocol. When you launch CacheInfo, it retrieves a list of URLs from a file named URL.plist. The URLs specify public domain images from NASA. The combo box control displays the list and allows you to choose different images to load.\
+To add new URLs to the application, or to delete existing URLs, open URL.plist in an Xcode editor window and edit the list as needed.\
+\
+The Load Resource button initiates a request and a connection. If the resource is already in the shared cache, the load time is displayed in gray. The two sliders allow you to adjust the size of the memory and disk caches. The Clear Cache button removes the contents of the shared cache and resets the UI.\
+\
+Note that after loading an image for the first time, the URL loading system takes a few seconds to cache the image to disk. The disk cache always contains a minimum of 13312 bytes. This is the size of the database used as the persistent store for URL data.\
+\
+\
+RELATED INFORMATION\
+\
+The Foundation framework includes a set of classes for interacting with URLs and communicating with servers using standard Internet protocols. Together these classes are referred to as the URL loading system. The Apple document 
+\i URL Loading System
+\i0  describes how to use the classes. \
+\
+This sample uses the following classes in the URL loading system:\
+\
+
+\f1\fs24 NSURLCache\
+NSURLConnection\
+NSURLRequest\
+NSURLResponse\
+NSCachedURLResponse\
+
+\f0\fs28 \
+\
+BUILD REQUIREMENTS\
+\
+Mac OS X v10.5 or later, Xcode 3.1 or later\
+\
+\
+RUNTIME REQUIREMENTS\
+\
+Mac OS X v10.5.3 or later\
+\
+\
+PACKAGING LIST\
+\
+
+\f1\fs24 Controller.h\
+Controller.m\
+
+\f0\fs28 \
+Contains the controller logic for the application. A delegate for 
+\f1\fs24 NSApplication
+\f0\fs28 , 
+\f1\fs24 NSComboBox
+\f0\fs28 , and 
+\f1\fs24 NSWindow
+\f0\fs28 .\
+\
+
+\f1\fs24 MainMenu.nib\
+
+\f0\fs28 \
+Implements the user interface.\
+\
+
+\f1\fs24 URL.plist\
+
+\f0\fs28 \
+Contains a list of URLs that specify images courtesy of NASA. These images are in the public domain.\
+\
+\
+CHANGES FROM PREVIOUS VERSIONS:\
+\
+Version 1.0\
+First version of a sample application that demonstrates URL caching behavior.\
+\
+\
+Copyright (C) 2008 Apple Inc. All rights reserved.\
+}
