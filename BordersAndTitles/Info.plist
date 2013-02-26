@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>BordersAndTitles</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.edit.BordersAndTitles</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BordersAndTitles</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
+	<key>NSPrincipalClass</key>
+	<string>PluginController</string>
+	<key>ProPlugDictionaryVersion</key>
+	<string>1.0</string>
+	<key>ProPlugDynamicRegistration</key>
+	<false/>
+	<key>ProPlugPlugInGroupList</key>
+	<array>
+		<dict>
+<!-- Do not change the groupName or uuid. These will help identify your plug-in as an Aperture Export plug-in. -->
+			<key>groupName</key>
+			<string>Edit</string>
+			<key>uuid</key>
+			<string>C4E54D0A-175D-4751-B9FD-308F6105BFB5</string>
+		</dict>
+	</array>
+	<key>ProPlugPlugInList</key>
+	<array>
+		<dict>
+			<key>className</key>
+			<string>PluginController</string>
+			<key>displayName</key>
+			<string>Borders &amp; Titles</string>
+<!-- Do not change this uuid. It should match the group uuid above and will help Aperture identify your plug-in as an Export plug-in. -->
+			<key>group</key>
+			<string>C4E54D0A-175D-4751-B9FD-308F6105BFB5</string>
+<!-- You should change the help URL to a URL appropriate for your plug-in. If you do not wish to include a help URL, please remove the helpURL tag and its string tag. -->
+			<key>helpURL</key>
+			<string>http://www.apple.com/aperture/</string>
+			<key>protocolNames</key>
+			<array>
+				<string>ApertureEditPlugIn</string>
+			</array>
+			<key>uuid</key>
+<!-- You must replace the text below with a UUID. Use the uuidgen command line utility to generate a new one and then paste it into the tag below. -->
+			<string>FE083AA8-C3EC-48CE-8FBB-2B04A4373985</string>
+		</dict>
+	</array>
+	<key>ProPlugProtocolList</key>
+	<array>
+		<dict>
+			<key>protocolName</key>
+			<string>ApertureEditManager</string>
+			<key>versions</key>
+			<array>
+				<integer>1</integer>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

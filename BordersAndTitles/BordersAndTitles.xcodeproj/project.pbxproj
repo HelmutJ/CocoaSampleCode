@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89EC2F070D46C418000BEF37 /* BordersTitlesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EC2F060D46C418000BEF37 /* BordersTitlesView.m */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		D118EA660AC08CCB006DD2FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D118EA640AC08CCB006DD2FE /* Localizable.strings */; };
+		D15DEA4A0ABF639500CBE3A5 /* PluginManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15DEA490ABF639500CBE3A5 /* PluginManager.framework */; };
+		D15DEA4F0ABF63C600CBE3A5 /* PluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D15DEA4D0ABF63C600CBE3A5 /* PluginController.m */; };
+		D15DEA520ABF641300CBE3A5 /* PluginUI.nib in Resources */ = {isa = PBXBuildFile; fileRef = D15DEA500ABF641300CBE3A5 /* PluginUI.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* BordersAndTitles_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BordersAndTitles_Prefix.pch; sourceTree = "<group>"; };
+		89EC2F050D46C418000BEF37 /* BordersTitlesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BordersTitlesView.h; sourceTree = "<group>"; };
+		89EC2F060D46C418000BEF37 /* BordersTitlesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BordersTitlesView.m; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D118EA650AC08CCB006DD2FE /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D118EB0F0AC08EAE006DD2FE /* BordersAndTitles.ApertureEdit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BordersAndTitles.ApertureEdit; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15DEA490ABF639500CBE3A5 /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = /Library/Frameworks/PluginManager.framework; sourceTree = "<absolute>"; };
+		D15DEA4D0ABF63C600CBE3A5 /* PluginController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PluginController.m; sourceTree = "<group>"; };
+		D15DEA4E0ABF63C600CBE3A5 /* PluginController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PluginController.h; sourceTree = "<group>"; };
+		D15DEA510ABF641300CBE3A5 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PluginUI.nib; sourceTree = "<group>"; };
+		D164EC280CD7CFDD00D00647 /* ApertureSDKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApertureSDKCommon.h; sourceTree = "<group>"; };
+		D164EC2A0CD7CFDD00D00647 /* ApertureEditManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApertureEditManager.h; sourceTree = "<group>"; };
+		D164EC2B0CD7CFDD00D00647 /* ApertureEditPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApertureEditPlugIn.h; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				D15DEA4A0ABF639500CBE3A5 /* PluginManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* MyApertureExportPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				D164EC270CD7CFDD00D00647 /* ApertureHeaders */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				D118EB1C0AC08EE7006DD2FE /* Products */,
+			);
+			name = MyApertureExportPlugIn;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D15DEA500ABF641300CBE3A5 /* PluginUI.nib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				D118EA640AC08CCB006DD2FE /* Localizable.strings */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D15DEA4E0ABF63C600CBE3A5 /* PluginController.h */,
+				D15DEA4D0ABF63C600CBE3A5 /* PluginController.m */,
+				89EC2F050D46C418000BEF37 /* BordersTitlesView.h */,
+				89EC2F060D46C418000BEF37 /* BordersTitlesView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D15DEA490ABF639500CBE3A5 /* PluginManager.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* BordersAndTitles_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D118EB1C0AC08EE7006DD2FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D118EB0F0AC08EAE006DD2FE /* BordersAndTitles.ApertureEdit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D164EC270CD7CFDD00D00647 /* ApertureHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				D164EC280CD7CFDD00D00647 /* ApertureSDKCommon.h */,
+				D164EC2A0CD7CFDD00D00647 /* ApertureEditManager.h */,
+				D164EC2B0CD7CFDD00D00647 /* ApertureEditPlugIn.h */,
+			);
+			path = ApertureHeaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* BordersAndTitles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "BordersAndTitles" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				89E0899A0DE24E4100AFC723 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BordersAndTitles;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = MyApertureExportPlugIn;
+			productReference = D118EB0F0AC08EAE006DD2FE /* BordersAndTitles.ApertureEdit */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "BordersAndTitles" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* MyApertureExportPlugIn */;
+			productRefGroup = 089C166AFE841209C02AAC07 /* MyApertureExportPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* BordersAndTitles */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				D15DEA520ABF641300CBE3A5 /* PluginUI.nib in Resources */,
+				D118EA660AC08CCB006DD2FE /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89E0899A0DE24E4100AFC723 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will put a link to the plug-in in Aperture's plug-in's folder (~/library/app support/aperture/plug-ins/) if you're building in debug, but clears out the plug-in for release builds.\n\n# Make sure the Aperture export plug-ins folder exists\nif ! [ -d \"${USER_LIBRARY_DIR}/Application Support/Aperture/Plug-Ins\" ]; then\n   mkdir \"${USER_LIBRARY_DIR}/Application Support/Aperture/Plug-Ins\"\nfi\n\n\n# Clean up any previous products/symbolic links in the Aperture export plug-ins folder\nif [ -a \"${USER_LIBRARY_DIR}/Application Support/Aperture/Plug-Ins/${FULL_PRODUCT_NAME}\" ]; then\n rm -Rf \"${USER_LIBRARY_DIR}/Application Support/Aperture/Plug-Ins/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n # if we're debugging, add a symbolic link to the plug-in\n ln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n   \"${USER_LIBRARY_DIR}/Application Support/Aperture/Plug-Ins/${FULL_PRODUCT_NAME}\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D15DEA4F0ABF63C600CBE3A5 /* PluginController.m in Sources */,
+				89EC2F070D46C418000BEF37 /* BordersTitlesView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D118EA640AC08CCB006DD2FE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D118EA650AC08CCB006DD2FE /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D15DEA500ABF641300CBE3A5 /* PluginUI.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D15DEA510ABF641300CBE3A5 /* English */,
+			);
+			name = PluginUI.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BordersAndTitles_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Aperture/Plug-Ins/";
+				PRODUCT_NAME = BordersAndTitles;
+				WRAPPER_EXTENSION = ApertureEdit;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DSTROOT = /;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BordersAndTitles_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Aperture/Plug-Ins/";
+				PRODUCT_NAME = BordersAndTitles;
+				WRAPPER_EXTENSION = ApertureEdit;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "BordersAndTitles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "BordersAndTitles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
