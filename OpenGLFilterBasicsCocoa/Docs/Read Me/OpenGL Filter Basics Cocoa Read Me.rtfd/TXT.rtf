@@ -1,0 +1,795 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica-Narrow;\f2\fnil\fcharset0 Monaco;
+\f3\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red63\green110\blue116;\red46\green13\blue110;
+\red28\green0\blue207;\red92\green38\blue153;\red0\green116\blue0;\red196\green26\blue22;\red170\green13\blue145;
+\red38\green71\blue75;\red100\green56\blue32;}
+\margl1440\margr1440\margb1800\margt1800
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 This application demonstrates how to install a filter in an OpenGL pipeline using Objective-C MVC design pattern.  Here our model in the MVC design pattern is the filter object encapsulating the OpenGL algorithmic workflows of loading, compiling, linking and binding of a fragment shader to a program object; data stream generator; texture initialization; framebuffer object instantiation.  \
+\
+	We generate new data for our array (texture), and therefore our computation, by rotating 3D models.   In this application, and to demonstrate the separation between data generation on the CPU side, and processing of  data on the GPU side, we shall use the immediate mode functionality of OpenGL to generate data.  Here, this has been encapsulated in an object that maintains a display list for three tori and the 
+\i \expnd0\expndtw0\kerning0
+Stanford Bunny
+\i0 \expnd0\expndtw0\kerning0
+, and the current angle of rotation.  To be certain this data can be generated on the GPU side using VBOs and PBOs.\
+\
+	Furthermore, in this application and with the MVC design pattern, the controller object acts as a request broker between the filter and the view, thus feeding the data into the filter and visualizing the results of the computation by updating the OpenGL view.  \
+\
+	Additionally, this application will demonstrate how to use dictionaries to encapsulate the relevant data for initialization of OpenGL view\'92s pixel format attributes, and uniforms associated with a GLSL fragment program or a computational kernel
+\f1 \expnd0\expndtw0\kerning0
+.\
+
+\f0 \expnd0\expndtw0\kerning0
+	\
+	\page 	To initialize a filter we start by setting a texture size,\
+\pard\tx480\pardeftab720\pardirnatural
+
+\f2\fs20 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec2 	\
+		
+\fs18 \cf3 \expnd0\expndtw0\kerning0
+\strokec3 textureSize\cf2 \expnd0\expndtw0\kerning0
+\strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\strokec4 NSMakeSize\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf5 \expnd0\expndtw0\kerning0
+\strokec5 1024\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 1024\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+\
+\pard\tx480\pardeftab720\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 where  
+\f2\fs18 \cf3 \expnd0\expndtw0\kerning0
+\strokec3 textureSize 
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 is of type 
+\f2\fs18 \cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSSize
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .  Here our texture size, or an array, will be of size
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f2\fs18 \expnd0\expndtw0\kerning0
+1024 x 1024
+\f0\fs24 \expnd0\expndtw0\kerning0
+.  Next we shall initialize a data bounds of type 
+\f2\fs18 \cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSRect 
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 to be
+\f2\fs18 \expnd0\expndtw0\kerning0
+\
+\
+		\cf3 \expnd0\expndtw0\kerning0
+\strokec3 dataBounds\cf2 \expnd0\expndtw0\kerning0
+\strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\strokec4 NSMakeRect\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\cf7 \expnd0\expndtw0\kerning0
+\strokec7 \
+\
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 that is, values for our orthographic projection 2D range.
+\fs20 \expnd0\expndtw0\kerning0
+\
+\
+
+\fs24 \expnd0\expndtw0\kerning0
+	Now we shall initialize a  dictionary for the uniform associated with our fragment shader
+\f2\fs20 \expnd0\expndtw0\kerning0
+\
+	\
+\pard\tx480\pardeftab720\pardirnatural
+
+\fs18 \cf6 \expnd0\expndtw0\kerning0
+\strokec6 	NSArray\cf2 \expnd0\expndtw0\kerning0
+\strokec2       *theUniformKeys = [\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSArray\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf4 \expnd0\expndtw0\kerning0
+\strokec4 arrayWithObjects\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf8 \expnd0\expndtw0\kerning0
+\strokec8 @"textureUnit"\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf9 \expnd0\expndtw0\kerning0
+\strokec9 nil\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];\
+\
+	\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSArray\cf2 \expnd0\expndtw0\kerning0
+\strokec2       *theUniformValues = [\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSArray\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf4 \expnd0\expndtw0\kerning0
+\strokec4 arrayWithObjects\cf2 \expnd0\expndtw0\kerning0
+\strokec2 : \
+							[\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSNumber\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf4 \expnd0\expndtw0\kerning0
+\strokec4 numberWithInt\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ], \cf9 \expnd0\expndtw0\kerning0
+\strokec9 nil\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];\
+\
+	\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSDictionary\cf2 \expnd0\expndtw0\kerning0
+\strokec2  *theUniformDictionary = [\cf6 \expnd0\expndtw0\kerning0
+\strokec6 NSDictionary\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \
+\pard\tx480\pardeftab720\pardirnatural
+\cf4 \expnd0\expndtw0\kerning0
+\strokec4 							dictionaryWithObjects\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :theUniformValues\
+							\cf4 \expnd0\expndtw0\kerning0
+\strokec4 forKeys\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :theUniformKeys];
+\fs20 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx480\pardeftab720\pardirnatural
+
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\pard\tx480\pardeftab720\pardirnatural
+
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 and thus initializing the uniform
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f2\fs18 \cf8 \expnd0\expndtw0\kerning0
+\strokec8 "textureUnit" 
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 with the value
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f2\fs18 \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .\
+\
+\pard\tx480\pardeftab720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 	
+\f0 \expnd0\expndtw0\kerning0
+To instantiate a filter object with the
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f2\fs18 \cf8 \expnd0\expndtw0\kerning0
+\strokec8 "LaplacianEdgeDetectionFilter"
+\f1 \cf8 \expnd0\expndtw0\kerning0
+\strokec8  
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 computational kernel (fragment shader), uniforms, data domain (orthographic projection 2D range), and data capacity (texture size), we shall invoke the designated initializer,
+\f2\fs20 \expnd0\expndtw0\kerning0
+\
+\pard\tx480\pardeftab720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 	\
+	
+\fs18 \cf3 \expnd0\expndtw0\kerning0
+\strokec3 filter\cf2 \expnd0\expndtw0\kerning0
+\strokec2  = [[\cf3 \expnd0\expndtw0\kerning0
+\strokec3 OpenGLFilterUtilityToolKit\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf4 \expnd0\expndtw0\kerning0
+\strokec4 alloc\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ] \
+\pard\tx480\pardeftab720\pardirnatural
+\cf10 \expnd0\expndtw0\kerning0
+\strokec10 				initWithFilterInAppBundle\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf8 \expnd0\expndtw0\kerning0
+\strokec8 @"LaplacianEdgeDetectionFilter"\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+				\cf10 \expnd0\expndtw0\kerning0
+\strokec10 uniformDictionary\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :theUniformDictionary\
+\cf10 \expnd0\expndtw0\kerning0
+\strokec10 				bounds\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf3 \expnd0\expndtw0\kerning0
+\strokec3 dataBounds\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\cf10 \expnd0\expndtw0\kerning0
+\strokec10 				size\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf3 \expnd0\expndtw0\kerning0
+\strokec3 textureSize\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];
+\fs20 \expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\pard\tx480\pardeftab720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 where 
+\f2\fs18 \cf3 \expnd0\expndtw0\kerning0
+\strokec3 filter 
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 is of type 
+\f2\fs18 \cf3 \expnd0\expndtw0\kerning0
+\strokec3 OpenGLFilterUtilityToolKit
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .  To run the filter, we shall call the public instance method
+\f1 \expnd0\expndtw0\kerning0
+  
+\f2\fs20 \expnd0\expndtw0\kerning0
+update
+\f0\fs24 \expnd0\expndtw0\kerning0
+:\
+\
+\pard\tx480\pardeftab720\pardirnatural
+
+\f2\fs18 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 - (\cf9 \expnd0\expndtw0\kerning0
+\strokec9 void\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ) update \
+\{\
+	[\cf3 \expnd0\expndtw0\kerning0
+\strokec3 filter\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf10 \expnd0\expndtw0\kerning0
+\strokec10 prepare\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];\
+	[\cf3 \expnd0\expndtw0\kerning0
+\strokec3 models\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf10 \expnd0\expndtw0\kerning0
+\strokec10 rotate\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];\
+	[\cf3 \expnd0\expndtw0\kerning0
+\strokec3 filter\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf10 \expnd0\expndtw0\kerning0
+\strokec10 run\cf2 \expnd0\expndtw0\kerning0
+\strokec2 :\cf3 \expnd0\expndtw0\kerning0
+\strokec3 dataBounds\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ];\
+\}\
+\pard\tx480\pardeftab720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+This method updates the texture by rendering the models (the rotating 
+\i \expnd0\expndtw0\kerning0
+Stanford Bunny
+\i0 \expnd0\expndtw0\kerning0
+ and 3 tori) and copying the image to a texture. Furthermore in a second pass we render again by using the texture as input to the filter.  The results produced by the filter are then copied to the allocated texture. The resulting texture is then used for visualizing the results of our computation.\page \pard\tx480\pardeftab720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+	A filter in general encapsulates the following 5 concepts:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 1.	Textures are equivalent to arrays that one is normally accustomed to in the standard computational models. Here, one allocates a texture large enough to fit the data:\
+\
+\pard\tx480\pardeftab720\pardirnatural
+
+\f2\fs18 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec2 		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glGenTextures\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , &\cf3 \expnd0\expndtw0\kerning0
+\strokec3 texture\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glBindTexture\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf3 \expnd0\expndtw0\kerning0
+\strokec3 texture\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexParameteri\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_MIN_FILTER\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_NEAREST\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexParameteri\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_MAG_FILTER\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_NEAREST\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexParameteri\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_WRAP_S\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_CLAMP\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexParameteri\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_WRAP_T\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_CLAMP\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexImage2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_RGBA8\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_RGB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_FLOAT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 	Next we shall be binding our texture to a frame buffer object,  through first creating,\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\fs18 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 		
+\f2 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec4 glGenFramebuffersEXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , &\cf3 \expnd0\expndtw0\kerning0
+\strokec3 framebuffer\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );
+\f0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 	and then,\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec2 \
+\pard\tx480\pardeftab720\pardirnatural
+
+\f2\fs18 \cf4 \expnd0\expndtw0\kerning0
+\strokec4 		glBindFramebufferEXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_FRAMEBUFFER_EXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf3 \expnd0\expndtw0\kerning0
+\strokec3 framebuffer\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glFramebufferTexture2DEXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (	\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_FRAMEBUFFER_EXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\
+						\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT0_EXT\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\
+						\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_TEXTURE_2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\
+						\cf3 \expnd0\expndtw0\kerning0
+\strokec3 texture\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,\
+						\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\pardirnatural
+
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+Specifying
+\f2\fs18 \cf7 \expnd0\expndtw0\kerning0
+\strokec7  \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 m\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT\cf7 \expnd0\expndtw0\kerning0
+\strokec7  
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 enables drawing only to the image attached to the frame buffer at
+\f2\fs18 \cf7 \expnd0\expndtw0\kerning0
+\strokec7  \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 m\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .  Each
+\f2\fs18 \cf7 \expnd0\expndtw0\kerning0
+\strokec7  \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 m\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT\cf7 \expnd0\expndtw0\kerning0
+\strokec7  
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 adheres to\cf7 \expnd0\expndtw0\kerning0
+\strokec7  
+\f2\fs18 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\pard\tx480\pardeftab720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 	\
+		\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 m\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT\cf7 \expnd0\expndtw0\kerning0
+\strokec7  = \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 0\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT\cf7 \expnd0\expndtw0\kerning0
+\strokec7  + m
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .
+\f2 \cf7 \expnd0\expndtw0\kerning0
+\strokec7   \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 The initial value of
+\f2\fs18 \cf7 \expnd0\expndtw0\kerning0
+\strokec7  \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_DRAW_BUFFER\cf7 \expnd0\expndtw0\kerning0
+\strokec7  
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 for application-created frame buffer objects is
+\f2\fs18 \cf7 \expnd0\expndtw0\kerning0
+\strokec7  \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT\cf7 \expnd0\expndtw0\kerning0
+\strokec7 0\cf11 \expnd0\expndtw0\kerning0
+\strokec11 _EXT
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 .
+\f2\fs18 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 \
+\page 2.	A fragment program represents a computational kernel applied in parallel to multiple fragments simultaneously.  In this application we shall load a computational kernel or a fragment program that performs Laplacian edge detection in real-time.\
+	\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\fs18 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 		
+\f2 \cf6 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec6 GLhandleARB \cf3 \expnd0\expndtw0\kerning0
+\strokec3 programObject\cf2 \expnd0\expndtw0\kerning0
+\strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\strokec4 glCreateProgramObjectARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ();\
+\pard\tx480\pardeftab720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+		\cf6 \expnd0\expndtw0\kerning0
+\strokec6 GLhandleARB \cf3 \expnd0\expndtw0\kerning0
+\strokec3 fragmentShader\cf2 \expnd0\expndtw0\kerning0
+\strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\strokec4 glCreateShaderObjectARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_FRAGMENT_SHADER_ARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glShaderSourceARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf3 \expnd0\expndtw0\kerning0
+\strokec3 fragmentShader\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 1\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , &fragmentShaderSource, \cf9 \expnd0\expndtw0\kerning0
+\strokec9 NULL\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glCompileShaderARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf3 \expnd0\expndtw0\kerning0
+\strokec3 fragmentShader\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+		\
+\pard\tx480\pardeftab720\pardirnatural
+\cf4 \expnd0\expndtw0\kerning0
+\strokec4 		glAttachObjectARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf3 \expnd0\expndtw0\kerning0
+\strokec3 programObject\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf3 \expnd0\expndtw0\kerning0
+\strokec3 fragmentShader\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glLinkProgramARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf3 \expnd0\expndtw0\kerning0
+\strokec3 programObject\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );\
+\
+		\cf6 \expnd0\expndtw0\kerning0
+\strokec6 GLint\cf2 \expnd0\expndtw0\kerning0
+\strokec2  \cf3 \expnd0\expndtw0\kerning0
+\strokec3 progamLinked\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ;\
+\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glGetObjectParameterivARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf3 \expnd0\expndtw0\kerning0
+\strokec3 programObject\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_OBJECT_LINK_STATUS_ARB\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , &\cf3 \expnd0\expndtw0\kerning0
+\strokec3 progamLinked\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );
+\f0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\page 3.	One-to-one pixel-to-texel mapping:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \uc0\u9702 	We need a one-to-one mapping of pixels to texels in order to ensure every element of our texture is processed. By setting our viewport to the dimensions of our destination texture and drawing a screen-sized quad, that is to say,\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+
+\fs18 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 		
+\f2 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec4 glViewport\cf2 \expnd0\expndtw0\kerning0
+\strokec2 (\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2 );
+\f0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+
+\fs24 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 	\
+	one ensures that every pixel of our texel is generated and processed in the fragment program.
+\f2\fs20 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec4 \
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 \uc0\u9702 	One-to-one pixel to texel mapping is achieved through the use of an orthographic projection matrix.  That is to say, here one sets the projection matrix to orthographic in a closed domain  defined by\
+	\
+		
+\f3 \cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 {{\NeXTGraphic pastedGraphic.pdf \width5760 \height280
+}¬}
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 \
+	\
+	where 
+\i \expnd0\expndtw0\kerning0
+W
+\i0 \expnd0\expndtw0\kerning0
+ is the width and 
+\i \expnd0\expndtw0\kerning0
+H
+\i0 \expnd0\expndtw0\kerning0
+ is the height, so that,\
+	
+\f3 \cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 {{\NeXTGraphic 1__#$!@%!#__pastedGraphic.pdf \width4320 \height2760
+}¬}
+\f0 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+
+\f2\fs20 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+
+\fs18 \cf4 \expnd0\expndtw0\kerning0
+\strokec4 	\
+	glMatrixMode\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_PROJECTION\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+\pard\tx480\pardeftab720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 	glLoadIdentity( );\
+	\
+	\cf4 \expnd0\expndtw0\kerning0
+\strokec4 gluOrtho2D\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 x\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 y\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+	\
+	\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glMatrixMode\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_MODELVIEW\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+	glLoadIdentity( );          \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li1440\fi-752\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+\
+4.	In order to utilize a fragment program in an OpenGL pipeline, it is essential that one should generate pixels. In this application we shall render our models so that the fragment shader (or the computational kernel) processes each data element stored in the target texture.  Since we will be  using a known set of projection and viewport settings, and by defining the four corner vertices of  the quad, we will be transforming each data element into a unique fragment by filling a quad that covers the entire viewport. With the use of normalized texture coordinates 
+\f2\fs18 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec11 GL_TEXTURE_2D
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 ,  this functionality is encapsulated by the following OpenGL calls:
+\f2\fs18 \cf4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec4 \
+\
+		glBegin\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_QUADS\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+\pard\tx480\pardeftab720\pardirnatural
+\cf2 \expnd0\expndtw0\kerning0
+\strokec2 	\
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexCoord2f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.0f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.0f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  ); \
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glVertex3f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 x\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 y\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.5f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+		\
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexCoord2f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.0f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  ); \
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glVertex3f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 y\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.5f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+		\
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexCoord2f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2  ); \
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glVertex3f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 width\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ,  \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.5f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+		\
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glTexCoord2f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.0f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2  ); \
+			\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glVertex3f\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ( \cf6 \expnd0\expndtw0\kerning0
+\strokec6 x\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\strokec6 height\cf2 \expnd0\expndtw0\kerning0
+\strokec2 , -\cf5 \expnd0\expndtw0\kerning0
+\strokec5 0.5f\cf2 \expnd0\expndtw0\kerning0
+\strokec2  );\
+	\
+		\cf4 \expnd0\expndtw0\kerning0
+\strokec4 glEnd\cf2 \expnd0\expndtw0\kerning0
+\strokec2 ();\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 	\
+	Hence, by assigning texture coordinates as vertex attributes to the four vertices, the four vertices will be mapped into screen space by the vertex stage of the pipeline.  The rasterizer will then perform bilinear interpolation for every pixel, interpolating the position of the pixel and the vertex attributes from the vertex data, and so generating a fragment for every pixel covered by the quad. These interpolated values are in turn passed to the fragment shader. Thus, and in terms of a computational process, by rendering a textured quad, the computational kernel (fragment program) is executed for all data elements of an array (or a texture).\
+\
+\page 5.	Once the fragment shader (computational kernel) is applied to a viewport-sized quad, the results of the computation will reside in the frame buffer.  That is to say,\
+\
+\pard\tx480\pardeftab720\pardirnatural
+
+\fs22 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature0 \strokec2 I.	Bind to FBO\
+	A.	Enable the FBO\
+	B.	Draw into 
+\f2\fs18 \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT0_EXT
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+	C.	Set the viewport to the dimensions of our texture\
+II.	Draw some geometry or model\
+III.	Copy the results to the FBO bound texture\
+	A.	Draw into the FBO\
+		1. 	Draw into 
+\f2\fs18 \cf11 \expnd0\expndtw0\kerning0
+\strokec11 GL_COLOR_ATTACHMENT1_EXT
+\f0\fs22 \cf2 \expnd0\expndtw0\kerning0
+\strokec2 \
+		2.	Bind to the first texture\
+	B.	Execute the computational kernel\
+		1.	Enable the computational kernel\
+		2.	Generate data in the form of a quad the size of our viewport\
+		3.	Disable the computational kernel\
+IV.	Display the results\
+	A.	Disable the FBO\
+	B.	Draw into the default draw buffer\
+	C.	Bind to the second texture\
+	D. 	Render a full-screen quad textured with the results of our computation
+\f2\fs18 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li720\fi-720\qj\pardirnatural
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \strokec2 \
+	The texture data can now be used as input for display or additional computations.
+\f3 \cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 \
+\pard\tqr\tx9360\pardeftab720\qc\pardirnatural
+
+\f1\fs20 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 1
+\f3\fs24 \cf0 \kerning1\expnd0\expndtw0 \up0 \nosupersub \ulnone \outl0\strokewidth0 \
+
+\f1\fs20 \cf2 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec2 1}
