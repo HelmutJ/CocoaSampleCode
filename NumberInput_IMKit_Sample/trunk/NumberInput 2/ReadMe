@@ -1,0 +1,19 @@
+NumberInput 2
+
+This version of the NumberInput project conversion modes.
+
+The NumberInput input method supports all the NSNumberFormatterStyles supported by the NSNumberFormatter class ( see file:///Developer/Documentation/DocSets/com.apple.ADC_Reference_Library.CoreReference.docset/Contents/Resources/Documents/documentation/Cocoa/Reference/Foundation/Classes/NSNumberFormatter_Class/index.html)
+
+The NSNumberFormatterStyle is set by choosing an input mode from the Text Input Menu.
+
+To add mode support to the input method the following needs to be done:
+
+1. Add a ComponentInputModeDict dictionary to your Info.plist file.  The ComponentInputModeDict dictionary describes how to display your modes in the Text Input Menu and in the International Preferences preference panel.
+2. Implement the -(void)setValue:(id)value forTag:(unsigned long)tag client:(id)sender method.  This method takes a mode string and uses it to set the current mode.  In the NumberInput case we map the string modes to the NSNumberFormatterStyle constants and then tell the conversion engine about the new mode.
+
+
+After making these changes build the input method and then copy it to /Library/Input Methods/. Because you are adding modes you may need to log out and log back in.
+
+After logging out and logging back in open the International Preferences/Input Menu panel and check. There should be a whole list of modes there.  You can select or deslect these modes there.
+
+Now if you select a mode the number conversion will change to the type of formatting you set.

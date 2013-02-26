@@ -1,0 +1,20 @@
+NumberInput 3
+
+This version of the NumberInput project adds a candidate window.
+
+The candidate window lets the user override the selected mode conversion.
+
+To add a candidate window to the input method the following needs to be done:
+
+1. Create an IMKCandidates* object.  This is done on line 33 of main.m  
+2. In your controller object (NumberInputController.m) add logic to display a candidate window.  In this example we display the candidate window after the user has converted the input once (i.e. has typed a number followed by a space), and then types another space.
+   The addition is found in NumberInputController.m lines 190-198.
+3. Next you need to implement a method to supply the candidates.  This method is defined as part of the IMKServerInput informal protocol in IMKInputController.h.  It is defined like this: - (NSArray*)candidates:(id)sender;.
+   This method needs to create an array of NSStrings or NSAttributedStrings as its return value. Each element of the array will be a selectable candidate in the candidate window.
+4. You also need to create a method that is called when the selection in the candidate window changes, and another method that is called when the user makes her final choice.
+   The method that is called when the user changes her selection is: - (void)candidateSelectionChanged:(NSAttributedString*)candidateString.
+   The method called when the final selection is made is: - (void)candidateSelected:(NSAttributedString*)candidateString
+
+As usual after making these changes build the input method and then copy it to /Library/Input Methods/.  
+
+Now open TextEdit.app.  Choose one of the NumberInput modes and type a number, space and the space again. The candidate window should pop-up.

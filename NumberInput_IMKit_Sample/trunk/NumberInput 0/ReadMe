@@ -1,0 +1,35 @@
+NumberInput
+
+This project demonstrates do-nothing InputMethodKit input method.  
+
+The project contains 3 source files.  They are:
+
+NumberInputController.h
+
+Declares your input controller.  An Objective-C object that sub-classes the new InputMethodKit class IMKInputController.
+
+NumberInputController.m
+
+Defines your input controller.  In this instance, a single do-nothing method is defined.  The method is -(BOOL)inputText:(NSString*)string client:(id)sender,
+which is originally defined in the file IMKInputController.h (see /System/Library/Frameworks/InputMethodKit.framework/Headers/).  This method ultimately
+will receive keyboard input.  In this example it simply returns NO meaning that the keyboard input should be passed on to the client.
+
+main.m
+
+Includes the input method's entry point.  This file also allocates an instance of an IMKServer.  The server object communicates with application clients via an NSConnection.  It also communicates with each instance of the input method's input controller object.
+
+Another important file is the Info.plist file.  This file contains required information about the input method, and is commented in detail.  Have a look at this file to see what information is provided here.
+
+Building and Installing
+
+Simply build the project in XCode.  After the project is built drag the resulting application to /Library/Input Methods/, and log out.  After this initial installation and log out you shouldn't have to log out again.
+
+After you have done that open the System Preferences.app, select International, and then select the Input Menu tab.  There you will see a list of Input Methods and Keyboard Layouts.
+
+Find the Input Method called Number Input, and click in the radio button next to in.  That will add the Number Input input method to the Text Input Menu.  
+
+Now open the application TextEdit.app, go to the Text Input Menu and select NumberInput.  When you type the characters will be passed to the input method which logs the string and returns NO.
+
+Returning NO means that the input was not processed and should be passed on to the client application.  You can see the logged input in the Console application.
+
+You've built and installed an do-nothing input method.  

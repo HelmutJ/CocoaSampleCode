@@ -1,0 +1,33 @@
+NumberInput 4
+
+This version of the NumberInput project adds a preferences and menu items that let the user change the preferences.
+
+To add a preferences window and preferences support your create a preferences.nib that uses an NSUserDefaultsController to bind your preferences
+to key-value pairs in the user defaults database.  You also need to provide a preferences.plist so that the InputMethodKit can automatically set your preferences defaults.
+Finally, you provide the user access to the preferences by adding a preferences menu item to the Text Input Menu.
+
+1. In Interface Builder create a nib file called preferences.nib.  Add a utility panel here with controls.
+1a. Make the File's owner an NSWindowController and connect it with the panel.
+1b.  Add a matrix of 2 Radio Buttons.  Set the Tag of the first button to 1.  And the tag of the second to 0.
+1c.  Drag a NSUserDefaultsController to your nib file.  Then bind the NSMatrix to selectedTags.  Set the model key path to verticalCandidate.
+
+2. Add a preferences.plist to your the NumberInput project.  It should look like this:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>verticalCandidate</key>
+	<integer>1</integer>
+</dict>
+</plist>
+
+3. Back in InterfaceBuilder create an NSMenu in your MainMenu.nib.  Add a single NSMenuItem to the menu.  Name it "Preferences..."
+
+4. The menu in this example's case is shared amongst all controllers so create an IBOutlet in your NumberInputApplicationDelegate that is an NSMenu.
+   Also be sure and provide an accessor function for the menu.  Then have IB reread the NumberInputApplicationDelegate and connect the new menu outlet to your NSMenu.
+
+4. Add a menu method to your input controller.  This menu function overrides the menu method declared in IMKInputController, and it will be called whenever your input method is selected and the Text Input Menu needs to be updated.
+
+As usual after making these changes build the input method and then copy it to /Library/Input Methods/.  
+
+Now open TextEdit.app.  Choose one of the NumberInput modes you can see that the Text Input Menu now adds an item called "Preferences..." Selecting that item should display your preferences panel.
