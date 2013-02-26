@@ -1,0 +1,143 @@
+Read Me About PreLoginAgents
+============================
+1.0
+
+Mac OS X 10.5 introduced the ability to run a launchd agent while the login screen is showing.  Such pre-login launchd agents are the best solution to a small but important class of problems.  For example, if you're developing assistive technology for Mac OS X <http://www.apple.com/accessibility/> and you want to provide assistance at login time, you will probably need a pre-login launchd agent.
+
+Creating a pre-login launchd agent is trivial.  However, displaying UI from such an agent does present some unique challenges.  This sample includes example pre-login launchd agents that display UI using both AppKit and HIToolbox.
+
+Pre-login launchd agents were introduced in Mac OS X 10.5, and these samples require that release.  If you need to support earlier systems, you will have to use a system login item.  Please contain <dts@apple.com> for the details.
+
+Packing List
+------------
+The sample contains the following items:
+
+o Read Me About PreLoginAgents.txt -- This file.
+
+o PreLoginAgentCocoa -- A pre-login launchd agent that uses AppKit to display a window.
+o PreLoginAgentCarbon -- A pre-login launchd agent that uses HIToolbox to display a window.
+
+Each sample includes the following files (where "Xxx" is either "Cocoa" or "Carbon"):
+
+o com.apple.dts.PreLoginAgentXxx.plist -- The launchd property list file for the agent.
+
+o main.[cm] -- The core code for the agent.
+
+o main.nib and Info.plist  -- Resources for the agent.
+
+o PreLoginAgentXxx.xcodeproj -- An Xcode 3.0 project for the agent.
+
+o build -- Pre-built binaries.
+
+Using the Sample
+----------------
+The following instructions explain how to install one of these samples.  Some steps show different commands for the "Cocoa" and "Carbon" flavours of the sample; you should run just one of these commands depending on what flavour you want to install.
+
+1. Download and unpack the sample on your desktop.
+
+2. Change into the sample directory.
+
+$ cd Desktop/PreLoginAgents
+
+3. Make a secure "/Library/PrivilegedHelperTools" directory.
+
+$ sudo mkdir -p /Library/PrivilegedHelperTools
+Password:********
+$ sudo chown root:wheel /Library/PrivilegedHelperTools
+
+Pre-login launchd agents are run as root and it is not appropriate to place them in any directory that an admin user can modify without authenticating.
+
+3. Copy the agent to "/Library/PrivilegedHelperTools".
+
+$ sudo cp -R PreLoginAgentCocoa/build/Debug/PreLoginAgentCocoa.app \
+/Library/PrivilegedHelperTools/
+
+$ sudo cp -R PreLoginAgentCarbon/build/Debug/PreLoginAgentCarbon.app \
+/Library/PrivilegedHelperTools/
+
+4. Copy the property list file to "/Library/LaunchAgents".
+
+$ sudo cp PreLoginAgentCocoa/com.apple.dts.PreLoginAgentCocoa.plist \
+/Library/LaunchAgents/
+
+$ sudo cp PreLoginAgentCarbon/com.apple.dts.PreLoginAgentCarbon.plist \
+/Library/LaunchAgents/
+
+5. Log out.
+
+At the login screen you will see a window displaying the name of the sample.  When you log in, the agent will quit and the window will go away.
+
+Building the Sample
+-------------------
+Each sample was built using Xcode 3.0 on Mac OS X 10.5.  You should be able to just open a project and choose Build from the Build menu.  This will build the agent in the "build" directory.
+
+Security
+--------
+IMPORTANT: Pre-login launchd agents are privileged programs; you must code carefully to maintain system security.
+
+A pre-login launchd agent is run as root.  This makes a certain kind of sense in that the agent executes before any user has logged in.  However, it does present some security issues.  These are exacerbated by the fact that it's likely that your agent will want to use GUI frameworks, and using GUI frameworks from a root process is a serious security concern.
+
+There really is no over-arching solution to this problem.  Rather, there are a number of things that you can do to minimise the risk.
+
+o Your agent must not display a menu bar.  Rather, your agent should either be background-only program or a UI element.  You can achieve this by setting either the "LSBackgroundOnly" or "LSUIElement" property in your "Info.plist".
+
+o You should try to keep your agent's user interface as simple as possible to reduce the likelihood of security problems.  For example, if you display a text field, you have to worry about whether contextual menu items can be used in that field.  OTOH, if you don't display a text field, you don't have to worry.
+
+WARNING:
+Mac OS X's security infrastructure gets around this problem by running its GUI code as a special user, "_securityagent".  It's hard for third party code to replicate this behaviour because there is no mechanism or policy to create specialist users like this on Mac OS X.  It is /vital/, however, that you not run your agent as "_securityagent".  Doing so could potentially compromise system security.
+
+Similarly, you should not reuse other specialist users on the system (for example, "nobody" or "_mdnsresponder").
+
+Note:
+launchd does not currently honour the "UserName" and "GroupName" properties in the launchd property list file for a pre-login launchd agent <rdar://problem/5337257>.
+
+Logging
+-------
+The samples log using the Apple System Log <x-man-page://3/asl> API.  Do the following to see the log entries.
+
+1. SSH into the machine.
+
+2. Enable 'info' level logging with the following command:
+
+$ sudo syslog -c syslogd -i
+Password:********
+
+3. Wait and print new log messages use:
+
+$ syslog -w
+[...]
+
+Quit and Relaunch
+-----------------
+A launchd agent is not quite like a typical application (that is, by way of the 'quit' Apple event).  Rather, when the system wants your agent to quit, it will send it a SIGTERM.  The code shows a simple technique for catching SIGTERM in a run-loop friendly fashion (see the routine InstallHandleSIGTERMFromRunLoop, present in both samples).
+
+Also, if your agent quits, launchd will, by default, relaunch it.  You can control this behaviour using various properties in your launchd property list file <x-man-page://5/launchd.plist>.
+
+Window Visibility
+-----------------
+Because of its unique execution environment, a pre-login launchd agent must do some special things to ensure that its windows are visible.  Specifically:
+
+o To prevent windows accidentally showing up at login time, Mac OS X 10.5 and later require that you specifically bless such a window before it can appear on the screen.  For an NSWindow, you must call -[NSWindow setCanBecomeVisibleWithoutLogin:].  For a HIToolbox window, you must set the kHIWindowBitCanBeVisibleWithoutLogin attribute.
+
+o Finally, due to an artefact of the relationship between the UI frameworks and the window server <rdar://problem/5136400>, you must take extra-ordinary steps to show your window:
+
+- For an NSWindow window, calling -[NSWindow orderFront:] is not sufficient; you must call -[NSWindow orderFrontRegardless].
+
+- For an HIToolbox window, calling ShowWindow is not sufficient.  For the window to actually appear on screen, you must call BringToFront.
+
+Other Gotchas
+-------------
+Your pre-login launchd agent will be run redundantly when the user switches directly from user A to user B via the fast user switching menu <rdar://problem/5136392>.
+
+Credits and Version History
+---------------------------
+If you find any problems with this sample, mail <dts@apple.com> and I'll try to fix them up.
+
+1.0 (Oct 2007) was the first shipping version.
+
+Share and Enjoy.
+
+Apple Developer Technical Support
+Core OS/Hardware
+
+22 Oct 2007
