@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EB1FCFDC0DECDCFD00A3962D /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EB1FCFF10DECDD3100A3962D /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				EB1FCFE20DECDD0800A3962D /* PBXTargetDependency */,
+				EB1FCFE00DECDD0800A3962D /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		EB1FCFD10DECDC9500A3962D /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCFAE0DECDBE800A3962D /* common.c */; };
+		EB1FCFD30DECDC9700A3962D /* gssserver.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCFB10DECDBE800A3962D /* gssserver.c */; };
+		EB1FCFD40DECDC9B00A3962D /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCFAE0DECDBE800A3962D /* common.c */; };
+		EB1FCFD50DECDC9C00A3962D /* gssclient.c in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCFB00DECDBE800A3962D /* gssclient.c */; };
+		EB1FCFD80DECDCD400A3962D /* Kerberos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1FCFD70DECDCD400A3962D /* Kerberos.framework */; };
+		EB1FCFD90DECDCD400A3962D /* Kerberos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1FCFD70DECDCD400A3962D /* Kerberos.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB1FCFDF0DECDD0800A3962D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB1FCFBF0DECDC2500A3962D;
+			remoteInfo = gssclient;
+		};
+		EB1FCFE10DECDD0800A3962D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB1FCFB80DECDC0C00A3962D;
+			remoteInfo = gssserver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB1FCFAE0DECDBE800A3962D /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
+		EB1FCFAF0DECDBE800A3962D /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		EB1FCFB00DECDBE800A3962D /* gssclient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gssclient.c; sourceTree = "<group>"; };
+		EB1FCFB10DECDBE800A3962D /* gssserver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gssserver.c; sourceTree = "<group>"; };
+		EB1FCFB90DECDC0C00A3962D /* gssserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gssserver; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1FCFC00DECDC2500A3962D /* gssclient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gssclient; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1FCFD70DECDCD400A3962D /* Kerberos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kerberos.framework; path = /System/Library/Frameworks/Kerberos.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB1FCFB70DECDC0C00A3962D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1FCFD90DECDCD400A3962D /* Kerberos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1FCFBE0DECDC2500A3962D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1FCFD80DECDCD400A3962D /* Kerberos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Kerberos Sample */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				EB1FCFD70DECDCD400A3962D /* Kerberos.framework */,
+			);
+			name = "Kerberos Sample";
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EB1FCFAE0DECDBE800A3962D /* common.c */,
+				EB1FCFAF0DECDBE800A3962D /* common.h */,
+				EB1FCFB00DECDBE800A3962D /* gssclient.c */,
+				EB1FCFB10DECDBE800A3962D /* gssserver.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB1FCFB90DECDC0C00A3962D /* gssserver */,
+				EB1FCFC00DECDC2500A3962D /* gssclient */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB1FCFB80DECDC0C00A3962D /* gssserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1FCFC70DECDC5900A3962D /* Build configuration list for PBXNativeTarget "gssserver" */;
+			buildPhases = (
+				EB1FCFB60DECDC0C00A3962D /* Sources */,
+				EB1FCFB70DECDC0C00A3962D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gssserver;
+			productName = gssserver;
+			productReference = EB1FCFB90DECDC0C00A3962D /* gssserver */;
+			productType = "com.apple.product-type.tool";
+		};
+		EB1FCFBF0DECDC2500A3962D /* gssclient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB1FCFC80DECDC5900A3962D /* Build configuration list for PBXNativeTarget "gssclient" */;
+			buildPhases = (
+				EB1FCFBD0DECDC2500A3962D /* Sources */,
+				EB1FCFBE0DECDC2500A3962D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gssclient;
+			productName = gssclient;
+			productReference = EB1FCFC00DECDC2500A3962D /* gssclient */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Kerberos GSS-API Sample" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Kerberos Sample */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB1FCFDC0DECDCFD00A3962D /* All */,
+				EB1FCFB80DECDC0C00A3962D /* gssserver */,
+				EB1FCFBF0DECDC2500A3962D /* gssclient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB1FCFB60DECDC0C00A3962D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1FCFD10DECDC9500A3962D /* common.c in Sources */,
+				EB1FCFD30DECDC9700A3962D /* gssserver.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1FCFBD0DECDC2500A3962D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB1FCFD40DECDC9B00A3962D /* common.c in Sources */,
+				EB1FCFD50DECDC9C00A3962D /* gssclient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB1FCFE00DECDD0800A3962D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB1FCFBF0DECDC2500A3962D /* gssclient */;
+			targetProxy = EB1FCFDF0DECDD0800A3962D /* PBXContainerItemProxy */;
+		};
+		EB1FCFE20DECDD0800A3962D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB1FCFB80DECDC0C00A3962D /* gssserver */;
+			targetProxy = EB1FCFE10DECDD0800A3962D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		EB1FCFBB0DECDC0D00A3962D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = gssserver;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EB1FCFBC0DECDC0D00A3962D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = gssserver;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EB1FCFC20DECDC2500A3962D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = gssclient;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		EB1FCFC30DECDC2500A3962D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = gssclient;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		EB1FCFDD0DECDCFD00A3962D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		EB1FCFDE0DECDCFD00A3962D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Kerberos GSS-API Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1FCFC70DECDC5900A3962D /* Build configuration list for PBXNativeTarget "gssserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1FCFBB0DECDC0D00A3962D /* Debug */,
+				EB1FCFBC0DECDC0D00A3962D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1FCFC80DECDC5900A3962D /* Build configuration list for PBXNativeTarget "gssclient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1FCFC20DECDC2500A3962D /* Debug */,
+				EB1FCFC30DECDC2500A3962D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB1FCFF10DECDD3100A3962D /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB1FCFDD0DECDCFD00A3962D /* Debug */,
+				EB1FCFDE0DECDCFD00A3962D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
