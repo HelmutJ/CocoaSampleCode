@@ -1,0 +1,367 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf410
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fnil\fcharset77 Monaco;
+\f3\fmodern\fcharset77 CourierNewPSMT;\f4\fswiss\fcharset77 Helvetica;\f5\fswiss\fcharset77 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\margb1800\margt1800\vieww16900\viewh20440\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa480\ql\qnatural\pardirnatural
+
+\f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
+Getting Started with GLSL \uc0\u8232 on Mac OS X\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f1\b0\fs20 \cf0 \expnd0\expndtw0\kerning0
+\
+The goal of this exercise is to show you how to get your own fragment and vertex shaders to run in a Cocoa application. By completing this exercise, you\'d5ll be on your way to creating spectacular visual effects that bring the cinematic experience to your Mac OS X application.\
+There are three goals to this prerequisite:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+To make sure you have enough GLSL and Cocoa experience to fully benefit from the session.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 \expnd0\expndtw0\kerning0
+OpenGL Shading Language (GLSL) can create spectacular effects on Mac OS X, but it is not an entry-level technology. You must be familiar with the basics of GLSL and with OpenGL coding first. The shaders in the example application execute from within a Cocoa application. So you also need to have a rudimentary understanding of  Cocoa application development.  To get the most out of this session, make sure that you understand the techniques used in the example application, and make sure you are able to complete the suggested exercises. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+To introduce the example application.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 \expnd0\expndtw0\kerning0
+If you are familiar with the organization of the example application and how it runs, the presenter doesn\'d5t need to spend as much time explaining how the application  works. You can then learn about best practices and optimization techniques that are unique to Mac OS X and that  help your fragment and vertex shaders run efficiently on Mac OS X.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+To get you to start thinking about the benefits of using GLSL in a Mac OS X application.
+\f1\b0 \expnd0\expndtw0\kerning0
+\
+To understand how to get the most out of using GLSL on Mac OS X, it\'d5s helpful to think about some of the problems that you have to solve in almost every 2D and 3D application that uses OpenGL.  What are some of the common design patterns you use to write GLSL shaders? How might you refactor specific OpenGL code to take advantage of utility classes such as the 
+\f2 \expnd0\expndtw0\kerning0
+GLSLExhibit 
+\f1 \expnd0\expndtw0\kerning0
+class used in the example application?\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa360\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+Introduction
+\fs20 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa200\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 \expnd0\expndtw0\kerning0
+Initially, assembly language offered the only way to program the Graphics Processing Unit (GPU). Later, the OpenGL ARB created OpenGL Shading Language (GLSL) to provide a more intuitive means of programming the GPU and maintain the open standards advantage that  drives the OpenGL community. Today, the OpenGL rendering pipeline is quite flexible, allowing a high level of programmability through the use of fragment and vertex shaders.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+\cf0 \expnd0\expndtw0\kerning0
+GLSL defines twenty-two basic data types. Some are the same as used in the C programming language, while others are specific to graphics processing. You\'d5ll recognize many of the GLSL operators, because GLSL contains all the C and C++ operators, with the exception of bitwise operators and pointers.\
+Similar to the high-level programming languages such as C/C++, the OpenGL shading language supports loops and branching, including 
+\f3 \expnd0\expndtw0\kerning0
+if
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+else
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+if
+\f1 \expnd0\expndtw0\kerning0
+-
+\f3 \expnd0\expndtw0\kerning0
+else
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+for
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+do
+\f1 \expnd0\expndtw0\kerning0
+-
+\f3 \expnd0\expndtw0\kerning0
+while
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+break
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+continue
+\f1 \expnd0\expndtw0\kerning0
+, an so forth.\
+GLSL supports user defined functions,  as well as a wide variety of commonly used functions. Many of these functions are similar to those found in the C programming language standard math library such as 
+\f3 \expnd0\expndtw0\kerning0
+exp()
+\f2 \expnd0\expndtw0\kerning0
+ 
+\f1 \expnd0\expndtw0\kerning0
+and 
+\f3 \expnd0\expndtw0\kerning0
+abs()
+\f1 \expnd0\expndtw0\kerning0
+, while others are specific to graphics programming such as 
+\f3 \expnd0\expndtw0\kerning0
+smoothstep()
+\f1 \expnd0\expndtw0\kerning0
+ and 
+\f3 \expnd0\expndtw0\kerning0
+texture2D()
+\f1 \expnd0\expndtw0\kerning0
+.\
+A 
+\f0\b \expnd0\expndtw0\kerning0
+shader
+\f1\b0 \expnd0\expndtw0\kerning0
+ is a program that computes surface properties. GLSL shaders are not stand-alone applications; they work only within an OpenGL application. You can use the OpenGL programming interfaces and GLSL within any C, C++, and Objective-C application on Mac OS X.\
+GLSL shaders themselves are simply a set of strings that are passed to the nVidia and ATI  drivers on Mac OS X for compilation from within an application that uses the OpenGL  entry points. You can generate shaders  from within an application or read them in as text files. Regardless of the origin of the shader, you  must  package it as a C-string before sending it to a graphics driver.\
+The OpenGL programming interfaces that you use to  compile, link, and pass parameters to GLSL programs are specified in the ARB vertex shader, ARB fragment shader, and ARB shader objects extensions.  These extensions are part of the core OpenGL specification starting with version 2.0.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa360\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+The GLSL Showpiece Lite Application\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f1\b0\fs20 \cf0 \expnd0\expndtw0\kerning0
+When the GLSL Showpiece Lite application opens, you see the following window:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc\pardirnatural
+
+\f4\fs24 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic pastedGraphic.pdf \width7540 \height6560
+}¬}
+\f0\b \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa360\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f1\b0\fs20 \cf0 \expnd0\expndtw0\kerning0
+The column on the left side\'d1GLSL Exhibits\'d1lists the names of shader examples, each of which is created using the GLSLExhibit class. as you\'d5ll see later when you examine the code. The view portion of the window displays the currently selected shader example, which in this case is the Cloud 1 shader applied to the classic OpenGL teapot. The description of the shader appears below the view of the teapot.\
+Clicking another GLSL Exhibit name changes the view. You can print a PDF of what\'d5s in the view by choosing File > Print.\
+The example shaders in the application are taken from 
+\f0\b \expnd0\expndtw0\kerning0
+OpenGL Shading Language
+\f1\b0 \expnd0\expndtw0\kerning0
+, Addison-Wesley publishers (also referred to as \'d2The Orange Book\'d3). Each shader is applied to a well-known model\'d1such as the  OpenGL teapot, the Stanford bunny,  a sphere, and so on.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa360\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+Exercises\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f5\fs20 \cf0 \expnd0\expndtw0\kerning0
+Run the Application\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f1\b0 \cf0 \expnd0\expndtw0\kerning0
+To run the application, double-click the 
+\f3 \expnd0\expndtw0\kerning0
+GLSLShowpiece Lite.xcodeproj
+\f1 \expnd0\expndtw0\kerning0
+ file. After the project launches in Xcode, click Build and Restart. \
+Click each item in the GLSL Exhibits list and observe the result. Read the description of the shader. You might also print, or save as a PDF,  one or two renderings. \
+
+\f0\b \expnd0\expndtw0\kerning0
+Explore the Code\
+
+\f1\b0 \expnd0\expndtw0\kerning0
+Now that you\'d5ve seen the sorts of shaders that are possible, it\'d5s time for you to take a look at the code.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f4 \cf0 \expnd0\expndtw0\kerning0
+In the Xcode Groups & File list for the GLSL Showpiece Lite application, click the disclosure triangle next to GLSLShowpieceLite. Then select Viewer. \
+In the list of file names, double-click  
+\f3 \expnd0\expndtw0\kerning0
+Exhibit.h
+\f4 \expnd0\expndtw0\kerning0
+. Take a look at the two public utility methods that are used by each of the shader examples in this application:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sa240\ql\qnatural\pardirnatural
+
+\f3 \cf0 \expnd0\expndtw0\kerning0
+loadShadersFromResource:
+\f4 \expnd0\expndtw0\kerning0
+ loads  fragment & vertex shaders from the application bundle, then compiles and links them.\
+
+\f3 \expnd0\expndtw0\kerning0
+loadTextureFromResource:
+\f4 \expnd0\expndtw0\kerning0
+ gets and loads a JPEG texture file from the application bundle.\
+In the Groups and Files list, choose Exhibits > Sources. Notice that the file names match the names of the GLSL Exhibits in the interface. Take a look at the interface (
+\f3 \expnd0\expndtw0\kerning0
+.h
+\f4 \expnd0\expndtw0\kerning0
+) and implementation (
+\f3 \expnd0\expndtw0\kerning0
+.m
+\f4 \expnd0\expndtw0\kerning0
+) files for several shader examples. 
+\f1 \expnd0\expndtw0\kerning0
+\
+You might start with the simpler examples, which include Cloud1, Earth, and Vertex Noise. Then, move on to more complex examples, such as Fur, Glass, and Plasma. By looking at the code you\'d5ll get an idea of the variety of workflow paradigms that you can choose from when you write your own shader.\
+Notice that despite the differences among the shader implementations, each one subclasses the 
+\f3 \expnd0\expndtw0\kerning0
+GLSLExhibit
+\f1 \expnd0\expndtw0\kerning0
+ class. This class performs all the loading, compiling, and linking for a shader. It also simplifies the process of loading textures.\
+Count the number of files associated with each shader. Notice that there are five per shader: \
+A fragment shader file (
+\f3 \expnd0\expndtw0\kerning0
+.frag
+\f1 \expnd0\expndtw0\kerning0
+ extension) written using GLSL. The shader code is platform-independent. You can create this file in any text editor.\
+A vertex shader file (
+\f3 \expnd0\expndtw0\kerning0
+.vert
+\f1 \expnd0\expndtw0\kerning0
+ extension) written using GLSL. The shader code is platform-independent. You can create this file in any text editor.\
+An interface file (.h extension) written using Objective-C. Notice that each shader is wrapped by a  
+\f3 \expnd0\expndtw0\kerning0
+GLSLExhibit
+\f1 \expnd0\expndtw0\kerning0
+ class. \
+An implementation file (.m extension) written using Objective-C.\
+A description file (.rtf extension) that contains text describing the shader and is  displayed in the user interface. (Note that if you write a similar application that provides user interface strings, you typically provide the description in the 
+\f3 \expnd0\expndtw0\kerning0
+Info.plist
+\f1 \expnd0\expndtw0\kerning0
+ file to facilitate localization.)\
+  Compare several implementation files. Notice that each implements the following methods of the 
+\f3 \expnd0\expndtw0\kerning0
+GLSLExhibit 
+\f1 \expnd0\expndtw0\kerning0
+class: 
+\f3 \expnd0\expndtw0\kerning0
+\
+initLazy 
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 Performs the necessary initializations.
+\f3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+dealloc:
+\f1 \expnd0\expndtw0\kerning0
+ 
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 If needed, releases memory resources  allocated in the 
+\f3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 initLazy
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0  method.\
+
+\f3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 name:
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0   Returns the name of this exhibit to the superclass.
+\f3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+descriptionFilename:
+\f1 \expnd0\expndtw0\kerning0
+ L
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 oads and displays the RTF exhibit description file, from the application bundle, in the application window pane.
+\f3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+renderFrame:
+\f1 \expnd0\expndtw0\kerning0
+ R
+\f4 \expnd0\expndtw0\kerning0
+\CocoaLigature0 enders the shader example.  This method must be customized for the particular example.
+\f1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\f0\b \expnd0\expndtw0\kerning0
+Add Your Own Shader\
+
+\f1\b0 \expnd0\expndtw0\kerning0
+Now that you have an idea of the organization of the example application, you are ready to add your own GLSL code to it. In addition to providing the five required files, you\'d5ll need to make a few minor edits so that the example application knows of the existence of your shader. \
+Follow these steps to add your own code to the GLSL Showpiece Lite application.\
+In the GLSL Showpiece LIte project window, click the Action popup menu and choose Add > New Group. Name the group appropriately.\
+Write a shader. \
+For details on writing shaders refer to 
+\f0\b \expnd0\expndtw0\kerning0
+OpenGL Shading Language
+\f1\b0 \expnd0\expndtw0\kerning0
+. If you are still new to writing shaders, you might consider copying or modidfying a shader from this book.\
+You can use your favorite text editor to write a shader. Make sure that you save a fragment shader with the extension 
+\f3 \expnd0\expndtw0\kerning0
+.frag
+\f1 \expnd0\expndtw0\kerning0
+  and a vertex shader with the extension 
+\f3 \expnd0\expndtw0\kerning0
+.vert. 
+\f1 \expnd0\expndtw0\kerning0
+Use the same prefix for both the fragment and vertex shaders. For example, 
+\f3 \expnd0\expndtw0\kerning0
+Rain.frag
+\f1 \expnd0\expndtw0\kerning0
+ and 
+\f3 \expnd0\expndtw0\kerning0
+Rain.vert
+\f1 \expnd0\expndtw0\kerning0
+. You must use this naming scheme because the 
+\f3 \expnd0\expndtw0\kerning0
+loadShadersFromResource
+\f1 \expnd0\expndtw0\kerning0
+ method assumes this scheme.\
+Create a description file and save it as a RTF file.\
+Add the shader (
+\f3 \expnd0\expndtw0\kerning0
+.frag
+\f1 \expnd0\expndtw0\kerning0
+ and 
+\f3 \expnd0\expndtw0\kerning0
+.vert
+\f1 \expnd0\expndtw0\kerning0
+) and description files to the project by choosing Project > Add to Project. After you\'d5ve added the files you can drag them into the group you created previously.\
+Write  Objective-C code to render your shader example.\
+Choose File > New File. Then in the Assistant choose Cocoa > Objective-C class and click Next. Enter the name of your shader example and click Finish. Drag the newly created files to your Group in the Groups & Files list.\
+In the interface file you just created, define the interface for your shader example, similar to what you saw when you explored the code.\
+In the implementation file you just created, implement the necessary methods, which should include the following plus any other methods needed for your shader example: 
+\f3 \expnd0\expndtw0\kerning0
+init
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+initLazy
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+dealloc
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+name:
+\f1 \expnd0\expndtw0\kerning0
+, 
+\f3 \expnd0\expndtw0\kerning0
+descriptionFilename:
+\f1 \expnd0\expndtw0\kerning0
+, and 
+\f3 \expnd0\expndtw0\kerning0
+renderFrame:
+\f1 \expnd0\expndtw0\kerning0
+.\
+In the 
+\f3 \expnd0\expndtw0\kerning0
+UIController.h
+\f1 \expnd0\expndtw0\kerning0
+ file, add an 
+\f3 \expnd0\expndtw0\kerning0
+#import
+\f1 \expnd0\expndtw0\kerning0
+ statement t so that the application imports your shader example. \
+In 
+\f3 \expnd0\expndtw0\kerning0
+UIController.m
+\f1 \expnd0\expndtw0\kerning0
+ file, modify the definition of exhibits in the init method so that the NSArray includes your shader example object. For example, if your shader is named 
+\f3 \expnd0\expndtw0\kerning0
+Rain
+\f1 \expnd0\expndtw0\kerning0
+, add 
+\f3 \expnd0\expndtw0\kerning0
+[[Rain alloc] init],
+\f1 \expnd0\expndtw0\kerning0
+ inserting it in the list alphabetically.   \
+Click Build and Restart. Make sure your shader example runs as expected.}

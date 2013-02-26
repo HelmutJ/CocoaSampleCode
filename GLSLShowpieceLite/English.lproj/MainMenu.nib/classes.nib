@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {open = id; }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {glViewOutlet = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OpenGLView; LANGUAGE = ObjC; SUPERCLASS = NSOpenGLView; }, 
+        {
+            CLASS = UIController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                exhibitOpenGLView = OpenGLView; 
+                exhibitShaderDescTextView = NSTextView; 
+                exhibitTableView = NSTableView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
