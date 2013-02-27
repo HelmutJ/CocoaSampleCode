@@ -1,0 +1,239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		744F97E20AAFAC8C00E0DBA0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 74179DE90AAF1E8200862915 /* main.c */; };
+		744F97E30AAFAC8D00E0DBA0 /* platform.c in Sources */ = {isa = PBXBuildFile; fileRef = 74179DEA0AAF1E8200862915 /* platform.c */; };
+		744F97E40AAFAC9500E0DBA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 74179DE80AAF1E8200862915 /* logo.png */; };
+		744F9AF70AAFACAC00E0DBA0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74179E010AAF1F4900862915 /* GLUT.framework */; };
+		744F9AF80AAFACAC00E0DBA0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74179E020AAF1F4900862915 /* OpenGL.framework */; };
+		744F9AFA0AAFACC400E0DBA0 /* rtva.icns in Resources */ = {isa = PBXBuildFile; fileRef = 744F9AF90AAFACC400E0DBA0 /* rtva.icns */; };
+		744F9AFD0AAFAD3A00E0DBA0 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744F9AFC0AAFAD3A00E0DBA0 /* ApplicationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74179DE80AAF1E8200862915 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		74179DE90AAF1E8200862915 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		74179DEA0AAF1E8200862915 /* platform.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = platform.c; sourceTree = "<group>"; };
+		74179DEB0AAF1E8200862915 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		74179E010AAF1F4900862915 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		74179E020AAF1F4900862915 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		744F97DA0AAFAC5500E0DBA0 /* RenderToVertexArray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenderToVertexArray.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		744F97DC0AAFAC5500E0DBA0 /* RenderToVertexArray-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "RenderToVertexArray-Info.plist"; sourceTree = "<group>"; };
+		744F9AF90AAFACC400E0DBA0 /* rtva.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rtva.icns; sourceTree = "<group>"; };
+		744F9AFC0AAFAD3A00E0DBA0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		744F97D80AAFAC5500E0DBA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F9AF70AAFACAC00E0DBA0 /* GLUT.framework in Frameworks */,
+				744F9AF80AAFACAC00E0DBA0 /* OpenGL.framework in Frameworks */,
+				744F9AFD0AAFAD3A00E0DBA0 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74179DDC0AAF1E6400862915 = {
+			isa = PBXGroup;
+			children = (
+				74179DEB0AAF1E8200862915 /* ReadMe.txt */,
+				74179E000AAF1F1D00862915 /* Frameworks */,
+				74179DED0AAF1E8A00862915 /* Sources */,
+				74179DEE0AAF1E9E00862915 /* Resources */,
+				74179DF30AAF1EBD00862915 /* Products */,
+				744F97DC0AAFAC5500E0DBA0 /* RenderToVertexArray-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		74179DED0AAF1E8A00862915 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				74179DE90AAF1E8200862915 /* main.c */,
+				74179DEA0AAF1E8200862915 /* platform.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		74179DEE0AAF1E9E00862915 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				744F9AF90AAFACC400E0DBA0 /* rtva.icns */,
+				74179DE80AAF1E8200862915 /* logo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		74179DF30AAF1EBD00862915 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				744F97DA0AAFAC5500E0DBA0 /* RenderToVertexArray.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74179E000AAF1F1D00862915 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				744F9AFC0AAFAD3A00E0DBA0 /* ApplicationServices.framework */,
+				74179E010AAF1F4900862915 /* GLUT.framework */,
+				74179E020AAF1F4900862915 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		744F97D90AAFAC5500E0DBA0 /* RenderToVertexArray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744F97DD0AAFAC5600E0DBA0 /* Build configuration list for PBXNativeTarget "RenderToVertexArray" */;
+			buildPhases = (
+				744F97D60AAFAC5500E0DBA0 /* Resources */,
+				744F97D70AAFAC5500E0DBA0 /* Sources */,
+				744F97D80AAFAC5500E0DBA0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RenderToVertexArray;
+			productName = RenderToVertexArray;
+			productReference = 744F97DA0AAFAC5500E0DBA0 /* RenderToVertexArray.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74179DDE0AAF1E6400862915 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 74179DDF0AAF1E6400862915 /* Build configuration list for PBXProject "PBORenderToVertexArray" */;
+			hasScannedForEncodings = 0;
+			mainGroup = 74179DDC0AAF1E6400862915;
+			productRefGroup = 74179DF30AAF1EBD00862915 /* Products */;
+			projectDirPath = "";
+			targets = (
+				744F97D90AAFAC5500E0DBA0 /* RenderToVertexArray */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		744F97D60AAFAC5500E0DBA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F97E40AAFAC9500E0DBA0 /* logo.png in Resources */,
+				744F9AFA0AAFACC400E0DBA0 /* rtva.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		744F97D70AAFAC5500E0DBA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F97E20AAFAC8C00E0DBA0 /* main.c in Sources */,
+				744F97E30AAFAC8D00E0DBA0 /* platform.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		74179DE00AAF1E6400862915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		74179DE10AAF1E6400862915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		744F97DE0AAFAC5600E0DBA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "RenderToVertexArray-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = RenderToVertexArray;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		744F97DF0AAFAC5600E0DBA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "RenderToVertexArray-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = RenderToVertexArray;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74179DDF0AAF1E6400862915 /* Build configuration list for PBXProject "PBORenderToVertexArray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74179DE00AAF1E6400862915 /* Debug */,
+				74179DE10AAF1E6400862915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744F97DD0AAFAC5600E0DBA0 /* Build configuration list for PBXNativeTarget "RenderToVertexArray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744F97DE0AAFAC5600E0DBA0 /* Debug */,
+				744F97DF0AAFAC5600E0DBA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74179DDE0AAF1E6400862915 /* Project object */;
+}
