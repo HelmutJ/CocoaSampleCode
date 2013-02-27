@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D66F44806F101480059510A /* NavServicesHandling.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D66F43F06F101480059510A /* NavServicesHandling.c */; };
+		2D90781B06F11754002BEABF /* DoPrinting.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D90781A06F11754002BEABF /* DoPrinting.c */; };
+		2DC32CD50806F36F0062A441 /* ptlobos.tif in Resources */ = {isa = PBXBuildFile; fileRef = 2DC32CCB0806F36F0062A441 /* ptlobos.tif */; };
+		2DC32D360806FDFC0062A441 /* AppDrawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DC32D340806FDFC0062A441 /* AppDrawing.c */; settings = {COMPILER_FLAGS = "-DCARBON_SAMPLE=1"; }; };
+		2DF0A6E506F216530081C51B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DF0A6E306F216530081C51B /* Localizable.strings */; };
+		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		8D0C4E8E0486CD37000505A6 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 02345980000FD03B11CA0E72 /* main.nib */; };
+		8D0C4E900486CD37000505A6 /* UIHandling.c in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* UIHandling.c */; settings = {ATTRIBUTES = (); }; };
+		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504C5FFE6A39111CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4A9504C6FFE6A39111CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = YES;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870340FFE93FCAF11CA0CD7 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		20286C2BFDCF999611CA2CEA /* UIHandling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UIHandling.c; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		2D66F43F06F101480059510A /* NavServicesHandling.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = NavServicesHandling.c; sourceTree = "<group>"; };
+		2D66F44006F101480059510A /* NavServicesHandling.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NavServicesHandling.h; sourceTree = "<group>"; };
+		2D66F44106F101480059510A /* UIHandling.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UIHandling.h; sourceTree = "<group>"; };
+		2D90781A06F11754002BEABF /* DoPrinting.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DoPrinting.c; sourceTree = "<group>"; };
+		2D90781E06F1176C002BEABF /* DoPrinting.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DoPrinting.h; sourceTree = "<group>"; };
+		2DC32CCB0806F36F0062A441 /* ptlobos.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ptlobos.tif; sourceTree = "<group>"; };
+		2DC32D340806FDFC0062A441 /* AppDrawing.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = AppDrawing.c; sourceTree = "<group>"; };
+		2DC32D350806FDFC0062A441 /* AppDrawing.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppDrawing.h; sourceTree = "<group>"; };
+		2DF0A6E406F216530081C51B /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32DBCF6D0370B57F00C91783 /* BasicDrawing_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicDrawing_Prefix.pch; sourceTree = "<group>"; };
+		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D0C4E970486CD37000505A6 /* Quartz2DBasics.Carbon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quartz2DBasics.Carbon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0C4E910486CD37000505A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8CFFE9D517E11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C4E970486CD37000505A6 /* Quartz2DBasics.Carbon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* BasicDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				2DC32CE80806F3D70062A441 /* CommonCode */,
+				20286C2AFDCF999611CA2CEA /* CarbonSpecific */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8CFFE9D517E11CA2CBB /* Products */,
+			);
+			name = BasicDrawing;
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* CarbonSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				2D90781A06F11754002BEABF /* DoPrinting.c */,
+				2D90781E06F1176C002BEABF /* DoPrinting.h */,
+				2D66F43F06F101480059510A /* NavServicesHandling.c */,
+				2D66F44006F101480059510A /* NavServicesHandling.h */,
+				20286C2BFDCF999611CA2CEA /* UIHandling.c */,
+				2D66F44106F101480059510A /* UIHandling.h */,
+				32DBCF6D0370B57F00C91783 /* BasicDrawing_Prefix.pch */,
+			);
+			name = CarbonSpecific;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2DC32CC20806F36F0062A441 /* GraphicsFiles */,
+				8D0C4E960486CD37000505A6 /* Info.plist */,
+				2DF0A6E306F216530081C51B /* Localizable.strings */,
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				02345980000FD03B11CA0E72 /* main.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		2DC32CC20806F36F0062A441 /* GraphicsFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2DC32CCB0806F36F0062A441 /* ptlobos.tif */,
+			);
+			name = GraphicsFiles;
+			path = ../GraphicsFiles;
+			sourceTree = SOURCE_ROOT;
+		};
+		2DC32CE80806F3D70062A441 /* CommonCode */ = {
+			isa = PBXGroup;
+			children = (
+				2DC32D340806FDFC0062A441 /* AppDrawing.c */,
+				2DC32D350806FDFC0062A441 /* AppDrawing.h */,
+			);
+			name = CommonCode;
+			path = ../CommonCode;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D0C4E890486CD37000505A6 /* BasicDrawing.Carbon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D4F4E6108E0C842002C8F59 /* Build configuration list for PBXNativeTarget "BasicDrawing.Carbon" */;
+			buildPhases = (
+				8D0C4E8C0486CD37000505A6 /* Resources */,
+				8D0C4E8F0486CD37000505A6 /* Sources */,
+				8D0C4E910486CD37000505A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BasicDrawing_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = BasicDrawing;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = BasicDrawing.Carbon;
+			productInstallPath = "$(HOME)/Applications";
+			productName = BasicDrawing;
+			productReference = 8D0C4E970486CD37000505A6 /* Quartz2DBasics.Carbon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2D4F4E6508E0C842002C8F59 /* Build configuration list for PBXProject "Quartz2DBasics.carbon" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504C5FFE6A39111CA0CBA /* Development */,
+				4A9504C6FFE6A39111CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 20286C29FDCF999611CA2CEA /* BasicDrawing */;
+			projectDirPath = "";
+			targets = (
+				8D0C4E890486CD37000505A6 /* BasicDrawing.Carbon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D0C4E8C0486CD37000505A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */,
+				8D0C4E8E0486CD37000505A6 /* main.nib in Resources */,
+				2DF0A6E506F216530081C51B /* Localizable.strings in Resources */,
+				2DC32CD50806F36F0062A441 /* ptlobos.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D0C4E8F0486CD37000505A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0C4E900486CD37000505A6 /* UIHandling.c in Sources */,
+				2D66F44806F101480059510A /* NavServicesHandling.c in Sources */,
+				2D90781B06F11754002BEABF /* DoPrinting.c in Sources */,
+				2DC32D360806FDFC0062A441 /* AppDrawing.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02345980000FD03B11CA0E72 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1870340FFE93FCAF11CA0CD7 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2DF0A6E306F216530081C51B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DF0A6E406F216530081C51B /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D4F4E6208E0C842002C8F59 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BasicDrawing_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = Quartz2DBasics.Carbon;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		2D4F4E6308E0C842002C8F59 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BasicDrawing_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = Quartz2DBasics.Carbon;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		2D4F4E6408E0C842002C8F59 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BasicDrawing_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = Quartz2DBasics.Carbon;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Default;
+		};
+		2D4F4E6608E0C842002C8F59 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		2D4F4E6708E0C842002C8F59 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Deployment;
+		};
+		2D4F4E6808E0C842002C8F59 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D4F4E6108E0C842002C8F59 /* Build configuration list for PBXNativeTarget "BasicDrawing.Carbon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4F4E6208E0C842002C8F59 /* Development */,
+				2D4F4E6308E0C842002C8F59 /* Deployment */,
+				2D4F4E6408E0C842002C8F59 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		2D4F4E6508E0C842002C8F59 /* Build configuration list for PBXProject "Quartz2DBasics.carbon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4F4E6608E0C842002C8F59 /* Development */,
+				2D4F4E6708E0C842002C8F59 /* Deployment */,
+				2D4F4E6808E0C842002C8F59 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}
