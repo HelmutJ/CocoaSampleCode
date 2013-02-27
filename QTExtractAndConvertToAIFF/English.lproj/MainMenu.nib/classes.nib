@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = AIFFWriter; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {doExportToAIFF = id; doOpen = id; }; 
+            CLASS = MyController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mExportButton = NSButton; 
+                mMovieView = QTMovieView; 
+                mProgressBar = NSProgressIndicator; 
+                mWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
