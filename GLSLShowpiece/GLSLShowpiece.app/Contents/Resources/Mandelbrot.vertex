@@ -1,0 +1,22 @@
+/*
+
+File: Mandelbrot.vertex
+			 
+Abstract: Mandelbrot Shader (from the "orange book")
+			 
+Copyright (C) 2002-2004  3Dlabs Inc. Ltd.
+All rights reserved.
+
+See 3Dlabs-License.txt for license information
+
+*/
+
+varying vec3 Position;
+
+void main() 
+{
+	gl_Position = ftransform();
+	gl_FrontColor = gl_Color;
+	Position = vec3(gl_MultiTexCoord0 - 0.5) * 5.0;
+
+}
