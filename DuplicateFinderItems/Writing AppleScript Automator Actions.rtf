@@ -1,0 +1,865 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fnil\fcharset80 AppleGothic;\f2\fswiss\fcharset77 Helvetica;
+\f3\fnil\fcharset77 Verdana-Bold;\f4\fnil\fcharset77 Verdana;\f5\fnil\fcharset77 Verdana-Italic;
+\f6\fnil\fcharset77 Monaco;\f7\fmodern\fcharset77 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red85\green85\blue85;\red0\green0\blue255;
+\red64\green128\blue0;\red76\green78\blue78;\red35\green110\blue37;\red137\green19\blue21;\red128\green0\blue128;
+}
+\pard\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf2 \up0 \nosupersub \ul \ulc2 \obliqueness0 \expansion0 Topic\
+\
+\pard\tx280\tx500\li500\fi-500\ql\qnatural\pardirnatural
+
+\f1\b0\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Duplicate Finder Items\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 1:\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Create new AppleScript Automator Action project in Xcode\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Implement main.applescript\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+
+\f3\b \cf4 \CocoaLigature0 tell
+\f4\b0 \cf2  \cf4 application\cf2  "Finder" 
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 duplicate\cf2  \cf5 input\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 2: Configure Info.plist\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Use the inspector (Xcode 2.1) or directly edit the file (Xcode 2.0)\
+	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Identifier (CFBundleIdentifier) (only if you created project with Xcode 2.0)\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	com.yourcompany.Automator.Duplicate_Finder_Items\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	General\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Application (AMApplication)\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Category (AMCategory)\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Icon name (AMIconName)\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Set them all to Finder\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Input/Output (AMAccepts/AMProvides)\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Change to com.apple.applescript.alias-object\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Keywords (AMKeywords)\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add three\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Copy\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	File\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Folder\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Description (AMDescription)\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	This action duplicates the Finder items passed into it.\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 3: Add User Interface elements controlled by Cocoa Bindings\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Open main.nib in Interface Builder\
+	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add checkbox labeled "Return duplicate items"\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	In Attributes inspector\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Change Size to Small\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add AMPalette\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	In IB, select the Tools > Palettes > Palette Preferences\'c9 menu item\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	In the Palettes preference pane, click on the "Add\'c9" button\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Navigate to /Developer/Extras/Palettes/ and select "AMPalette.palette"\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add Directory Chooser popup from Automator palette with "To:" label to its left\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	In Attributes inspector for AMPathPopUpButton\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Check Choose: New paths\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Check Show: Placeholder and change label to "Same folder"\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Arrange elements using IB guides and 10-pixel border\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Tip: hold down option key to get pixel guides\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Test Interface\
+	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Make bindings for both UI elements\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	returnDuplicateItems for checkbox\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	toLocation for AMPathPopUpButton\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add matching Parameters (AMDefaultParameters) entries to Info.plist\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	returnDuplicateItems, boolean, Yes\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	toLocation, string\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Update main.applescript to use user choices\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+
+\f3\b \cf4 \CocoaLigature0 on
+\f4\b0 \cf2  \cf4 run\cf2  \{\cf5 input\cf2 , \cf5 parameters\cf2 \}\
+	\
+	--
+\f5\i \cf6  read settings from user interface\
+
+\f4\i0 \cf2 	
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 to_location\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  (|\cf5 toLocation\cf2 | 
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 parameters\cf2 )\
+	
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 return_duplicate_items\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  (|\cf5 returnDuplicateItems\cf2 | 
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 parameters\cf2 ) 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 boolean\
+\cf2 	\
+	--
+\f5\i \cf6  convert POSIX path possibly containing a ~ to an AppleScript alias\
+
+\f4\i0 \cf2 	
+\f3\b \cf4 if
+\f4\b0 \cf2  \cf5 to_location\cf2  
+\f3\b \cf4 is
+\f4\b0 \cf2  
+\f3\b \cf4 not
+\f4\b0 \cf2  "" 
+\f3\b \cf4 then
+\f4\b0 \cf2  --
+\f5\i \cf6  AMPathPopUpButton returns an empty string for placeholder selection \
+
+\f4\i0 \cf2 		
+\f3\b \cf4 try\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 target_folder\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 call method\cf2  "stringByExpandingTildeInPath" \cf4 of\cf2  \cf5 to_location\
+\cf2 			
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 target_folder\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  (\cf4 POSIX file\cf2  \cf5 target_folder\cf2 )\
+			
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 target_folder\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf5 target_folder\cf2  
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 alias\
+\cf2 		
+\f3\b \cf4 on
+\f4\b0 \cf2  
+\f3\b \cf4 error\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 error
+\f4\b0 \cf2  \cf4 number\cf2  -43 \cf4 from\cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 target_folder\
+\cf2 		
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 try\
+
+\f4\b0 \cf2 	
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+
+\f4\b0 \cf2 	\
+	
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  \{\}\
+	\
+	
+\f3\b \cf4 if
+\f4\b0 \cf2  \cf5 to_location\cf2  
+\f3\b \cf4 is
+\f4\b0 \cf2  "" 
+\f3\b \cf4 then
+\f4\b0 \cf2  --
+\f5\i \cf6  if the user left the To: popup set to 'Same folder'\
+
+\f4\i0 \cf2 		
+\f3\b \cf4 tell
+\f4\b0 \cf2  \cf4 application\cf2  "Finder" 
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 duplicate\cf2  \cf5 input\
+\cf2 	
+\f3\b \cf4 else\
+
+\f4\b0 \cf2 		
+\f3\b \cf4 tell
+\f4\b0 \cf2  \cf4 application\cf2  "Finder" 
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 duplicate\cf2  \cf5 input\cf2  \cf4 to\cf2  \cf5 target_folder\
+\cf2 	
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+
+\f4\b0 \cf2 	\
+	
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf4 result\
+\cf2 	\
+	
+\f3\b \cf4 if
+\f4\b0 \cf2  \cf5 return_duplicate_items\cf2  
+\f3\b \cf4 then\
+
+\f4\b0 \cf2 		--
+\f5\i \cf6  convert the Finder reference for each duplicate item to an AppleScript alias\
+
+\f4\i0 \cf2 		
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  \{\}\
+		
+\f3\b \cf4 tell
+\f4\b0 \cf2  \cf4 application\cf2  "System Events"\
+			
+\f3\b \cf4 repeat
+\f4\b0 \cf2  
+\f3\b \cf4 with
+\f4\b0 \cf2  \cf5 i\cf2  
+\f3\b \cf4 from
+\f4\b0 \cf2  1 
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 number\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf4 items\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\
+\cf2 				
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  (\cf4 item\cf2  \cf5 i\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\cf2 ) 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 alias\
+\cf2 			
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 repeat\
+
+\f4\b0 \cf2 		
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 tell\
+
+\f4\b0 \cf2 		
+\f3\b \cf4 return
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\
+\cf2 	
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+
+\f4\b0 \cf2 	\
+	
+\f3\b \cf4 return
+\f4\b0 \cf2  \cf5 input\
+
+\f3\b \cf4 end
+\f4\b0 \cf2  \cf4 run\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 4: Add User Interface elements controlled by AppleScript Studio\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add "Example:" label and "xxxx" text field placeholder to main.nib\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	"xxxx" text field\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Name "example" in AppleScript inspector pane\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add horizontal springs in Size inspector pane\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Reset 10-pixel border\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Attach handlers\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	awake from nib and opened to View\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	clicked to 'Return duplicate items' checkbox\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add handlers to new AppleScript Text File ui.applescript\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Name "return duplicate items" checkbox in AppleScript inspector pane\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Implement ui.applescript\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+
+\f3\b \cf4 \CocoaLigature0 property\cf2  \cf5 contentview_reference\cf2  : \cf4 missing value\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf4 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 on\cf2  \cf4 awake from nib\cf2  \cf5 theObject\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 	\cf4 set\cf2  \cf4 the\cf2  \cf5 contentview_reference\cf2  \cf4 to\cf2  \cf5 theObject\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 end\cf2  \cf4 awake from nib\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf4 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 on\cf2  \cf4 opened\cf2  \cf5 theObject\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 	\cf5 update_example\cf2 ()\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 end\cf2  \cf4 opened\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf4 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 on\cf2  \cf4 clicked\cf2  \cf5 theObject\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 	\cf5 update_example\cf2 ()\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 end\cf2  \cf4 clicked\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf4 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf4 on
+\f4\b0 \cf2  \cf5 update_example\cf2 ()\
+	
+\f3\b \cf4 tell
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 contentview_reference\
+\cf2 		
+\f3\b \cf4 if
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf4 state\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf4 button\cf2  "return duplicate items" 
+\f3\b \cf4 is
+\f4\b0 \cf2  1 
+\f3\b \cf4 then\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 display_example\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  "Return duplicate items" 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 Unicode text\
+\cf2 		
+\f3\b \cf4 else\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 display_example\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  "Return original items" 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 Unicode text\
+\cf2 		
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+
+\f4\b0 \cf2 		
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf4 content\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf4 text field\cf2  "example" 
+\f3\b \cf4 to
+\f4\b0 \cf2  (\cf5 display_example\cf2 )\
+	
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 tell\
+end
+\f4\b0 \cf2  \cf5 update_example\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Run action with Show When Run\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Fix bug with Show When Run\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Attach parameters updated handler to View\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Implement parameters updated handler\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li1940\ql\qnatural\pardirnatural
+
+\f3\b \cf4 \CocoaLigature0 on
+\f4\b0 \cf2  \cf4 parameters updated\cf2  \cf5 theObject\cf2  \cf4 parameters\cf2  \cf5 theParameters\
+\cf2 	
+\f3\b \cf4 set
+\f4\b0 \cf2  (
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf4 state\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf4 button\cf2  "return duplicate items" 
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 contentview_reference\cf2 ) 
+\f3\b \cf4 to
+\f4\b0 \cf2  |\cf5 returnDuplicateItems\cf2 | 
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 theParameters\cf2  
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 integer\
+\cf2 	\cf5 update_example\cf2 ()\
+
+\f3\b \cf4 end
+\f4\b0 \cf2  \cf4 parameters updated\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 5: Make Localizable\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Update InfoPlist.strings\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+
+\f6\fs20 \cf7 \CocoaLigature0 /* Localized versions of Info.plist keys */\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf7 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 CFBundleName = \cf8 "Duplicate Finder Items"\cf2 ;\
+NSHumanReadableCopyright = \cf8 "Copyright 2005 Apple Computer, Inc."\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 AMName = \cf8 "Duplicate Finder Items"\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf7 /*  AMApplication localized strings  */\
+/*  AMCategory localized strings  */\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf8 "Finder"\cf2  = \cf8 "Finder"\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf7 /*  AMDefaultParameters localized values  */\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf7 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf7 /*  AMDescription localized strings  */\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 AMDSummary = \cf8 "This action duplicates the Finder items passed into it."\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf7 /*  AMKeywords localized strings  */\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf8 "Copy"\cf2  = \cf8 "Copy"\cf2 ;\
+\cf8 "File"\cf2  = \cf8 "File"\cf2 ;\
+\cf8 "Folder"\cf2  = \cf8 "Folder"\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf7 /*  AMWarning localized strings  */\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf2 ApplyButton = \cf8 "(* Button label for user to add proposed Action, e.g. Add. *)"\cf2 ;\
+IgnoreButton = \cf8 "(* Button label for user not to add proposed Action, e.g. Don't Add. *)"\cf2 ;\
+Message = \cf8 "(* Warning message presented to user goes here. *)"\cf2 ;\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+
+\f2\fs24 \cf2 \CocoaLigature1 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	AMDSummary\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	AMApplication\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	AMKeywords\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	AMCategory\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Update ui.applescript\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Update update_example to call my localized_string to fetch two strings\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li1940\ql\qnatural\pardirnatural
+
+\f4 \cf2 \CocoaLigature0 			
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 display_example\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  
+\f3\b \cf4 my
+\f4\b0 \cf2  \cf5 localized_string\cf2 ("Return duplicate items") 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 Unicode text\
+\cf2 		
+\f3\b \cf4 else\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  \cf5 display_example\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  
+\f3\b \cf4 my
+\f4\b0 \cf2  \cf5 localized_string\cf2 ("Return original items") 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 Unicode text\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add localized_string handler to ui.applescript\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li1940\ql\qnatural\pardirnatural
+
+\f3\b \cf4 \CocoaLigature0 on
+\f4\b0 \cf2  \cf5 localized_string\cf2 (\cf5 key_string\cf2 )\
+	
+\f3\b \cf4 return
+\f4\b0 \cf2  \cf4 localized string\cf2  \cf5 key_string\cf2  \cf4 in bundle with identifier\cf2  "com.yourcompany.Automator.Duplicate
+\f7 \cf9 _
+\f4 \cf2 Finder
+\f7 \cf9 _
+\f4 \cf2 Items"\
+
+\f3\b \cf4 end
+\f4\b0 \cf2  \cf5 localized_string\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+
+\f2 \cf2 \CocoaLigature1 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add Localizable.strings\
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+
+\f6\fs20 \cf8 \CocoaLigature0 "Return duplicate items"\cf2  = \cf8 "Return duplicate items"\cf2 ;\
+\pard\li1580\ql\qnatural\pardirnatural
+\cf2 \
+\pard\tx2060\tx2540\tx3020\tx3500\tx3980\tx4460\tx4940\tx5420\tx5900\tx6380\tx6860\tx7340\tx7820\tx8300\tx8780\tx9260\tx9740\tx10220\tx10700\tx11180\tx11660\tx12140\tx12620\tx13100\tx13580\tx14060\tx14540\tx15020\tx15500\tx15980\tx16460\tx16940\tx17420\tx17900\tx18380\tx18860\tx19340\tx19820\tx20300\tx20780\tx21260\tx21740\tx22220\tx22700\tx23180\tx23660\tx24140\tx24620\tx25100\tx25580\tx26060\tx26540\tx27020\tx27500\tx27980\tx28460\tx28940\tx29420\tx29900\tx30380\tx30860\tx31340\tx31820\tx32300\tx32780\tx33260\tx33740\tx34220\tx34700\tx35180\tx35660\tx36140\tx36620\tx37100\tx37580\tx38060\tx38540\tx39020\tx39500\tx39980\tx40460\tx40940\tx41420\tx41900\tx42380\tx42860\tx43340\tx43820\tx44300\tx44780\tx45260\tx45740\tx46220\tx46700\tx47180\tx47660\tx48140\tx48620\tx49100\tx49580\li1580\ql\qnatural\pardirnatural
+\cf8 "Return original items"\cf2  = \cf8 "Return original items"\cf2 ;\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+
+\f2\fs24 \cf2 \CocoaLigature1 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Use inspector to\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Make localizable\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Convert encoding to UTF-16\
+\pard\tx360\tx640\tx860\li860\fi-860\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step 6: Test and Debug\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Open up Step 6 milestone project, which has bugs introduced into it\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Fix amlint errors in main.nib\
+	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Try passing the action a single file as input and check its output when returning the duplicate items\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add breakpoint on line 78 of main.applescript\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Add breakpoint actions if desired\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Debug\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Step through to find the bug\
+\pard\tx1440\tx1720\tx1940\li1940\fi-1940\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	duplicate_Finder_items isn't a list in this case\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Fix bug by replacing 'if return_duplicate_items then' code in run handler in main.applescript with the following code\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li3540\fi-1600\ql\qnatural\pardirnatural
+
+\f4 \cf2 \CocoaLigature0 	
+\f3\b \cf4 if
+\f4\b0 \cf2  \cf5 return_duplicate_items\cf2  
+\f3\b \cf4 then\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li4340\fi-2400\ql\qnatural\pardirnatural
+
+\f4\b0 \cf2 		--
+\f5\i \cf6  convert the Finder reference for each duplicate item to an AppleScript alias\
+
+\f4\i0 \cf2 		
+\f3\b \cf4 set
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  \{\}\
+		
+\f3\b \cf4 if
+\f4\b0 \cf2  \cf4 class\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\cf2  
+\f3\b \cf4 is
+\f4\b0 \cf2  \cf4 list\cf2  
+\f3\b \cf4 then\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li5140\fi-3200\ql\qnatural\pardirnatural
+
+\f4\b0 \cf2 			
+\f3\b \cf4 tell
+\f4\b0 \cf2  \cf4 application\cf2  "System Events"\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li5940\fi-4000\ql\qnatural\pardirnatural
+\cf2 				
+\f3\b \cf4 repeat
+\f4\b0 \cf2  
+\f3\b \cf4 with
+\f4\b0 \cf2  \cf5 i\cf2  
+\f3\b \cf4 from
+\f4\b0 \cf2  1 
+\f3\b \cf4 to
+\f4\b0 \cf2  \cf4 number\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf4 items\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li6740\fi-4800\ql\qnatural\pardirnatural
+\cf2 					
+\f3\b \cf4 set
+\f4\b0 \cf2  
+\f3\b \cf4 the
+\f4\b0 \cf2  
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\cf2  
+\f3\b \cf4 to
+\f4\b0 \cf2  (\cf4 item\cf2  \cf5 i\cf2  
+\f3\b \cf4 of
+\f4\b0 \cf2  \cf5 duplicate_Finder_items\cf2 ) 
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 alias\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li5940\fi-4000\ql\qnatural\pardirnatural
+\cf2 				
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 repeat\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li5140\fi-3200\ql\qnatural\pardirnatural
+
+\f4\b0 \cf2 			
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 tell\
+
+\f4\b0 \cf2 			
+\f3\b \cf4 return
+\f4\b0 \cf2  \cf5 duplicate_item_aliases\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li4340\fi-2400\ql\qnatural\pardirnatural
+\cf2 		
+\f3\b \cf4 else
+\f4\b0 \cf2  --
+\f5\i \cf6  result was a single Finder item, not a list\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li5140\fi-3200\ql\qnatural\pardirnatural
+
+\f4\i0 \cf2 			--
+\f5\i \cf6  but this action promises in its Output (AMProvides) Container setting to provide a list to the next action\
+
+\f4\i0 \cf2 			
+\f3\b \cf4 return
+\f4\b0 \cf2  \{\cf5 duplicate_Finder_items\cf2  
+\f3\b \cf4 as
+\f4\b0 \cf2  \cf4 alias\cf2 \}\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li4340\fi-2400\ql\qnatural\pardirnatural
+\cf2 		
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+\pard\tx2420\tx2900\tx3380\tx3860\tx4340\tx4820\tx5300\tx5780\tx6260\tx6740\tx7220\tx7700\tx8180\tx8660\tx9140\tx9620\tx10100\tx10580\tx11060\tx11540\tx12020\tx12500\tx12980\tx13460\tx13940\tx14420\tx14900\tx15380\tx15860\tx16340\tx16820\tx17300\tx17780\tx18260\tx18740\tx19220\tx19700\tx20180\tx20660\tx21140\tx21620\tx22100\tx22580\tx23060\tx23540\tx24020\tx24500\tx24980\tx25460\tx25940\tx26420\tx26900\tx27380\tx27860\tx28340\tx28820\tx29300\tx29780\tx30260\tx30740\tx31220\tx31700\tx32180\tx32660\tx33140\tx33620\tx34100\tx34580\tx35060\tx35540\tx36020\tx36500\tx36980\tx37460\tx37940\tx38420\tx38900\tx39380\tx39860\tx40340\tx40820\tx41300\tx41780\tx42260\tx42740\tx43220\tx43700\tx44180\tx44660\tx45140\tx45620\tx46100\tx46580\tx47060\tx47540\tx48020\tx48500\tx48980\tx49460\tx49940\li3540\fi-1600\ql\qnatural\pardirnatural
+
+\f4\b0 \cf2 	
+\f3\b \cf4 end
+\f4\b0 \cf2  
+\f3\b \cf4 if\
+\pard\tx720\tx1000\tx1220\li1220\fi-1220\ql\qnatural\pardirnatural
+
+\f2\b0 \cf2 \CocoaLigature1 	
+\f1\fs26 \cf3 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a1\'e5
+\f2\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Build and Go\
+\pard\tx1080\tx1360\tx1580\li1580\fi-1580\ql\qnatural\pardirnatural
+\cf2 	
+\fs26 \cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \'a5
+\fs24 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	\cf0 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 \uc0\u10065 \cf2 \up0 \nosupersub \ulnone \obliqueness0 \expansion0 	Verify that returning the duplicate items for a single input file now returns the proper output (a list of the single duplicated item)\
+}
