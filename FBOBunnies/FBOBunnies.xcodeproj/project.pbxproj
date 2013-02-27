@@ -1,0 +1,244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74E7B0A00AAF8B0900CAC7A5 /* stanfordbunny.c in Sources */ = {isa = PBXBuildFile; fileRef = 747CDC110AADEE950046D8C9 /* stanfordbunny.c */; };
+		74E7B0A10AAF8B0900CAC7A5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 747CDC0F0AADEE950046D8C9 /* main.c */; };
+		74E7B0A90AAF8BD600CAC7A5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747CDC3B0AADF0130046D8C9 /* GLUT.framework */; };
+		74E7B0AA0AAF8BD600CAC7A5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747CDC360AADF0080046D8C9 /* OpenGL.framework */; };
+		74E7B0D50AAF8FD700CAC7A5 /* bunny.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74E7B0D40AAF8FD700CAC7A5 /* bunny.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		747CDC0F0AADEE950046D8C9 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		747CDC100AADEE950046D8C9 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		747CDC110AADEE950046D8C9 /* stanfordbunny.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = stanfordbunny.c; sourceTree = "<group>"; };
+		747CDC120AADEE950046D8C9 /* stanfordbunny.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = stanfordbunny.h; sourceTree = "<group>"; };
+		747CDC360AADF0080046D8C9 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		747CDC3B0AADF0130046D8C9 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		74E7B08C0AAF8A7600CAC7A5 /* Bunnies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunnies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E7B08E0AAF8A7600CAC7A5 /* Bunnies-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bunnies-Info.plist"; sourceTree = "<group>"; };
+		74E7B0D40AAF8FD700CAC7A5 /* bunny.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bunny.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74E7B08A0AAF8A7600CAC7A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E7B0A90AAF8BD600CAC7A5 /* GLUT.framework in Frameworks */,
+				74E7B0AA0AAF8BD600CAC7A5 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		747CDC030AADEE790046D8C9 = {
+			isa = PBXGroup;
+			children = (
+				747CDC100AADEE950046D8C9 /* ReadMe.txt */,
+				74E7B0870AAF8A5200CAC7A5 /* Resources */,
+				747CDC180AADEEC40046D8C9 /* Headers */,
+				747CDC140AADEE9D0046D8C9 /* Source */,
+				747CDC350AADEFDF0046D8C9 /* Frameworks */,
+				747CDC1E0AADEF5A0046D8C9 /* Products */,
+				74E7B08E0AAF8A7600CAC7A5 /* Bunnies-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		747CDC140AADEE9D0046D8C9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				747CDC110AADEE950046D8C9 /* stanfordbunny.c */,
+				747CDC0F0AADEE950046D8C9 /* main.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		747CDC180AADEEC40046D8C9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				747CDC120AADEE950046D8C9 /* stanfordbunny.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		747CDC1E0AADEF5A0046D8C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74E7B08C0AAF8A7600CAC7A5 /* Bunnies.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		747CDC350AADEFDF0046D8C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				747CDC3B0AADF0130046D8C9 /* GLUT.framework */,
+				747CDC360AADF0080046D8C9 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74E7B0870AAF8A5200CAC7A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74E7B0D40AAF8FD700CAC7A5 /* bunny.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74E7B08B0AAF8A7600CAC7A5 /* Bunnies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E7B08F0AAF8A7600CAC7A5 /* Build configuration list for PBXNativeTarget "Bunnies" */;
+			buildPhases = (
+				74E7B0880AAF8A7600CAC7A5 /* Resources */,
+				74E7B0890AAF8A7600CAC7A5 /* Sources */,
+				74E7B08A0AAF8A7600CAC7A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bunnies;
+			productName = Bunnies;
+			productReference = 74E7B08C0AAF8A7600CAC7A5 /* Bunnies.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		747CDC050AADEE790046D8C9 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 747CDC060AADEE790046D8C9 /* Build configuration list for PBXProject "FBOBunnies" */;
+			hasScannedForEncodings = 0;
+			mainGroup = 747CDC030AADEE790046D8C9;
+			productRefGroup = 747CDC1E0AADEF5A0046D8C9 /* Products */;
+			projectDirPath = "";
+			targets = (
+				74E7B08B0AAF8A7600CAC7A5 /* Bunnies */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74E7B0880AAF8A7600CAC7A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E7B0D50AAF8FD700CAC7A5 /* bunny.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74E7B0890AAF8A7600CAC7A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E7B0A00AAF8B0900CAC7A5 /* stanfordbunny.c in Sources */,
+				74E7B0A10AAF8B0900CAC7A5 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		747CDC070AADEE790046D8C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		747CDC080AADEE790046D8C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		74E7B0900AAF8A7600CAC7A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Bunnies-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Bunnies;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		74E7B0910AAF8A7600CAC7A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Bunnies-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = Bunnies;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		747CDC060AADEE790046D8C9 /* Build configuration list for PBXProject "FBOBunnies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				747CDC070AADEE790046D8C9 /* Debug */,
+				747CDC080AADEE790046D8C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E7B08F0AAF8A7600CAC7A5 /* Build configuration list for PBXNativeTarget "Bunnies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E7B0900AAF8A7600CAC7A5 /* Debug */,
+				74E7B0910AAF8A7600CAC7A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 747CDC050AADEE790046D8C9 /* Project object */;
+}
