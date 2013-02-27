@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<schema version="1.0" xmlns="http://www.apple.com/metadata"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
+    <note>
+        Custom attributes that this metadata importer supports.  Below
+	is an example of a multivalued string attribute.  Other types
+	are CFNumber, CFDate, CFBoolean and CFData.		      
+    </note>
+    <attributes>
+        <attribute name="com_apple_dbgSessionName" type="CFString"/>
+        <attribute name="com_apple_dbgRadarNumber" type="CFString"/>
+    </attributes>
+
+    <types>
+        <type name="com.apple.dbg-demo">
+            <note>
+		The keys that this metadata importer handles.
+            </note>
+            <allattrs>
+	    com_apple_dbgSessionName
+	    com_apple_dbgRadarNumber
+		kMDItemKeywords
+            </allattrs>
+            <displayattrs>
+	    com_apple_dbgSessionName	    
+	    com_apple_dbgRadarNumber
+		kMDItemKeywords
+            </displayattrs>
+        </type>
+    </types>
+</schema>
+

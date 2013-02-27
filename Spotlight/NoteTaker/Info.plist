@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!--
+	If your application does not already define a UTI, you may want to declare it
+	here, so that your documents are recognized by systems which do not have your
+	application installed.
+
+	To export this declaration, fill in the fields with your application's 
+	information, and uncomment the block of XML.
+	-->
+	
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>com.aquaminds.notetaker.notebook</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://www.aquaminds.com/</string>
+			<key>UTTypeDescription</key>
+			<string>NoteTaker notebook</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.directory</string>
+				<string>com.apple.package</string>
+				<string>public.content</string>
+				<string>public.composite-content</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<!-- <key>com.apple.ostype</key>
+				<string>XXXX</string> -->
+				<key>public.filename-extension</key>
+				<array>
+					<string>ntx</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>MDImporter</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.aquaminds.notetaker.notebook</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>NoteTaker</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.aquaminds.notetaker.MDImporter</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>659F9D7A-E25E-4C27-A214-E7A17BA77107</key>
+		<string>MetadataImporterPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>8B08C4BF-415B-11D8-B3F9-0003936726FC</key>
+		<array>
+			<string>659F9D7A-E25E-4C27-A214-E7A17BA77107</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+</dict>
+</plist>
