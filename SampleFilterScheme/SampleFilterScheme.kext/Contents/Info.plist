@@ -1,0 +1,53 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>CFBundleDevelopmentRegion</key>
+ <string>English</string>
+ <key>CFBundleExecutable</key>
+ <string>SampleFilterScheme</string>
+ <key>CFBundleIdentifier</key>
+ <string>com.apple.dts.driver.SampleFilterScheme</string>
+ <key>CFBundleInfoDictionaryVersion</key>
+ <string>6.0</string>
+ <key>CFBundlePackageType</key>
+ <string>KEXT</string>
+ <key>CFBundleSignature</key>
+ <string>????</string>
+ <key>CFBundleVersion</key>
+ <string>1.2.0d1</string>
+ <key>CFBundleGetInfoString</key>
+ <string>1.2.0d1, Copyright © 2002-2005 Apple</string>
+ <key>IOKitPersonalities</key>
+ <dict>
+  <key>Apple_DTS_Filtered_HFS</key>
+  <dict>
+   <key>CFBundleIdentifier</key>
+   <string>com.apple.dts.driver.SampleFilterScheme</string>
+   <key>Content Hint</key>
+   <string>Apple_DTS_Filtered_HFS</string>
+   <key>IOClass</key>
+   <string>com_apple_dts_driver_SampleFilterScheme</string>
+   <key>IOMatchCategory</key>
+   <string>IOStorage</string>
+   <key>IOProviderClass</key>
+   <string>IOMedia</string>
+  </dict>
+ </dict>
+ <key>OSBundleLibraries</key>
+ <dict>
+  <key>com.apple.kernel.iokit</key>
+  <string>6.0</string>
+  <key>com.apple.kernel.libkern</key>
+  <string>6.0</string>
+  <key>com.apple.iokit.IOStorageFamily</key>
+  <string>1.2</string>
+ </dict>
+
+
+
+
+</dict>
+</plist>
