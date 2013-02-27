@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1807D2DF0C1DEF3300FAD22C /* World */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1807D2E40C1DEF5D00FAD22C /* Build configuration list for PBXAggregateTarget "World" */;
+			buildPhases = (
+			);
+			dependencies = (
+				1807D2E10C1DEF3F00FAD22C /* PBXTargetDependency */,
+				1807D2E30C1DEF3F00FAD22C /* PBXTargetDependency */,
+			);
+			name = World;
+			productName = World;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXAppleScriptBuildPhase section */
+		65081C2E067A9A0C006247A1 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				65E2187606F52A5F00613B9C /* main.applescript in AppleScript */,
+				181459A70C054A5700E894A3 /* UI.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXAppleScriptBuildPhase section */
+
+/* Begin PBXBuildFile section */
+		181459A70C054A5700E894A3 /* UI.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 181459A60C054A5700E894A3 /* UI.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		1837B0B30C0520DA004E4937 /* FirmwarePassword.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 1837B0B20C0520DA004E4937 /* FirmwarePassword.pkg */; };
+		185DECAA0C19FE0500C7DA27 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 185DECA80C19FE0500C7DA27 /* Utilities.h */; };
+		185DECAB0C19FE0500C7DA27 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DECA90C19FE0500C7DA27 /* Utilities.m */; };
+		18770BC20C1A5885004775E4 /* main.nib in Resources */ = {isa = PBXBuildFile; fileRef = 18770BC00C1A5885004775E4 /* main.nib */; };
+		65081C32067A9A0C006247A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		65081C37067A9A0C006247A1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		65081C38067A9A0C006247A1 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AABA78056AB2A5006CE269 /* Automator.framework */; };
+		65E2187606F52A5F00613B9C /* main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 65E2187306F52A5F00613B9C /* main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1807D2DB0C1DEF0B00FAD22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1807D2D40C1DEF0B00FAD22C /* AStoObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = AStoSIU;
+		};
+		1807D2E00C1DEF3F00FAD22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65081C2D067A9A0C006247A1;
+			remoteInfo = "Apply Firmware Password";
+		};
+		1807D2E20C1DEF3F00FAD22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1807D2D40C1DEF0B00FAD22C /* AStoObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = AStoSIU;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1800B20E0C1DF4AE00607063 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		1807D2D40C1DEF0B00FAD22C /* AStoObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AStoObjC.xcodeproj; path = AStoObjC/AStoObjC.xcodeproj; sourceTree = "<group>"; };
+		181459A60C054A5700E894A3 /* UI.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = UI.applescript; sourceTree = "<group>"; };
+		1837B0B20C0520DA004E4937 /* FirmwarePassword.pkg */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.installer-pkg"; name = FirmwarePassword.pkg; path = pkg/FirmwarePassword.pkg; sourceTree = "<group>"; };
+		185DECA80C19FE0500C7DA27 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		185DECA90C19FE0500C7DA27 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		18770BC10C1A5885004775E4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/main.nib; sourceTree = "<group>"; };
+		65081C3A067A9A0C006247A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		65081C3B067A9A0C006247A1 /* Apply Firmware Password.action */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apply Firmware Password.action"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6578AEF2078DDFFD004A0FC7 /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
+		65AABA78056AB2A5006CE269 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = /System/Library/Frameworks/Automator.framework; sourceTree = "<absolute>"; };
+		65E2187306F52A5F00613B9C /* main.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = main.applescript; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65081C36067A9A0C006247A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65081C37067A9A0C006247A1 /* Cocoa.framework in Frameworks */,
+				65081C38067A9A0C006247A1 /* Automator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Automator Action */ = {
+			isa = PBXGroup;
+			children = (
+				65AABA0F056A9AD1006CE269 /* Scripts */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+				65081C3A067A9A0C006247A1 /* Info.plist */,
+			);
+			name = "Automator Action";
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1800B20E0C1DF4AE00607063 /* ReadMe.rtf */,
+				1807D2D40C1DEF0B00FAD22C /* AStoObjC.xcodeproj */,
+				18770BC00C1A5885004775E4 /* main.nib */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				6578AEF2078DDFFD004A0FC7 /* AppleScriptKit.sdef */,
+				1837B0B20C0520DA004E4937 /* FirmwarePassword.pkg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				185DECA80C19FE0500C7DA27 /* Utilities.h */,
+				185DECA90C19FE0500C7DA27 /* Utilities.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				65AABA78056AB2A5006CE269 /* Automator.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1807D2D50C1DEF0B00FAD22C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1807D2DC0C1DEF0B00FAD22C /* AStoObjC.caction */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65081C3B067A9A0C006247A1 /* Apply Firmware Password.action */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65AABA0F056A9AD1006CE269 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				65E2187306F52A5F00613B9C /* main.applescript */,
+				181459A60C054A5700E894A3 /* UI.applescript */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		65081C30067A9A0C006247A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185DECAA0C19FE0500C7DA27 /* Utilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		65081C2D067A9A0C006247A1 /* Apply Firmware Password */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E77D0090895B1C5005CF7E3 /* Build configuration list for PBXNativeTarget "Apply Firmware Password" */;
+			buildPhases = (
+				65081C2E067A9A0C006247A1 /* AppleScript */,
+				65081C30067A9A0C006247A1 /* Headers */,
+				65081C31067A9A0C006247A1 /* Resources */,
+				65081C35067A9A0C006247A1 /* Sources */,
+				65081C36067A9A0C006247A1 /* Frameworks */,
+				65081C39067A9A0C006247A1 /* Rez */,
+				25038757080C6CE300E1128B /* ShellScript */,
+				1817830C0C05438500CE9508 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apply Firmware Password";
+			productInstallPath = "$(USER_LIBRARY_DIR)/Automator";
+			productName = "Automator Action";
+			productReference = 65081C3B067A9A0C006247A1 /* Apply Firmware Password.action */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4E77D00D0895B1C5005CF7E3 /* Build configuration list for PBXProject "Apply Firmware Password" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* Automator Action */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1807D2D50C1DEF0B00FAD22C /* Products */;
+					ProjectRef = 1807D2D40C1DEF0B00FAD22C /* AStoObjC.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				65081C2D067A9A0C006247A1 /* Apply Firmware Password */,
+				1807D2DF0C1DEF3300FAD22C /* World */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1807D2DC0C1DEF0B00FAD22C /* AStoObjC.caction */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AStoObjC.caction;
+			remoteRef = 1807D2DB0C1DEF0B00FAD22C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65081C31067A9A0C006247A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65081C32067A9A0C006247A1 /* InfoPlist.strings in Resources */,
+				1837B0B30C0520DA004E4937 /* FirmwarePassword.pkg in Resources */,
+				18770BC20C1A5885004775E4 /* main.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		65081C39067A9A0C006247A1 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1817830C0C05438500CE9508 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf ~/Library/Automator/\"${FULL_PRODUCT_NAME}\"\nditto \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\" ~/Library/Automator/\"${FULL_PRODUCT_NAME}\"";
+		};
+		25038757080C6CE300E1128B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/amlint \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65081C35067A9A0C006247A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185DECAB0C19FE0500C7DA27 /* Utilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1807D2E10C1DEF3F00FAD22C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65081C2D067A9A0C006247A1 /* Apply Firmware Password */;
+			targetProxy = 1807D2E00C1DEF3F00FAD22C /* PBXContainerItemProxy */;
+		};
+		1807D2E30C1DEF3F00FAD22C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AStoSIU;
+			targetProxy = 1807D2E20C1DEF3F00FAD22C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18770BC00C1A5885004775E4 /* main.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18770BC10C1A5885004775E4 /* English */,
+			);
+			name = main.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1807D2E50C1DEF5D00FAD22C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = World;
+			};
+			name = Debug;
+		};
+		1807D2E60C1DEF5D00FAD22C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = World;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		4E77D00A0895B1C5005CF7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Automator";
+				PRODUCT_NAME = "Apply Firmware Password";
+				WRAPPER_EXTENSION = action;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4E77D00B0895B1C5005CF7E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = YES;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Automator";
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
+				OTHER_OSAFLAGS = "-x";
+				PRODUCT_NAME = "Apply Firmware Password";
+				WRAPPER_EXTENSION = action;
+			};
+			name = Release;
+		};
+		4E77D00E0895B1C5005CF7E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Debug;
+		};
+		4E77D00F0895B1C5005CF7E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1807D2E40C1DEF5D00FAD22C /* Build configuration list for PBXAggregateTarget "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807D2E50C1DEF5D00FAD22C /* Debug */,
+				1807D2E60C1DEF5D00FAD22C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E77D0090895B1C5005CF7E3 /* Build configuration list for PBXNativeTarget "Apply Firmware Password" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E77D00A0895B1C5005CF7E3 /* Debug */,
+				4E77D00B0895B1C5005CF7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E77D00D0895B1C5005CF7E3 /* Build configuration list for PBXProject "Apply Firmware Password" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E77D00E0895B1C5005CF7E3 /* Debug */,
+				4E77D00F0895B1C5005CF7E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

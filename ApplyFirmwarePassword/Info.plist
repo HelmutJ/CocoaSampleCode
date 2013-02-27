@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMAccepts</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Optional</key>
+		<false/>
+		<key>Types</key>
+		<array>
+			<string>com.apple.server.systemimageutility.abstract-netinstallimage</string>
+			<string>com.apple.server.systemimageutility.abstract-netbootimage</string>
+		</array>
+	</dict>
+	<key>AMApplication</key>
+	<string>System Image Utility</string>
+	<key>AMCanShowSelectedItemsWhenRun</key>
+	<true/>
+	<key>AMCanShowWhenRun</key>
+	<true/>
+	<key>AMCategory</key>
+	<string>Utility</string>
+	<key>AMDefaultParameters</key>
+	<dict>
+		<key>firmware_password</key>
+		<string></string>
+		<key>passwordsMatch</key>
+		<true/>
+	</dict>
+	<key>AMDescription</key>
+	<dict>
+		<key>AMDAlert</key>
+		<string></string>
+		<key>AMDInput</key>
+		<string>Input is accepted from any SIU Automator action.</string>
+		<key>AMDNote</key>
+		<string></string>
+		<key>AMDOptions</key>
+		<string>The passwords provided must match. If they do not, neither password will be applied.</string>
+		<key>AMDRelatedActions</key>
+		<array>
+			<string>com.apple.server.SystemImageUtility.SIUImageSource</string>
+			<string>com.apple.server.SystemImageUtility.SIUCreateImage</string>
+		</array>
+		<key>AMDRequires</key>
+		<string></string>
+		<key>AMDResult</key>
+		<string>Provides output to any other SIU Automator action.</string>
+		<key>AMDSummary</key>
+		<string>This action will configure the NetInstall set to apply a firmware password to the target machine.</string>
+		<key>AMDWebsite</key>
+		<string></string>
+	</dict>
+	<key>AMIconName</key>
+	<string>(* The name of the icon *)</string>
+	<key>AMKeywords</key>
+	<array/>
+	<key>AMName</key>
+	<string>Apply Firmware Password</string>
+	<key>AMProvides</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Types</key>
+		<array>
+			<string>com.apple.applescript.object</string>
+		</array>
+	</dict>
+	<key>AMRequiredResources</key>
+	<array/>
+	<key>AMWarning</key>
+	<dict>
+		<key>Action</key>
+		<string></string>
+		<key>ApplyButton</key>
+		<string></string>
+		<key>IgnoreButton</key>
+		<string></string>
+		<key>Level</key>
+		<integer>0</integer>
+		<key>Message</key>
+		<string></string>
+	</dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Apply Firmware Password version 1.0, Copyright (c) 2007, Apple, Inc.</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.deployment.Apply_Firmware_Password</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>main</string>
+	<key>NSPrincipalClass</key>
+	<string>AMAppleScriptAction</string>
+</dict>
+</plist>
