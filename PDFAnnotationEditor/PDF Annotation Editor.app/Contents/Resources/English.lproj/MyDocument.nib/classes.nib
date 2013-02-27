@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MyDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {
+            ACTIONS = {setEditTestMode = id; }; 
+            CLASS = MyWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_editTestButton" = NSSegmentedControl; 
+                "_pdfView" = PDFViewEdit; 
+                "_saveProgressBar" = NSProgressIndicator; 
+                "_saveWindow" = NSPanel; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {delete = id; }; 
+            CLASS = PDFViewEdit; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = PDFView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

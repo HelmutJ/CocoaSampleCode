@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'PDF Outline Editor' target in the 'PDF Outline Editor' project
+//
+
+#define AVAILABLE_MAC_OS_X_VERSION_10_5_AND_LATER
+
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+
+#if __LP64__
+typedef long NSInt;
+typedef unsigned long NSUInt;
+#else
+typedef int NSInt;
+typedef unsigned int NSUInt;
+#endif

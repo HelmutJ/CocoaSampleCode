@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		FE305C8F08F5F6AB000172B7 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE305C8E08F5F6AB000172B7 /* MyWindowController.m */; };
+		FE305E2908F5FB18000172B7 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE305E2808F5FB18000172B7 /* Quartz.framework */; };
+		FE4C74960A6DC75C00F3FA49 /* MyStampAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C74950A6DC75C00F3FA49 /* MyStampAnnotation.m */; };
+		FE52B8AC08FDC04200B5B63E /* PDFViewEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = FE52B8AB08FDC04200B5B63E /* PDFViewEdit.m */; };
+		FE6CA8A208FB4C8F003F969E /* AnnotationPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6CA89E08FB4C8F003F969E /* AnnotationPanel.m */; };
+		FED9346C0A7AE5D0004A1C7A /* AnnotationPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = FED9346A0A7AE5D0004A1C7A /* AnnotationPanel.nib */; };
+		FEEC58650A6DDDA700670F28 /* Apple2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FEEC58640A6DDDA700670F28 /* Apple2.pdf */; };
+		FEF521C009006DBF00051C1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF521BF09006DBF00051C1A /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4B5FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MyDocument.nib; sourceTree = "<group>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		32DBCF750370BD2300C91783 /* PDF Annotation Editor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDF Annotation Editor_Prefix.pch"; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* PDF Annotation Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Annotation Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE305C8D08F5F6AB000172B7 /* MyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyWindowController.h; sourceTree = "<group>"; };
+		FE305C8E08F5F6AB000172B7 /* MyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyWindowController.m; sourceTree = "<group>"; };
+		FE305E2808F5FB18000172B7 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		FE4C74940A6DC75C00F3FA49 /* MyStampAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStampAnnotation.h; sourceTree = "<group>"; };
+		FE4C74950A6DC75C00F3FA49 /* MyStampAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStampAnnotation.m; sourceTree = "<group>"; };
+		FE52B8AA08FDC04200B5B63E /* PDFViewEdit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PDFViewEdit.h; sourceTree = "<group>"; };
+		FE52B8AB08FDC04200B5B63E /* PDFViewEdit.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PDFViewEdit.m; sourceTree = "<group>"; };
+		FE6CA89D08FB4C8F003F969E /* AnnotationPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AnnotationPanel.h; path = "Annotation Panel/AnnotationPanel.h"; sourceTree = SOURCE_ROOT; };
+		FE6CA89E08FB4C8F003F969E /* AnnotationPanel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AnnotationPanel.m; path = "Annotation Panel/AnnotationPanel.m"; sourceTree = SOURCE_ROOT; };
+		FED9346B0A7AE5D0004A1C7A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = "Annotation Panel/English.lproj/AnnotationPanel.nib"; sourceTree = "<group>"; };
+		FEEC58640A6DDDA700670F28 /* Apple2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Apple2.pdf; sourceTree = "<group>"; };
+		FEF521BE09006DBF00051C1A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FEF521BF09006DBF00051C1A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				FE305E2908F5FB18000172B7 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* PDF Annotation Editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* PDF Outline Editor */ = {
+			isa = PBXGroup;
+			children = (
+				FE6CA89A08FB4C8F003F969E /* Annotation Panel */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = "PDF Outline Editor";
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEF521BE09006DBF00051C1A /* AppDelegate.h */,
+				FEF521BF09006DBF00051C1A /* AppDelegate.m */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				FE4C74940A6DC75C00F3FA49 /* MyStampAnnotation.h */,
+				FE4C74950A6DC75C00F3FA49 /* MyStampAnnotation.m */,
+				FE305C8D08F5F6AB000172B7 /* MyWindowController.h */,
+				FE305C8E08F5F6AB000172B7 /* MyWindowController.m */,
+				FE52B8AA08FDC04200B5B63E /* PDFViewEdit.h */,
+				FE52B8AB08FDC04200B5B63E /* PDFViewEdit.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF750370BD2300C91783 /* PDF Annotation Editor_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEEC58640A6DDDA700670F28 /* Apple2.pdf */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */,
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				FE305E2808F5FB18000172B7 /* Quartz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE6CA89A08FB4C8F003F969E /* Annotation Panel */ = {
+			isa = PBXGroup;
+			children = (
+				FED9346A0A7AE5D0004A1C7A /* AnnotationPanel.nib */,
+				FE6CA89D08FB4C8F003F969E /* AnnotationPanel.h */,
+				FE6CA89E08FB4C8F003F969E /* AnnotationPanel.m */,
+			);
+			path = "Annotation Panel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* PDF Annotation Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF116D108FB0A0E00773204 /* Build configuration list for PBXNativeTarget "PDF Annotation Editor" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PDF Annotation Editor";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "PDF Outline Editor";
+			productReference = 8D15AC370486D014006FF6A4 /* PDF Annotation Editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FEF116D508FB0A0E00773204 /* Build configuration list for PBXProject "PDF Annotation Editor" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* PDF Outline Editor */;
+			projectDirPath = "";
+			projectRoot = "";
+			shouldCheckCompatibility = 1;
+			targets = (
+				8D15AC270486D014006FF6A4 /* PDF Annotation Editor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
+				8D15AC2E0486D014006FF6A4 /* MyDocument.nib in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				FEEC58650A6DDDA700670F28 /* Apple2.pdf in Resources */,
+				FED9346C0A7AE5D0004A1C7A /* AnnotationPanel.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				FE305C8F08F5F6AB000172B7 /* MyWindowController.m in Sources */,
+				FE6CA8A208FB4C8F003F969E /* AnnotationPanel.m in Sources */,
+				FE52B8AC08FDC04200B5B63E /* PDFViewEdit.m in Sources */,
+				FEF521C009006DBF00051C1A /* AppDelegate.m in Sources */,
+				FE4C74960A6DC75C00F3FA49 /* MyStampAnnotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A37F4B4FDCFA73011CA2CEA /* MyDocument.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B5FDCFA73011CA2CEA /* English */,
+			);
+			name = MyDocument.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FED9346A0A7AE5D0004A1C7A /* AnnotationPanel.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FED9346B0A7AE5D0004A1C7A /* English */,
+			);
+			name = AnnotationPanel.nib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEF116D208FB0A0E00773204 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDF Annotation Editor_Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "PDF Annotation Editor";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		FEF116D308FB0A0E00773204 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDF Annotation Editor_Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = "PDF Annotation Editor";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		FEF116D408FB0A0E00773204 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDF Annotation Editor_Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "PDF Annotation Editor";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		FEF116D608FB0A0E00773204 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		FEF116D708FB0A0E00773204 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		FEF116D808FB0A0E00773204 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEF116D108FB0A0E00773204 /* Build configuration list for PBXNativeTarget "PDF Annotation Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF116D208FB0A0E00773204 /* Development */,
+				FEF116D308FB0A0E00773204 /* Deployment */,
+				FEF116D408FB0A0E00773204 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		FEF116D508FB0A0E00773204 /* Build configuration list for PBXProject "PDF Annotation Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF116D608FB0A0E00773204 /* Development */,
+				FEF116D708FB0A0E00773204 /* Deployment */,
+				FEF116D808FB0A0E00773204 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}
