@@ -1,0 +1,94 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fmodern\fcharset77 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww14240\viewh20160\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Read Me for Custom Media Icons 1.0
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs24 \cf0 06/25/07
+\fs28 \
+
+\fs24 \
+This sample illustrates how to use a codeless KEXT to provide custom media icons for storage devices.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Sample Requirements
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs24 \cf0 This sample requires Mac OS X 10.3 or later on PowerPC-based Macs and 10.4 or later on Intel-based Macs to run.  It is designed to be built using Xcode 2.2.1 or later.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 \
+Using the Sample\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 The sample contains two codeless KEXTs called 
+\f2 CustomSCSIMediaIcon.kext
+\f1  and 
+\f2 CustomUSBMediaIcon.kext
+\f1 .  They will function best if installed into /System/Library/Extensions.  That can be done by using commands like the following:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2 \cf0 	$ sudo cp -R /path_to/CustomSCSIMediaIcon.kext /System/Library/Extensions
+\f1 \
+
+\f2 	$ sudo touch System/Library/Extensions
+\f1 \
+\
+  In order to load the KEXT from another location, use this command in Terminal:\
+\
+
+\f2 	$ sudo cp -R /path_to/CustomSCSIMediaIcon.kext /tmp
+\f1 \
+
+\f2 	$ sudo kextload /tmp/CustomSCSIMediaIcon.kext
+\f1 \
+\
+NOTE:\
+Loading the KEXTs from a location other than /System/Library/Extensions can result in the the custom icon resources not being loaded from the KEXT bundles properly and a generic folder icon being displayed instead.\CocoaLigature0 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Implementation Notes\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \CocoaLigature1 The project builds two codeless KEXTs, each contains 1 I/O Kit personality:\
+	\CocoaLigature0 Custom USB Media Icon - This demonstrates how to set a custom media icon for your USB device, working at the USB interface level.  This technique, with the appropriate changes, can be used for other interface types as well.  For this example the USB device that the sample is set to match against is fictitious and uses Apple's vendor ID (0x05AC) and a non-existent product ID (0x9999).  Please set these to match the vendor and product IDs of the USB storage product you wish to test this sample against.  The probe score is generated according to the rules used for USB property matching and is described in detail in Q&A 1076 (link below).  As only one personality is matched and started for a given device, we have copied the properties (Read Time Out Duration, Write Time Out Duration) from the personality that would normally be loaded for a USB mass storage device to our profile as well to ensure that everything continues to behave properly.\
+\
+	Custom SCSI Media Icon - This demonstrates how to set a custom media icon for a storage device, working at the SCSI peripheral nub level.  For this example, the vendor and product ID strings are fictional.  You can change these to match the product you are working with.  Also, be aware that SCSI storage may be either SCSI device type 00 (standard block command - SBC) or type 0E (reduced block command set) devices.  This sample is written for a type 00 device, although this technique will work for RBC devices as well if the appropriate identifiers (IOClass, Peripheral Device Type) are changed.\
+\
+Both of these extensions can be installed at once.  As the SCSI layer to the storage stack is instantiated after the USB layer, any icon specified at the SCSI level will take precedence.\
+\CocoaLigature1 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 \CocoaLigature0 Related Information\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \CocoaLigature1 I/O Kit Fundamentals:\
+	<http://developer.apple.com/documentation/DeviceDrivers/Conceptual/IOKitFundamentals/index.html>\
+\
+Tips on USB driver matching for Mac OS X:\
+	< http://developer.apple.com/qa/qa2001/qa1076.html >\
+\
+Mass Storage Device Driver Programming Guide:\
+	<http://developer.apple.com/documentation/DeviceDrivers/Conceptual/MassStorage/index.html>\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 FeedBack
+\f1\b0\fs24 \
+Please send all feedback about this sample to \
+http://developer.apple.com/contact/feedback.html\
+}
