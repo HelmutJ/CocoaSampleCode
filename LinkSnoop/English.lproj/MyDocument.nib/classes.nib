@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MyDocument; LANGUAGE = ObjC; SUPERCLASS = NSDocument; }, 
+        {CLASS = MyPDFView; LANGUAGE = ObjC; SUPERCLASS = PDFView; }, 
+        {
+            CLASS = MyWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_linkCount" = NSTextField; 
+                "_linksTable" = NSTableView; 
+                "_pdfView" = MyPDFView; 
+                "_splitView" = NSSplitView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}
