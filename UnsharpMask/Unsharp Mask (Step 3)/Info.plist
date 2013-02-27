@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMAccepts</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Optional</key>
+		<false/>
+		<key>Types</key>
+		<array>
+			<string>com.apple.quartzcore.coreimage</string>
+		</array>
+	</dict>
+	<key>AMApplication</key>
+	<string>Preview</string>
+	<key>AMCanShowSelectedItemsWhenRun</key>
+	<false/>
+	<key>AMCanShowWhenRun</key>
+	<true/>
+	<key>AMCategory</key>
+	<string>Images</string>
+	<key>AMDefaultParameters</key>
+	<dict>
+		<key>integer</key>
+		<string>0.5</string>
+		<key>radius</key>
+		<string>2.5</string>
+	</dict>
+	<key>AMDescription</key>
+	<dict>
+		<key>AMDOptions</key>
+		<string>There are two options: (1) An intensity value that specifies a linear blend between the filter output and the original image. The higher the value, the greater the contrast. The default value is 0.5. The range is 0.0 through 1.0. (2) A radius value that specifies the extent of the sharpening. The default value is 2.5. The range is 0.0 through 100.0.</string>
+		<key>AMDRelatedActions</key>
+		<array>
+			<string>foo</string>
+		</array>
+		<key>AMDSummary</key>
+		<string>This action will sharpen the images of the files passed into it.  It does this by increasing the contrast of the edges between pixels of different colors.</string>
+	</dict>
+	<key>AMIconName</key>
+	<string>Preview</string>
+	<key>AMKeywords</key>
+	<array>
+		<string>Sharpen</string>
+		<string>Change</string>
+		<string>Photo</string>
+	</array>
+	<key>AMName</key>
+	<string>Unsharp Mask</string>
+	<key>AMProvides</key>
+	<dict>
+		<key>Container</key>
+		<string>List</string>
+		<key>Types</key>
+		<array>
+			<string>com.apple.quartzcore.coreimage</string>
+		</array>
+	</dict>
+	<key>AMRequiredResources</key>
+	<array/>
+	<key>AMWarning</key>
+	<dict>
+		<key>Action</key>
+		<string>com.apple.Automator.CopyFiles</string>
+		<key>ApplyButton</key>
+		<string>Add</string>
+		<key>IgnoreButton</key>
+		<string>Don't Add</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>Message</key>
+		<string>This action will change the image files passed into it.  Would you like to add a Copy Finder Items action so that the copies are changed and your originals are preserved?</string>
+	</dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Unsharp Mask</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Unsharp Mask version 1.0, Copyright (c) 2005, Apple Computer, Inc.</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Automator.UnsharpMask</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Unsharp Mask</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSPrincipalClass</key>
+	<string>UnsharpMask</string>
+</dict>
+</plist>
