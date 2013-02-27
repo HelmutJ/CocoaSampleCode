@@ -1,0 +1,226 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F890486A9BA00D96B5E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097DBE83FE8419DDC02AAC07 /* CoreServices.framework */; };
+		BBA5AE9F0AD44928002AC276 /* VolumeToBSDNode.c in Sources */ = {isa = PBXBuildFile; fileRef = BBA5AE9E0AD44928002AC276 /* VolumeToBSDNode.c */; };
+		BBA5AEB50AD44DE4002AC276 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA5AEB30AD44DE4002AC276 /* CoreFoundation.framework */; };
+		BBA5AEB60AD44DE4002AC276 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA5AEB40AD44DE4002AC276 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F8B0486A9BA00D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		097DBE83FE8419DDC02AAC07 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		8DD76F8E0486A9BA00D96B5E /* VolumeToBSDNode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VolumeToBSDNode; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA5AE9E0AD44928002AC276 /* VolumeToBSDNode.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = VolumeToBSDNode.c; sourceTree = "<group>"; };
+		BBA5AEB30AD44DE4002AC276 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		BBA5AEB40AD44DE4002AC276 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F880486A9BA00D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F890486A9BA00D96B5E /* CoreServices.framework in Frameworks */,
+				BBA5AEB50AD44DE4002AC276 /* CoreFoundation.framework in Frameworks */,
+				BBA5AEB60AD44DE4002AC276 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* VolumeToBSDNode */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1A8B4A8EFE9D542A11CA2CBB /* Products */,
+			);
+			name = VolumeToBSDNode;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BBA5AE9E0AD44928002AC276 /* VolumeToBSDNode.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BBA5AEB30AD44DE4002AC276 /* CoreFoundation.framework */,
+				097DBE83FE8419DDC02AAC07 /* CoreServices.framework */,
+				BBA5AEB40AD44DE4002AC276 /* IOKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1A8B4A8EFE9D542A11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F8E0486A9BA00D96B5E /* VolumeToBSDNode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F840486A9BA00D96B5E /* VolumeToBSDNode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB925E08733DCF0010E9CD /* Build configuration list for PBXNativeTarget "VolumeToBSDNode" */;
+			buildPhases = (
+				8DD76F860486A9BA00D96B5E /* Sources */,
+				8DD76F880486A9BA00D96B5E /* Frameworks */,
+				8DD76F8B0486A9BA00D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumeToBSDNode;
+			productInstallPath = "$(HOME)/bin";
+			productName = VolumeToBSDNode;
+			productReference = 8DD76F8E0486A9BA00D96B5E /* VolumeToBSDNode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB926208733DCF0010E9CD /* Build configuration list for PBXProject "VolumeToBSDNode" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* VolumeToBSDNode */;
+			projectDirPath = "";
+			targets = (
+				8DD76F840486A9BA00D96B5E /* VolumeToBSDNode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F860486A9BA00D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA5AE9F0AD44928002AC276 /* VolumeToBSDNode.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB925F08733DCF0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = VolumeToBSDNode;
+				WARNING_CFLAGS = "";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB926008733DCF0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = VolumeToBSDNode;
+				WARNING_CFLAGS = "";
+			};
+			name = Release;
+		};
+		1DEB926308733DCF0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				PREBINDING = NO;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			name = Debug;
+		};
+		1DEB926408733DCF0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				PREBINDING = NO;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB925E08733DCF0010E9CD /* Build configuration list for PBXNativeTarget "VolumeToBSDNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB925F08733DCF0010E9CD /* Debug */,
+				1DEB926008733DCF0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB926208733DCF0010E9CD /* Build configuration list for PBXProject "VolumeToBSDNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB926308733DCF0010E9CD /* Debug */,
+				1DEB926408733DCF0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

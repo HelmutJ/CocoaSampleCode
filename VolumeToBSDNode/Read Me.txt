@@ -1,0 +1,38 @@
+Read Me for VolumeToBSDNode 1.1
+------------------------------------
+October 4, 2006
+
+Shows how to iterate across all mounted volumes and retrieve the BSD node name (/dev/disk*) for each volume. That information is used to determine if the volume is on a CD, DVD, or some other storage media.
+
+
+Sample Requirements
+-------------------
+This sample requires Mac OS X and Xcode 2.2.1 or later to build. The sample runs on Mac OS X 10.2 or later.
+
+
+About the Sample
+----------------
+The sample uses the Core Services File Manager to iterate across all local volumes. Each volume's BSD node name is fetched, then the I/O Kit APIs are used to find the IOMedia object representing the volume's media. From that I/O Kit can return information about the kind of media on which the volume resides: CD, DVD, or other generic media such as a hard disk.
+
+Occasionally the need arises to find the volumes mounted from a given IOMedia object. The techniques shown in this sample can be used in reverse: get the BSD node name from the IOMedia object, then look for a match among all of the mounted volumes.
+
+
+Using the Sample
+----------------
+Simply build and run the sample. Output is sent to the console.
+
+Insert a CD or DVD and note how the output of the sample reflects the kind of media in the optical drive.
+
+	
+Changes from Previous Versions
+------------------------------------
+Updated to produce a universal binary. Modernized and incorporated bug fixes.
+
+
+Feedback and Bug Reports
+------------------------
+Please send all feedback about this sample to 
+<http://developer.apple.com/contact/feedback.html>.
+
+Please submit any bug reports about this sample to
+<http://developer.apple.com/bugreporter>. 
