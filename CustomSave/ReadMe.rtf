@@ -1,0 +1,85 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fnil\fcharset77 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red118\green15\blue80;}
+\vieww16320\viewh17420\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+
+\f0\b\fs36 \cf0 CustomSave
+\f1\b0\fs20 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+\cf0 January 5, 2007\
+\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 "CustomSave" is a Cocoa sample application that demonstrates how to customize the 
+\f2 NSSavePanel
+\f1  class.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+
+\f0\b \cf0 Sample Requirements
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qj\pardirnatural
+\cf0 The supplied Xcode project was created using Xcode v2.3 running under Mac OS X 10.3.x or later. The project will create a Universal Binary.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+
+\f0\b \cf0 About the Sample
+\f1\b0 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 Customization is achieved by implementing -\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 \CocoaLigature0 \
+\ul NSDocument\ulnone \
+
+\f2 - (\cf2 BOOL\cf0 )prepareSavePanel:(NSSavePanel *)savePanel;
+\f1 \
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 \CocoaLigature1 This will set the initial directory, add a custom accessory view, set the required extension, set the name field label and dialog message.\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\qj
+\cf0 \CocoaLigature0 \
+\pard\tx480\tx960\tx1440\tx1920\tx2400\tx2880\tx3360\tx3840\tx4320\tx4800\tx5280\tx5760\tx6240\tx6720\tx7200\tx7680\tx8160\tx8640\tx9120\tx9600\tx10080\tx10560\tx11040\tx11520\tx12000\tx12480\tx12960\tx13440\tx13920\tx14400\tx14880\tx15360\tx15840\tx16320\tx16800\tx17280\tx17760\tx18240\tx18720\tx19200\tx19680\tx20160\tx20640\tx21120\tx21600\tx22080\tx22560\tx23040\tx23520\tx24000\tx24480\tx24960\tx25440\tx25920\tx26400\tx26880\tx27360\tx27840\tx28320\tx28800\tx29280\tx29760\tx30240\tx30720\tx31200\tx31680\tx32160\tx32640\tx33120\tx33600\tx34080\tx34560\tx35040\tx35520\tx36000\tx36480\tx36960\tx37440\tx37920\tx38400\tx38880\tx39360\tx39840\tx40320\tx40800\tx41280\tx41760\tx42240\tx42720\tx43200\tx43680\tx44160\tx44640\tx45120\tx45600\tx46080\tx46560\tx47040\tx47520\tx48000\ql\qnatural\pardirnatural
+\cf0 \ul \ulc0 NSSavePanelDelegate\ulnone \
+
+\f2 - (\cf2 BOOL\cf0 )panel:(\cf2 id\cf0 )sender isValidFilename:(NSString *)filename;\
+- (NSString*)panel:(\cf2 id\cf0 )sender userEnteredFilename:(NSString*)filename confirmed:(\cf2 BOOL\cf0 )okFlag;\CocoaLigature1 \
+\CocoaLigature0 - (\cf2 void\cf0 )panel:(\cf2 id\cf0 )sender willExpand:(\cf2 BOOL\cf0 )expanding;\
+- (\cf2 void\cf0 )panel:(\cf2 id\cf0 )sender directoryDidChange:(NSString *)path;\
+- (\cf2 void\cf0 )panelSelectionDidChange:(\cf2 id\cf0 )sender;\
+- (NSComparisonResult)panel:(\cf2 id\cf0 )sender compareFilename:(NSString *)name1 with:(NSString *)name2 caseSensitive:(\cf2 BOOL\cf0 )caseSensitive;
+\f1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+\cf0 \
+As a delegate to the NSSavePanel, this sample provides sound feedback for navigation, allows navigating inside packages, and overrides how a file's saved name is determined.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj\pardirnatural
+
+\f0\b \cf0 Using the Sample
+\f1\b0 \
+Simply build and run the sample using Xcode, create and save a text document.\
+\
+	\
+
+\f0\b Changes from Previous Versions
+\f1\b0 \
+n/a\
+
+\f0\b \
+\
+Feedback and Bug Reports
+\f1\b0 \
+Please send all feedback about this sample by connecting to the {\field{\*\fldinst{HYPERLINK "http://developer.apple.com/contact/feedback.html"}}{\fldrslt Contact ADC}} page.\
+Please submit any bug reports about this sample to the {\field{\*\fldinst{HYPERLINK "http://developer.apple.com/bugreporter"}}{\fldrslt Bug Reporting}} page.\
+\
+\
+
+\f0\b Developer Technical Support\
+\pard\pardeftab720\sa200\qj
+
+\f1\b0 \cf0 The Apple Developer Connection Developer Technical Support (DTS) team is made up of highly qualified engineers with development expertise in key Apple technologies. Whether you need direct one-on-one support troubleshooting issues, hands-on assistance to accelerate a project, or helpful guidance to the right documentation and sample code, Apple engineers are ready to help you.  Refer to the {\field{\*\fldinst{HYPERLINK "http://developer.apple.com/technicalsupport/"}}{\fldrslt Apple Developer Technical Support}} page.\
+Copyright \'a9\'ca2007 Apple Inc. All rights reserved.}
