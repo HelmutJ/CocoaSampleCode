@@ -1,0 +1,101 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
+{\fonttbl\f0\fnil\fcharset77 LucidaGrande-Bold;\f1\fnil\fcharset77 LucidaGrande;\f2\fmodern\fcharset77 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+\vieww9000\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Read Me for SCSI HBA Emulator 1.0
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs24 \cf0 02/20/07
+\fs28 \
+
+\fs24 \
+This sample illustrates how to write a parallel tasking SCSI Host Bus Adapter by implementing a virtual SCSI HBA and attaching a RAM disk as a sample target to it.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Sample Requirements
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\fs24 \cf0 This sample requires Mac OS X 10.3 or later on PowerPC-based Macs and 10.4 or later on Intel-based Macs to run.  It is designed to be built using Xcode 2.2.1 or later.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 \
+Using the Sample\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 The sample contains an I/O Kit KEXT called 
+\f2 SCSI HBA Emulator.kext
+\f1  that contains a virtual HBA driver and a SCSI device emulator for a 20MB RAM disk.  It will function best if installed into /System/Library/Extensions.  In order to load the KEXT from another location, use this command in Terminal:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f2 \cf0 	$ sudo cp -R /path_to/SCSI_HBA_Emulator.kext /tmp
+\f1 \
+
+\f2 	$ sudo kextload /tmp/SCSI_HBA_Emulator.kext
+\f1 \
+\
+Once the KEXT is loaded, you can use Disk Utility to format the RAM disk.\
+\
+While this sample does implement a volatile RAM disk, that is not the main purpose of this example.  The RAM disk is here to help demonstrate how to attach and use a target device with your HBA driver.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \CocoaLigature0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Implementation Notes\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \CocoaLigature1 The KEXT contains 2 I/O Kit personalities:\
+	\CocoaLigature0 Emulator \CocoaLigature1 I/O Kit\CocoaLigature0  Loader - a sample "bus" that is used to match HBA during load time.  It publishes a nub called 
+\f2 com_apple_dts_SCSIEmulatorAdapterNub 
+\f1 that the HBA emulator itself loads against.  \CocoaLigature1 I/O Kit\CocoaLigature0  then matches our virtual HBA against this nub, similar to how a device would match against it if this were real hardware.  Currently, IOSCSIParallelInterfaceController expects that any subclass have at least one hardware interrupt connected to it and will fail to initialize if it does not find one.  As a work-around for a virtual HBA, SCSIEmulatorAdapterNub.\{h,cpp\} contains the minimal code to simulate one.\
+\
+	SCSI HBA Emulator - the HBA driver itself.  It matches against the nub called 
+\f2 com_apple_dts_SCSIEmulatorAdapterNub
+\f1  that the Emulator \CocoaLigature1 I/O Kit\CocoaLigature0  Loader publishes during load.\
+\
+The HBA emulator consists of 3 main components:\
+	A virtual host bus adapter\
+	An event source to respond to tasks\
+	A SCSI target device emulator\
+\
+A real world hardware-based HBA would generally only need to implement the HBA component.  It would receive tasks via 
+\f2 ProcessParallelTask()
+\f1  and relay them to hardware.  The hardware would complete the tasks and then respond via 
+\f2 HandleInterruptRequest()
+\f1 , and the driver would relay these back to the OS by calling CompleteParallelTask().  A virtual HBA needs the above, plus an event source it can use to issue task completions back to the OS on the IOSCSIParallelInterfaceController workloop.\
+\
+As this sample doesn't connect to any hardware or other target, a simple SCSI target emulator is included.  Our virtual HBA uses one copy of this target to demonstrate a RAM disk setup.\
+\CocoaLigature1 \
+NOTE:\
+This sample includes a custom icon for our disks.  This icon will only display properly if you install the KEXT into /System/Library/Extensions.  If the KEXT is not located there, any disks from this HBA will show with a generic folder icon.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 Notes on working with \CocoaLigature0 IOSCSIParallelInterfaceController\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 All tasks should be started or performed on the thread that issues the task but should be completed on the  IOSCSIParallelInterfaceController workloop.  A reference to this workloop can be obtained via GetWorkLoop() from any IOSCSIParallelInterfaceController subclass.\
+\
+All memory descriptors provided by parallel SCSI family are prepared and completed for you.  Doing another prepare()/complete() on them won't be harmful, but will waste overhead and isn't required.  Please remember that you are still required to prepare()/complete() any memory descriptors you allocate and use internally.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f1\b0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+
+\f0\b\fs28 \cf0 FeedBack
+\f1\b0\fs24 \
+Please send all feedback about this sample to \
+http://developer.apple.com/contact/feedback.html\
+}

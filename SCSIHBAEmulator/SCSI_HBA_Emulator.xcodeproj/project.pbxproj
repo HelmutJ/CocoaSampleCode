@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32D94FC80562CBF700B6AF17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		D4C122850B28E709003180EE /* SCSIEmulatorEventSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C122830B28E709003180EE /* SCSIEmulatorEventSource.h */; };
+		D4C122860B28E709003180EE /* SCSIEmulatorEventSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4C122840B28E709003180EE /* SCSIEmulatorEventSource.cpp */; };
+		D4D1F94F0B276F1400DD2D36 /* SCSIEmulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F9470B276F1400DD2D36 /* SCSIEmulator.cpp */; };
+		D4D1F9500B276F1400DD2D36 /* SCSIEmulator.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1F9480B276F1400DD2D36 /* SCSIEmulator.h */; };
+		D4D1F9510B276F1400DD2D36 /* SCSIEmulatorAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F9490B276F1400DD2D36 /* SCSIEmulatorAdapter.cpp */; };
+		D4D1F9520B276F1400DD2D36 /* SCSIEmulatorAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1F94A0B276F1400DD2D36 /* SCSIEmulatorAdapter.h */; };
+		D4D1F9530B276F1400DD2D36 /* SCSIEmulatorAdapterNub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F94B0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.cpp */; };
+		D4D1F9540B276F1400DD2D36 /* SCSIEmulatorAdapterNub.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1F94C0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.h */; };
+		D4D1F9550B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D1F94D0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.cpp */; };
+		D4D1F9560B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1F94E0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.h */; };
+		D4F3CE010B306F8300E49D75 /* Floppy.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4F3CE000B306F8300E49D75 /* Floppy.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		32D94FD00562CBF700B6AF17 /* SCSI_HBA_Emulator.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCSI_HBA_Emulator.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		D4C122830B28E709003180EE /* SCSIEmulatorEventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSIEmulatorEventSource.h; sourceTree = "<group>"; };
+		D4C122840B28E709003180EE /* SCSIEmulatorEventSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCSIEmulatorEventSource.cpp; sourceTree = "<group>"; };
+		D4CB39110B55C76E001F5366 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		D4D1F9470B276F1400DD2D36 /* SCSIEmulator.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SCSIEmulator.cpp; sourceTree = "<group>"; };
+		D4D1F9480B276F1400DD2D36 /* SCSIEmulator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SCSIEmulator.h; sourceTree = "<group>"; };
+		D4D1F9490B276F1400DD2D36 /* SCSIEmulatorAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SCSIEmulatorAdapter.cpp; sourceTree = "<group>"; };
+		D4D1F94A0B276F1400DD2D36 /* SCSIEmulatorAdapter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SCSIEmulatorAdapter.h; sourceTree = "<group>"; };
+		D4D1F94B0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SCSIEmulatorAdapterNub.cpp; sourceTree = "<group>"; };
+		D4D1F94C0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SCSIEmulatorAdapterNub.h; sourceTree = "<group>"; };
+		D4D1F94D0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = SCSIEmulatorIOKitDriver.cpp; sourceTree = "<group>"; };
+		D4D1F94E0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SCSIEmulatorIOKitDriver.h; sourceTree = "<group>"; };
+		D4F3CE000B306F8300E49D75 /* Floppy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Floppy.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* SCSI HBA Emulator */ = {
+			isa = PBXGroup;
+			children = (
+				D4CB39110B55C76E001F5366 /* Read Me.rtf */,
+				247142CAFF3F8F9811CA285C /* Source */,
+				D4F3CDFF0B306F6A00E49D75 /* Icons */,
+				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = "SCSI HBA Emulator";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FCF0562CBF700B6AF17 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FD00562CBF700B6AF17 /* SCSI_HBA_Emulator.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247142CAFF3F8F9811CA285C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1F9480B276F1400DD2D36 /* SCSIEmulator.h */,
+				D4D1F9470B276F1400DD2D36 /* SCSIEmulator.cpp */,
+				D4C122830B28E709003180EE /* SCSIEmulatorEventSource.h */,
+				D4C122840B28E709003180EE /* SCSIEmulatorEventSource.cpp */,
+				D4D1F94A0B276F1400DD2D36 /* SCSIEmulatorAdapter.h */,
+				D4D1F9490B276F1400DD2D36 /* SCSIEmulatorAdapter.cpp */,
+				D4D1F94C0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.h */,
+				D4D1F94B0B276F1400DD2D36 /* SCSIEmulatorAdapterNub.cpp */,
+				D4D1F94E0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.h */,
+				D4D1F94D0B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		D4F3CDFF0B306F6A00E49D75 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D4F3CE000B306F8300E49D75 /* Floppy.icns */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32D94FC50562CBF700B6AF17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1F9500B276F1400DD2D36 /* SCSIEmulator.h in Headers */,
+				D4D1F9520B276F1400DD2D36 /* SCSIEmulatorAdapter.h in Headers */,
+				D4D1F9540B276F1400DD2D36 /* SCSIEmulatorAdapterNub.h in Headers */,
+				D4D1F9560B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.h in Headers */,
+				D4C122850B28E709003180EE /* SCSIEmulatorEventSource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32D94FC30562CBF700B6AF17 /* SCSI_HBA_Emulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "SCSI_HBA_Emulator" */;
+			buildPhases = (
+				32D94FC50562CBF700B6AF17 /* Headers */,
+				32D94FC70562CBF700B6AF17 /* Resources */,
+				32D94FC90562CBF700B6AF17 /* Sources */,
+				32D94FCB0562CBF700B6AF17 /* Frameworks */,
+				32D94FCC0562CBF700B6AF17 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCSI_HBA_Emulator;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = "SCSI HBA Emulator";
+			productReference = 32D94FD00562CBF700B6AF17 /* SCSI_HBA_Emulator.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "SCSI_HBA_Emulator" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* SCSI HBA Emulator */;
+			projectDirPath = "";
+			targets = (
+				32D94FC30562CBF700B6AF17 /* SCSI_HBA_Emulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32D94FC70562CBF700B6AF17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D94FC80562CBF700B6AF17 /* InfoPlist.strings in Resources */,
+				D4F3CE010B306F8300E49D75 /* Floppy.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		32D94FCC0562CBF700B6AF17 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32D94FC90562CBF700B6AF17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1F94F0B276F1400DD2D36 /* SCSIEmulator.cpp in Sources */,
+				D4D1F9510B276F1400DD2D36 /* SCSIEmulatorAdapter.cpp in Sources */,
+				D4D1F9530B276F1400DD2D36 /* SCSIEmulatorAdapterNub.cpp in Sources */,
+				D4D1F9550B276F1400DD2D36 /* SCSIEmulatorIOKitDriver.cpp in Sources */,
+				D4C122860B28E709003180EE /* SCSIEmulatorEventSource.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91DA08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.yourcompany.driver.SCSI_HBA_Emulator;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = SCSI_HBA_Emulator;
+				WRAPPER_EXTENSION = kext;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB91DB08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.yourcompany.driver.SCSI_HBA_Emulator;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = SCSI_HBA_Emulator;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		1DEB91DE08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				MACOS_X_DEPLOYMENT_TARGET_i386 = 10.4;
+				OTHER_CFLAGS = "-DDEBUG_VERBOSE=1";
+				PREBINDING = NO;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Debug;
+		};
+		1DEB91DF08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				MACOS_X_DEPLOYMENT_TARGET_i386 = 10.4;
+				PREBINDING = NO;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "SCSI_HBA_Emulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DA08733DB10010E9CD /* Debug */,
+				1DEB91DB08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "SCSI_HBA_Emulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DE08733DB10010E9CD /* Debug */,
+				1DEB91DF08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
