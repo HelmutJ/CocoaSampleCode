@@ -1,0 +1,53 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica-Bold;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww19880\viewh13380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs24 \cf0 SampleD
+\f1\b0 \
+\
+
+\f0\b Description
+\f1\b0 \
+SampleD consists of two programs designed to demonstrate the use of the Apple System Logger (ASL) API as well as the basic construction and behavior of a launchd daemon.\
+\
+
+\f0\b Build Requirements\
+
+\f1\b0 Mac OS X 10.4, Xcode 2.1, gcc 4.0\
+\
+
+\f0\b Runtime Requirements\
+
+\f1\b0 Mac OS X 10.4 or greater\
+\
+
+\f0\b Files
+\f1\b0 \
+SampleD.c    A basic launchd daemon that, when instantiated by launchd, will listen for connections on a socket indefinitely.  Launchd takes care of registering the socket before the daemon is even launched, so all this code needs to do is accept any incoming connections and then write a message to them.  This code also demonstrates how to use Apple System Logger APIs to construct and issue well formatted logging information to the syslogd server.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 com.apple.dts.SampleD.plist    Configuration file which details the desired functionality to the launchd server.  The only two required keys are "Label", which associates the unique name of  the daemon with launchd, and "ProgramArguments", which in the most basic case lists the path to the daemon executable.  This file also contains one "Sockets" entry which defines the socket that the daemon will use for communication.  The presence of this entry also lets launchd know to launch the daemon on demand when a communication request is received on the socket.  In this case we are using an arbitrary unassigned port number as the SockServiceName value.  This string could instead contain a known service name like "smtp".  Finally, setting the "ServiceIPC" key requests that launchd reserve a socket for the daemon's use.  It is up to the daemon to then check in with launchd and retrieve any socket definitions from the plist.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+\cf0 \
+report.c    Program that demonstrates the use of ASL to query the syslogd server for log messages created by the SampleD daemon.\
+\
+client.pl    Short Perl script that will try to connect to the SampleD daemon and read.  This action will cause SampleD to issue a log message using ASL.\
+\
+
+\f0\b Use
+\f1\b0 \
+To see SampleD in action, you can manually instantiate it using the "launchctl" command line tool.  See the launchctl man page for more information on its use.\
+\
+1)  Using Terminal, change directories to the SampleD project folder.\
+2)  Copy the SampleD daemon to /tmp\
+	cp SampleD /tmp\
+3)  Use launchctl to start SampleD.  Launchctl operates on the daemon's configuration file, in this case com.apple.dts.SampleD.plist.\
+	sudo launchctl load ./com.apple.dts.SampleD.plist\
+4)  To make SampleD issue a log message, run the client.pl script.  You should receive the "hello world!" message from SampleD.\
+	perl ./client.pl\
+5)  To query syslogd and print out the messages issued by SampleD, run the report program.\
+	./report\
+6)  To unload SampleD, use the launchctl "unload" directive.\
+	sudo launchctl unload ./com.apple.dts.SampleD.plist}
