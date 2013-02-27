@@ -1,0 +1,12 @@
+This sample kext shows how to setup and use an IOTimerEventSource.
+After building and loading the kext you should see a message in the system log of the form:
+"mach_kernel: TimerEventSample: In timeoutHandler (1)"
+The number at the end is used to indicate how many times the timeout handler has been called.
+The timer event source in this sample is set to put a new message in the system log every 5 seconds.
+
+You can view the system.log file in a Terminal widow using
+
+tail -f /var/log/system.log
+
+Version: 1.0.0
+Date written: 03/28/01
