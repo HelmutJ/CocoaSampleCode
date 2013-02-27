@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		BBABE5640AA7551A00932BA5 /* Build All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BBABE5690AA7552B00932BA5 /* Build configuration list for PBXAggregateTarget "Build All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				BBABE5660AA7552100932BA5 /* PBXTargetDependency */,
+				BBABE5680AA7552100932BA5 /* PBXTargetDependency */,
+			);
+			name = "Build All";
+			productName = "Build All";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */; };
+		BBABE5550AA754CC00932BA5 /* SetPropertiesTestTool.c in Sources */ = {isa = PBXBuildFile; fileRef = BBABE5540AA754CC00932BA5 /* SetPropertiesTestTool.c */; };
+		BBEFDF130AA7558F00124652 /* VendorSpecificType00.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBEFDF110AA7558F00124652 /* VendorSpecificType00.cpp */; };
+		BBEFDF170AA755A500124652 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEFDF160AA755A500124652 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBABE5650AA7552100932BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F740486A8DE00D96B5E;
+			remoteInfo = SetPropertyTestTool;
+		};
+		BBABE5670AA7552100932BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBABE55E0AA754FE00932BA5;
+			remoteInfo = VendorSpecificType00;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F7B0486A8DE00D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		8DD76F7E0486A8DE00D96B5E /* SetPropertiesTestTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SetPropertiesTestTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBABE5540AA754CC00932BA5 /* SetPropertiesTestTool.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = SetPropertiesTestTool.c; sourceTree = "<group>"; };
+		BBABE55F0AA754FE00932BA5 /* VendorSpecificType00.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VendorSpecificType00.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBABE5600AA754FE00932BA5 /* VendorSpecificType00-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "VendorSpecificType00-Info.plist"; sourceTree = "<group>"; };
+		BBEFDF110AA7558F00124652 /* VendorSpecificType00.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = VendorSpecificType00.cpp; sourceTree = "<group>"; };
+		BBEFDF120AA7558F00124652 /* VendorSpecificType00.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VendorSpecificType00.h; sourceTree = "<group>"; };
+		BBEFDF160AA755A500124652 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		BBEFDF1A0AA755B700124652 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F780486A8DE00D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */,
+				BBEFDF170AA755A500124652 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBABE55D0AA754FE00932BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* VendorSpecificType00 */ = {
+			isa = PBXGroup;
+			children = (
+				BBABE55A0AA754DF00932BA5 /* Kernel Source */,
+				08FB7795FE84155DC02AAC07 /* User Space Source */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				19C28FBDFE9D53C911CA2CBB /* Products */,
+			);
+			name = VendorSpecificType00;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* User Space Source */ = {
+			isa = PBXGroup;
+			children = (
+				BBABE5540AA754CC00932BA5 /* SetPropertiesTestTool.c */,
+			);
+			name = "User Space Source";
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BBEFDF1A0AA755B700124652 /* Kernel.framework */,
+				09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */,
+				BBEFDF160AA755A500124652 /* IOKit.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		19C28FBDFE9D53C911CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBABE55F0AA754FE00932BA5 /* VendorSpecificType00.kext */,
+				8DD76F7E0486A8DE00D96B5E /* SetPropertiesTestTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBABE55A0AA754DF00932BA5 /* Kernel Source */ = {
+			isa = PBXGroup;
+			children = (
+				BBEFDF110AA7558F00124652 /* VendorSpecificType00.cpp */,
+				BBEFDF120AA7558F00124652 /* VendorSpecificType00.h */,
+				BBABE5600AA754FE00932BA5 /* VendorSpecificType00-Info.plist */,
+			);
+			name = "Kernel Source";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F740486A8DE00D96B5E /* SetPropertiesTestTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB924708733DCA0010E9CD /* Build configuration list for PBXNativeTarget "SetPropertiesTestTool" */;
+			buildPhases = (
+				8DD76F760486A8DE00D96B5E /* Sources */,
+				8DD76F780486A8DE00D96B5E /* Frameworks */,
+				8DD76F7B0486A8DE00D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SetPropertiesTestTool;
+			productInstallPath = "$(HOME)/bin";
+			productName = VendorSpecificType00;
+			productReference = 8DD76F7E0486A8DE00D96B5E /* SetPropertiesTestTool */;
+			productType = "com.apple.product-type.tool";
+		};
+		BBABE55E0AA754FE00932BA5 /* VendorSpecificType00 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBABE5610AA754FE00932BA5 /* Build configuration list for PBXNativeTarget "VendorSpecificType00" */;
+			buildPhases = (
+				BBABE55B0AA754FE00932BA5 /* Sources */,
+				BBABE55C0AA754FE00932BA5 /* Resources */,
+				BBABE55D0AA754FE00932BA5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VendorSpecificType00;
+			productName = VendorSpecificType00;
+			productReference = BBABE55F0AA754FE00932BA5 /* VendorSpecificType00.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB924B08733DCA0010E9CD /* Build configuration list for PBXProject "VendorSpecificType00" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* VendorSpecificType00 */;
+			projectDirPath = "";
+			targets = (
+				BBABE5640AA7551A00932BA5 /* Build All */,
+				BBABE55E0AA754FE00932BA5 /* VendorSpecificType00 */,
+				8DD76F740486A8DE00D96B5E /* SetPropertiesTestTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBABE55C0AA754FE00932BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F760486A8DE00D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBABE5550AA754CC00932BA5 /* SetPropertiesTestTool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBABE55B0AA754FE00932BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEFDF130AA7558F00124652 /* VendorSpecificType00.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBABE5660AA7552100932BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76F740486A8DE00D96B5E /* SetPropertiesTestTool */;
+			targetProxy = BBABE5650AA7552100932BA5 /* PBXContainerItemProxy */;
+		};
+		BBABE5680AA7552100932BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBABE55E0AA754FE00932BA5 /* VendorSpecificType00 */;
+			targetProxy = BBABE5670AA7552100932BA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB924808733DCA0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				PRODUCT_NAME = SetPropertiesTestTool;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			name = Debug;
+		};
+		1DEB924908733DCA0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				PRODUCT_NAME = SetPropertiesTestTool;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			name = Release;
+		};
+		1DEB924C08733DCA0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		1DEB924D08733DCA0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+		BBABE5620AA754FE00932BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INFOPLIST_FILE = "VendorSpecificType00-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "$(GCC_PREPROCESSOR_DEFINITIONS)";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				MODULE_NAME = com.apple.dts.driver.VendorSpecificType00;
+				MODULE_VERSION = 1.1;
+				PRODUCT_NAME = VendorSpecificType00;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		BBABE5630AA754FE00932BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				INFOPLIST_FILE = "VendorSpecificType00-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "$(GCC_PREPROCESSOR_DEFINITIONS)";
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				MODULE_NAME = com.apple.dts.driver.VendorSpecificType00;
+				MODULE_VERSION = 1.1;
+				PRODUCT_NAME = VendorSpecificType00;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		BBABE56A0AA7552B00932BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build All";
+			};
+			name = Debug;
+		};
+		BBABE56B0AA7552B00932BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = "Build All";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB924708733DCA0010E9CD /* Build configuration list for PBXNativeTarget "SetPropertiesTestTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB924808733DCA0010E9CD /* Debug */,
+				1DEB924908733DCA0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB924B08733DCA0010E9CD /* Build configuration list for PBXProject "VendorSpecificType00" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB924C08733DCA0010E9CD /* Debug */,
+				1DEB924D08733DCA0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBABE5610AA754FE00932BA5 /* Build configuration list for PBXNativeTarget "VendorSpecificType00" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBABE5620AA754FE00932BA5 /* Debug */,
+				BBABE5630AA754FE00932BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBABE5690AA7552B00932BA5 /* Build configuration list for PBXAggregateTarget "Build All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBABE56A0AA7552B00932BA5 /* Debug */,
+				BBABE56B0AA7552B00932BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

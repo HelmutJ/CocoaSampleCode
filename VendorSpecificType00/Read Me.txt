@@ -1,0 +1,49 @@
+Read Me for VendorSpecificType00 1.1
+------------------------------------
+August 31, 2006
+
+This sample demonstrates how to subclass the IOSCSIPeripheralDeviceType00 mass storage driver to add custom vendor-specific functionality. It also shows how to set up a simple interface from user space code using I/O Registry properties.
+
+Sample Requirements
+-------------------
+This sample requires Mac OS X and Xcode 2.2.1 or later to build.
+
+This sample will run on Mac OS X 10.2 or later.
+
+About the Sample
+----------------
+The sample contains two pieces. The first is an I/O Kit driver KEXT called VendorSpecificType00.kext. This driver subclasses the base support class for SCSI Peripheral Device Type 00h (block devices) and overrides the setProperties member function. setProperties is called when a user process calls the I/O Kit function IORegistryEntrySetCFProperties.
+
+The second piece is a command-line tool called SetPropertiesTestTool that finds an instance of the custom driver, creates a dictionary containing a single property, and calls IORegistryEntrySetCFProperties to send the dictionary to the driver's setProperties function.
+
+Developers can add custom behavior to the driver's setProperties function. Note that setProperties is inherited from the class IOService, but the default implementation simply returns the error kIOReturnUnsupported. This means that a kernel driver has to opt in to allow arbitrary userland code to call IORegistryEntrySetCFProperties. This is a security feature that prevents random application code from potentially modifying kernel driver behavior.
+
+The driver has the property OSBundleRequired set to Local-Root. This is because the drivers it would compete against for matching have the same property value and thus are loaded early in the boot cycle. Without the OSBundleRequired property, the Apple IOSCSIPeripheralDeviceType00 driver would already be started for the device by the time VendorSpecificType00.kext was available from the filesystem.
+
+Using the Sample
+----------------
+Before building and loading the driver, the IOKitPersonalities dictionary in its Info.plist (called VendorSpecific00-Info.plist in the Xcode project) has to be modified to match the target device. Typically one would plug in the device, run IORegistryExplorer or ioreg, note the device's Product Identification and Vendor Identification properties in the I/O Registry under its IOSCSIPeripheralDeviceNub entry, and change the value of those properties in the Info.plist to match.
+ 
+In order to load the driver, you will need to change the owner of the KEXT to root:wheel, then load it with the kextload tool. The best way to do this is as follows:
+
+	sudo cp -R build/Debug/VendorSpecificType00.kext /tmp
+	sudo kextload /tmp/VendorSpecificType00.kext
+
+Once the driver is loaded, running SetPropertiesTestTool will locate each instance of the VendorSpecificType00 driver and send each a dictionary. If the driver is built using the Debug build configuration, the driver will in turn log the value of the property in that dictionary to the system log. 
+
+Be sure to run the tool soon after loading the driver. I/O Kit unloads unused drivers after about a minute of inactivity.
+
+You can run SetPropertiesTestTool from the command line or directly from within Xcode.
+
+You can build both the KEXT and the user space tool at the same time by selecting the 'Build All' target from the pop-up menu. If you'd like to run the tool from within Xcode, select the 'SetPropertiesTestTool' target from the pop-up menu and run the command Build > Build and Run.
+
+Changes from Previous Versions
+------------------------------------
+Updated to produce a universal binary. Shows how to conditionally modify a driver's Info.plist file. Xcode 2.x supports preprocessing of Info.plist files via the build settings INFOPLIST_PREPROCESS = YES and INFOPLIST_PREPROCESSOR_DEFINITIONS = $(GCC_PREPROCESSOR_DEFINITIONS). This capability is used to include the IOKitDebug property only in debug builds.
+
+Feedback and Bug Reports
+Please send all feedback about this sample to 
+<http://developer.apple.com/contact/feedback.html>.
+
+Please submit any bug reports about this sample to
+<http://developer.apple.com/bugreporter>. 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>VendorSpecificType00</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.dts.driver.VendorSpecificType00</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>VendorSpecificType00</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>VendorSpecificType00</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.dts.driver.VendorSpecificType00</string>
+			<key>IOClass</key>
+			<string>com_apple_dts_driver_VendorSpecificType00</string>
+			<key>IOProviderClass</key>
+			<string>IOSCSIPeripheralDeviceNub</string>
+			<key>Peripheral Device Type</key>
+			<integer>0</integer>
+			<key>Product Identification</key>
+			<string>Put your Product Identification here</string>
+			<key>Vendor Identification</key>
+			<string>Put your Vendor Identification here</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOSCSIArchitectureModelFamily</key>
+		<string>1.0.0</string>
+		<key>com.apple.iokit.IOSCSIBlockCommandsDevice</key>
+		<string>1.0.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Local-Root</string>
+</dict>
+</plist>
