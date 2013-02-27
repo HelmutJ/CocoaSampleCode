@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 38;
+	objects = {
+		00FA9A72FF714A0C11CA1586 = {
+			isa = PBXFrameworkReference;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+		};
+		00FA9A73FF714A0C11CA1586 = {
+			fileRef = 00FA9A72FF714A0C11CA1586;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//000
+//001
+//002
+//003
+//004
+//010
+//011
+//012
+//013
+//014
+		01474CBA0014167611CA1586 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				OPTIMIZATION_CFLAGS = "-O0";
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		01474CBB0014167611CA1586 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//010
+//011
+//012
+//013
+//014
+//020
+//021
+//022
+//023
+//024
+		02AA9329FF65777011CA1585 = {
+			buildActionMask = 12;
+			files = (
+			);
+			generatedFileNames = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			neededFileNames = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#\n# Premultiply all \"*.tif\" files in the Resources directory\n#\nresourceDirPath=\"$TARGET_BUILD_DIR/CocoaSpeechSynthesisExample.app/Contents/Resources/\"\nfor fileToPremulitply in \"$resourceDirPath\"*.tif\n{\n\tbaseFileName=\"${fileToPremulitply%.tif}\"\n\ttiffutil -cat \"$baseFileName\"\".tif\" -out \"$baseFileName\"\".out.tiff\"\n\tmv -f \"$baseFileName\"\".out.tiff\" \"$baseFileName\"\".tif\"\n}\n";
+		};
+//020
+//021
+//022
+//023
+//024
+//040
+//041
+//042
+//043
+//044
+		043355CEFE303625C02AAC07 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//040
+//041
+//042
+//043
+//044
+//080
+//081
+//082
+//083
+//084
+		080E96DAFE201CDB7F000001 = {
+			fileRef = 2A37F4B6FDCFA73011CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		08618FBBFF5C79AD7F000001 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = SpeakingTextWindow.h;
+			refType = 4;
+		};
+		08618FBCFF5C79AD7F000001 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = SpeakingTextWindow.m;
+			refType = 4;
+		};
+		08618FBDFF5C79AD7F000001 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = CocoaSpeechSynthesisExample_main.m;
+			refType = 4;
+		};
+		08618FC0FF5C79AD7F000001 = {
+			fileRef = 08618FBBFF5C79AD7F000001;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		08618FC2FF5C79AD7F000001 = {
+			fileRef = 08618FBDFF5C79AD7F000001;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		08618FC3FF5C79AD7F000001 = {
+			fileRef = 08618FBCFF5C79AD7F000001;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		08618FC9FF5C7D7D7F000001 = {
+			children = (
+				08618FCAFF5C7D7D7F000001,
+			);
+			isa = PBXVariantGroup;
+			name = SpeakingTextWindow.nib;
+			path = "";
+			refType = 4;
+		};
+		08618FCAFF5C7D7D7F000001 = {
+			isa = PBXFileReference;
+			name = English;
+			path = English.lproj/SpeakingTextWindow.nib;
+			refType = 4;
+		};
+		08618FCBFF5C7D7D7F000001 = {
+			fileRef = 08618FC9FF5C7D7D7F000001;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//080
+//081
+//082
+//083
+//084
+//100
+//101
+//102
+//103
+//104
+		1058C7A6FEA54F5311CA2CBB = {
+			children = (
+				00FA9A72FF714A0C11CA1586,
+				1058C7A7FEA54F5311CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+		};
+		1058C7A7FEA54F5311CA2CBB = {
+			isa = PBXFrameworkReference;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+		};
+		1058C7A8FEA54F5311CA2CBB = {
+			children = (
+				2A37F4C5FDCFA73011CA2CEA,
+				2A37F4C4FDCFA73011CA2CEA,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+		};
+		1058C7A9FEA54F5311CA2CBB = {
+			fileRef = 1058C7A7FEA54F5311CA2CBB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//100
+//101
+//102
+//103
+//104
+//170
+//171
+//172
+//173
+//174
+		1758732AFF379DA111CA2CBB = {
+			isa = PBXApplicationReference;
+			path = CocoaSpeechSynthesisExample.app;
+			refType = 3;
+		};
+//170
+//171
+//172
+//173
+//174
+//190
+//191
+//192
+//193
+//194
+		19C28FB0FE9D524F11CA2CBB = {
+			children = (
+				1758732AFF379DA111CA2CBB,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+		};
+//190
+//191
+//192
+//193
+//194
+//2A0
+//2A1
+//2A2
+//2A3
+//2A4
+		2A37F4A9FDCFA73011CA2CEA = {
+			buildStyles = (
+				01474CBA0014167611CA1586,
+				01474CBB0014167611CA1586,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA;
+			projectDirPath = "";
+			targets = (
+				2A37F4C6FDCFA73011CA2CEA,
+			);
+		};
+		2A37F4AAFDCFA73011CA2CEA = {
+			children = (
+				AC579253049FC0C600CB1753,
+				2A37F4ABFDCFA73011CA2CEA,
+				2A37F4AFFDCFA73011CA2CEA,
+				2A37F4B8FDCFA73011CA2CEA,
+				2A37F4C3FDCFA73011CA2CEA,
+				19C28FB0FE9D524F11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = TempMultiDocApp;
+			path = "";
+			refType = 4;
+		};
+		2A37F4ABFDCFA73011CA2CEA = {
+			children = (
+				08618FBBFF5C79AD7F000001,
+				08618FBCFF5C79AD7F000001,
+				90B056FA0474B86F003E2737,
+				90B056FB0474B86F003E2737,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			path = "";
+			refType = 4;
+		};
+		2A37F4AFFDCFA73011CA2CEA = {
+			children = (
+				08618FBDFF5C79AD7F000001,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+		};
+		2A37F4B6FDCFA73011CA2CEA = {
+			children = (
+				2A37F4B7FDCFA73011CA2CEA,
+			);
+			isa = PBXVariantGroup;
+			name = MainMenu.nib;
+			path = "";
+			refType = 4;
+		};
+		2A37F4B7FDCFA73011CA2CEA = {
+			isa = PBXFileReference;
+			name = English;
+			path = English.lproj/MainMenu.nib;
+			refType = 4;
+		};
+		2A37F4B8FDCFA73011CA2CEA = {
+			children = (
+				90B057000474C4B0003E2737,
+				2A37F4B6FDCFA73011CA2CEA,
+				08618FC9FF5C7D7D7F000001,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+		};
+		2A37F4C3FDCFA73011CA2CEA = {
+			children = (
+				1058C7A6FEA54F5311CA2CBB,
+				1058C7A8FEA54F5311CA2CBB,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			path = "";
+			refType = 4;
+		};
+		2A37F4C4FDCFA73011CA2CEA = {
+			isa = PBXFrameworkReference;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+		};
+		2A37F4C5FDCFA73011CA2CEA = {
+			isa = PBXFrameworkReference;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+		};
+		2A37F4C6FDCFA73011CA2CEA = {
+			buildPhases = (
+				2A37F4C7FDCFA73011CA2CEA,
+				2A37F4C9FDCFA73011CA2CEA,
+				2A37F4CEFDCFA73011CA2CEA,
+				2A37F4D1FDCFA73011CA2CEA,
+				043355CEFE303625C02AAC07,
+				02AA9329FF65777011CA1585,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = CocoaSpeechSynthesisExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = CocoaSpeechSynthesisExample;
+			productInstallPath = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+			productName = CocoaSpeechSynthesisExample;
+			productReference = 1758732AFF379DA111CA2CBB;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>txt</string>
+				<string>TXT</string>
+				<string>*</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Plain Text</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>SpeakingTextWindow</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>rtf</string>
+				<string>RTF</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>RTF Document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>SpeakingTextWindow</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>CocoaSpeechSynthesisExample</string>
+	<key>CFBundleGetInfoString</key>
+	<string>An example of using the Speech Synthesis API from a Cocoa application.</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.speech.synthesis.cocoaspeechsynthesisexample</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Cocoa Speech Synthesis Example</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.3</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.3</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+		2A37F4C7FDCFA73011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				08618FC0FF5C79AD7F000001,
+				90B056FC0474B86F003E2737,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A37F4C9FDCFA73011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				080E96DAFE201CDB7F000001,
+				08618FCBFF5C7D7D7F000001,
+				90B057080474C4BF003E2737,
+				90B0570C0474C4BF003E2737,
+				90B0570D0474C4BF003E2737,
+				90B0570E0474C4BF003E2737,
+				90E4A65F0474D0E00033C4F7,
+				90E4A6600474D0E00033C4F7,
+				90E4A6610474D0E00033C4F7,
+				907BB3F1047569A600520FA3,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A37F4CEFDCFA73011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				08618FC2FF5C79AD7F000001,
+				08618FC3FF5C79AD7F000001,
+				90B056FD0474B86F003E2737,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A37F4D1FDCFA73011CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A9FEA54F5311CA2CBB,
+				00FA9A73FF714A0C11CA1586,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//2A0
+//2A1
+//2A2
+//2A3
+//2A4
+//900
+//901
+//902
+//903
+//904
+		907BB3F0047569A600520FA3 = {
+			isa = PBXFileReference;
+			name = BusterSleep.tif;
+			path = Characters/Buster/BusterSleep.tif;
+			refType = 4;
+		};
+		907BB3F1047569A600520FA3 = {
+			fileRef = 907BB3F0047569A600520FA3;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B056FA0474B86F003E2737 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			path = SpeakingCharacterView.h;
+			refType = 4;
+		};
+		90B056FB0474B86F003E2737 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			path = SpeakingCharacterView.m;
+			refType = 4;
+		};
+		90B056FC0474B86F003E2737 = {
+			fileRef = 90B056FA0474B86F003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B056FD0474B86F003E2737 = {
+			fileRef = 90B056FB0474B86F003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B057000474C4B0003E2737 = {
+			children = (
+				90B057010474C4BF003E2737,
+				907BB3F0047569A600520FA3,
+				90E4A65C0474D0E00033C4F7,
+				90B057060474C4BF003E2737,
+				90E4A65D0474D0E00033C4F7,
+				90E4A65E0474D0E00033C4F7,
+				90B057050474C4BF003E2737,
+				90B057070474C4BF003E2737,
+			);
+			isa = PBXGroup;
+			name = Buster;
+			refType = 4;
+		};
+		90B057010474C4BF003E2737 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = Buster.plist;
+			path = Characters/Buster/Buster.plist;
+			refType = 4;
+		};
+		90B057050474C4BF003E2737 = {
+			isa = PBXFileReference;
+			name = BusterClosed.tif;
+			path = Characters/Buster/BusterClosed.tif;
+			refType = 4;
+		};
+		90B057060474C4BF003E2737 = {
+			isa = PBXFileReference;
+			name = BusterIdle2.tif;
+			path = Characters/Buster/BusterIdle2.tif;
+			refType = 4;
+		};
+		90B057070474C4BF003E2737 = {
+			isa = PBXFileReference;
+			name = BusterOpen.tif;
+			path = Characters/Buster/BusterOpen.tif;
+			refType = 4;
+		};
+		90B057080474C4BF003E2737 = {
+			fileRef = 90B057010474C4BF003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B0570C0474C4BF003E2737 = {
+			fileRef = 90B057050474C4BF003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B0570D0474C4BF003E2737 = {
+			fileRef = 90B057060474C4BF003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90B0570E0474C4BF003E2737 = {
+			fileRef = 90B057070474C4BF003E2737;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90E4A65C0474D0E00033C4F7 = {
+			isa = PBXFileReference;
+			name = BusterIdle1.tif;
+			path = Characters/Buster/BusterIdle1.tif;
+			refType = 4;
+		};
+		90E4A65D0474D0E00033C4F7 = {
+			isa = PBXFileReference;
+			name = BusterIdle3.tif;
+			path = Characters/Buster/BusterIdle3.tif;
+			refType = 4;
+		};
+		90E4A65E0474D0E00033C4F7 = {
+			isa = PBXFileReference;
+			name = BusterIdle4.tif;
+			path = Characters/Buster/BusterIdle4.tif;
+			refType = 4;
+		};
+		90E4A65F0474D0E00033C4F7 = {
+			fileRef = 90E4A65C0474D0E00033C4F7;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90E4A6600474D0E00033C4F7 = {
+			fileRef = 90E4A65D0474D0E00033C4F7;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		90E4A6610474D0E00033C4F7 = {
+			fileRef = 90E4A65E0474D0E00033C4F7;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//900
+//901
+//902
+//903
+//904
+//AC0
+//AC1
+//AC2
+//AC3
+//AC4
+		AC579253049FC0C600CB1753 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = "ReadMe-CocoaSpeechExample.txt";
+			refType = 4;
+		};
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA;
+}

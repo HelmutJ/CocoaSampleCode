@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		532C0B9C0BA87F400023AC9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 532C0B9A0BA87F400023AC9D /* InfoPlist.strings */; };
+		5389893E0BA87C1D0040EBBD /* SpeakingTextWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 08618FBBFF5C79AD7F000001 /* SpeakingTextWindow.h */; };
+		5389893F0BA87C1D0040EBBD /* SpeakingCharacterView.h in Headers */ = {isa = PBXBuildFile; fileRef = 90B056FA0474B86F003E2737 /* SpeakingCharacterView.h */; };
+		538989410BA87C1D0040EBBD /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
+		538989420BA87C1D0040EBBD /* SpeakingTextWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 08618FC9FF5C7D7D7F000001 /* SpeakingTextWindow.nib */; };
+		538989430BA87C1D0040EBBD /* Buster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90B057010474C4BF003E2737 /* Buster.plist */; };
+		538989440BA87C1D0040EBBD /* BusterClosed.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90B057050474C4BF003E2737 /* BusterClosed.tif */; };
+		538989450BA87C1D0040EBBD /* BusterIdle2.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90B057060474C4BF003E2737 /* BusterIdle2.tif */; };
+		538989460BA87C1D0040EBBD /* BusterOpen.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90B057070474C4BF003E2737 /* BusterOpen.tif */; };
+		538989470BA87C1D0040EBBD /* BusterIdle1.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90E4A65C0474D0E00033C4F7 /* BusterIdle1.tif */; };
+		538989480BA87C1D0040EBBD /* BusterIdle3.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90E4A65D0474D0E00033C4F7 /* BusterIdle3.tif */; };
+		538989490BA87C1D0040EBBD /* BusterIdle4.tif in Resources */ = {isa = PBXBuildFile; fileRef = 90E4A65E0474D0E00033C4F7 /* BusterIdle4.tif */; };
+		5389894A0BA87C1D0040EBBD /* BusterSleep.tif in Resources */ = {isa = PBXBuildFile; fileRef = 907BB3F0047569A600520FA3 /* BusterSleep.tif */; };
+		5389894C0BA87C1D0040EBBD /* CocoaSpeechSynthesisExample_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08618FBDFF5C79AD7F000001 /* CocoaSpeechSynthesisExample_main.m */; settings = {ATTRIBUTES = (); }; };
+		5389894D0BA87C1D0040EBBD /* SpeakingTextWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 08618FBCFF5C79AD7F000001 /* SpeakingTextWindow.m */; settings = {ATTRIBUTES = (); }; };
+		5389894E0BA87C1D0040EBBD /* SpeakingCharacterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B056FB0474B86F003E2737 /* SpeakingCharacterView.m */; };
+		538989500BA87C1D0040EBBD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		538989510BA87C1D0040EBBD /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FA9A72FF714A0C11CA1586 /* ApplicationServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00FA9A72FF714A0C11CA1586 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		08618FBBFF5C79AD7F000001 /* SpeakingTextWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SpeakingTextWindow.h; sourceTree = "<group>"; };
+		08618FBCFF5C79AD7F000001 /* SpeakingTextWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SpeakingTextWindow.m; sourceTree = "<group>"; };
+		08618FBDFF5C79AD7F000001 /* CocoaSpeechSynthesisExample_main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CocoaSpeechSynthesisExample_main.m; sourceTree = "<group>"; };
+		08618FCAFF5C7D7D7F000001 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/SpeakingTextWindow.nib; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		532C0B9B0BA87F400023AC9D /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		538989200BA87B920040EBBD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		538989590BA87C1D0040EBBD /* CocoaSpeechSynthesisExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSpeechSynthesisExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		907BB3F0047569A600520FA3 /* BusterSleep.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterSleep.tif; path = Characters/Buster/BusterSleep.tif; sourceTree = "<group>"; };
+		90B056FA0474B86F003E2737 /* SpeakingCharacterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakingCharacterView.h; sourceTree = "<group>"; };
+		90B056FB0474B86F003E2737 /* SpeakingCharacterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakingCharacterView.m; sourceTree = "<group>"; };
+		90B057010474C4BF003E2737 /* Buster.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Buster.plist; path = Characters/Buster/Buster.plist; sourceTree = "<group>"; };
+		90B057050474C4BF003E2737 /* BusterClosed.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterClosed.tif; path = Characters/Buster/BusterClosed.tif; sourceTree = "<group>"; };
+		90B057060474C4BF003E2737 /* BusterIdle2.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle2.tif; path = Characters/Buster/BusterIdle2.tif; sourceTree = "<group>"; };
+		90B057070474C4BF003E2737 /* BusterOpen.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterOpen.tif; path = Characters/Buster/BusterOpen.tif; sourceTree = "<group>"; };
+		90E4A65C0474D0E00033C4F7 /* BusterIdle1.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle1.tif; path = Characters/Buster/BusterIdle1.tif; sourceTree = "<group>"; };
+		90E4A65D0474D0E00033C4F7 /* BusterIdle3.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle3.tif; path = Characters/Buster/BusterIdle3.tif; sourceTree = "<group>"; };
+		90E4A65E0474D0E00033C4F7 /* BusterIdle4.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = BusterIdle4.tif; path = Characters/Buster/BusterIdle4.tif; sourceTree = "<group>"; };
+		AC579253049FC0C600CB1753 /* ReadMe-CocoaSpeechExample.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "ReadMe-CocoaSpeechExample.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5389894F0BA87C1D0040EBBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538989500BA87C1D0040EBBD /* Cocoa.framework in Frameworks */,
+				538989510BA87C1D0040EBBD /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00FA9A72FF714A0C11CA1586 /* ApplicationServices.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				538989590BA87C1D0040EBBD /* CocoaSpeechSynthesisExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* TempMultiDocApp */ = {
+			isa = PBXGroup;
+			children = (
+				AC579253049FC0C600CB1753 /* ReadMe-CocoaSpeechExample.txt */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = TempMultiDocApp;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				08618FBBFF5C79AD7F000001 /* SpeakingTextWindow.h */,
+				08618FBCFF5C79AD7F000001 /* SpeakingTextWindow.m */,
+				90B056FA0474B86F003E2737 /* SpeakingCharacterView.h */,
+				90B056FB0474B86F003E2737 /* SpeakingCharacterView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				538989200BA87B920040EBBD /* Info.plist */,
+				08618FBDFF5C79AD7F000001 /* CocoaSpeechSynthesisExample_main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				532C0B9A0BA87F400023AC9D /* InfoPlist.strings */,
+				90B057000474C4B0003E2737 /* Buster */,
+				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
+				08618FC9FF5C7D7D7F000001 /* SpeakingTextWindow.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90B057000474C4B0003E2737 /* Buster */ = {
+			isa = PBXGroup;
+			children = (
+				90B057010474C4BF003E2737 /* Buster.plist */,
+				907BB3F0047569A600520FA3 /* BusterSleep.tif */,
+				90E4A65C0474D0E00033C4F7 /* BusterIdle1.tif */,
+				90B057060474C4BF003E2737 /* BusterIdle2.tif */,
+				90E4A65D0474D0E00033C4F7 /* BusterIdle3.tif */,
+				90E4A65E0474D0E00033C4F7 /* BusterIdle4.tif */,
+				90B057050474C4BF003E2737 /* BusterClosed.tif */,
+				90B057070474C4BF003E2737 /* BusterOpen.tif */,
+			);
+			name = Buster;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5389893D0BA87C1D0040EBBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5389893E0BA87C1D0040EBBD /* SpeakingTextWindow.h in Headers */,
+				5389893F0BA87C1D0040EBBD /* SpeakingCharacterView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5389893C0BA87C1D0040EBBD /* CocoaSpeechSynthesisExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 538989540BA87C1D0040EBBD /* Build configuration list for PBXNativeTarget "CocoaSpeechSynthesisExample" */;
+			buildPhases = (
+				5389893D0BA87C1D0040EBBD /* Headers */,
+				538989400BA87C1D0040EBBD /* Resources */,
+				5389894B0BA87C1D0040EBBD /* Sources */,
+				5389894F0BA87C1D0040EBBD /* Frameworks */,
+				538989520BA87C1D0040EBBD /* Rez */,
+				538989530BA87C1D0040EBBD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaSpeechSynthesisExample;
+			productInstallPath = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+			productName = CocoaSpeechSynthesisExample;
+			productReference = 538989590BA87C1D0040EBBD /* CocoaSpeechSynthesisExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 873AFEA2087070D800936E38 /* Build configuration list for PBXProject "CocoaSpeechSynthesisExample" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* TempMultiDocApp */;
+			projectDirPath = "";
+			targets = (
+				5389893C0BA87C1D0040EBBD /* CocoaSpeechSynthesisExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		538989400BA87C1D0040EBBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538989410BA87C1D0040EBBD /* MainMenu.nib in Resources */,
+				538989420BA87C1D0040EBBD /* SpeakingTextWindow.nib in Resources */,
+				538989430BA87C1D0040EBBD /* Buster.plist in Resources */,
+				538989440BA87C1D0040EBBD /* BusterClosed.tif in Resources */,
+				538989450BA87C1D0040EBBD /* BusterIdle2.tif in Resources */,
+				538989460BA87C1D0040EBBD /* BusterOpen.tif in Resources */,
+				538989470BA87C1D0040EBBD /* BusterIdle1.tif in Resources */,
+				538989480BA87C1D0040EBBD /* BusterIdle3.tif in Resources */,
+				538989490BA87C1D0040EBBD /* BusterIdle4.tif in Resources */,
+				5389894A0BA87C1D0040EBBD /* BusterSleep.tif in Resources */,
+				532C0B9C0BA87F400023AC9D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		538989520BA87C1D0040EBBD /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		538989530BA87C1D0040EBBD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#\n# Premultiply all \"*.tif\" files in the Resources directory\n#\nresourceDirPath=\"$TARGET_BUILD_DIR/CocoaSpeechSynthesisExample.app/Contents/Resources/\"\nfor fileToPremulitply in \"$resourceDirPath\"*.tif\n{\n\tbaseFileName=\"${fileToPremulitply%.tif}\"\n\ttiffutil -cat \"$baseFileName\"\".tif\" -out \"$baseFileName\"\".out.tiff\"\n\tmv -f \"$baseFileName\"\".out.tiff\" \"$baseFileName\"\".tif\"\n}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5389894B0BA87C1D0040EBBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5389894C0BA87C1D0040EBBD /* CocoaSpeechSynthesisExample_main.m in Sources */,
+				5389894D0BA87C1D0040EBBD /* SpeakingTextWindow.m in Sources */,
+				5389894E0BA87C1D0040EBBD /* SpeakingCharacterView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		08618FC9FF5C7D7D7F000001 /* SpeakingTextWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08618FCAFF5C7D7D7F000001 /* English */,
+			);
+			name = SpeakingTextWindow.nib;
+			sourceTree = "<group>";
+		};
+		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4B7FDCFA73011CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		532C0B9A0BA87F400023AC9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532C0B9B0BA87F400023AC9D /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		538989550BA87C1D0040EBBD /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = CocoaSpeechSynthesisExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		538989560BA87C1D0040EBBD /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = CocoaSpeechSynthesisExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		538989570BA87C1D0040EBBD /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-CocoaSpeechSynthesisExample__Upgraded_.plist";
+				INSTALL_PATH = "$(SYSTEM_DEVELOPER_DIR)/Examples/Speech/SpeechSynthesisExamples/CocoaSpeechSynthesisExample/";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = CocoaSpeechSynthesisExample;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		873AFEA3087070D800936E38 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		873AFEA4087070D800936E38 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		873AFEA5087070D800936E38 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		538989540BA87C1D0040EBBD /* Build configuration list for PBXNativeTarget "CocoaSpeechSynthesisExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538989550BA87C1D0040EBBD /* Development */,
+				538989560BA87C1D0040EBBD /* Deployment */,
+				538989570BA87C1D0040EBBD /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		873AFEA2087070D800936E38 /* Build configuration list for PBXProject "CocoaSpeechSynthesisExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873AFEA3087070D800936E38 /* Development */,
+				873AFEA4087070D800936E38 /* Deployment */,
+				873AFEA5087070D800936E38 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

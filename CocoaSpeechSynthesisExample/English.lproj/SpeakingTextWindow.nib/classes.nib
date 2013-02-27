@@ -1,0 +1,68 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = SpeakingCharacterView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                charByCharCheckboxSelected = id; 
+                digitByDigitCheckboxSelected = id; 
+                dumpPhonemesSelected = id; 
+                pauseContinueButtonPressed = id; 
+                phonemeCallbacksButtonPressed = id; 
+                phonemeModeCheckboxSelected = id; 
+                pitchBaseChanged = id; 
+                pitchModChanged = id; 
+                rateChanged = id; 
+                resetSelected = id; 
+                saveAsButtonPressed = id; 
+                startStopButtonPressed = id; 
+                useDictionarySelected = id; 
+                voicePopupSelected = id; 
+                volumeChanged = id; 
+                wordCallbacksButtonPressed = id; 
+            }; 
+            CLASS = SpeakingTextWindow; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fAPIVersionStaticField = NSTextField; 
+                fAfterSentenceRadioButton = NSButton; 
+                fAfterWordRadioButton = NSButton; 
+                fCharByCharCheckboxButton = NSButton; 
+                fCharacterView = SpeakingCharacterView; 
+                fDigitByDigitCheckboxButton = NSButton; 
+                fDumpPhonemesButton = NSButton; 
+                fHandleErrorCallbacksCheckboxButton = NSButton; 
+                fHandlePhonemeCallbacksCheckboxButton = NSButton; 
+                fHandleSpeechDoneCallbacksCheckboxButton = NSButton; 
+                fHandleSyncCallbacksCheckboxButton = NSButton; 
+                fHandleTextDoneCallbacksCheckboxButton = NSButton; 
+                fHandleWordCallbacksCheckboxButton = NSButton; 
+                fImmediatelyRadioButton = NSButton; 
+                fPauseContinueButton = NSButton; 
+                fPhonemeModeCheckboxButton = NSButton; 
+                fPitchBaseCurrentStaticField = NSTextField; 
+                fPitchBaseDefaultEditableField = NSTextField; 
+                fPitchModCurrentStaticField = NSTextField; 
+                fPitchModDefaultEditableField = NSTextField; 
+                fRateCurrentStaticField = NSTextField; 
+                fRateDefaultEditableField = NSTextField; 
+                fResetButton = NSButton; 
+                fSaveAsFileButton = NSButton; 
+                fSpokenTextView = NSTextView; 
+                fStartStopButton = NSButton; 
+                fUseDictionaryButton = NSButton; 
+                fVoicesPopUpButton = NSPopUpButton; 
+                fVolumeCurrentStaticField = NSTextField; 
+                fVolumeDefaultEditableField = NSTextField; 
+                fWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}
